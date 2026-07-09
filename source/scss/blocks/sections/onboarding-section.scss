@@ -1,0 +1,111 @@
+@import "../../general/mixins";
+
+.onboarding-section {
+    padding: clamp(40px, 7.813vw, 80px) 0;
+
+    &__wrapp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    &__items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        counter-reset: item-counter;
+
+        li:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 90px;
+        counter-increment: item-counter;
+
+        &-media {
+            position: relative;
+            max-width: 484px;
+            width: 100%;
+            height: 356px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content: "0" counter(item-counter);
+                position: absolute;
+                z-index: 4;
+                top: -40px;
+                left: 50%;
+                transform: rotate(-6deg) translateX(-50%);
+                padding: 10px 35px;
+                border: 6px solid var(--white);
+                background-color: var(--violet-500);
+                border-radius: 65px;
+                font-size: 36px;
+                line-height: 118%;
+                font-weight: 700;
+                letter-spacing: -1.8px;
+                color: var(--white);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--light-blue);
+                border-radius: 30px;
+                transform: rotate(-6deg);
+                z-index: 1;
+            }
+        }
+
+        &-image {
+            padding: 30px 20px 20px;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background-color: var(--violet-100);
+            border-radius: 30px;
+            transform: rotate(6deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: contain;
+                backface-visibility: hidden; 
+            }
+        }
+
+        &-content {
+            max-width: 590px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &-excerpt {
+            color: var(--grey-500);
+        }
+
+        &-lesson {
+            max-width: 365px;
+            width: 100%;
+        }
+    }
+}

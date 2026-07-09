@@ -1,53 +1,86 @@
 @import "../../general/mixins";
 
 .banner-section {
-    padding-top: clamp(24px, 2.222vw, 32px);
+    position: relative;
+    padding: 60px 0;
 
-    &__slider {
-        width: 100%;
-        position: relative;
-        z-index: 1;
+    &__wrapp {
         display: flex;
-    
-        @include laptop {
-            padding: 0 var(--container-offset);
-        }
+        flex-direction: column;
+        gap: 25px;
+    }
 
-        .swiper {
-            width: calc(100% + (var(--container-offset) * 2));
-            margin: 0 calc(var(--container-offset) * -1);
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
 
-            .swiper-container {
-                padding: 0 var(--container-offset);
-            }
-            
-            &-slide{
-                width: 100%;
-            }
-    
-            &-container{
-                width: 100%;
-    
-                @include laptop {
-                    width: calc(100% + (var(--container-offset) * 2));
-                    margin: 0 calc(var(--container-offset) * -1);
-                }
-            }
-    
-            &-btn {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 3;
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
 
-                
-                &.swiper-button-next{
-                    right: clamp(10px, 1.613vw, 20px);
-                }
-    
-                &.swiper-button-prev{
-                    left: clamp(10px, 1.613vw, 20px);
-                }
+    &__info {
+        max-width: 685px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__character-boy {
+        display: flex;
+    }
+
+    &__right {
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+
+    &__form {
+        // flex-shrink: 0;
+        max-width: 480px;
+        width: 100%;
+        padding: 40px 30px;
+        border-radius: 30px;
+        background-color: var(--violet-100);
+    }
+
+    &__character-logika {
+        margin-top: -33px;
+        display: flex;
+    }
+
+    &__bar {
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 25px 0 rgba(37, 37, 37, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            span {
+                display: flex;
+                flex-shrink: 0;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 118%;
+                font-weight: 700;
+                letter-spacing: -1px;
+                color: var(--violet-300);
             }
         }
     }

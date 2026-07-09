@@ -4,15 +4,17 @@
 
 // ----------------- SECTION BLOCKS -----------------
 @import "../blocks/sections/banner-section.scss";
-@import "../blocks/sections/main-section.scss";
-@import "../blocks/sections/content-section.scss";
-@import "../blocks/sections/reasons-section.scss";
+@import "../blocks/sections/marquee-section.scss";
+@import "../blocks/sections/services-section.scss";
+@import "../blocks/sections/english-section.scss";
+@import "../blocks/sections/advantages-section.scss";
+@import "../blocks/sections/transformation-section.scss";
+@import "../blocks/sections/onboarding-section.scss";
+@import "../blocks/sections/testimonials-section.scss";
+@import "../blocks/sections/portfolio-section.scss";
+@import "../blocks/sections/media-section.scss";
+@import "../blocks/sections/cta-section.scss";
 @import "../blocks/sections/faq-section.scss";
-@import "../blocks/sections/reviews-section.scss";
+@import "../blocks/sections/certificates-section.scss";
+@import "../blocks/sections/partners-section.scss";
 
-// ----------------- PRODUCT PAGE BLOCKS -----------------
-@import "../blocks/sections/product.scss";
-
-// ----------------- CATEGORY PAGE BLOCKS -----------------
-@import "../blocks/sections/top-section.scss";
-@import "../blocks/sections/categories-section.scss";

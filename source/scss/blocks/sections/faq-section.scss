@@ -6,6 +6,12 @@
     &__wrapp {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: clamp(24px, 3.125vw, 32px);
+    }
+
+    .accordion {
+        max-width: 954px;
+        width: 100%;
     }
 }

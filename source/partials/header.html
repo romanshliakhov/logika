@@ -1,41 +1,46 @@
 <header class="header fixed-block">
   <div class="header__top">
     <div class="container">
-      <div class="header__top-inner">
-        <div class="header__delivery btn-link">
-          <svg width='24' height='24'>
-            <use href='img/sprite/sprite.svg#delivery'></use>
-          </svg>
-          FREE LOCAL DELIVERY
+      <div class="header__top-box">
+        <div class="header__contact">
+          <div class="header__contact-heading">
+            <svg width='16' height='16'>
+              <use href='img/sprite/sprite.svg#icon-phone'></use>
+            </svg>
+            <span>Телефон:</span>
+          </div>
+          <a class="header__contact-link" href="tel:+380931707440" target="_blank">+ 38 (093) 170-74-40</a>
         </div>
 
-        <div class="header__top-btns">
-          <a class="btn-link" href="tel:+14165339695">
-            <svg width='24' height='24'>
-              <use href='img/sprite/sprite.svg#phone'></use>
+        <div class="header__contact">
+          <div class="header__contact-heading">
+            <svg width='16' height='16'>
+              <use href='img/sprite/sprite.svg#icon-email'></use>
             </svg>
-            +1 416 533 9695
-          </a>
-
-          <a class="btn-link" href="#">
-            <svg width='24' height='24'>
-              <use href='img/sprite/sprite.svg#profile'></use>
-            </svg>
-            Sing in / Register
-          </a>
-
-          <div class="header__controls">
-              <div class="header__cart">
-                <button class="btn-cart open-cart">
-                  <svg width='16' height='16'>
-                    <use href='img/sprite/sprite.svg#cart'></use>
-                  </svg>
-                  Cart
-                </button>
-              </div>
-
-              <a class="btn-checkout" href="#">Check out</a>
+            <span>Email:</span>
           </div>
+          <a class="header__contact-link" href="mailto:kiev@logikaschool.com" target="_blank">kiev@logikaschool.com</a>
+        </div>
+
+        <div class="header__socials">
+          <div class="header__socials-heading">Соц. мережі:</div>
+
+          <ul class="header__socials-links">
+            <li>
+              <a href="#" target="_blank">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#instagram-color'></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#facebook-color'></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -43,258 +48,94 @@
 
   <div class="container">
     <div class="header__box">
-      <a class="header__logo" href="/">
-        <img width='223' height='50' src='img/sprite/logo.svg' alt='image'>
-      </a>
+      <div class="header__left">
+        <a class="header__logo logo" href="/">
+          <img width='129' height='54' src='img/main-logo.svg' alt='Logika'>
+        </a>
 
-      <div class="header__desktop-content">
-        <form class="header__search search">
-          <label class="search__label">
-            <input class="search__input" type="search" placeholder="Shop for products, brands or categories...">
-            <button class="search__btn">
-              <svg width='24' height='24'>
-                <use href='img/sprite/sprite.svg#search'></use>
+        <div class="header__accreditation">
+          Найбільша в Україні школа програмування та англійської мови для учнів 7-16 років
+        </div>
+      </div>
+
+      <div class="mobile">
+        <div class="mobile__box">
+          <div class="header__location">
+            <div class="header__location-trigger">
+              <div class="header__location-active">
+                <svg width='16' height='16'>
+                  <use href='img/sprite/sprite.svg#icon-location'></use>
+                </svg>
+                <p>Оберіть місто</p>
+              </div>
+
+              <svg width='18' height='18'>
+                <use href='img/sprite/sprite.svg#icon-caret-down'></use>
               </svg>
-            </button>
-          </label>
-        </form>
-
-        <div class="header__content">
-          <div class="header__basket open-cart">
-            <svg width='24' height='24'>
-              <use href='img/sprite/sprite.svg#cart'></use>
-            </svg>
-            <div class="header__basket-counter">0</div>
+            </div>
           </div>
 
-          <div class="header__worktime">
-            <svg width='16' height='20'>
-              <use href='img/sprite/sprite.svg#schedule'></use>
-            </svg>
-            <p>
-              Mo-Fr 10 am - 5pm <br>
-              Sat 10 am - 2pm
-            </p>
+          <nav class="header__nav" data-single='true' data-breakpoint='576' data-accordion-init>
+            <ul class="menu">
+              <li class="menu-item">
+                <a class="menu-link" href="#">Про Logika</a>
+              </li>
+              <li class="menu-item menu-has-child">
+                <a class="menu-link" href="#">Курси</a>
+
+                <button class="menu-button" data-id='courses'>
+                  <svg width='18' height='18'>
+                    <use href='img/sprite/sprite.svg#icon-caret-down'></use>
+                  </svg>
+                </button>
+
+                <ul class="sub-menu" data-content='courses'>
+                  <li class="menu-item">
+                    <a class="menu-link" href="#">IT Courses</a>
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="#">English Courses</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#">IT-табори</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#">Медіа-центр</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#">FAQ</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__controls">
+            <a class="header__login btn" href="#">
+              <svg width='16' height='16'>
+                <use href='img/sprite/sprite.svg#icon-person'></use>
+              </svg>
+              <span>Увійти</span>
+            </a>
+
+            <a class="header__lesson btn btn--yellow" href="#">
+              Пробний урок
+              <svg width='20' height='20'>
+                <use href='img/sprite/sprite.svg#arrow-right'></use>
+              </svg>
+            </a>
+
+
           </div>
-
-          <button class="burger">
-            <span class="burger__line"></span>
-          </button>
         </div>
       </div>
-    </div>
 
-    <div class="mobile">
-      <div class="mobile__box accordion" data-single='true' data-breakpoint='576' data-accordion-init>
-        <nav class="header__nav">
-          <ul class="menu">
-            <li class="menu-item menu-has-child">
-              <div class="menu-item-wrapp">
-                <a class="menu-link" href="#">Sun Care</a>
-
-                <button class="menu-button" data-id='1'>
-                  <svg width='24' height='24'>
-                    <use href='img/sprite/sprite.svg#arrow-right'></use>
-                  </svg>
-                </button>
-              </div>
-              <ul class="sub-menu" data-content='1'>
-                <li>
-                  <a href="#">Diapering & Potty</a>
-                </li>
-                <li>
-                  <a href="#">Bath & Skincare</a>
-                </li>
-                <li>
-                  <a href="#">Children's Medicine</a>
-                </li>
-                <li>
-                  <a href="#">Feeding & Mealtime</a>
-                </li>
-                <li>
-                  <a href="#">Formula & Baby Food</a>
-                </li>
-                <li>
-                  <a href="#">Maternity & Postpartum</a>
-                </li>
-                <li>
-                  <a href="#">Oral Care</a>
-                </li>
-                <li>
-                  <a href="#">Health & Safety</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item menu-has-child">
-              <div class="menu-item-wrapp">
-                <a class="menu-link" href="#">Baby & Kids</a>
-
-                <button class="menu-button" data-id='2'>
-                  <svg width='24' height='24'>
-                    <use href='img/sprite/sprite.svg#arrow-right'></use>
-                  </svg>
-                </button>
-              </div>
-              <ul class="sub-menu" data-content='2'>
-                <li>
-                  <a href="#">Diapering & Potty</a>
-                </li>
-                <li>
-                  <a href="#">Bath & Skincare</a>
-                </li>
-                <li>
-                  <a href="#">Children's Medicine</a>
-                </li>
-                <li>
-                  <a href="#">Feeding & Mealtime</a>
-                </li>
-                <li>
-                  <a href="#">Formula & Baby Food</a>
-                </li>
-                <li>
-                  <a href="#">Maternity & Postpartum</a>
-                </li>
-                <li>
-                  <a href="#">Oral Care</a>
-                </li>
-                <li>
-                  <a href="#">Health & Safety</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item menu-has-child">
-              <div class="menu-item-wrapp">
-                <a class="menu-link" href="#">Personal Care</a>
-
-                <button class="menu-button" data-id='3'>
-                  <svg width='24' height='24'>
-                    <use href='img/sprite/sprite.svg#arrow-right'></use>
-                  </svg>
-                </button>
-              </div>
-              <ul class="sub-menu" data-content='3'>
-                <li>
-                  <a href="#">Diapering & Potty</a>
-                </li>
-                <li>
-                  <a href="#">Bath & Skincare</a>
-                </li>
-                <li>
-                  <a href="#">Children's Medicine</a>
-                </li>
-                <li>
-                  <a href="#">Feeding & Mealtime</a>
-                </li>
-                <li>
-                  <a href="#">Formula & Baby Food</a>
-                </li>
-                <li>
-                  <a href="#">Maternity & Postpartum</a>
-                </li>
-                <li>
-                  <a href="#">Oral Care</a>
-                </li>
-                <li>
-                  <a href="#">Health & Safety</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Fitness & Protein</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Medicine & Health</a>
-            </li>
-            <li class="menu-item menu-has-child">
-              <div class="menu-item-wrapp">
-                <a class="menu-link" href="#">Home & Lifestyle</a>
-
-                <button class="menu-button" data-id='4'>
-                  <svg width='24' height='24'>
-                    <use href='img/sprite/sprite.svg#arrow-right'></use>
-                  </svg>
-                </button>
-              </div>
-              <ul class="sub-menu" data-content='4'>
-                <li>
-                  <a href="#">Diapering & Potty</a>
-                </li>
-                <li>
-                  <a href="#">Bath & Skincare</a>
-                </li>
-                <li>
-                  <a href="#">Children's Medicine</a>
-                </li>
-                <li>
-                  <a href="#">Feeding & Mealtime</a>
-                </li>
-                <li>
-                  <a href="#">Formula & Baby Food</a>
-                </li>
-                <li>
-                  <a href="#">Maternity & Postpartum</a>
-                </li>
-                <li>
-                  <a href="#">Oral Care</a>
-                </li>
-                <li>
-                  <a href="#">Health & Safety</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item menu-has-child">
-              <div class="menu-item-wrapp">
-                <a class="menu-link" href="#">Vitamins & Supplements</a>
-
-                <button class="menu-button" data-id='5'>
-                  <svg width='24' height='24'>
-                    <use href='img/sprite/sprite.svg#arrow-right'></use>
-                  </svg>
-                </button>
-              </div>
-              <ul class="sub-menu" data-content='5'>
-                <li>
-                  <a href="#">Diapering & Potty</a>
-                </li>
-                <li>
-                  <a href="#">Bath & Skincare</a>
-                </li>
-                <li>
-                  <a href="#">Children's Medicine</a>
-                </li>
-                <li>
-                  <a href="#">Feeding & Mealtime</a>
-                </li>
-                <li>
-                  <a href="#">Formula & Baby Food</a>
-                </li>
-                <li>
-                  <a href="#">Maternity & Postpartum</a>
-                </li>
-                <li>
-                  <a href="#">Oral Care</a>
-                </li>
-                <li>
-                  <a href="#">Health & Safety</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link sale" href="#">Sale</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="header__worktime">
-          <svg width='16' height='20'>
-            <use href='img/sprite/sprite.svg#schedule'></use>
-          </svg>
-          <p>
-            Mo-Fr 10 am - 5pm <br>
-            Sat 10 am - 2pm
-          </p>
-        </div>
-      </div>
+      <button class="burger">
+        <span class="burger__line"></span>
+      </button>
     </div>
   </div>
 </header>

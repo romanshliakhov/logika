@@ -1,145 +1,237 @@
 .footer {
-    padding: 48px 0;
-    background-color: var(--bg-c);
+    padding: clamp(40px, 4.167vw, 80px) 0;
+    background-color: var(--violet-100);
 
     &__wrapp {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 36px;
+        gap: clamp(40px, 4.167vw, 80px);
     }
 
-    &__box {
+    &__top {
         width: 100%;
+        display: flex;
 
         @include for-tablet {
-            display: flex;
             align-items: flex-start;
             justify-content: space-between;
+            gap: clamp(30px, 2.778vw, 40px);
+        }
+
+        @include tablet {
+            flex-direction: column;
+            gap:40px;
+        }
+    }
+
+    &__info {
+        @include for-tablet {
+            width: 100%;
+            flex-shrink: 0;
+            max-width: clamp(280px, 23.958vw, 345px);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
         }
 
         @include tablet {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 36px 20px;
+            grid-template-columns: auto 1fr;
+            gap: 15px clamp(20px, 3.906vw, 30px);
 
-            @include for-small-tablet {
-                & > div:last-child {
-                    order: -1;
-                }
-            }
-        }
-
-        @include mobile {
-            & > div:first-child {
+            .btn {
                 grid-column: 1 / -1;
             }
-
-            & > div:last-child {
-                order: 1;
-                grid-column: 1 / -1;
-            }
-        }
-
-        &-left {
-            order: -1;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        &-block {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
         }
     }
 
+    &__logo {
+        max-width: clamp(135px, 25.13vw, 193px);
+    }
+    
     &__accreditation {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        font-size: 16px;
-        color: var(--cl-d);
+        max-width: 300px;
+        font-size: clamp(13px, 2.344vw, 18px);
+        line-height: 140%;
+        font-weight: 600;
+        color: var(--white);
     }
 
-    &__payments {
-        display: flex;
+    &__box {
+        @include for-tablet {
+            width: fit-content;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: clamp(20px, 6.25vw, 120px);
+        }
+
+        @include tablet {
+            @include for-small-tablet {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 36px 20px;
+            }
+        }
+
+        @include small-tablet{
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            gap: 40px;
+        }
     }
 
     &__title {
-        font-size: 18px;
-        line-height: 122%;
-        font-weight: 700;
-        color: var(--cl-a);
+        margin-bottom: clamp(15px, 1.953vw, 20px);
+        font-size: clamp(18px, 2.734vw, 28px);
+        line-height: 128%;
+        font-weight: 600;
+        letter-spacing: -1.4px;
+        color: var(--white);
+    }
+
+    &__navigation {
+        @include for-desktop  {
+            ul {
+                column-count: 2; 
+                column-gap: 60px;
+            }
+
+            li + li {
+                margin-top: 15px;
+            }
+        }
+
+        @include desktop {
+            ul {
+                max-width: 200px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: clamp(10px, 1.953vw, 15px);
+            }
+    
+            a {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__information {
+        ul {
+            max-width: 200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(10px, 1.953vw, 15px);
+
+            a {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 
     &__menu {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-
         a {
-            font-size: 14px;
-            line-height: 114%;
-            font-weight: 500;
-            color: var(--cl-k);
+            width: fit-content;
+            font-size: clamp(14px, 1.758vw, 18px);
+            line-height: 140%;
+            font-weight: 600;
+            letter-spacing: -0.9px;
+            color: var(--white);
+
+            p {
+                font-size: clamp(12px, 1.367vw, 12px);
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: -0.7px;
+                color: var(--light-blue);
+            }
         }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     &__contacts {
         display: flex;
-        flex-direction: column;
-        gap: 16px;
-        
-        span,
-        a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 16px;
-            line-height: 125%;
-            font-weight: 400;
-            color: var(--cl-k);
+
+        @include for-laptop {
+            flex-shrink: 0;
         }
 
-        svg {
-            fill: currentColor;
+        @include for-small-tablet {
+            flex-direction: column;
+            gap: clamp(20px, 3.906vw, 40px);
+        }
+
+        @include small-tablet {
+            grid-column: 1 / -1;
+            justify-content: space-between;
+
+            & > div:first-of-type {
+                order: 1;
+            }
+        }
+
+        &-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            width: fit-content;
+            font-size: clamp(14px, 1.758vw, 18px);
+            line-height: 140%;
+            font-weight: 600;
+            letter-spacing: -0.9px;
+            color: var(--white);
+            
+
+            svg {
+                width: clamp(36px, 4.492vw, 46px);
+                height: clamp(36px, 4.492vw, 46px);
+            }
+        }
+
+        a + a {
+            margin-top: clamp(10px, 1.953vw, 15px);
         }
     }
 
     &__bottom {
+        width: 100%;
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 0 14px;
-        font-size: 12px;
-        line-height: 140%;
-        color: var(--cl-a);
-        letter-spacing: 0.03em;
+        justify-content: space-between;
+        gap: 10px;
 
-        a {
-            position: relative;
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: -10px;
-                transform: translateY(-50%);
-                width: 4px;
-                height: 1px;
-                background-color: var(--bg-a);
-            }
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: clamp(5px, 2.604vw, 20px);
         }
 
-        @include mobile {
-            p {
-                width: 100%;
-            }
+        a,
+        p {
+            font-size: clamp(10px, 2.083vw, 12px);
+            font-weight: 500;
+            line-height: 140%;
+            letter-spacing: -0.6px;
+            color: var(--light-blue);
+            transition: 0.3s ease-in-out;
+        }
 
-            a:first-child {
-                color: red;
+        @include hover {
+            a {
+                color: var(--white);
             }
         }
     }

@@ -1,0 +1,107 @@
+@import "../../general/mixins";
+
+.services-section {
+    padding: clamp(40px, 7.813vw, 80px) 0;
+
+    &__wrapp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    &__items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+        li:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-media {
+            position: relative;
+            max-width: 588px;
+            width: 100%;
+            background-color: var(--violet-100);
+            border-radius: 40px;
+        }
+
+        &-ages {
+            position: absolute;
+            transform: rotate(-6deg);
+            padding: 10px 20px;
+            top: 43px;
+            right: -67px;
+            border: 8px solid var(--white);
+            background-color: var(--green);
+            border-radius: 65px;
+            font-size: 36px;
+            line-height: 118%;
+            font-weight: 700;
+            letter-spacing: -1.8px;
+            color: var(--white);
+        }
+
+        &-icon {
+            position: absolute;
+            bottom: 0;
+            left: -67px;
+            display: flex;
+        }
+
+        &-image {
+            margin-top: -80px;
+            display: flex;
+        }
+
+        &-content {
+            max-width: 710px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &-tags {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            li {
+                padding: 10px 20px;
+                background-color: var(--light-blue);
+                border-radius: 56px;
+            }
+        }
+
+        &-excerpt {
+            max-width: 620px;
+            width: 100%;
+            color: var(--grey-500);
+        }
+
+        &-btns {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        &-lesson {
+            max-width: 365px;
+            width: 100%;
+        }
+
+        &-about {
+            width: fit-content;
+        }
+    }
+}

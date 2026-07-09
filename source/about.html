@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+    About page
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-section__wrapp">
+          <h2>FAQ</h2>
+
+          <ul class='accordion' data-default="1" data-single='true' data-breakpoint='576' data-accordion-init>
+            <li class='accordion__item'>
+              <button class='accordion__btn' data-id='1'>
+                What is an online pharmacy, and how does it work?
+                <span class="accordion__btn-icon">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#agile-down'></use>
+                  </svg>
+                </span>
+              </button>
+              <div class='accordion__content' data-content='1'>
+                <div class="editor">
+                  <p>Pellentesque et neque fringilla arcu laoreet pretium. Aenean id pellentesque ante. Phasellus in augue eget magna ultrices tristique vitae sed ligula. Etiam imperdiet mi ut odio tincidunt finibus. Nulla facilisi. Nullam molestie dictum nibh, dignissim accumsan ipsum pharetra pulvinar. In eu sollicitudin sapien. Mauris suscipit venenatis nunc et commodo. Etiam et tortor non ipsum tempus aliquam.</p>
+                </div>
+              </div>
+            </li>
+            <li class='accordion__item'>
+              <button class='accordion__btn' data-id='2'>
+                How do I place an order?
+                <span class="accordion__btn-icon">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#agile-down'></use>
+                  </svg>
+                </span>
+              </button>
+              <div class='accordion__content' data-content='2'>
+                <div class="editor">
+                  <p>Pellentesque et neque fringilla arcu laoreet pretium. Aenean id pellentesque ante. Phasellus in augue eget magna ultrices tristique vitae sed ligula. Etiam imperdiet mi ut odio tincidunt finibus. Nulla facilisi. Nullam molestie dictum nibh, dignissim accumsan ipsum pharetra pulvinar. In eu sollicitudin sapien. Mauris suscipit venenatis nunc et commodo. Etiam et tortor non ipsum tempus aliquam.</p>
+                </div>
+              </div>
+            </li>
+            <li class='accordion__item'>
+              <button class='accordion__btn' data-id='3'>
+                Can I order prescription medications from your online pharmacy?
+                <span class="accordion__btn-icon">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#agile-down'></use>
+                  </svg>
+                </span>
+              </button>
+              <div class='accordion__content' data-content='3'>
+                <div class="editor">
+                  <p>Pellentesque et neque fringilla arcu laoreet pretium. Aenean id pellentesque ante. Phasellus in augue eget magna ultrices tristique vitae sed ligula. Etiam imperdiet mi ut odio tincidunt finibus. Nulla facilisi. Nullam molestie dictum nibh, dignissim accumsan ipsum pharetra pulvinar. In eu sollicitudin sapien. Mauris suscipit venenatis nunc et commodo. Etiam et tortor non ipsum tempus aliquam.</p>
+                </div>
+              </div>
+            </li>
+            <li class='accordion__item'>
+              <button class='accordion__btn' data-id='4'>
+                How does delivery work with your online pharmacy in Canada?
+                <span class="accordion__btn-icon">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#agile-down'></use>
+                  </svg>
+                </span>
+              </button>
+              <div class='accordion__content' data-content='4'>
+                <div class="editor">
+                  <p>Pellentesque et neque fringilla arcu laoreet pretium. Aenean id pellentesque ante. Phasellus in augue eget magna ultrices tristique vitae sed ligula. Etiam imperdiet mi ut odio tincidunt finibus. Nulla facilisi. Nullam molestie dictum nibh, dignissim accumsan ipsum pharetra pulvinar. In eu sollicitudin sapien. Mauris suscipit venenatis nunc et commodo. Etiam et tortor non ipsum tempus aliquam.</p>
+                </div>
+              </div>
+            </li>
+            <li class='accordion__item'>
+              <button class='accordion__btn' data-id='5'>
+                Do you offer over-the-counter products in your online drugstore?
+                <span class="accordion__btn-icon">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#agile-down'></use>
+                  </svg>
+                </span>
+              </button>
+              <div class='accordion__content' data-content='5'>
+                <div class="editor">
+                  <p>Pellentesque et neque fringilla arcu laoreet pretium. Aenean id pellentesque ante. Phasellus in augue eget magna ultrices tristique vitae sed ligula. Etiam imperdiet mi ut odio tincidunt finibus. Nulla facilisi. Nullam molestie dictum nibh, dignissim accumsan ipsum pharetra pulvinar. In eu sollicitudin sapien. Mauris suscipit venenatis nunc et commodo. Etiam et tortor non ipsum tempus aliquam.</p>
+                </div>
+              </div>
+            </li>
+            <li class='accordion__item'>
+              <button class='accordion__btn' data-id='6'>
+                What if I have questions or need help with my order?
+                <span class="accordion__btn-icon">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#agile-down'></use>
+                  </svg>
+                </span>
+              </button>
+              <div class='accordion__content' data-content='6'>
+                <div class="editor">
+                  <p>Pellentesque et neque fringilla arcu laoreet pretium. Aenean id pellentesque ante. Phasellus in augue eget magna ultrices tristique vitae sed ligula. Etiam imperdiet mi ut odio tincidunt finibus. Nulla facilisi. Nullam molestie dictum nibh, dignissim accumsan ipsum pharetra pulvinar. In eu sollicitudin sapien. Mauris suscipit venenatis nunc et commodo. Etiam et tortor non ipsum tempus aliquam.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+
+  <script src="js/swiper.js"></script>
+  <script defer src="js/main.js"></script>
+</body>
+
+
+</html>
