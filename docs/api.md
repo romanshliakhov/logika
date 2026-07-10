@@ -401,6 +401,18 @@ Implementation notes:
 - log `request_id`, `lead_id`, CRM status and HTTP code;
 - do not log full personal payload in public logs.
 
+Frontend behavior:
+
+- successful form submission must show a success popup;
+- validation errors must show an error popup and field-level errors where possible;
+- network/server errors must show an error popup with safe user-facing text;
+- popup copy on the public site must be Ukrainian;
+- popup must not expose CRM errors, stack traces, request payloads, tokens or internal status names;
+- success popup should confirm that the request was received and that a manager will contact the user;
+- error popup should explain that the request was not submitted and suggest trying again or contacting Logika directly;
+- submit button must be disabled while the request is in progress and re-enabled on error;
+- duplicate successful submit should not open multiple success popups or create multiple CRM sends.
+
 ### 7.2. Get form token
 
 ```http

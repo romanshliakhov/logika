@@ -16,10 +16,10 @@ Core rule:
 | Technology | Version / baseline | Role | Why it is chosen |
 |---|---:|---|---|
 | WordPress | 7.0 | CMS, admin, URL routing, media, users | Needs managed CMS for editors, SEO and scalable landing pages |
-| PHP | 8.2+ | WordPress runtime for theme and plugins | Modern baseline for WordPress development with better typing than older versions |
+| PHP | 8.3+ | WordPress runtime for theme and plugins | Modern baseline for WordPress development with better typing than older versions |
 | MySQL | WordPress default 8.0+ baseline | Standard and well-supported storage for WordPress |
 | ACF Pro | 6.x | Fields, repeaters, flexible content, option pages, ACF Blocks | Lets editors change content without visual builder chaos |
-| Rank Math or Yoast SEO | stable current version | Sitemap, metadata UI, baseline SEO settings | Avoids building SEO manually |
+| Yoast SEO | stable current version | Sitemap, metadata UI, baseline SEO settings | Avoids building SEO manually |
 
 Versions of WordPress plugins are defined by deployment process. In documentation we keep baseline, not a blanket claim of always using the absolute latest.
 
