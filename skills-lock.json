@@ -13,6 +13,36 @@
       "skillPath": "claude-cowork/wp-site-creator/skills/design-systems/SKILL.md",
       "computedHash": "8d8bdab552acbc58446a63c74cf39991a1eecddcc4d688d5dc016081411bec0e"
     },
+    "graphify": {
+      "source": "howell5/willhong-skills",
+      "sourceType": "github",
+      "skillPath": "skills/graphify/SKILL.md",
+      "computedHash": "80456681e8ee5e57700fcca889a46179f81354a76559744cee8977c97d1faf66"
+    },
+    "php-best-practices": {
+      "source": "asyrafhussin/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/php-best-practices/SKILL.md",
+      "computedHash": "1b25a60572ddd8b206eaf68b067cde70a9d002df572de8fefda703532cecfdad"
+    },
+    "php-pro": {
+      "source": "jeffallan/claude-skills",
+      "sourceType": "github",
+      "skillPath": "skills/php-pro/SKILL.md",
+      "computedHash": "c163f6d5d26ddbf4a4d79e8dc95d3b41e447f1659486cf0aae8c070d950a9d86"
+    },
+    "popups": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/popups/SKILL.md",
+      "computedHash": "95c5cb45dcbb05362168255d97ee68d53a5916d8de779bd08f5f70c9b0cabd36"
+    },
+    "validation-patterns": {
+      "source": "wshaddix/dotnet-skills",
+      "sourceType": "github",
+      "skillPath": "skills/validation-patterns/SKILL.md",
+      "computedHash": "4531d70e79790e4208d584453562d5fe6abe23ffcae87579d746abaf274e1e63"
+    },
     "wordpress-content": {
       "source": "jezweb/claude-skills",
       "sourceType": "github",
@@ -42,6 +72,12 @@
       "sourceType": "github",
       "skillPath": "toolchains/php/frameworks/wordpress/wordpress-security-validation/SKILL.md",
       "computedHash": "f168927194b17034e00188c44c16c51e73846ee8ed066750f7f01df96a5dabf5"
+    },
+    "wordpress-setup": {
+      "source": "jezweb/claude-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/wordpress/skills/wordpress-setup/SKILL.md",
+      "computedHash": "945490d6cb4a46af7d897e4f85bf88d1c2b79fa553735f4a28791955fbe91838"
     },
     "wordpress-testing-qa": {
       "source": "bobmatnyc/claude-mpm-skills",

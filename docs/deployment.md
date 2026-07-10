@@ -40,7 +40,45 @@
 - [ ] Deployed theme and plugins match the reviewed source state.
 - [ ] ACF Local JSON is included in the deployment artifact.
 
-## 5. Database and migrations
+## 5. CI/CD and automated deployment
+
+- [ ] CI/CD pipeline is configured before connecting real production hosting.
+- [ ] Pipeline runs automatically on pull requests.
+- [ ] Pipeline runs automatically on pushes to the main deployment branch.
+- [ ] Autodeploy is configured for staging from the approved deployment branch.
+- [ ] Production deployment is gated by successful CI checks.
+- [ ] Production deployment requires explicit approval until the hosting and rollback process are proven stable.
+- [ ] Deployment is blocked when any required test/check fails.
+- [ ] Pipeline installs dependencies from lockfiles only.
+- [ ] Pipeline builds frontend assets with the approved Node/npm stack.
+- [ ] Pipeline validates PHP code when WordPress plugin/theme code is present.
+- [ ] Pipeline runs unit tests when available.
+- [ ] Pipeline runs integration tests when available.
+- [ ] Pipeline runs browser smoke tests for critical pages when environment is available.
+- [ ] Pipeline runs HTML validation or documents known accepted failures.
+- [ ] Pipeline verifies that no production secrets are present in the repository or build artifact.
+- [ ] Pipeline uploads or exposes build logs for debugging failed deployments.
+- [ ] Failed deployments do not modify production state.
+- [ ] Deployment status is visible to the team.
+
+Required CI checks before any autodeploy:
+
+- [ ] Frontend build passes.
+- [ ] PHP syntax/static checks pass where applicable.
+- [ ] Unit tests pass.
+- [ ] Integration tests pass where available.
+- [ ] Browser smoke tests pass on staging when available.
+- [ ] Migration dry-run or migration safety check passes where available.
+- [ ] No secrets are detected in source or generated artifact.
+
+Autodeploy policy:
+
+- [ ] Staging can deploy automatically after all required checks pass.
+- [ ] Production deploy must not run from an unchecked commit.
+- [ ] Production deploy should use the same reviewed artifact that passed CI.
+- [ ] Production deploy should have rollback steps linked in the pipeline or release notes.
+
+## 6. Database and migrations
 
 - [ ] Production database backup exists before deployment.
 - [ ] Restore procedure has been tested on staging.
@@ -50,7 +88,7 @@
 - [ ] Destructive database changes require explicit approval and rollback plan.
 - [ ] CRM retry queue is checked before and after restore/migration operations.
 
-## 6. WordPress and plugins
+## 7. WordPress and plugins
 
 - [ ] WordPress core version matches approved production baseline.
 - [ ] Required plugins are installed and active.
@@ -62,7 +100,7 @@
 - [ ] ACF Pro is active and field groups are synchronized.
 - [ ] SEO plugin is configured.
 
-## 7. Caching and performance
+## 8. Caching and performance
 
 - [ ] Page cache/CDN is configured for public pages.
 - [ ] Lead submission endpoints are excluded from cache.
@@ -74,7 +112,7 @@
 - [ ] Images are optimized for production.
 - [ ] Critical pages pass agreed performance smoke checks.
 
-## 8. Forms, leads and CRM
+## 9. Forms, leads and CRM
 
 - [ ] Lead forms save requests locally before CRM send.
 - [ ] CRM integration uses server-side requests only.
@@ -88,7 +126,7 @@
 - [ ] CRM failure does not show technical details to users.
 - [ ] Production test lead flow is verified according to agreed launch policy.
 
-## 9. Security
+## 10. Security
 
 - [ ] `WP_DEBUG_DISPLAY` is disabled in production.
 - [ ] Debug logs are not publicly accessible.
@@ -100,7 +138,7 @@
 - [ ] Rate limiting or anti-spam protection is enabled for public forms.
 - [ ] Security headers are configured at hosting/CDN level where possible.
 
-## 10. SEO and indexing
+## 11. SEO and indexing
 
 - [ ] Production robots/indexing settings are correct.
 - [ ] Staging noindex settings are not copied to production.
@@ -112,7 +150,7 @@
 - [ ] JSON-LD output is valid on priority templates.
 - [ ] SEO titles/descriptions render from configured fields/templates.
 
-## 11. Monitoring and logs
+## 12. Monitoring and logs
 
 - [ ] PHP error logging is enabled privately.
 - [ ] Web server logs are available.
@@ -122,7 +160,7 @@
 - [ ] Critical form failures can be diagnosed by `request_id` or `lead_id`.
 - [ ] First 24 hours after launch have active monitoring owner.
 
-## 12. Rollback requirements
+## 13. Rollback requirements
 
 - [ ] Previous production release can be restored.
 - [ ] Database backup is available before launch.
@@ -131,7 +169,7 @@
 - [ ] Migration rollback limitations are documented.
 - [ ] CRM retry behavior after rollback is understood.
 
-## 13. Launch checklist
+## 14. Launch checklist
 
 - [ ] Deploy to staging.
 - [ ] Run migrations on staging.
