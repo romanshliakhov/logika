@@ -1,0 +1,39 @@
+<?php
+/**
+ * Plugin Name: Logika Core
+ * Description: Контентна модель сайту Logika.
+ * Version: 0.1.0
+ * Requires PHP: 8.3
+ * Text Domain: logika-core
+ */
+
+declare(strict_types=1);
+
+defined( 'ABSPATH' ) || exit;
+
+define( 'LOGIKA_CORE_PATH', plugin_dir_path( __FILE__ ) );
+
+require_once LOGIKA_CORE_PATH . 'src/AcfJson.php';
+require_once LOGIKA_CORE_PATH . 'src/ContentTypes.php';
+require_once LOGIKA_CORE_PATH . 'src/OptionsPage.php';
+require_once LOGIKA_CORE_PATH . 'src/CityApi.php';
+
+Logika\Core\AcfJson::register();
+add_action( 'init', array( Logika\Core\ContentTypes::class, 'register' ) );
+add_action( 'acf/init', array( Logika\Core\OptionsPage::class, 'register' ) );
+add_action( 'rest_api_init', array( Logika\Core\CityApi::class, 'register' ) );
+
+register_activation_hook(
+	__FILE__,
+	static function (): void {
+		Logika\Core\ContentTypes::register();
+		flush_rewrite_rules();
+	}
+);
+
+register_deactivation_hook(
+	__FILE__,
+	static function (): void {
+		flush_rewrite_rules();
+	}
+);

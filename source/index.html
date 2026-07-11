@@ -30,8 +30,8 @@
 
                 <div class="main-form__inputs">
                   <input class="main-form__input" type="text" name="name" placeholder="Ім’я">
-                  <input class="main-form__input" type="tel" name="tel" placeholder="Номер телефону">
-                  <input class="main-form__input" type="text" name="age" placeholder="Вік дитини (від 7 до 17)">
+                  <input class="main-form__input main-form__phone" type="tel" name="tel" placeholder="Номер телефону" data-logika-phone-input>
+                  <div class="main-form__select-wrap" data-logika-age-select><select name="child_age" class="main-form__select" aria-label="Вік дитини (від 7 до 17)" aria-hidden="true" tabindex="-1"><option value="">Вік дитини (від 7 до 17)</option><option value="7">7 років</option><option value="8">8 років</option><option value="9">9 років</option><option value="10">10 років</option><option value="11">11 років</option><option value="12">12 років</option><option value="13">13 років</option><option value="14">14 років</option><option value="15">15 років</option><option value="16">16 років</option><option value="17">17 років</option></select><button class="main-form__input main-form__age-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="logika-child-age-static"><span class="main-form__age-label">Вік дитини (від 7 до 17)</span></button><ul class="main-form__age-dropdown" id="logika-child-age-static" role="listbox" hidden><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="7">7 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="8">8 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="9">9 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="10">10 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="11">11 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="12">12 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="13">13 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="14">14 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="15">15 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="16">16 років</button></li><li><button class="main-form__age-option" type="button" role="option" aria-selected="false" data-value="17">17 років</button></li></ul></div>
 
                 </div>
 
@@ -332,7 +332,7 @@
                 </div>
               </div>
             </li>
-          </div>
+          </ul>
         </div>
       </div>
     </section>
@@ -704,7 +704,7 @@
 
               <div class="transformation-section__item-slogan"><p>Створює власні ігри</p></div>
             </li>
-          </div>
+          </ul>
         </div>
       </div>
     </section>
@@ -777,7 +777,7 @@
                 </a>
               </div>
             </li>
-          </div>
+          </ul>
         </div>
       </div>
     </section>
@@ -1027,6 +1027,8 @@
   @include('partials/footer.html')
 
   <script src="js/swiper.js"></script>
+  <script src="js/vendor/intl-tel-input/intlTelInput.min.js"></script>
+  <script src="js/vendor/intl-tel-input/i18n-uk.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 

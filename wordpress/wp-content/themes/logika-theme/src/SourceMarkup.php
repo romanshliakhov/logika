@@ -1,0 +1,562 @@
+<?php
+
+declare(strict_types=1);
+
+final class Logika_Theme_Source_Markup {
+	/**
+	 * @var array<string, string>
+	 */
+	private const PAGE_SOURCES = array(
+		'about'           => 'about',
+		'faq'             => 'faq',
+		'it-courses'      => 'it-courses',
+		'english-courses' => 'en-courses',
+		'media-center'    => 'media-center',
+	);
+
+	/**
+	 * @var array<string, string>
+	 */
+	private const ROUTES = array(
+		'about.html'        => '/about/',
+		'faq.html'          => '/faq/',
+		'it-courses.html'   => '/it-courses/',
+		'en-courses.html'   => '/english-courses/',
+		'camps.html'        => '/camps/',
+		'media-center.html' => '/media-center/',
+	);
+
+	public static function renderPage( string $source ): void {
+		$markup = self::read( $source );
+
+		if ( '' === $markup ) {
+			return;
+		}
+
+		if ( 'index' === $source ) {
+			$markup = self::applyHomepageValues( $markup );
+		}
+
+		if ( preg_match( '#<main(?:\s[^>]*)?>.*?</main>#is', $markup, $matches ) ) {
+			echo self::rewriteAssets( $matches[0] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+	}
+
+	public static function renderFragment( string $fragment ): void {
+		echo self::rewriteAssets( self::read( $fragment ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	}
+
+	public static function sourceForCurrentPage(): ?string {
+		if ( ! is_page() ) {
+			return null;
+		}
+
+		$slug = get_post_field( 'post_name', get_queried_object_id() );
+
+		return self::PAGE_SOURCES[ $slug ] ?? null;
+	}
+
+	private static function read( string $source ): string {
+		$path = get_template_directory() . "/source-pages/{$source}.php";
+
+		if ( ! is_readable( $path ) ) {
+			return '';
+		}
+
+		ob_start();
+		require $path;
+
+		return (string) ob_get_clean();
+	}
+
+	private static function applyHomepageValues( string $markup ): string {
+		$page_id = (int) get_option( 'page_on_front' );
+		$title   = get_field( 'home_hero_title', $page_id );
+		$text    = get_field( 'home_hero_text', $page_id );
+
+		if ( $title ) {
+			$markup = str_replace( 'Найбільша в Україні школа програмування для дітей 7-17 років', esc_html( $title ), $markup );
+		}
+
+		if ( $text ) {
+			$markup = str_replace( 'Перші результати вже через 4 тижні', esc_html( $text ), $markup );
+		}
+
+		$markup = self::applyHomepageSectionText( $markup, $page_id );
+
+		$hero_boy_image = self::attachmentUrl( get_field( 'home_hero_boy_image', $page_id ) );
+		if ( $hero_boy_image ) {
+			$markup = str_replace( 'img/boy-character.svg', esc_url( $hero_boy_image ), $markup );
+		}
+
+		$hero_character_image = self::attachmentUrl( get_field( 'home_hero_character_image', $page_id ) );
+		if ( $hero_character_image ) {
+			$markup = str_replace( 'img/logika-character.svg', esc_url( $hero_character_image ), $markup );
+		}
+
+		$english_title = get_field( 'home_english_title', $page_id );
+		$english_text  = get_field( 'home_english_text', $page_id );
+
+		if ( $english_title ) {
+			$markup = str_replace( 'Англiйська мова в Logika', esc_html( $english_title ), $markup );
+		}
+
+		if ( $english_text ) {
+			$markup = str_replace(
+				'Навчаємо говорити англійською впевнено з перших занять — через практику, живе спілкування та сучасні методики. Програма підбирається за віком і рівнем, щоб дитині було цікаво та комфортно вчитися.',
+				esc_html( $english_text ),
+				$markup
+			);
+		}
+
+		$trust_defaults = array(
+			array( 'text' => 'З 2018 року на ринку', 'icon' => 'banner-bar/icon-calendar-check.svg' ),
+			array( 'text' => 'Освітня ліцензія', 'icon' => 'banner-bar/icon-document-certificate.svg' ),
+			array( 'text' => '4.9 рейтинг від клієнтів', 'icon' => 'banner-bar/icon-rating-star.svg' ),
+			array( 'text' => '178 шкіл в Україні', 'icon' => 'banner-bar/icon-outline_school.svg' ),
+			array( 'text' => '130 міст по Україні', 'icon' => 'banner-bar/icon-map-location.svg' ),
+			array( 'text' => '100тис+ успішних випускників', 'icon' => 'banner-bar/icon-tabler-school.svg' ),
+		);
+
+		foreach ( (array) get_field( 'home_trust_items', $page_id ) as $index => $item ) {
+			if ( ! isset( $trust_defaults[ $index ] ) || ! is_array( $item ) ) {
+				continue;
+			}
+
+			if ( ! empty( $item['text'] ) ) {
+				$markup = str_replace( $trust_defaults[ $index ]['text'], esc_html( $item['text'] ), $markup );
+			}
+
+			$icon = ! empty( $item['icon'] ) ? self::attachmentUrl( $item['icon'] ) : '';
+
+			if ( $icon ) {
+				$markup = str_replace( 'img/' . $trust_defaults[ $index ]['icon'], esc_url( $icon ), $markup );
+			}
+		}
+
+		$markup = str_replace(
+			'<form class="banner-section__form main-form">',
+			'<form class="banner-section__form main-form" data-logika-lead-form novalidate>',
+			$markup
+		);
+		$markup = str_replace(
+			'<input class="main-form__input" type="tel" name="tel" placeholder="Номер телефону">',
+			'<div class="main-form__phone-wrap"><input class="main-form__input main-form__phone" type="tel" name="tel" placeholder="Номер телефону" data-logika-phone-input aria-describedby="logika-phone-error"><span class="main-form__phone-error" id="logika-phone-error" data-logika-phone-error hidden>Введіть коректний номер телефону</span></div>',
+			$markup
+		);
+		$markup = str_replace(
+			'<input class="main-form__input main-form__phone" type="tel" name="tel" placeholder="Номер телефону" data-logika-phone-input>',
+			'<div class="main-form__phone-wrap"><input class="main-form__input main-form__phone" type="tel" name="tel" placeholder="Номер телефону" data-logika-phone-input aria-describedby="logika-phone-error"><span class="main-form__phone-error" id="logika-phone-error" data-logika-phone-error hidden>Введіть коректний номер телефону</span></div>',
+			$markup
+		);
+		$markup = str_replace(
+			'<p class="main-form__text">',
+			'<input type="hidden" name="form_id" value="trial_lesson"><input type="hidden" name="consent_accepted" value="1"><input type="hidden" name="consent_text_version" value="v1"><input type="hidden" name="idempotency_key" value=""><input class="main-form__honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><p class="main-form__text">',
+			$markup
+		);
+		$markup = str_replace(
+			'</a></p></form>',
+			'</a></p><p class="main-form__status" aria-live="polite" hidden></p></form>',
+			$markup
+		);
+		$markup = self::replaceHomepageAgeSelect( $markup, $page_id );
+
+		return str_replace( '<span>Наступні курси</span>', '<p>Наступні курси</p>', $markup );
+	}
+
+	private static function replaceHomepageAgeSelect( string $markup, int $page_id ): string {
+		$select = Logika_Theme_Lead_Form::render_age_select( $page_id );
+		$markup = str_replace( '<input class="main-form__input" type="text" name="age" placeholder="Вік дитини (від 7 до 17)">', $select, $markup );
+
+		return (string) preg_replace( '#<(?P<tag>span|div) class="main-form__select-wrap"[^>]*>.*?</(?P=tag)>#s', $select, $markup, 1 );
+	}
+
+	private static function applyHomepageSectionText( string $markup, int $page_id ): string {
+		foreach (
+			array(
+				'home_form_badge' => 'Перший урок — безкоштовно.',
+				'home_form_text' => 'Залиште заявку за 30 секунд — ми зателефонуємо і підберемо зручний час',
+				'home_programming_title' => 'Курси програмування',
+				'home_english_subtitle' => 'Не просто уроки, а мовне середовище',
+				'home_transformation_title' => 'Дайте дитині шанс не просто грати, а створювати',
+				'home_transformation_before_label' => 'Було',
+				'home_transformation_before_text' => 'Просто грає в ігри',
+				'home_transformation_after_label' => 'Стало',
+				'home_transformation_after_text' => 'Створює власні ігри',
+				'home_onboarding_title' => 'Як розпочати навчання',
+				'home_testimonials_title' => 'Довіра, підтверджена результатами',
+				'home_portfolio_title' => 'Проекти наших учнів',
+				'home_locations_title' => 'Знайдіть свою школу або навчайтесь онлайн',
+				'home_locations_text' => 'Наші школи у 130 містах України — знайдіть зручний варіант поруч із вами або навчайтесь онлайн.',
+				'home_media_title' => 'Медіа-центр',
+				'home_media_text' => 'Новини, події та корисні матеріали про навчання, розвиток дітей і світ технологій.',
+				'home_cta_title' => 'Підберемо курс саме для вашої дитини!',
+				'home_faq_title' => 'Питання та відповіді',
+				'home_certificates_title' => 'Ура, подарункові сертифікати',
+				'home_certificates_subtitle' => 'Вартість сертифікату на 2 місяці навчання = вартість 1-го місяця + вартість 2-го місяця зі знижкою 10%',
+				'home_certificates_text' => "Залиште заявку, і ми зв'яжемось з вами: відповімо на будь-які запитання і допоможемо обрати курс ",
+				'home_partners_title' => 'Наші партнери',
+			) as $field => $default
+		) {
+			$markup = self::replaceFieldText( $markup, $page_id, $field, $default );
+		}
+
+		$markup = self::replacePatternFieldText( $markup, $page_id, 'home_form_button', '#(<button class="main-form__btn btn btn--yellow">)(.*?)(\s*<svg)#s' );
+		$markup = self::replacePatternFieldText( $markup, $page_id, 'home_form_consent', '~(<p class="main-form__text">)(.*?)(<a href="#">Політикою конфіденційності</a></p>)~s' );
+		$markup = self::replacePatternFieldText( $markup, $page_id, 'home_english_cta_label', '~(<a href="#" class="english-section__link btn btn--yellow">)(.*?)(\s*<svg)~s' );
+		$markup = self::replacePatternFieldText( $markup, $page_id, 'home_transformation_cta_label', '~(<a href="#" class="transformation-section__link btn btn--yellow">)(.*?)(\s*<svg)~s' );
+		$markup = self::replacePatternFieldText( $markup, $page_id, 'home_certificates_button', '~(<a class="btn btn--violet" href="#">)(.*?)(\s*<svg)~s' );
+		$markup = self::replaceEnglishNextLabel( $markup, $page_id );
+
+		$markup = self::applyRepeaterRows(
+			$markup,
+			(array) get_field( 'home_marquee_items', $page_id ),
+			array(
+				array( 'text' => 'Перший урок – безкоштовно' ),
+				array( 'text' => 'Навчання з результатом' ),
+				array( 'text' => 'Уроки з живими викладачами' ),
+				array( 'text' => 'Інтерактивне навчання' ),
+				array( 'text' => 'Програмування для дітей 7-17' ),
+				array( 'text' => 'Англійська мова' ),
+			),
+			array( 'text' )
+		);
+
+		$markup = self::applyProgrammingRows(
+			$markup,
+			(array) get_field( 'home_programming_courses', $page_id ),
+			array(
+				array( 'age' => '7-8 рокiв', 'title' => 'Перший крок у свiт технологiй', 'text' => 'Допомагаємо дитині зробити перші впевнені кроки у світі технологій, розвиваючи логіку, увагу та базові комп’ютерні навички.', 'lesson_label' => 'Запис на безкоштовний урок', 'about_label' => 'Ознайомитись з курсами', 'image_webp' => 'img/services/service1.webp', 'image' => 'img/services/service1.png', 'icon' => 'img/services/service1.svg' ),
+				array( 'age' => '9-11 рокiв', 'title' => 'Вiд iгор до власних проектiв', 'text' => 'Діти переходять від ігор до створення власних проєктів, розвивають креативне мислення та вчаться працювати з різними цифровими інструментами.', 'lesson_label' => 'Запис на безкоштовний урок', 'about_label' => 'Ознайомитись з курсами', 'image_webp' => 'img/services/service1.webp', 'image' => 'img/services/service1.png', 'icon' => 'img/services/service1.svg' ),
+				array( 'age' => '12-14 рокiв', 'title' => 'Серйознi навички для серйозних цiлей', 'text' => 'Поглиблюємо знання в програмуванні, працюємо над реальними проєктами та формуємо навички, які стануть основою для подальшого розвитку в IT.', 'lesson_label' => 'Запис на безкоштовний урок', 'about_label' => 'Ознайомитись з курсами', 'image_webp' => 'img/services/service1.webp', 'image' => 'img/services/service1.png', 'icon' => 'img/services/service1.svg' ),
+				array( 'age' => '14-17 рокiв', 'title' => "Перший крок у IT-кар'єру", 'text' => 'Готуємо до перших кроків у кар’єрі: даємо практичні знання, знайомимо з сучасними технологіями та вчимо мислити як розробник.', 'lesson_label' => 'Запис на безкоштовний урок', 'about_label' => 'Ознайомитись з курсами', 'image_webp' => 'img/services/service1.webp', 'image' => 'img/services/service1.png', 'icon' => 'img/services/service1.svg' ),
+			),
+		);
+
+		$markup = self::applyEnglishRows(
+			$markup,
+			(array) get_field( 'home_english_levels', $page_id ),
+			array(
+				array( 'age' => '8-10 років', 'title' => 'Рівень А0', 'text' => 'Перші слова, фрази та знайомство з англійською', 'image' => 'img/english-courses/A0.svg' ),
+				array( 'age' => '10-12 років', 'title' => 'Рівень А1', 'text' => 'Базове спілкування, прості речення та щоденні теми', 'image' => 'img/english-courses/A1.svg' ),
+				array( 'age' => '10-12 років', 'title' => 'Рівень А2', 'text' => 'Більше практики та словникового запасу', 'image' => 'img/english-courses/A2.svg' ),
+				array( 'age' => '13-15 років', 'title' => 'Рівень B1', 'text' => 'Вільніше спілкування та розуміння живої мови', 'image' => 'img/english-courses/B1.svg' ),
+				array( 'age' => '15-17 років', 'title' => 'Рівень B2', 'text' => 'Впевнене володіння мовою та спілкування', 'image' => 'img/english-courses/B2.svg' ),
+			)
+		);
+
+		$markup = self::replacePictureImage( $markup, get_field( 'home_transformation_before_image', $page_id ), 'img/transformation/before.webp', 'img/transformation/before.png' );
+		$markup = self::replacePictureImage( $markup, get_field( 'home_transformation_after_image', $page_id ), 'img/transformation/after.webp', 'img/transformation/after.png' );
+
+		$markup = self::applyOnboardingRows(
+			$markup,
+			(array) get_field( 'home_onboarding_steps', $page_id ),
+			array(
+				array( 'title' => 'Залишiть заявку', 'text' => "Заповнiть форму або зателефонуйте. Менеджер зв'яжеться за 30 хвилин", 'button' => 'Залишити заявку', 'image' => 'img/onbording/onbording1.svg' ),
+				array( 'title' => 'Відвідайте безкоштовний пробний урок', 'text' => "Дитина спробує, ви подивитесь. Жодних зобов'язань", 'button' => 'Залишити заявку', 'image' => 'img/onbording/onbording2.svg' ),
+				array( 'title' => 'Розпочніть навчання та отримайте результат', 'text' => 'Регулярнi заняття, власнi проекти, вiдкритi уроки для батькiв', 'button' => 'Залишити заявку', 'image' => 'img/onbording/onbording3.svg' ),
+			),
+		);
+
+		$markup = self::replacePictureImage( $markup, get_field( 'home_certificates_image', $page_id ), 'img/certificates/certificate.webp', 'img/certificates/certificate.png' );
+		$markup = self::applyPartnerRows(
+			$markup,
+			(array) get_field( 'home_partners_items', $page_id ),
+			array(
+				array( 'webp' => 'img/Partners/think.webp', 'image' => 'img/Partners/think.png' ),
+				array( 'webp' => 'img/Partners/1+1.webp', 'image' => 'img/Partners/1+1.png' ),
+				array( 'webp' => 'img/Partners/Free.webp', 'image' => 'img/Partners/Free.png' ),
+				array( 'webp' => 'img/Partners/club.webp', 'image' => 'img/Partners/club.png' ),
+				array( 'webp' => 'img/Partners/ed.webp', 'image' => 'img/Partners/ed.png' ),
+				array( 'webp' => 'img/Partners/basis.webp', 'image' => 'img/Partners/basis.png' ),
+				array( 'webp' => 'img/Partners/fond.webp', 'image' => 'img/Partners/fond.png' ),
+				array( 'webp' => 'img/Partners/mriya.webp', 'image' => 'img/Partners/mriya.png' ),
+			)
+		);
+
+		return self::applyFaqRows(
+			$markup,
+			(array) get_field( 'home_faq_items', $page_id ),
+			array(
+				array( 'question' => 'Скільки коштує навчання в Logika?', 'answer' => 'Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.' ),
+				array( 'question' => 'З якого віку можна навчатися в Logika?', 'answer' => 'Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.' ),
+				array( 'question' => 'Чи потрібен досвід у програмуванні або англійській?', 'answer' => 'Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.' ),
+				array( 'question' => 'Як проходять заняття?', 'answer' => 'Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.' ),
+				array( 'question' => 'Що отримає дитина під час навчання?', 'answer' => 'Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.' ),
+				array( 'question' => 'Як записатися на безкоштовний пробний урок?', 'answer' => 'Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.' ),
+				array( 'question' => 'Чим Logika відрізняється від інших шкіл?', 'answer' => 'Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.' ),
+			)
+		);
+	}
+
+	private static function replaceFieldText( string $markup, int $page_id, string $field, string $default ): string {
+		$value = trim( (string) get_field( $field, $page_id ) );
+
+		return '' === $value ? $markup : str_replace( $default, esc_html( $value ), $markup );
+	}
+
+	private static function replacePatternFieldText( string $markup, int $page_id, string $field, string $pattern ): string {
+		$value = trim( (string) get_field( $field, $page_id ) );
+
+		if ( '' === $value ) {
+			return $markup;
+		}
+
+		return (string) preg_replace_callback(
+			$pattern,
+			static fn( array $matches ): string => $matches[1] . esc_html( $value ) . $matches[3],
+			$markup,
+			1
+		);
+	}
+
+	private static function replaceEnglishNextLabel( string $markup, int $page_id ): string {
+		$value = trim( (string) get_field( 'home_english_next_label', $page_id ) );
+
+		if ( '' !== $value ) {
+			return (string) preg_replace(
+				'#(<button class="swiper-btn swiper-button-next">)<span>.*?</span>#s',
+				'$1<p>' . esc_html( $value ) . '</p>',
+				$markup,
+				1
+			);
+		}
+
+		return (string) preg_replace( '#(<button class="swiper-btn swiper-button-next">)<span>(.*?)</span>#s', '$1<p>$2</p>', $markup, 1 );
+	}
+
+	/**
+	 * @param array<int, mixed> $rows
+	 * @param array<int, array<string, string>> $defaults
+	 */
+	private static function applyProgrammingRows( string $markup, array $rows, array $defaults ): string {
+		$index = 0;
+
+		return (string) preg_replace_callback(
+			'#<li class="services-section__item">.*?</li>#s',
+			static function ( array $matches ) use ( $rows, $defaults, &$index ): string {
+				$item = $matches[0];
+				$row = $rows[ $index ] ?? null;
+				$default = $defaults[ $index ] ?? null;
+				$index++;
+
+				if ( ! is_array( $row ) || ! is_array( $default ) ) {
+					return $item;
+				}
+
+				foreach ( array( 'age', 'title', 'text', 'lesson_label', 'about_label' ) as $key ) {
+					$value = trim( (string) ( $row[ $key ] ?? '' ) );
+					if ( '' !== $value && isset( $default[ $key ] ) ) {
+						$item = str_replace( $default[ $key ], esc_html( $value ), $item );
+					}
+				}
+
+				$tags = self::lines( (string) ( $row['tags'] ?? '' ) );
+				if ( $tags ) {
+					$list = implode( '', array_map( static fn( string $tag ): string => '<li class="h5">' . esc_html( $tag ) . '</li>', $tags ) );
+					$item = (string) preg_replace( '#<ul class="services-section__item-tags">.*?</ul>#s', '<ul class="services-section__item-tags">' . $list . '</ul>', $item, 1 );
+				}
+
+				$item = self::replacePictureImage( $item, $row['image'] ?? 0, $default['image_webp'] ?? '', $default['image'] ?? '' );
+				$item = self::replaceImagePath( $item, $row['icon'] ?? 0, $default['icon'] ?? '' );
+
+				return $item;
+			},
+			$markup
+		);
+	}
+
+	/**
+	 * @param array<int, mixed> $rows
+	 * @param array<int, array<string, string>> $defaults
+	 */
+	private static function applyEnglishRows( string $markup, array $rows, array $defaults ): string {
+		$index = 0;
+
+		return (string) preg_replace_callback(
+			'#<li class="swiper-slide"><div class="english-level">.*?</div></li>#s',
+			static function ( array $matches ) use ( $rows, $defaults, &$index ): string {
+				$item = $matches[0];
+				$row = $rows[ $index ] ?? null;
+				$default = $defaults[ $index ] ?? null;
+				$index++;
+
+				if ( ! is_array( $row ) || ! is_array( $default ) ) {
+					return $item;
+				}
+
+				foreach ( array( 'age', 'title', 'text' ) as $key ) {
+					$value = trim( (string) ( $row[ $key ] ?? '' ) );
+					if ( '' !== $value && isset( $default[ $key ] ) ) {
+						$item = str_replace( $default[ $key ], esc_html( $value ), $item );
+					}
+				}
+
+				return self::replaceImagePath( $item, $row['image'] ?? 0, $default['image'] ?? '' );
+			},
+			$markup
+		);
+	}
+
+	/**
+	 * @param array<int, mixed> $rows
+	 * @param array<int, array<string, string>> $defaults
+	 */
+	private static function applyOnboardingRows( string $markup, array $rows, array $defaults ): string {
+		$index = 0;
+
+		return (string) preg_replace_callback(
+			'#<li class="onboarding-section__item">.*?</li>#s',
+			static function ( array $matches ) use ( $rows, $defaults, &$index ): string {
+				$item = $matches[0];
+				$row = $rows[ $index ] ?? null;
+				$default = $defaults[ $index ] ?? null;
+				$index++;
+
+				if ( ! is_array( $row ) || ! is_array( $default ) ) {
+					return $item;
+				}
+
+				foreach ( array( 'title', 'text', 'button' ) as $key ) {
+					$value = trim( (string) ( $row[ $key ] ?? '' ) );
+					if ( '' !== $value && isset( $default[ $key ] ) ) {
+						$item = str_replace( $default[ $key ], esc_html( $value ), $item );
+					}
+				}
+
+				return self::replaceImagePath( $item, $row['image'] ?? 0, $default['image'] ?? '' );
+			},
+			$markup
+		);
+	}
+
+	/**
+	 * @param array<int, mixed> $rows
+	 * @param array<int, array<string, string>> $defaults
+	 */
+	private static function applyPartnerRows( string $markup, array $rows, array $defaults ): string {
+		$index = 0;
+
+		return (string) preg_replace_callback(
+			'#<li><picture><source type="image/webp" srcset="img/Partners/[^"]+"><img width="305" height="180" src="img/Partners/[^"]+" alt=""></picture></li>#',
+			static function ( array $matches ) use ( $rows, $defaults, &$index ): string {
+				$item = $matches[0];
+				$row = $rows[ $index ] ?? null;
+				$default = $defaults[ $index ] ?? null;
+				$index++;
+
+				if ( ! is_array( $row ) || ! is_array( $default ) ) {
+					return $item;
+				}
+
+				return self::replacePictureImage( $item, $row['image'] ?? 0, $default['webp'] ?? '', $default['image'] ?? '' );
+			},
+			$markup
+		);
+	}
+
+	/**
+	 * @param array<int, mixed> $rows
+	 * @param array<int, array<string, string>> $defaults
+	 */
+	private static function applyFaqRows( string $markup, array $rows, array $defaults ): string {
+		$index = 0;
+
+		return (string) preg_replace_callback(
+			'#<li class="accordion__item">.*?</li>#s',
+			static function ( array $matches ) use ( $rows, $defaults, &$index ): string {
+				$item = $matches[0];
+				$row = $rows[ $index ] ?? null;
+				$index++;
+
+				if ( ! is_array( $row ) || ! isset( $defaults[ $index - 1 ] ) ) {
+					return $item;
+				}
+
+				$question = trim( (string) ( $row['question'] ?? '' ) );
+				$answer = trim( (string) ( $row['answer'] ?? '' ) );
+
+				if ( '' !== $question ) {
+					$item = (string) preg_replace( '#(<button class="accordion__btn h5" data-id="\d+">).*?(</button>)#s', '$1' . esc_html( $question ) . '$2', $item, 1 );
+				}
+
+				if ( '' !== $answer ) {
+					$item = (string) preg_replace( '#(<div class="editor"><p>).*?(</p></div>)#s', '$1' . esc_html( $answer ) . '$2', $item, 1 );
+				}
+
+				return $item;
+			},
+			$markup
+		);
+	}
+
+	/**
+	 * @return string[]
+	 */
+	private static function lines( string $value ): array {
+		return array_values( array_filter( array_map( 'trim', preg_split( '/\r\n|\r|\n|,/', $value ) ?: array() ) ) );
+	}
+
+	/**
+	 * @param array<int, mixed> $rows
+	 * @param array<int, array<string, string>> $defaults
+	 * @param string[] $keys
+	 */
+	private static function applyRepeaterRows( string $markup, array $rows, array $defaults, array $keys ): string {
+		foreach ( $rows as $index => $row ) {
+			if ( ! is_array( $row ) || ! isset( $defaults[ $index ] ) ) {
+				continue;
+			}
+
+			foreach ( $keys as $key ) {
+				$value = trim( (string) ( $row[ $key ] ?? '' ) );
+				if ( '' !== $value && isset( $defaults[ $index ][ $key ] ) ) {
+					$markup = str_replace( $defaults[ $index ][ $key ], esc_html( $value ), $markup );
+				}
+			}
+		}
+
+		return $markup;
+	}
+
+	private static function attachmentUrl( mixed $attachment ): string {
+		$id = is_array( $attachment ) && isset( $attachment['ID'] ) ? (int) $attachment['ID'] : (int) $attachment;
+
+		if ( $id > 0 && str_starts_with( wp_specialchars_decode( get_the_title( $id ), ENT_QUOTES ), 'Головна ' ) ) {
+			return '';
+		}
+
+		$url = $id > 0 ? wp_get_attachment_image_url( $id, 'full' ) : false;
+
+		return $url ? (string) $url : '';
+	}
+
+	private static function replaceImagePath( string $markup, mixed $attachment, string $path ): string {
+		$url = self::attachmentUrl( $attachment );
+
+		return '' === $url || '' === $path ? $markup : str_replace( $path, esc_url( $url ), $markup );
+	}
+
+	private static function replacePictureImage( string $markup, mixed $attachment, string $webp_path, string $image_path ): string {
+		$url = self::attachmentUrl( $attachment );
+
+		if ( '' === $url || '' === $image_path ) {
+			return $markup;
+		}
+
+		$markup = '' === $webp_path ? $markup : str_replace( 'type="image/webp" srcset="' . $webp_path . '"', 'srcset="' . esc_url( $url ) . '"', $markup );
+
+		return str_replace( 'src="' . $image_path . '"', 'src="' . esc_url( $url ) . '"', $markup );
+	}
+
+	private static function rewriteAssets( string $markup ): string {
+		$assets = esc_url( get_template_directory_uri() . '/assets/img/' );
+
+		foreach ( self::ROUTES as $source => $route ) {
+			$markup = str_replace( "href=\"/{$source}\"", 'href="' . esc_url( home_url( $route ) ) . '"', $markup );
+			$markup = str_replace( "href=\"{$source}\"", 'href="' . esc_url( home_url( $route ) ) . '"', $markup );
+		}
+
+		return (string) preg_replace( '#(["\'])img/#', '$1' . $assets, $markup );
+	}
+}

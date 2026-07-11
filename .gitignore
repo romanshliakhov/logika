@@ -1,3 +1,13 @@
 node_modules
 .env
 .worktrees/
+wordpress/*
+!wordpress/wp-content/
+wordpress/wp-content/*
+!wordpress/wp-content/plugins/
+!wordpress/wp-content/themes/
+wordpress/wp-content/plugins/*
+!wordpress/wp-content/plugins/logika-core/
+!wordpress/wp-content/plugins/logika-leads/
+wordpress/wp-content/themes/*
+!wordpress/wp-content/themes/logika-theme/

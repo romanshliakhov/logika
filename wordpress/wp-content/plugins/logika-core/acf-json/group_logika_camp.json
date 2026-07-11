@@ -1,0 +1,24 @@
+{
+  "key": "group_logika_camp",
+  "title": "Табір",
+  "fields": [
+    {"key":"field_camp_external_id","label":"Зовнішній ID","name":"camp_external_id","type":"text"},
+    {"key":"field_camp_start_date","label":"Дата початку","name":"camp_start_date","type":"date_picker","return_format":"Y-m-d"},
+    {"key":"field_camp_end_date","label":"Дата завершення","name":"camp_end_date","type":"date_picker","return_format":"Y-m-d"},
+    {"key":"field_camp_season","label":"Сезон","name":"camp_season","type":"text"},
+    {"key":"field_camp_format","label":"Формат навчання","name":"camp_format","type":"taxonomy","taxonomy":"learning_format","field_type":"select","required":1,"return_format":"id"},
+    {"key":"field_camp_related_cities","label":"Міста","name":"camp_related_cities","type":"relationship","post_type":["city"],"return_format":"id"},
+    {"key":"field_camp_related_course","label":"Пов'язаний курс","name":"camp_related_course","type":"post_object","post_type":["course"],"return_format":"id"},
+    {"key":"field_camp_program","label":"Програма","name":"camp_program","type":"repeater","layout":"block","sub_fields":[{"key":"field_camp_program_title","label":"Заголовок","name":"title","type":"text"},{"key":"field_camp_program_description","label":"Опис","name":"description","type":"wysiwyg"},{"key":"field_camp_program_items","label":"Пункти","name":"items","type":"repeater","layout":"table","sub_fields":[{"key":"field_camp_program_item_text","label":"Пункт","name":"item_text","type":"text"}]}]},
+    {"key":"field_camp_gallery","label":"Галерея","name":"camp_gallery","type":"gallery","return_format":"id"},
+    {"key":"field_camp_cta_label","label":"Текст CTA","name":"camp_cta_label","type":"text"},
+    {"key":"field_camp_is_active","label":"Активний табір","name":"camp_is_active","type":"true_false","required":1,"default_value":1},
+    {"key":"field_camp_expired_state_text","label":"Повідомлення після завершення","name":"camp_expired_state_text","type":"textarea"},
+    {"key":"field_camp_seo_title","label":"SEO-заголовок","name":"camp_seo_title","type":"text"},
+    {"key":"field_camp_seo_description","label":"SEO-опис","name":"camp_seo_description","type":"textarea"}
+  ],
+  "location": [[{"param":"post_type","operator":"==","value":"camp"}]],
+  "active": true,
+  "position": "acf_after_title",
+  "show_in_rest": true
+}

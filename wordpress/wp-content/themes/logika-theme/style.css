@@ -1,0 +1,17 @@
+/*
+Theme Name: Logika Theme
+Description: Тема сайту школи Logika.
+Version: 0.1.0
+Requires at least: 7.0
+Requires PHP: 8.3
+Text Domain: logika-theme
+*/
+
+:root { color: #172044; font-family: Arial, sans-serif; }
+body { margin: 0; background: #f7f8fc; }
+.site-header, .site-footer, main { max-width: 1120px; margin: auto; padding: 24px; }
+.site-header, .site-footer { display: flex; justify-content: space-between; align-items: center; }
+.hero { padding: 96px 24px; text-align: center; }
+.hero h1 { font-size: clamp(2rem, 6vw, 4.5rem); margin: 0; }
+.hero p { font-size: 1.25rem; }
+.button { display: inline-block; padding: 14px 24px; border-radius: 999px; background: #ff6a3d; color: #fff; text-decoration: none; }

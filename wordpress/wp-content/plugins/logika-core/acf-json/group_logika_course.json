@@ -1,0 +1,28 @@
+{
+  "key": "group_logika_course",
+  "title": "Курс",
+  "fields": [
+    {"key":"field_course_external_id","label":"Зовнішній ID","name":"course_external_id","type":"text"},
+    {"key":"field_course_age_min","label":"Вік від","name":"course_age_min","type":"number","min":0},
+    {"key":"field_course_age_max","label":"Вік до","name":"course_age_max","type":"number","min":0},
+    {"key":"field_course_direction","label":"Напрям","name":"course_direction","type":"taxonomy","taxonomy":"course_direction","field_type":"select","required":1,"return_format":"id"},
+    {"key":"field_course_format","label":"Формат навчання","name":"course_format","type":"taxonomy","taxonomy":"learning_format","field_type":"select","required":1,"return_format":"id"},
+    {"key":"field_course_short_description","label":"Короткий опис","name":"course_short_description","type":"textarea"},
+    {"key":"field_course_program","label":"Програма","name":"course_program","type":"repeater","layout":"block","sub_fields":[{"key":"field_course_program_title","label":"Заголовок","name":"title","type":"text"},{"key":"field_course_program_description","label":"Опис","name":"description","type":"wysiwyg"},{"key":"field_course_program_items","label":"Пункти","name":"items","type":"repeater","layout":"table","sub_fields":[{"key":"field_course_program_item_text","label":"Пункт","name":"item_text","type":"text"}]}]},
+    {"key":"field_course_projects","label":"Проєкти","name":"course_projects","type":"repeater","layout":"table","sub_fields":[{"key":"field_course_project_title","label":"Назва","name":"project_title","type":"text"},{"key":"field_course_project_description","label":"Опис","name":"project_description","type":"textarea"},{"key":"field_course_project_image","label":"Зображення","name":"project_image","type":"image","return_format":"id"}]},
+    {"key":"field_course_cta_label","label":"Текст CTA","name":"course_cta_label","type":"text"},
+    {"key":"field_course_cta_text","label":"Опис CTA","name":"course_cta_text","type":"textarea"},
+    {"key":"field_course_related_cities","label":"Доступні міста","name":"course_related_cities","type":"relationship","post_type":["city"],"return_format":"id"},
+    {"key":"field_course_related_faq","label":"FAQ","name":"course_related_faq","type":"relationship","post_type":["faq_item"],"return_format":"id"},
+    {"key":"field_course_related_reviews","label":"Відгуки","name":"course_related_reviews","type":"relationship","post_type":["review"],"return_format":"id"},
+    {"key":"field_course_card_image","label":"Зображення картки","name":"course_card_image","type":"image","return_format":"id"},
+    {"key":"field_course_hero_image","label":"Зображення hero","name":"course_hero_image","type":"image","return_format":"id"},
+    {"key":"field_course_seo_title","label":"SEO-заголовок","name":"course_seo_title","type":"text"},
+    {"key":"field_course_seo_description","label":"SEO-опис","name":"course_seo_description","type":"textarea"},
+    {"key":"field_course_schema_course","label":"Дані схеми Course","name":"course_schema_course","type":"group","sub_fields":[{"key":"field_course_schema_name","label":"Назва","name":"name","type":"text"},{"key":"field_course_schema_description","label":"Опис","name":"description","type":"textarea"}]}
+  ],
+  "location": [[{"param":"post_type","operator":"==","value":"course"}]],
+  "active": true,
+  "position": "acf_after_title",
+  "show_in_rest": true
+}

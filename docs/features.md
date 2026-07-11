@@ -27,6 +27,7 @@ Requirements:
 - until CRM is finalized, leads should be stored in WordPress so they are not lost.
 - forms must pass page context: city, course, URL, UTM, referrer.
 - key pages should have clear CTA logic.
+- phone fields should preselect the country code from safe hosting/CDN geo headers with an admin fallback.
 
 Acceptance criteria:
 
