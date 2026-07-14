@@ -84,12 +84,12 @@ final class Logika_Theme_Source_Markup {
 
 		$markup = self::applyHomepageSectionText( $markup, $page_id );
 
-		$hero_boy_image = self::attachmentUrl( get_field( 'home_hero_boy_image', $page_id ) );
+		$hero_boy_image = self::attachmentUrl( get_field( 'home_hero_boy_image_override', $page_id ), true );
 		if ( $hero_boy_image ) {
 			$markup = str_replace( 'img/boy-character.svg', esc_url( $hero_boy_image ), $markup );
 		}
 
-		$hero_character_image = self::attachmentUrl( get_field( 'home_hero_character_image', $page_id ) );
+		$hero_character_image = self::attachmentUrl( get_field( 'home_hero_character_image_override', $page_id ), true );
 		if ( $hero_character_image ) {
 			$markup = str_replace( 'img/logika-character.svg', esc_url( $hero_character_image ), $markup );
 		}
@@ -127,7 +127,7 @@ final class Logika_Theme_Source_Markup {
 				$markup = str_replace( $trust_defaults[ $index ]['text'], esc_html( $item['text'] ), $markup );
 			}
 
-			$icon = ! empty( $item['icon'] ) ? self::attachmentUrl( $item['icon'] ) : '';
+			$icon = ! empty( $item['icon_override'] ) ? self::attachmentUrl( $item['icon_override'], true ) : '';
 
 			if ( $icon ) {
 				$markup = str_replace( 'img/' . $trust_defaults[ $index ]['icon'], esc_url( $icon ), $markup );
@@ -245,8 +245,8 @@ final class Logika_Theme_Source_Markup {
 			)
 		);
 
-		$markup = self::replacePictureImage( $markup, get_field( 'home_transformation_before_image', $page_id ), 'img/transformation/before.webp', 'img/transformation/before.png' );
-		$markup = self::replacePictureImage( $markup, get_field( 'home_transformation_after_image', $page_id ), 'img/transformation/after.webp', 'img/transformation/after.png' );
+		$markup = self::replacePictureImage( $markup, get_field( 'home_transformation_before_image_override', $page_id ), 'img/transformation/before.webp', 'img/transformation/before.png', true );
+		$markup = self::replacePictureImage( $markup, get_field( 'home_transformation_after_image_override', $page_id ), 'img/transformation/after.webp', 'img/transformation/after.png', true );
 
 		$markup = self::applyOnboardingRows(
 			$markup,
@@ -258,7 +258,7 @@ final class Logika_Theme_Source_Markup {
 			),
 		);
 
-		$markup = self::replacePictureImage( $markup, get_field( 'home_certificates_image', $page_id ), 'img/certificates/certificate.webp', 'img/certificates/certificate.png' );
+		$markup = self::replacePictureImage( $markup, get_field( 'home_certificates_image_override', $page_id ), 'img/certificates/certificate.webp', 'img/certificates/certificate.png', true );
 		$markup = self::applyPartnerRows(
 			$markup,
 			(array) get_field( 'home_partners_items', $page_id ),
@@ -357,8 +357,8 @@ final class Logika_Theme_Source_Markup {
 					$item = (string) preg_replace( '#<ul class="services-section__item-tags">.*?</ul>#s', '<ul class="services-section__item-tags">' . $list . '</ul>', $item, 1 );
 				}
 
-				$item = self::replacePictureImage( $item, $row['image'] ?? 0, $default['image_webp'] ?? '', $default['image'] ?? '' );
-				$item = self::replaceImagePath( $item, $row['icon'] ?? 0, $default['icon'] ?? '' );
+				$item = self::replacePictureImage( $item, $row['image_override'] ?? 0, $default['image_webp'] ?? '', $default['image'] ?? '', true );
+				$item = self::replaceImagePath( $item, $row['icon_override'] ?? 0, $default['icon'] ?? '', true );
 
 				return $item;
 			},
@@ -392,7 +392,7 @@ final class Logika_Theme_Source_Markup {
 					}
 				}
 
-				return self::replaceImagePath( $item, $row['image'] ?? 0, $default['image'] ?? '' );
+				return self::replaceImagePath( $item, $row['image_override'] ?? 0, $default['image'] ?? '', true );
 			},
 			$markup
 		);
@@ -424,7 +424,7 @@ final class Logika_Theme_Source_Markup {
 					}
 				}
 
-				return self::replaceImagePath( $item, $row['image'] ?? 0, $default['image'] ?? '' );
+				return self::replaceImagePath( $item, $row['image_override'] ?? 0, $default['image'] ?? '', true );
 			},
 			$markup
 		);
@@ -449,7 +449,7 @@ final class Logika_Theme_Source_Markup {
 					return $item;
 				}
 
-				return self::replacePictureImage( $item, $row['image'] ?? 0, $default['webp'] ?? '', $default['image'] ?? '' );
+				return self::replacePictureImage( $item, $row['image_override'] ?? 0, $default['webp'] ?? '', $default['image'] ?? '', true );
 			},
 			$markup
 		);
@@ -519,10 +519,10 @@ final class Logika_Theme_Source_Markup {
 		return $markup;
 	}
 
-	private static function attachmentUrl( mixed $attachment ): string {
+	private static function attachmentUrl( mixed $attachment, bool $is_override = false ): string {
 		$id = is_array( $attachment ) && isset( $attachment['ID'] ) ? (int) $attachment['ID'] : (int) $attachment;
 
-		if ( $id > 0 && str_starts_with( wp_specialchars_decode( get_the_title( $id ), ENT_QUOTES ), 'Головна ' ) ) {
+		if ( ! $is_override && $id > 0 && str_starts_with( wp_specialchars_decode( get_the_title( $id ), ENT_QUOTES ), 'Головна ' ) ) {
 			return '';
 		}
 
@@ -531,14 +531,14 @@ final class Logika_Theme_Source_Markup {
 		return $url ? (string) $url : '';
 	}
 
-	private static function replaceImagePath( string $markup, mixed $attachment, string $path ): string {
-		$url = self::attachmentUrl( $attachment );
+	private static function replaceImagePath( string $markup, mixed $attachment, string $path, bool $is_override = false ): string {
+		$url = self::attachmentUrl( $attachment, $is_override );
 
 		return '' === $url || '' === $path ? $markup : str_replace( $path, esc_url( $url ), $markup );
 	}
 
-	private static function replacePictureImage( string $markup, mixed $attachment, string $webp_path, string $image_path ): string {
-		$url = self::attachmentUrl( $attachment );
+	private static function replacePictureImage( string $markup, mixed $attachment, string $webp_path, string $image_path, bool $is_override = false ): string {
+		$url = self::attachmentUrl( $attachment, $is_override );
 
 		if ( '' === $url || '' === $image_path ) {
 			return $markup;

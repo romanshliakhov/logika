@@ -27,17 +27,16 @@ function logika_theme_assets(): void {
 	$uri     = get_template_directory_uri() . '/assets';
 	$version = wp_get_theme()->get( 'Version' );
 	$leads_version = (string) filemtime( get_template_directory() . '/assets/js/leads.js' );
-	$phone_country = function_exists( 'get_field' ) ? (string) get_field( 'form_phone_country_default', 'option' ) : '';
-	$phone_country = preg_match( '/^[A-Za-z]{2}$/', $phone_country ) ? strtoupper( $phone_country ) : 'UA';
-
+	$phone_dropup_version = (string) filemtime( get_template_directory() . '/assets/css/phone-dropdown-dropup.css' );
 	wp_enqueue_style( 'logika-intl-tel-input', $uri . '/css/vendor/intl-tel-input/intlTelInput.min.css', array(), '20.1.0' );
 	wp_enqueue_style( 'logika-theme', $uri . '/css/style.css', array( 'logika-intl-tel-input' ), $version );
+	wp_enqueue_style( 'logika-phone-dropdown-dropup', $uri . '/css/phone-dropdown-dropup.css', array( 'logika-theme' ), $phone_dropup_version );
 	wp_enqueue_script( 'logika-swiper', $uri . '/js/swiper.js', array(), $version, true );
 	wp_enqueue_script( 'logika-theme', $uri . '/js/main.js', array( 'logika-swiper' ), $version, true );
 	wp_enqueue_script( 'logika-intl-tel-input', $uri . '/js/vendor/intl-tel-input/intlTelInput.min.js', array(), '20.1.0', true );
 	wp_enqueue_script( 'logika-intl-tel-input-i18n-uk', $uri . '/js/vendor/intl-tel-input/i18n-uk.js', array( 'logika-intl-tel-input' ), $version, true );
 	wp_enqueue_script( 'logika-leads', $uri . '/js/leads.js', array( 'logika-intl-tel-input-i18n-uk' ), $leads_version, true );
-	wp_localize_script( 'logika-leads', 'logikaLead', array( 'endpoint' => esc_url_raw( rest_url( 'logika/v1/leads' ) ), 'tokenEndpoint' => esc_url_raw( rest_url( 'logika/v1/forms/token' ) ), 'phoneCountryDefault' => $phone_country, 'phoneCountryEndpoint' => esc_url_raw( rest_url( 'logika/v1/phone-country' ) ), 'phoneUtilsUrl' => esc_url_raw( $uri . '/js/vendor/intl-tel-input/utils.js' ) ) );
+	wp_localize_script( 'logika-leads', 'logikaLead', array( 'endpoint' => esc_url_raw( rest_url( 'logika/v1/leads' ) ), 'tokenEndpoint' => esc_url_raw( rest_url( 'logika/v1/forms/token' ) ), 'phoneCountryDefault' => 'UA', 'phoneCountryEndpoint' => esc_url_raw( rest_url( 'logika/v1/phone-country' ) ), 'phoneUtilsUrl' => esc_url_raw( $uri . '/js/vendor/intl-tel-input/utils.js' ) ) );
 	wp_enqueue_script( 'logika-city-selector', $uri . '/js/city-selector.js', array(), $version, true );
 	wp_localize_script( 'logika-city-selector', 'logikaCitySelector', array( 'endpoint' => esc_url_raw( rest_url( 'logika/v1/cities' ) ) ) );
 }

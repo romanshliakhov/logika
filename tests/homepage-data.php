@@ -20,6 +20,8 @@ $certificates_button_original = get_field( 'home_certificates_button', $page_id 
 $partners_title_original = get_field( 'home_partners_title', $page_id );
 $hero_boy_original = get_field( 'home_hero_boy_image', $page_id );
 $hero_character_original = get_field( 'home_hero_character_image', $page_id );
+$hero_boy_override_original = get_field( 'home_hero_boy_image_override', $page_id );
+$hero_character_override_original = get_field( 'home_hero_character_image_override', $page_id );
 $gallery_original = get_field( 'home_image_gallery', $page_id );
 $age_placeholder_original = get_field( 'home_form_age_placeholder', $page_id );
 $age_options_original = get_field( 'home_form_age_options', $page_id );
@@ -82,6 +84,8 @@ register_shutdown_function(
 		$partners_title_original,
 			$hero_boy_original,
 			$hero_character_original,
+			$hero_boy_override_original,
+			$hero_character_override_original,
 			$gallery_original,
 			$age_placeholder_original,
 			$age_options_original,
@@ -106,6 +110,8 @@ register_shutdown_function(
 				'home_partners_title' => $partners_title_original,
 					'home_hero_boy_image' => $hero_boy_original,
 					'home_hero_character_image' => $hero_character_original,
+					'home_hero_boy_image_override' => $hero_boy_override_original,
+					'home_hero_character_image_override' => $hero_character_override_original,
 					'home_image_gallery' => $gallery_original,
 					'home_form_age_placeholder' => $age_placeholder_original,
 					'home_form_age_options' => $age_options_original,
@@ -137,8 +143,8 @@ update_field( 'home_faq_items', array( array( 'question' => $faq_question, 'answ
 update_field( 'home_certificates_title', $certificates_title, $page_id );
 update_field( 'home_certificates_button', $certificates_button, $page_id );
 update_field( 'home_partners_title', $partners_title, $page_id );
-update_field( 'home_hero_boy_image', $hero_boy_id, $page_id );
-update_field( 'home_hero_character_image', $hero_character_id, $page_id );
+update_field( 'home_hero_boy_image_override', $hero_boy_id, $page_id );
+update_field( 'home_hero_character_image_override', $hero_character_id, $page_id );
 update_field( 'home_image_gallery', array( $hero_boy_id, $hero_character_id, $trust_icon_id ), $page_id );
 update_field( 'home_form_age_placeholder', $age_placeholder, $page_id );
 update_field( 'home_form_age_options', $age_options, $page_id );
@@ -236,16 +242,16 @@ foreach (
 	}
 }
 
-if ( null === $hero_boy_original || false === $hero_boy_original || '' === $hero_boy_original ) {
-	delete_field( 'home_hero_boy_image', $page_id );
+if ( null === $hero_boy_override_original || false === $hero_boy_override_original || '' === $hero_boy_override_original ) {
+	delete_field( 'home_hero_boy_image_override', $page_id );
 } else {
-	update_field( 'home_hero_boy_image', $hero_boy_original, $page_id );
+	update_field( 'home_hero_boy_image_override', $hero_boy_override_original, $page_id );
 }
 
-if ( null === $hero_character_original || false === $hero_character_original || '' === $hero_character_original ) {
-	delete_field( 'home_hero_character_image', $page_id );
+if ( null === $hero_character_override_original || false === $hero_character_override_original || '' === $hero_character_override_original ) {
+	delete_field( 'home_hero_character_image_override', $page_id );
 } else {
-	update_field( 'home_hero_character_image', $hero_character_original, $page_id );
+	update_field( 'home_hero_character_image_override', $hero_character_override_original, $page_id );
 }
 
 if ( null === $gallery_original || false === $gallery_original || array() === $gallery_original ) {

@@ -1,0 +1,23 @@
+[ 2634459ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[ 5297278ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[ 8043288ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[12044311ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[18285223ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[20985264ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[34823678ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[37203722ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[45632212ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[50343222ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[89275167ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[90450276ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[92260355ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[97346307ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[102615787ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[104395822ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[105295846ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[106195867ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[107108358ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[117509215ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[118895652ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[165044269ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0
+[172287211ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://logika.ddev.site/wp-admin/admin-ajax.php:0

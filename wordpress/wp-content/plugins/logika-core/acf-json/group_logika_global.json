@@ -17,7 +17,6 @@
     {"key":"field_form_privacy_text_version","label":"Версія тексту приватності","name":"form_privacy_text_version","type":"text","required":1},
     {"key":"field_form_default_success_message","label":"Повідомлення про успіх","name":"form_default_success_message","type":"textarea","required":1},
     {"key":"field_form_default_error_message","label":"Безпечне повідомлення про помилку","name":"form_default_error_message","type":"textarea","required":1},
-    {"key":"field_form_phone_country_default","label":"Країна телефону за замовчуванням","name":"form_phone_country_default","type":"text","instructions":"ISO-код країни з двох літер для початкового вибору у полі телефону. Наприклад: UA, PL, US.","default_value":"UA"},
     {"key":"field_form_allowed_ids","label":"Дозволені ID форм","name":"form_allowed_ids","type":"repeater","required":1,"layout":"table","sub_fields":[{"key":"field_form_allowed_id","label":"ID форми","name":"form_id","type":"text"},{"key":"field_form_allowed_label","label":"Підпис","name":"label","type":"text"}]},
     {"key":"field_seo_default_title_template","label":"Шаблон SEO-заголовка","name":"seo_default_title_template","type":"text"},
     {"key":"field_seo_default_description_template","label":"Шаблон SEO-опису","name":"seo_default_description_template","type":"textarea"},

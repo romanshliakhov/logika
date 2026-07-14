@@ -31,6 +31,49 @@ One of the main technical capabilities is selecting a city via an interactive ma
 23. For the latest documentation, always check `/docs/links.md`.
 24. For CI/CD setup, refer to `/docs/deployment.md`.
 25. All local WordPress development must use Docker and DDEV to ensure a consistent, reproducible environment across all developers and AI agents.
+26. For any ACF Pro, ACF Local JSON, content model, field group, CPT, taxonomy, options page, or ACF runtime work, use the project MCP setup. Work from the WordPress/DDEV checkout at `/home/sbaikov/Desktop/Projects/logika/.worktrees/codex-implement-plan`, start/check DDEV first, and use both:
+    - `logika-wordpress` via `.mcp.json` / `./scripts/wp-mcp.sh` for WordPress MCP Adapter runtime abilities.
+    - our local ACF MCP server from `/home/sbaikov/Desktop/Projects/acf_mcp` for safe Local JSON audits, dry runs, backups, and sync checks.
+
+ACF MCP commands:
+
+```bash
+cd /home/sbaikov/Desktop/Projects/logika/.worktrees/codex-implement-plan
+ddev describe
+./scripts/wp-mcp.sh core version
+./scripts/wp-mcp.sh plugin get advanced-custom-fields-pro --format=json
+./scripts/wp-mcp.sh plugin get mcp-adapter --format=json
+./scripts/wp-mcp.sh mcp-adapter list
+```
+
+Run our Local JSON MCP server for this project:
+
+```bash
+cd /home/sbaikov/Desktop/Projects/logika/.worktrees/codex-implement-plan
+ACF_MCP_ACF_JSON_DIR="$PWD/wordpress/wp-content/plugins/logika-core/acf-json" \
+ACF_MCP_WP_CLI_BIN="./scripts/wp-mcp.sh" \
+node /home/sbaikov/Desktop/Projects/acf_mcp/dist/server/stdio.js
+```
+
+When connected to our ACF MCP server, run the relevant checks before changing ACF JSON:
+
+```text
+acf_runtime_status
+acf_audit_ai_access
+acf_validate_runtime_compatibility
+acf_audit_schema_mappings
+acf_sync_json with { "dryRun": true }
+```
+
+When connected to `logika-wordpress`, use MCP Adapter tools to inspect runtime ACF abilities:
+
+```text
+mcp-adapter-discover-abilities
+mcp-adapter-get-ability-info
+mcp-adapter-execute-ability with ability_name "acf/field-groups"
+```
+
+Never edit ACF structures blindly. Prefer Local JSON + `dryRun` first, review the git diff, then use `acf_sync_json` / `./scripts/wp-mcp.sh acf json sync --dry-run` before any non-dry-run sync.
 
 ## graphify
 
@@ -44,3 +87,24 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+## Local WordPress MCP
+
+ACF machine-readable content workflows are prepared through `.mcp.json`, `scripts/wp-mcp.sh` and `wp-content/mu-plugins/logika-acf-ai.php`.
+
+After the DDEV WordPress skeleton exists, install and activate the MCP Adapter:
+
+```bash
+ddev wp plugin install https://github.com/WordPress/mcp-adapter/releases/latest/download/mcp-adapter.zip --activate
+ddev wp mcp-adapter list
+```
+
+Full setup and verification steps are in `docs/mcp.md`.
+
+## Skill usage for tool work
+
+For tool-related tasks in this repo, use local skills from `.agents/skills` when they match the task domain.
+
+- `cloudflare-development`, `nginx-configuration`, `docker-patterns`, `mysql`, `ssh` and `wp-wpcli-and-ops` were added in this worktree branch.
+- For infrastructure/hosting, use `cloudflare-development` or `nginx-configuration`; for shell or server access, use `ssh`; for containerization and local env, use `docker-patterns`; for database work, use `mysql`; and for WordPress operational work, use `wp-wpcli-and-ops`.
+- This should be the default before using related tools or editing workflows that rely on these domains.

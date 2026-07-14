@@ -13,8 +13,11 @@ foreach (
 		'home_english_levels',
 		'home_transformation_before_image',
 		'home_transformation_after_image',
+		'home_transformation_before_image_override',
+		'home_transformation_after_image_override',
 		'home_onboarding_steps',
 		'home_certificates_image',
+		'home_certificates_image_override',
 		'home_partners_items',
 		'home_image_gallery',
 	) as $field_name
@@ -76,18 +79,18 @@ update_field(
 			'text' => 'Допомагаємо дитині зробити перші впевнені кроки у світі технологій, розвиваючи логіку, увагу та базові комп’ютерні навички.',
 			'lesson_label' => 'Запис на безкоштовний урок',
 			'about_label' => 'Ознайомитись з курсами',
-			'image' => $image_ids['programming_image'],
-			'icon' => $image_ids['programming_icon'],
+			'image_override' => $image_ids['programming_image'],
+			'icon_override' => $image_ids['programming_icon'],
 		),
 	),
 	$page_id
 );
-update_field( 'home_english_levels', array( array( 'age' => '8-10 років', 'title' => 'Рівень А0', 'text' => 'Перші слова, фрази та знайомство з англійською', 'image' => $image_ids['english_image'] ) ), $page_id );
-update_field( 'home_transformation_before_image', $image_ids['transformation_before'], $page_id );
-update_field( 'home_transformation_after_image', $image_ids['transformation_after'], $page_id );
-update_field( 'home_onboarding_steps', array( array( 'title' => 'Залишiть заявку', 'text' => "Заповнiть форму або зателефонуйте. Менеджер зв'яжеться за 30 хвилин", 'button' => 'Залишити заявку', 'image' => $image_ids['onboarding_image'] ) ), $page_id );
-update_field( 'home_certificates_image', $image_ids['certificates_image'], $page_id );
-update_field( 'home_partners_items', array( array( 'name' => 'Тестовий партнер', 'image' => $image_ids['partner_image'] ) ), $page_id );
+update_field( 'home_english_levels', array( array( 'age' => '8-10 років', 'title' => 'Рівень А0', 'text' => 'Перші слова, фрази та знайомство з англійською', 'image_override' => $image_ids['english_image'] ) ), $page_id );
+update_field( 'home_transformation_before_image_override', $image_ids['transformation_before'], $page_id );
+update_field( 'home_transformation_after_image_override', $image_ids['transformation_after'], $page_id );
+update_field( 'home_onboarding_steps', array( array( 'title' => 'Залишiть заявку', 'text' => "Заповнiть форму або зателефонуйте. Менеджер зв'яжеться за 30 хвилин", 'button' => 'Залишити заявку', 'image_override' => $image_ids['onboarding_image'] ) ), $page_id );
+update_field( 'home_certificates_image_override', $image_ids['certificates_image'], $page_id );
+update_field( 'home_partners_items', array( array( 'name' => 'Тестовий партнер', 'image_override' => $image_ids['partner_image'] ) ), $page_id );
 update_field( 'home_image_gallery', array( $image_ids['gallery_only'] ), $page_id );
 
 ob_start();

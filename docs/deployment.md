@@ -105,6 +105,8 @@ Autodeploy policy:
 - [ ] Page cache/CDN is configured for public pages.
 - [ ] Lead submission endpoints are excluded from cache.
 - [ ] Form token endpoint is excluded from cache.
+- [ ] `GET /wp-json/logika/v1/phone-country` is excluded from cache and returns `Cache-Control: no-store`.
+- [ ] Cloudflare Managed Transform `Add visitor location headers` is enabled so the origin receives `CF-IPCountry`.
 - [ ] Admin endpoints are excluded from cache.
 - [ ] CRM callback endpoints are excluded from cache.
 - [ ] Static assets have cache headers.

@@ -36,6 +36,79 @@ const resolvePhoneCountry = (success) => {
     .catch(() => success(phoneCountryDefault));
 };
 
+const preferredPhoneCountries = ['ua', 'sk', 'pl', 'cz', 'de', 'ro', 'md', 'gb', 'ca'];
+const phoneCountryAliases = {
+  ua: 'ukr ukraine україна украина',
+  sk: 'slovakia slovensko словакия словаччина',
+  pl: 'pol poland polska польща польша',
+  cz: 'czech czechia чехія чехия',
+  de: 'germany deutschland німеччина германия',
+  ro: 'romania румунія румыния',
+  md: 'moldova молдова',
+  gb: 'great britain united kingdom uk england велика британія великобритания',
+  ca: 'canada канада',
+};
+const normalizePhoneCountrySearch = (value) => value
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLocaleLowerCase('uk-UA')
+  .trim();
+
+const setupPhoneCountrySearch = (input) => {
+  const root = input.closest('.iti');
+  const dropdown = root?.querySelector('.iti__dropdown-content');
+  const countryList = root?.querySelector('.iti__country-list');
+  if (!dropdown || !countryList || dropdown.querySelector('.iti__search-input')) return;
+
+  const countries = [...countryList.querySelectorAll('.iti__country')];
+  const countriesByCode = new Map(countries.map((country) => [country.dataset.countryCode, country]));
+  const popularCountries = preferredPhoneCountries.map((code) => countriesByCode.get(code)).filter(Boolean);
+  const divider = document.createElement('li');
+  divider.className = 'iti__divider';
+  divider.setAttribute('aria-hidden', 'true');
+
+  countryList.prepend(...popularCountries, divider);
+
+  const search = document.createElement('input');
+  search.className = 'iti__search-input';
+  search.type = 'search';
+  search.placeholder = 'Пошук країни...';
+  search.setAttribute('aria-label', search.placeholder);
+  dropdown.prepend(search);
+
+  const filterPhoneCountries = () => {
+    const query = normalizePhoneCountrySearch(search.value);
+
+    countries.forEach((country) => {
+      const countryCode = country.dataset.countryCode || '';
+      const countryName = country.querySelector('.iti__country-name')?.textContent || '';
+      const dialCode = country.dataset.dialCode || '';
+      const haystack = normalizePhoneCountrySearch([
+        countryName,
+        countryCode,
+        dialCode,
+        `+${dialCode}`,
+        phoneCountryAliases[countryCode] || '',
+      ].join(' '));
+      country.hidden = Boolean(query) && !haystack.includes(query);
+    });
+
+    divider.hidden = Boolean(query);
+    countryList.scrollTop = 0;
+  };
+
+  search.addEventListener('input', filterPhoneCountries);
+  search.addEventListener('search', filterPhoneCountries);
+  search.addEventListener('click', (event) => event.stopPropagation());
+  search.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') event.stopPropagation();
+  });
+  input.addEventListener('close:countrydropdown', () => {
+    search.value = '';
+    filterPhoneCountries();
+  });
+};
+
 const updatePhoneState = (input) => {
   input.closest('.iti')?.classList.toggle('iti--has-value', Boolean(input.value.trim()));
 };
@@ -63,10 +136,15 @@ document.querySelectorAll('[data-logika-phone-input], input[type="tel"][name="ph
     utilsScript: logikaLead.phoneUtilsUrl,
   });
   phoneInstances.set(input, instance);
+  setupPhoneCountrySearch(input);
   updatePhoneState(input);
 
-  input.addEventListener('open:countrydropdown', () => input.closest('.iti')?.classList.add('iti--phone-dropdown-open'));
-  input.addEventListener('close:countrydropdown', () => input.closest('.iti')?.classList.remove('iti--phone-dropdown-open'));
+  input.addEventListener('open:countrydropdown', () => {
+    const iti = input.closest('.iti');
+    iti?.classList.add('iti--phone-dropdown-open');
+    iti?.classList.toggle('iti--phone-dropdown-up', Boolean(iti?.querySelector('.iti__dropdown-content--dropup')));
+  });
+  input.addEventListener('close:countrydropdown', () => input.closest('.iti')?.classList.remove('iti--phone-dropdown-open', 'iti--phone-dropdown-up'));
 
   input.addEventListener('input', () => {
     updatePhoneState(input);
@@ -136,15 +214,47 @@ const setStatus = (status, message) => {
   status.textContent = message;
 };
 const submitButton = (form) => form.querySelector('[type="submit"], .main-form__btn');
-const setSubmitError = (form, show) => {
+const fieldLabels = {
+  name: 'ім’я',
+  phone: 'номер телефону',
+  tel: 'номер телефону',
+  child_age: 'вік дитини',
+  age: 'вік дитини',
+  consent_accepted: 'згоду з політикою конфіденційності',
+};
+const setFieldError = (field, show) => {
+  const target = field?.closest('[data-logika-age-select]')?.querySelector('.main-form__age-trigger') || field;
+  target?.classList.toggle('main-form__input--error', show);
+  target?.setAttribute('aria-invalid', show ? 'true' : 'false');
+};
+const validateRequiredFields = (form, phoneInput, phone) => {
+  const missing = [];
+  const fields = new Set(form.querySelectorAll('[required]'));
+
+  ['name', 'phone', 'tel', 'child_age'].forEach((name) => {
+    const field = form.querySelector(`[name="${name}"]`);
+    if (field) fields.add(field);
+  });
+
+  fields.forEach((field) => {
+    const name = field.name || '';
+    let invalid = field.type === 'checkbox' ? !field.checked : !field.value.trim();
+    if (field === phoneInput) invalid = !field.value.trim() || Boolean(phone && !phone.isValidNumber());
+    setFieldError(field, invalid);
+    if (invalid) missing.push(fieldLabels[name] || field.getAttribute('aria-label') || field.placeholder || name);
+  });
+
+  return [...new Set(missing)];
+};
+const setSubmitError = (form, show, message = '') => {
   let alert = form.querySelector('.main-form__submit-error');
   if (!alert) {
     alert = document.createElement('div');
     alert.className = 'main-form__submit-error';
     alert.setAttribute('role', 'alert');
-    alert.innerHTML = '<strong>Не вдалося надіслати заявку.</strong><span>Спробуйте ще раз або зателефонуйте нам.</span>';
     submitButton(form)?.before(alert);
   }
+  alert.textContent = message || 'Не вдалося надіслати заявку. Спробуйте ще раз або зателефонуйте нам.';
   alert.hidden = !show;
 };
 
@@ -161,8 +271,11 @@ document.querySelectorAll('[data-logika-lead-form]').forEach((form) => {
       await phone.promise.catch(() => {});
     }
 
-    if (!phoneInput?.value.trim() || (phone && !phone.isValidNumber())) {
-      setPhoneError(phoneInput, true);
+    const missingFields = validateRequiredFields(form, phoneInput, phone);
+    setPhoneError(phoneInput, missingFields.includes(fieldLabels.phone));
+    if (missingFields.length) {
+      setStatus(status, '');
+      setSubmitError(form, true, `Заповніть ${missingFields.length > 1 ? 'поля' : 'поле'}: ${missingFields.join(', ')}.`);
       return;
     }
 

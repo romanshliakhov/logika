@@ -247,7 +247,7 @@
     selectedCountryAriaLabel: "Обрана країна",
     noCountrySelected: "Країну не обрано",
     countryListAriaLabel: "Список країн",
-    searchPlaceholder: "Шукати",
+    searchPlaceholder: "Пошук країни...",
     zeroSearchResults: "Результатів не знайдено",
     oneSearchResult: "Знайдено 1 результат",
     multipleSearchResults: "Знайдено ${count} результатів",

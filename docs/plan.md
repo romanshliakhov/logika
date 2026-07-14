@@ -30,7 +30,7 @@ Goal: collect all missing business and technical inputs before heavy implementat
 
 - [ ] Confirm final domain and hosting strategy.
 - [ ] Confirm staging environment requirements.
-- [ ] Confirm CRM vendor and integration method.
+- [x] Confirm CRM vendor and integration method.
 - [ ] Confirm whether CRM has sandbox/test mode.
 - [ ] Get access to Tilda.
 - [ ] Get access to domain/DNS.
@@ -46,7 +46,7 @@ Goal: collect all missing business and technical inputs before heavy implementat
 Exit criteria:
 
 - [ ] Required accesses are available or explicitly documented as blocked.
-- [ ] CRM integration path is known.
+- [x] CRM integration path is known.
 - [ ] MVP language and SEO indexing rules are agreed.
 
 ## 3. Phase 1: Source HTML inventory
@@ -335,6 +335,7 @@ Goal: implement reliable lead collection and delivery.
 - [x] Save lead locally before CRM send.
 - [ ] Implement CRM client adapter.
 - [x] Add short-lived form-token endpoint for cached public forms.
+- [x] Add CF-IPCountry phone-code endpoint with fixed UA fallback and no-cache response.
 - [x] Add server-only CRM provider interface, Null provider and retry queue.
 - [x] Add WordPress admin lead list with masked PII and protected CSV export.
 - [ ] Implement CRM payload mapper.
@@ -346,6 +347,78 @@ Goal: implement reliable lead collection and delivery.
 - [ ] Implement admin retry action.
 - [ ] Implement CRM test action.
 - [x] Add audit events for critical lead actions.
+
+### Kommo CRM implementation plan
+
+Decision recorded 2026-07-11: use a private Kommo integration for the school's
+single CRM account. The first version authenticates with its server-only
+long-lived token; it does not add a browser OAuth flow, Marketplace widget, or
+credentials to WordPress options. Kommo OAuth is a separate future task only if
+the site must connect multiple independent Kommo accounts.
+
+- [x] Research Kommo authentication, lead creation, duplicate control, pipeline
+  lookup, custom fields, rate limits and error responses in the official docs.
+- [x] Select `POST /api/v4/leads/complex` as the delivery contract: create one
+  lead and one linked contact, pass the local `lead_id` as Kommo `request_id`,
+  and persist Kommo's returned lead/contact IDs and `merged` flag.
+- [ ] Obtain and record in the deployment secret manager: `LOGIKA_CRM_PROVIDER=kommo`,
+  `LOGIKA_KOMMO_SUBDOMAIN`, `LOGIKA_KOMMO_LONG_LIVED_TOKEN`,
+  `LOGIKA_KOMMO_PIPELINE_ID`, `LOGIKA_KOMMO_STATUS_ID`, and an optional
+  `LOGIKA_KOMMO_RESPONSIBLE_USER_ID`. Never place these values in Git,
+  ACF, WordPress options, browser configuration or logs.
+- [ ] Obtain the Kommo custom-field mapping before production: contact field
+  code/ID for `PHONE`, and only the agreed lead field code/ID for child age,
+  city, course, camp, source URL and UTM values. Confirm whether each field is
+  required at the selected pipeline stage and whether Duplicate control is
+  enabled for the private integration.
+- [ ] Extend `wordpress/wp-content/plugins/logika-leads/src/Crm.php` with a
+  `KommoProvider`, a Kommo-only payload mapper, and a narrow configuration DTO.
+  Keep `CrmProviderInterface` and the public form REST contract unchanged;
+  select `kommo` only in `Logika_Leads_Crm_Factory`.
+- [ ] Send a single-item JSON array to
+  `https://{subdomain}.kommo.com/api/v4/leads/complex` with a Bearer token,
+  explicit JSON headers and a five-second timeout. Map only normalized local
+  fields: contact name and E.164 phone; lead name, pipeline/status/responsible
+  user; and the agreed custom fields. Do not send consent text, raw request
+  payloads or unapproved personal data.
+- [ ] Upgrade `CrmResult`, `Schema.php` and `Service.php` to retain Kommo lead
+  and contact IDs, HTTP status, Kommo `request_id` and the duplicate/merged
+  result; write one masked row to `wp_logika_lead_attempts` for every outbound
+  call. Bump the schema version and verify the `dbDelta` upgrade on existing
+  local leads.
+- [ ] Make delivery concurrency-safe: claim a due lead through the existing
+  `sync_lock_until` field before sending, never resend `sent` or `rejected`
+  leads, and release the lock after the attempt. A timeout becomes an
+  `unknown` outcome for reconciliation instead of an immediate blind resend.
+- [ ] Classify Kommo responses: `200` with a matching result is sent;
+  `400`/`401`/validation errors are permanent and visible safely in admin;
+  `429`, transport failures and `5xx` are retryable. Respect Kommo's
+  `retry_after` when present and retain the existing bounded backoff queue;
+  keep aggregate request rate below Kommo's seven requests per second per IP.
+- [ ] Add an admin-only, nonce-protected connection test that reads pipelines
+  and custom-field metadata without creating a lead, validates the configured
+  pipeline/status/field IDs, and displays a safe result. Add a separately
+  confirmed test-lead action only after the business owner agrees on the
+  pipeline and cleanup policy.
+- [ ] Add isolated tests with mocked `wp_remote_request`: payload mapping,
+  token absence, accepted and merged responses, 400/401 rejection, 429 and
+  5xx retry scheduling, timeout/unknown reconciliation, lock contention and
+  idempotent repeated submission. Add a DDEV smoke that proves a locally saved
+  lead remains available when Kommo is disabled.
+- [ ] On staging, use a separate Kommo test account or an explicitly approved
+  test pipeline, run the connection test and one controlled lead, then verify
+  the local lead status, Kommo IDs, attempt/event logs and no PII/secrets in
+  PHP logs. Production enablement requires the same check with one agreed test
+  lead and a named first-day queue owner.
+
+Official references: [private integration](https://developers.kommo.com/docs/private-integration),
+[complex lead creation](https://developers.kommo.com/reference/complex-leads),
+[pipelines](https://developers.kommo.com/reference/pipelines-list),
+[custom fields](https://developers.kommo.com/reference/custom-field-by-entity),
+and [API limits](https://developers.kommo.com/docs/limitations).
+
+Note: the existing generic webhook providers must not be configured for Kommo.
+Kommo is an API adapter with account-scoped credentials, not a webhook URL.
 
 Exit criteria:
 

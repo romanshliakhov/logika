@@ -49,9 +49,7 @@ final class Logika_Theme_Phone_Country {
 	}
 
 	private static function default_country(): string {
-		$country = function_exists( 'get_field' ) ? (string) get_field( 'form_phone_country_default', 'option' ) : '';
-
-		return self::normalize( $country ) ?? 'UA';
+		return 'UA';
 	}
 
 	private static function normalize( string $country ): ?string {

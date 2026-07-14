@@ -248,6 +248,32 @@ Required scenarios:
 - validation returns field-level errors;
 - admin actions validate `current_user_can(...)`.
 
+### Phone country endpoint
+
+Required scenarios:
+
+- `CF-IPCountry: UA`, `PL` and `US` return the corresponding ISO alpha-2 code;
+- `CF-IPCountry` has priority over compatible CDN headers;
+- `XX`, `T1`, `EU`, malformed or absent values return fixed `UA`;
+- response is `200` with `Cache-Control: no-store`;
+- `intl-tel-input` uses `initialCountry: 'auto'`, and a failed fetch selects `UA`.
+
+Local header injection proves the application contract. A real country-to-country
+check additionally requires a request from each target-country IP through a
+Cloudflare zone with `Add visitor location headers` enabled; a Quick Tunnel alone
+does not establish that evidence.
+
+For DDEV, point a temporary Quick Tunnel to the direct web container port:
+
+```bash
+cloudflared tunnel --url "http://$(docker port ddev-logika-web 80/tcp)"
+```
+
+Use its public endpoint URL to verify tunnel reachability and cache headers.
+Because DDEV fixes `WP_HOME` to `logika.ddev.site`, use the local DDEV page for
+the dropdown smoke, or a staging/named tunnel whose public domain is configured
+as the WordPress URL for a complete public-browser smoke.
+
 ### SEO and schema
 
 Required scenarios:

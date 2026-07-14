@@ -446,7 +446,38 @@ Response `200`:
 
 This endpoint must not return CRM settings or private form configuration.
 
-### 7.3. List active cities
+### 7.3. Resolve phone country
+
+```http
+GET /wp-json/logika/v1/phone-country
+```
+
+Purpose:
+
+- select the initial country for `intl-tel-input` without a third-party GeoIP request;
+- return only a two-letter country code for public form UX.
+
+Auth and cache:
+
+- public read-only endpoint;
+- no cookies, PII, CRM data or secrets in the response;
+- response header: `Cache-Control: no-store, no-cache, must-revalidate, max-age=0`.
+
+Response `200`:
+
+```json
+{
+  "country": "PL"
+}
+```
+
+Resolution order:
+
+1. valid `CF-IPCountry` from Cloudflare;
+2. compatible hosting/CDN country headers when Cloudflare does not provide one;
+3. fixed `UA` for a missing, malformed or service value such as `XX`, `T1` or `EU`.
+
+### 7.4. List active cities
 
 ```http
 GET /wp-json/logika/v1/cities
@@ -493,7 +524,7 @@ Response `200`:
 
 Public city endpoints must not expose draft, review-only or internal SEO fields.
 
-### 7.4. List active courses
+### 7.5. List active courses
 
 ```http
 GET /wp-json/logika/v1/courses

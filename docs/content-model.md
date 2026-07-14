@@ -598,7 +598,6 @@ Fields:
 | `form_privacy_text_version` | Text | yes | stored with consent |
 | `form_default_success_message` | Textarea | yes | user-facing message |
 | `form_default_error_message` | Textarea | yes | safe error message |
-| `form_phone_country_default` | Text | no | e.g. UA |
 | `form_allowed_ids` | Repeater | yes | allowlist of form IDs |
 
 Repeater: `form_allowed_ids`

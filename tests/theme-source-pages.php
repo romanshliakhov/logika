@@ -119,20 +119,20 @@ if ( ! str_contains( $leads_js, "[type=\"submit\"], .main-form__btn" ) ) {
 if ( str_contains( $leads_js, 'crypto.randomUUID()' ) || ! str_contains( $leads_js, 'logikaLeadToast' ) ) {
 	$errors[] = 'Lead form must use a compatible request ID and global toast notification.';
 }
-foreach ( array( 'initialCountry: \'auto\'', 'geoIpLookup', 'phoneCountryEndpoint', 'countrySearch: false', 'showSelectedDialCode: true', 'window.logikaIntlTelInputUk', 'iti--has-value', 'iti--phone-dropdown-open' ) as $phone_ui_contract ) {
+foreach ( array( 'initialCountry: \'auto\'', 'geoIpLookup', 'phoneCountryEndpoint', 'preferredPhoneCountries', "['ua', 'sk', 'pl', 'cz', 'de', 'ro', 'md', 'gb', 'ca']", 'germany deutschland', 'romania', 'moldova', 'great britain', 'canada', 'setupPhoneCountrySearch', 'filterPhoneCountries', 'Пошук країни...', 'showSelectedDialCode: true', 'window.logikaIntlTelInputUk', 'iti--has-value', 'iti--phone-dropdown-open' ) as $phone_ui_contract ) {
 	if ( ! str_contains( $leads_js, $phone_ui_contract ) ) {
 		$errors[] = "Phone country code UI does not expose {$phone_ui_contract}.";
 	}
 }
 
 $phone_i18n = is_readable( "{$theme_path}/assets/js/vendor/intl-tel-input/i18n-uk.js" ) ? file_get_contents( "{$theme_path}/assets/js/vendor/intl-tel-input/i18n-uk.js" ) : '';
-foreach ( array( 'Данія', 'Джибуті', 'Домініканська Республіка', 'Еквадор', 'searchPlaceholder: "Шукати"' ) as $translation_contract ) {
+foreach ( array( 'Данія', 'Джибуті', 'Домініканська Республіка', 'Еквадор', 'searchPlaceholder: "Пошук країни..."' ) as $translation_contract ) {
 	if ( ! str_contains( $phone_i18n, $translation_contract ) ) {
 		$errors[] = "Phone country translation is missing {$translation_contract}.";
 	}
 }
 
-foreach ( array( '.iti--phone-dropdown-open', 'border-radius:26px 26px 0 0', 'border-top:0', 'border-bottom:4px solid var(--grey-500)', '.iti--inline-dropdown .iti__dropdown-content', 'max-height:360px', 'overflow-x:hidden', 'border-radius:0 0 12px 12px', 'iti__country.iti__highlight', 'background-color:var(--violet-300)', '.iti__country.iti__active', 'background-color:var(--violet-100)', '.iti__search-input{display:none' ) as $phone_css_contract ) {
+foreach ( array( '.iti--phone-dropdown-open', 'border-radius:26px 26px 0 0', 'border-top:0', 'border-bottom:4px solid var(--grey-500)', '.iti--inline-dropdown .iti__dropdown-content', 'max-height:360px', '.iti__dropdown-content:not(.iti__hide)', 'display:flex', 'overflow-x:hidden', 'border-radius:0 0 12px 12px', 'iti__country[hidden]', 'iti__divider[hidden]', 'display:none', 'iti__country.iti__highlight', 'background-color:var(--violet-300)', '.iti__country.iti__active', 'background-color:var(--violet-100)', '.iti__search-input{display:block', 'max-height:306px', 'overflow-y:auto' ) as $phone_css_contract ) {
 	if ( ! str_contains( $theme_css, $phone_css_contract ) ) {
 		$errors[] = "Phone country code CSS does not expose {$phone_css_contract}.";
 	}

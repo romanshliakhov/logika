@@ -12,7 +12,7 @@ final class Logika_Theme_Lead_Form {
 		$options = self::age_options( $page_id );
 		$control_id = 'logika-child-age-' . ++self::$age_select_index;
 
-		$html = '<div class="main-form__select-wrap" data-logika-age-select><select name="child_age" class="main-form__select" aria-label="' . esc_attr( $placeholder ) . '" aria-hidden="true" tabindex="-1">';
+		$html = '<div class="main-form__select-wrap" data-logika-age-select><select name="child_age" class="main-form__select" aria-label="' . esc_attr( $placeholder ) . '" aria-hidden="true" tabindex="-1" required>';
 		$html .= '<option value="">' . esc_html( $placeholder ) . '</option>';
 
 		foreach ( $options as $value => $label ) {

@@ -7,8 +7,8 @@ require dirname(__DIR__) . '/wordpress/wp-load.php';
 $errors = array();
 $global_fields = acf_get_fields( 'group_logika_global' );
 $phone_country = $global_fields ? current( array_filter( $global_fields, static fn( array $item ): bool => 'form_phone_country_default' === $item['name'] ) ) : false;
-if ( ! $phone_country || 'text' !== $phone_country['type'] || empty( $phone_country['label'] ) || empty( $phone_country['instructions'] ) || 'UA' !== ( $phone_country['default_value'] ?? '' ) ) {
-	$errors[] = 'Global phone country default is not an editor-facing ISO country setting.';
+if ( $phone_country ) {
+	$errors[] = 'Phone country fallback must be fixed to UA, not editor-configurable.';
 }
 foreach ( array( 'city', 'branch', 'course', 'camp', 'review', 'faq_item' ) as $type ) {
 	if ( post_type_supports( $type, 'editor' ) ) {

@@ -182,6 +182,24 @@
             }
         }
 
+        &--phone-dropdown-up {
+            .main-form__phone {
+                border-radius: 0 0 26px 26px;
+            }
+
+            .iti__selected-flag {
+                border-radius: 0 0 0 26px;
+            }
+
+            .iti__dropdown-content {
+                margin-bottom: 0;
+                border-top: 1px solid var(--grey-100);
+                border-bottom: 0;
+                border-radius: 12px 12px 0 0;
+                box-shadow: none;
+            }
+        }
+
         &--show-selected-dial-code {
             .iti__selected-flag {
                 background-color: transparent;
@@ -190,12 +208,6 @@
             .iti__selected-dial-code {
                 color: var(--grey-500);
                 transition: color 0.2s ease;
-            }
-        }
-
-        &--has-value {
-            .iti__selected-dial-code {
-                color: var(--black);
             }
         }
 
@@ -216,10 +228,17 @@
             overflow-y: hidden;
         }
 
+        &--inline-dropdown .iti__dropdown-content:not(.iti__hide) {
+            display: flex;
+            flex-direction: column;
+        }
+
         &__search-input {
-            display: none;
-            height: 38px;
-            padding: 0 12px;
+            display: block;
+            flex-shrink: 0;
+            height: 44px;
+            padding: 0 16px;
+            border-bottom: 1px solid var(--grey-100);
             font-family: var(--font-primary);
             font-size: 14px;
             color: var(--black);
@@ -242,6 +261,11 @@
             transition: background-color 0.16s ease, color 0.16s ease;
         }
 
+        &__country[hidden],
+        &__divider[hidden] {
+            display: none;
+        }
+
         &__country.iti__highlight,
         &__country:hover,
         &__country:focus {
@@ -255,8 +279,10 @@
         }
 
         &__country-list {
-            max-height: 340px;
+            max-height: 306px;
+            flex: 1;
             overflow-x: hidden;
+            overflow-y: auto;
             padding: 4px 0;
         }
 
@@ -285,10 +311,16 @@
 
     &__phone {
         padding-right: 16px;
+        font-weight: 500;
     }
 
     &__input--error {
         box-shadow: 0 0 0 2px rgba(255, 47, 0, 0.45);
+    }
+
+    &__phone-error,
+    &__submit-error {
+        color: var(--bg-f);
     }
 
     &__honeypot {
