@@ -10,6 +10,7 @@ $map = $read( $root . '/source/js/camp-map.js' );
 $media = $read( $root . '/source/js/media-center.js' );
 $page = $read( $root . '/wordpress/wp-content/themes/logika-theme/source-pages/media-center.php' );
 $functions = $read( $root . '/wordpress/wp-content/themes/logika-theme/functions.php' );
+$routing = $read( $root . '/wordpress/wp-content/themes/logika-theme/src/Routing.php' );
 $acf = $read( $root . '/wordpress/wp-content/plugins/logika-core/acf-json/group_logika_post.json' );
 
 if ( ! str_contains( $context, 'logika-city-id' ) || ! str_contains( $context, 'logika:city-change' ) || ! str_contains( $context, 'if (!config.endpoint)' ) ) {
@@ -17,8 +18,13 @@ if ( ! str_contains( $context, 'logika-city-id' ) || ! str_contains( $context, '
 	exit( 1 );
 }
 
-if ( ! str_contains( $selector, 'window.location.assign(city.url)' ) || ! str_contains( $selector, 'logikaCityContext.set' ) || ! str_contains( $map, 'cityContext.set' ) || ! str_contains( $map, 'window.location.assign(city.url)' ) ) {
-	fwrite( STDERR, "Navbar and map must select a city and open its URL.\n" );
+if ( ! str_contains( $context, 'const cityUrl = (city)' ) || ! str_contains( $selector, 'logikaCityContext.url(city)' ) || ! str_contains( $map, 'cityContext.url?.(city)' ) ) {
+	fwrite( STDERR, "Navbar and map must open the selected city in the current page context.\n" );
+	exit( 1 );
+}
+
+if ( ! str_contains( $routing, '^cities/([^/]+)/(.+)/?$' ) || ! str_contains( $routing, 'logika_city' ) || ! str_contains( $routing, 'redirectCanonical' ) ) {
+	fwrite( STDERR, "WordPress must resolve and preserve city-prefixed page URLs.\n" );
 	exit( 1 );
 }
 

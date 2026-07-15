@@ -94,8 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
     selectedCity = city;
     if (persist) {
       cityContext.set(city);
-      if (city.url) {
-        window.location.assign(city.url);
+      const url = cityContext.url?.(city) || city.url;
+      if (url) {
+        window.location.assign(url);
         return;
       }
     }
