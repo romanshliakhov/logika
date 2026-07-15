@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 require dirname(__DIR__) . '/wordpress/wp-load.php';
 
+$akademmistechko = get_page_by_path( 'akademmistechko', OBJECT, 'city' );
+$akademmistechko_id = $akademmistechko ? (int) $akademmistechko->ID : (int) wp_insert_post( array( 'post_type' => 'city', 'post_name' => 'akademmistechko', 'post_title' => 'Академмістечко', 'post_status' => 'publish' ) );
+update_field( 'city_selected_label', 'Академмістечко', $akademmistechko_id );
+update_field( 'city_url_slug', 'akademmistechko', $akademmistechko_id );
+
 $request = new WP_REST_Request( 'GET', '/logika/v1/cities' );
 $response = rest_do_request( $request );
 $cities = $response->get_data();
