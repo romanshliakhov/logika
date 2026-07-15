@@ -12,12 +12,12 @@ $page = $read( $root . '/wordpress/wp-content/themes/logika-theme/source-pages/m
 $functions = $read( $root . '/wordpress/wp-content/themes/logika-theme/functions.php' );
 $acf = $read( $root . '/wordpress/wp-content/plugins/logika-core/acf-json/group_logika_post.json' );
 
-if ( ! str_contains( $context, 'logika-city-id' ) || ! str_contains( $context, 'logika:city-change' ) ) {
+if ( ! str_contains( $context, 'logika-city-id' ) || ! str_contains( $context, 'logika:city-change' ) || ! str_contains( $context, 'if (!config.endpoint)' ) ) {
 	fwrite( STDERR, "City selection must use one persisted shared context.\n" );
 	exit( 1 );
 }
 
-if ( str_contains( $selector, 'link.href = city.url' ) || ! str_contains( $selector, 'logikaCityContext.set' ) || ! str_contains( $map, 'logikaCityContext.set' ) ) {
+if ( str_contains( $selector, 'link.href = city.url' ) || ! str_contains( $selector, 'logikaCityContext.set' ) || ! str_contains( $map, 'cityContext.set' ) ) {
 	fwrite( STDERR, "Navbar and map must select a city without navigation.\n" );
 	exit( 1 );
 }

@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
   const map = document.querySelector('[data-school-map]');
 
-  if (!map || !window.logikaCityContext) return;
+  if (!map) return;
+  const cityContext = window.logikaCityContext || {
+    get: () => null,
+    load: () => Promise.resolve([]),
+    set: () => {}
+  };
 
   const regionNames = {
     cherkasy: 'Черкаська область', chernihiv: 'Чернігівська область', chernivtsi: 'Чернівецька область',
@@ -22,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const schools = map.querySelector('[data-map-schools]');
   const locationsCount = map.querySelector('[data-map-locations-count]');
   const frame = map.querySelector('[data-map-frame]');
-  const config = window.logikaThemeAssets || {};
+  const config = { mapUrl: 'img/maps/ukraine-regions.svg', ...(window.logikaThemeAssets || {}) };
   const onlinePanel = document.createElement('div');
   const heroForm = document.querySelector('.banner-section__form[data-logika-lead-form]');
   const formOrigin = heroForm?.parentNode;
@@ -87,14 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const selectCity = (city, persist = true) => {
     selectedCity = city;
-    if (persist) window.logikaCityContext.set(city);
+    if (persist) cityContext.set(city);
     cityTitle.textContent = city.label.toUpperCase();
     details.hidden = false;
     locationsCount.textContent = 'Завантажуємо локації...';
     schools.replaceChildren();
     cities.querySelectorAll('button').forEach((button) => button.classList.toggle('is-active', button.dataset.cityId === String(city.id)));
 
-    requestJson(`${config.branchesEndpoint}${city.id}/branches`)
+    const branches = config.branchesEndpoint ? requestJson(`${config.branchesEndpoint}${city.id}/branches`) : Promise.resolve([]);
+
+    branches
       .then((branches) => {
         if (selectedCity === city) renderBranches(city, branches);
       })
@@ -159,9 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => setMode(button.dataset.mapMode));
   });
 
-  if (!config.mapUrl || !config.branchesEndpoint) return;
+  if (!config.mapUrl) return;
 
-  Promise.all([fetchMap(), window.logikaCityContext.load()])
+  Promise.all([fetchMap(), cityContext.load()])
     .then(([svg, cityList]) => {
       const citiesByRegion = cityList.reduce((groups, city) => {
         const label = city.region?.label;
@@ -195,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       regionTitle.textContent = 'Оберіть область';
       cities.replaceChildren();
-      selectContextCity(window.logikaCityContext.get());
+      selectContextCity(cityContext.get());
       window.addEventListener('logika:city-change', ({ detail }) => selectContextCity(detail.city));
     })
     .catch(() => {

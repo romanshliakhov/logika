@@ -24,6 +24,7 @@
 
   const load = () => {
     if (loading) return loading;
+    if (!config.endpoint) return Promise.resolve(cities);
     loading = fetch(config.endpoint)
       .then((response) => response.ok ? response.json() : [])
       .then((items) => {

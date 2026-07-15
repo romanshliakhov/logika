@@ -24,6 +24,11 @@ if ( str_contains( $script, 'config.citiesEndpoint' ) || str_contains( $function
 	exit( 1 );
 }
 
+if ( ! str_contains( $script, "mapUrl: 'img/maps/ukraine-regions.svg'" ) || ! str_contains( $script, 'const cityContext = window.logikaCityContext ||' ) ) {
+	fwrite( STDERR, "School map must render its SVG in static previews without WordPress configuration.\n" );
+	exit( 1 );
+}
+
 if ( str_contains( $script, 'requestJson(config.mapUrl)' ) ) {
 	fwrite( STDERR, "School map SVG must be read as text, not JSON.\n" );
 	exit( 1 );
