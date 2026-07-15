@@ -1,0 +1,147 @@
+(function ($, acf, settings) {
+	'use strict';
+
+	function profile(field) {
+		var profiles = settings.profiles[field.get('key')];
+		var row = field.$el.closest('.acf-row').data('id');
+		var match = typeof row === 'string' ? row.match(/^row-(\d+)$/) : null;
+		var index = match ? Number(match[1]) : 0;
+
+		return profiles ? (profiles[index] || profiles[0]) : null;
+	}
+
+	function rowIndex(field) {
+		var row = field.$el.closest('.acf-row').data('id');
+		var match = typeof row === 'string' ? row.match(/^row-(\d+)$/) : null;
+
+		return match ? Number(match[1]) : 0;
+	}
+
+	function source(field) {
+		var sources = settings.sources[field.get('key')];
+		var index = rowIndex(field);
+
+		return sources ? (sources[index] || '') : '';
+	}
+
+	function error(profile) {
+		return 'Оберіть зображення щонайменше ' + profile.width + ' × ' + profile.height + ' px з такими самими пропорціями.';
+	}
+
+	function isValid(attachment, profile) {
+		var image = attachment.attributes || attachment;
+		var type = image.mime || image.mime_type;
+		var ratio = Number(image.width) / Number(image.height);
+		var expected = profile.width / profile.height;
+
+		return ['image/jpeg', 'image/png', 'image/webp'].indexOf(type) !== -1 && Number(image.width) >= profile.width && Number(image.height) >= profile.height && Math.abs(ratio / expected - 1) <= 0.02;
+	}
+
+	function choose(field) {
+		var fieldProfile = profile(field);
+		acf.newMediaPopup({
+			mode: 'select',
+			title: 'Замінити зображення',
+			field: field.get('key'),
+			multiple: false,
+			library: field.get('library'),
+			allowedTypes: field.get('mime_types'),
+			select: function (attachment) {
+				if (!isValid(attachment, fieldProfile)) {
+					field.showNotice({ text: error(fieldProfile), type: 'error' });
+					return;
+				}
+
+				field.render(attachment);
+				setSelectedPreview(field, attachment);
+				syncPreview(field);
+			}
+		});
+	}
+
+	function setSelectedPreview(field, attachment) {
+		var image = attachment.attributes || attachment;
+		var url = image.url || image.source_url || '';
+
+		if (url) {
+			field.$el.find('.logika-image-override-selected img').attr('src', url);
+		}
+	}
+
+	function syncPreview(field) {
+		var hasValue = Boolean(field.val());
+		var selectedUrl = field.$el.find('.acf-image-uploader img').attr('src');
+
+		if (selectedUrl) {
+			field.$el.find('.logika-image-override-selected img').attr('src', selectedUrl);
+		}
+
+		field.$el.find('.logika-image-override-current').toggle(!hasValue);
+		field.$el.find('.logika-image-override-selected').toggle(hasValue);
+	}
+
+	function hideLegacyFields($el) {
+		Object.keys(settings.legacyFields).forEach(function (key) {
+			($el || $(document)).find('.acf-field[data-key="' + settings.legacyFields[key] + '"]').hide();
+		});
+	}
+
+	function enhance(field) {
+		var fieldProfile = profile(field);
+		var actions;
+		var input;
+		var panel;
+
+		if (!field || !fieldProfile) {
+			return;
+		}
+
+		if (field.$el.data('logika-image-override')) {
+			syncPreview(field);
+			return;
+		}
+
+		field.$el.data('logika-image-override', true);
+		field.$el
+			.addClass('logika-image-override-field')
+			.css({ width: '100%', maxWidth: 'none', flexBasis: '100%' });
+		field.$el.children('.acf-label').hide();
+		input = field.$el.find('.acf-input').first().css({ width: '100%', maxWidth: 'none' });
+		input.children('.acf-image-uploader').addClass('logika-image-override-native').hide();
+		panel = $('<div class="logika-image-override-panel" style="width:100%;max-width:none"></div>').prependTo(input);
+		if (source(field)) {
+			$('<div class="logika-image-override-current"><p><strong>Поточне зображення</strong></p><img alt="Поточне зображення" style="max-width:300px;height:auto"></div>')
+				.find('img').attr('src', source(field)).end()
+				.appendTo(panel);
+		}
+		$('<div class="logika-image-override-selected"><p><strong>Обране зображення</strong></p><img alt="Обране зображення" style="max-width:300px;height:auto"></div>').appendTo(panel);
+		actions = $('<p class="acf-actions logika-image-override-actions"></p>').appendTo(panel);
+		$('<a class="button button-primary logika-image-override-replace" href="#">Замінити зображення</a>')
+			.appendTo(actions)
+			.on('click', function (event) {
+				event.preventDefault();
+				choose(field);
+			});
+		$('<a class="button logika-image-override-reset" href="#">Повернути стандартне</a>')
+			.appendTo(actions)
+			.on('click', function (event) {
+				event.preventDefault();
+				field.removeAttachment();
+				syncPreview(field);
+			});
+		$('<p class="description logika-image-override-description"></p>')
+			.text('PNG, WebP або JPEG; щонайменше ' + fieldProfile.width + ' × ' + fieldProfile.height + ' px із такими самими пропорціями.')
+			.appendTo(panel);
+		syncPreview(field);
+	}
+
+	function enhanceFields($el) {
+		hideLegacyFields($el);
+		($el || $(document)).find('.acf-field-image').addBack('.acf-field-image').each(function () {
+			enhance(acf.getField($(this)));
+		});
+	}
+
+	acf.addAction('ready', enhanceFields);
+	acf.addAction('append', enhanceFields);
+}(jQuery, acf, logikaHomepageImageOverrides));
