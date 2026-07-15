@@ -18,6 +18,16 @@ if ( ! str_contains( $context, 'logika-city-id' ) || ! str_contains( $context, '
 	exit( 1 );
 }
 
+if ( ! str_contains( $context, 'JSON.stringify(city)' ) || ! str_contains( $context, 'const cachedCity' ) || ! str_contains( $context, '|| cachedCity()' ) ) {
+	fwrite( STDERR, "City context must restore the selected city before its REST list finishes loading.\n" );
+	exit( 1 );
+}
+
+if ( ! str_contains( $functions, '$city_selector_version' ) || ! str_contains( $functions, "'logika-city-selector', \$uri . '/js/city-selector.js', array( 'logika-city-context' ), \$city_selector_version" ) ) {
+	fwrite( STDERR, "City selector assets must receive a fresh version after a persistence fix.\n" );
+	exit( 1 );
+}
+
 if ( ! str_contains( $context, 'window.history.pushState' ) || str_contains( $selector, 'window.location.assign' ) || str_contains( $map, 'window.location.assign' ) ) {
 	fwrite( STDERR, "City selection must update the context URL without navigating away.\n" );
 	exit( 1 );

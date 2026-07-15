@@ -352,6 +352,8 @@ document.querySelectorAll('[data-logika-city-select]').forEach((root) => {
     if (!root.contains(event.target)) close();
   });
 
+  const initial = window.logikaCityContext?.get();
+  if (initial) selectCity(initial);
   Promise.all([cityRequest, window.logikaCityContext?.load() || Promise.resolve([])])
     .then(([cities]) => {
       renderCities(cities);

@@ -1,20 +1,31 @@
 (() => {
-  const storageKey = 'logika-city-id';
+  const storageKey = 'logika-city';
+  const legacyStorageKey = 'logika-city-id';
   const config = window.logikaCityContextConfig || {};
   let cities = [];
   let loading = null;
 
-  const storedId = () => {
+  const cachedCity = () => {
     try {
-      return localStorage.getItem(storageKey);
+      const city = JSON.parse(localStorage.getItem(storageKey) || 'null');
+      return city?.id ? city : null;
     } catch (error) {
       return null;
     }
   };
 
-  const remember = (id) => {
+  const storedId = () => cachedCity()?.id || (() => {
     try {
-      localStorage.setItem(storageKey, String(id));
+      return localStorage.getItem(legacyStorageKey);
+    } catch (error) {
+      return null;
+    }
+  })();
+
+  const remember = (city) => {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(city));
+      localStorage.setItem(legacyStorageKey, String(city.id));
     } catch (error) {
       // The current page still works when browser storage is unavailable.
     }
@@ -22,10 +33,12 @@
 
   const cityFromPath = () => {
     const match = window.location.pathname.match(/^\/cities\/([^/]+)(?:\/|$)/);
-    return match ? cities.find((city) => new URL(city.url, window.location.origin).pathname === `/cities/${match[1]}/`) || null : null;
+    const cached = cachedCity();
+    return match ? cities.find((city) => new URL(city.url, window.location.origin).pathname === `/cities/${match[1]}/`)
+      || (cached?.url && new URL(cached.url, window.location.origin).pathname === `/cities/${match[1]}/` ? cached : null) : null;
   };
 
-  const get = () => cityFromPath() || cities.find((city) => String(city.id) === storedId()) || null;
+  const get = () => cityFromPath() || cities.find((city) => String(city.id) === String(storedId())) || cachedCity();
 
   const cityUrl = (city) => {
     if (!city?.url) return '';
@@ -44,8 +57,8 @@
       .then((response) => response.ok ? response.json() : [])
       .then((items) => {
         cities = Array.isArray(items) ? items : [];
-        const city = cityFromPath();
-        if (city) remember(city.id);
+        const city = cityFromPath() || cities.find((item) => String(item.id) === String(storedId()));
+        if (city) remember(city);
         return cities;
       })
       .catch(() => []);
@@ -55,7 +68,7 @@
 
   const set = (city, updateUrl = false) => {
     if (!city || !city.id) return;
-    remember(city.id);
+    remember(city);
     const url = updateUrl && cityUrl(city);
     if (url && window.history?.pushState) window.history.pushState({ cityId: city.id }, '', url);
     window.dispatchEvent(new CustomEvent('logika:city-change', { detail: { city } }));
