@@ -5,12 +5,15 @@ declare(strict_types=1);
 defined( 'ABSPATH' ) || exit;
 
 final class Logika_Theme_Routing {
+	private const REWRITE_VERSION = '2';
+
 	private const LEGACY_ROUTES = array(
 		'about.html' => '/about/', 'faq.html' => '/faq/', 'it-courses.html' => '/it-courses/', 'en-courses.html' => '/english-courses/', 'camps.html' => '/camps/', 'media-center.html' => '/media-center/', 'article.html' => '/media-center/', 'it-course.html' => '/courses/', 'camp.html' => '/camps/', 'city.html' => '/',
 	);
 
 	public static function register(): void {
 		add_action( 'init', array( self::class, 'rewriteRules' ), 20 );
+		add_action( 'init', array( self::class, 'flushRules' ), 99 );
 		add_filter( 'query_vars', array( self::class, 'queryVars' ) );
 		add_filter( 'post_type_link', array( self::class, 'postTypeLink' ), 10, 2 );
 		add_filter( 'post_link', array( self::class, 'postLink' ), 10, 2 );
@@ -31,6 +34,15 @@ final class Logika_Theme_Routing {
 		$vars[] = 'logika_city';
 
 		return $vars;
+	}
+
+	public static function flushRules(): void {
+		if ( self::REWRITE_VERSION === get_option( 'logika_routing_version' ) ) {
+			return;
+		}
+
+		flush_rewrite_rules( false );
+		update_option( 'logika_routing_version', self::REWRITE_VERSION );
 	}
 
 	public static function postTypeLink( string $url, WP_Post $post ): string {

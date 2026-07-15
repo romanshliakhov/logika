@@ -23,8 +23,8 @@ if ( ! str_contains( $context, 'const cityUrl = (city)' ) || ! str_contains( $se
 	exit( 1 );
 }
 
-if ( ! str_contains( $routing, '^cities/([^/]+)/(.+)/?$' ) || ! str_contains( $routing, 'logika_city' ) || ! str_contains( $routing, 'redirectCanonical' ) ) {
-	fwrite( STDERR, "WordPress must resolve and preserve city-prefixed page URLs.\n" );
+if ( ! str_contains( $routing, '^cities/([^/]+)/(.+)/?$' ) || ! str_contains( $routing, 'logika_city' ) || ! str_contains( $routing, 'redirectCanonical' ) || ! str_contains( $routing, 'flushRules' ) ) {
+	fwrite( STDERR, "WordPress must resolve, preserve and activate city-prefixed page URLs.\n" );
 	exit( 1 );
 }
 
