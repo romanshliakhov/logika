@@ -29,4 +29,9 @@ if ( ! str_contains( $scss, '&__online' ) || ! str_contains( $scss, '[hidden]' )
 	exit( 1 );
 }
 
+if ( ! str_contains( $functions, 'logika-school-map-style' ) ) {
+	fwrite( STDERR, "School map stylesheet must be enqueued after the theme stylesheet.\n" );
+	exit( 1 );
+}
+
 echo "School map uses theme assets and dynamic map contracts.\n";

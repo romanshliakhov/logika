@@ -32,10 +32,12 @@ function logika_theme_assets(): void {
 	$style_version = (string) filemtime( get_template_directory() . '/assets/css/style.css' );
 	$main_version = (string) filemtime( get_template_directory() . '/assets/js/main.js' );
 	$map_version = (string) filemtime( get_template_directory() . '/assets/js/camp-map.js' );
+	$map_style_version = (string) filemtime( get_template_directory() . '/assets/css/blocks/sections/school-map.css' );
 	$leads_version = (string) filemtime( get_template_directory() . '/assets/js/leads.js' );
 	$phone_dropup_version = (string) filemtime( get_template_directory() . '/assets/css/phone-dropdown-dropup.css' );
 	wp_enqueue_style( 'logika-intl-tel-input', $uri . '/css/vendor/intl-tel-input/intlTelInput.min.css', array(), '20.1.0' );
 	wp_enqueue_style( 'logika-theme', $uri . '/css/style.css', array( 'logika-intl-tel-input' ), $style_version );
+	wp_enqueue_style( 'logika-school-map-style', $uri . '/css/blocks/sections/school-map.css', array( 'logika-theme' ), $map_style_version );
 	wp_enqueue_style( 'logika-phone-dropdown-dropup', $uri . '/css/phone-dropdown-dropup.css', array( 'logika-theme' ), $phone_dropup_version );
 	wp_enqueue_script( 'logika-swiper', $uri . '/js/swiper.js', array(), $version, true );
 	wp_enqueue_script( 'logika-theme', $uri . '/js/main.js', array( 'logika-swiper' ), $main_version, true );
