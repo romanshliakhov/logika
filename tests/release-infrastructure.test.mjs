@@ -161,3 +161,13 @@ test('WordPress integration bootstrap seeds baseline homepage ACF content', () =
     'homepage ACF seed should run before the final cache flush',
   );
 });
+
+test('WordPress integration bootstrap creates managed editor pages', () => {
+  const prepareScript = readFileSync(join(root, 'scripts/release/prepare-wordpress-tests.sh'), 'utf8');
+
+  for (const slug of ['about', 'faq', 'it-courses', 'english-courses', 'media-center']) {
+    assert.match(prepareScript, new RegExp(`${slug}:`));
+  }
+
+  assert.match(prepareScript, /wp post create --path=wordpress --post_type=page/);
+});

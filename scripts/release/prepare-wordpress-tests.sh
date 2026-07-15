@@ -24,5 +24,23 @@ if [[ -z "$home_id" ]]; then
 fi
 wp option update --path=wordpress show_on_front page
 wp option update --path=wordpress page_on_front "$home_id"
+
+managed_pages=(
+  'about:About'
+  'faq:FAQ'
+  'it-courses:IT Courses'
+  'english-courses:English Courses'
+  'media-center:Media Center'
+)
+
+for page in "${managed_pages[@]}"; do
+  slug="${page%%:*}"
+  title="${page#*:}"
+  page_id="$(wp post list --path=wordpress --post_type=page --name="$slug" --format=ids)"
+  if [[ -z "$page_id" ]]; then
+    wp post create --path=wordpress --post_type=page --post_name="$slug" --post_title="$title" --post_status=publish --porcelain >/dev/null
+  fi
+done
+
 wp eval-file --path=wordpress scripts/seed-home-texts.php
 wp cache flush --path=wordpress
