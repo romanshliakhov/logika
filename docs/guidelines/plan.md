@@ -309,6 +309,7 @@ Goal: implement city context and map-driven selection.
 - [ ] Implement interactive region map.
 - [x] Load city list from WordPress data.
 - [x] Show cities by selected region.
+- [ ] Load map city branches from WordPress and reuse the hero form in online mode.
 - [x] Update navbar after city selection.
 - [ ] Update local blocks where supported.
 - [ ] Update Google Maps/address block after city selection.
