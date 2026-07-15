@@ -26,4 +26,25 @@ if ( empty( $kyiv['region']['label'] ) || 'Київська область' !== 
 	exit( 1 );
 }
 
-echo "City selector API exposes public city labels, regions and URLs.\n";
+$map_city = get_page_by_path( 'map-api-city', OBJECT, 'city' );
+$map_city_id = $map_city ? (int) $map_city->ID : (int) wp_insert_post( array( 'post_type' => 'city', 'post_name' => 'map-api-city', 'post_title' => 'Місто для карти', 'post_status' => 'publish' ) );
+
+foreach ( array( 'active-map-branch' => array( 'Активна філія', 'publish', 1 ), 'inactive-map-branch' => array( 'Неактивна філія', 'publish', 0 ), 'draft-map-branch' => array( 'Чернетка філії', 'draft', 1 ) ) as $slug => $branch_data ) {
+	list( $title, $status, $active ) = $branch_data;
+	$branch = get_page_by_path( $slug, OBJECT, 'branch' );
+	$branch_id = $branch ? (int) $branch->ID : (int) wp_insert_post( array( 'post_type' => 'branch', 'post_name' => $slug, 'post_title' => $title, 'post_status' => $status ) );
+	wp_update_post( array( 'ID' => $branch_id, 'post_status' => $status, 'post_title' => $title ) );
+	update_field( 'branch_city_id', $map_city_id, $branch_id );
+	update_field( 'branch_address', 'вул. Тестова, 10', $branch_id );
+	update_field( 'branch_is_active', $active, $branch_id );
+}
+
+$branch_response = rest_do_request( new WP_REST_Request( 'GET', '/logika/v1/cities/' . $map_city_id . '/branches' ) );
+$branches = $branch_response->get_data();
+
+if ( 200 !== $branch_response->get_status() || array( 'Активна філія' ) !== array_column( $branches, 'label' ) ) {
+	fwrite( STDERR, "Map branch API must expose only active published branches.\n" );
+	exit( 1 );
+}
+
+echo "City selector and map APIs expose public city data and active branches.\n";

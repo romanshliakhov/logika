@@ -19,6 +19,21 @@ final class CityApi {
 				'permission_callback' => '__return_true',
 			)
 		);
+
+		register_rest_route(
+			'logika/v1',
+			'/cities/(?P<id>\d+)/branches',
+			array(
+				'methods'             => WP_REST_Server::READABLE,
+				'callback'            => array( self::class, 'branches' ),
+				'permission_callback' => '__return_true',
+				'args'                => array(
+					'id' => array(
+						'validate_callback' => static fn( $value ): bool => is_numeric( $value ),
+					),
+				),
+			)
+		);
 	}
 
 	public static function index( WP_REST_Request $request ): WP_REST_Response {
@@ -57,7 +72,45 @@ final class CityApi {
 					$cities
 				)
 			);
+	}
+
+	public static function branches( WP_REST_Request $request ): WP_REST_Response {
+		$city_id = absint( $request['id'] );
+		$city    = get_post( $city_id );
+
+		if ( ! $city instanceof \WP_Post || 'city' !== $city->post_type || 'publish' !== $city->post_status ) {
+			return new WP_REST_Response( array( 'message' => 'Місто не знайдено.' ), 404 );
 		}
+
+		$branches = get_posts(
+			array(
+				'post_type'      => 'branch',
+				'post_status'    => 'publish',
+				'posts_per_page' => -1,
+				'orderby'        => 'title',
+				'order'          => 'ASC',
+				'meta_query'     => array(
+					'relation' => 'AND',
+					array( 'key' => 'branch_city_id', 'value' => (string) $city_id ),
+					array( 'key' => 'branch_is_active', 'value' => '1' ),
+				),
+			)
+		);
+
+		return new WP_REST_Response(
+			array_map(
+				static fn( \WP_Post $branch ): array => array(
+					'id'      => $branch->ID,
+					'label'   => $branch->post_title,
+					'address' => (string) get_field( 'branch_address', $branch->ID ),
+					'lat'     => (float) get_field( 'branch_lat', $branch->ID ),
+					'lng'     => (float) get_field( 'branch_lng', $branch->ID ),
+					'map_url' => (string) get_field( 'branch_google_maps_url', $branch->ID ),
+				),
+				$branches
+			)
+		);
+	}
 
 	private static function region( int $city_id ): array {
 		$terms = get_the_terms( $city_id, 'region' );
