@@ -19,6 +19,11 @@ foreach ( array( 'branchesEndpoint', 'fetchMap', 'logikaCityContext', 'moveHeroF
 	}
 }
 
+if ( ! str_contains( $script, ".cta-form[data-logika-lead-form]" ) ) {
+	fwrite( STDERR, "School map must reuse the CTA form when a page has no hero form.\n" );
+	exit( 1 );
+}
+
 if ( str_contains( $script, 'config.citiesEndpoint' ) || str_contains( $functions, "'citiesEndpoint'" ) ) {
 	fwrite( STDERR, "School map must load cities only through the shared city context.\n" );
 	exit( 1 );
