@@ -2,7 +2,24 @@
 /* stylelint-disable */
 /* stylelint-disable */
 .faq-section {
+  position: relative;
   padding: clamp(32px, 4.444vw, 64px) 0;
+}
+.faq-section__left-bg {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.faq-section__right-bg {
+  position: absolute;
+  bottom: -5%;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .faq-section__wrapp {
   display: -webkit-box;

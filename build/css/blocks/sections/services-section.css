@@ -2,7 +2,16 @@
 /* stylelint-disable */
 /* stylelint-disable */
 .services-section {
+  position: relative;
   padding: clamp(40px, 7.813vw, 80px) 0;
+}
+.services-section__bg {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .services-section__wrapp {
   display: -webkit-box;
@@ -16,6 +25,35 @@
   -ms-flex-align: center;
   align-items: center;
   gap: 60px;
+}
+.services-section__box {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.services-section__box-bg {
+  position: absolute;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.services-section__title {
+  text-align: center;
 }
 .services-section__items {
   width: 100%;
@@ -51,6 +89,13 @@
   width: 100%;
   background-color: var(--violet-100);
   border-radius: 40px;
+}
+.services-section__item-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  inset: 0;
 }
 .services-section__item-ages {
   position: absolute;

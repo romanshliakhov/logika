@@ -16,6 +16,7 @@ const accParrent = [...document.querySelectorAll("[data-accordion-init]")];
 
 const marqueeSectionSlider = document.querySelectorAll('.marquee-section__slider');
 const englishSectionSlider = document.querySelectorAll('.english-section__slider');
+const categoriesCoursesSlider = document.querySelectorAll('.categories-section__slider');
 
 //------------------------------------------------
 
@@ -414,6 +415,33 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   )};
+
+  if (categoriesCoursesSlider.length > 0) {
+    categoriesCoursesSlider.forEach(function (slider) {
+      const container = slider.querySelector(".swiper-container");
+      
+      // Піднімаємося до спільного батька (сесії), щоб знайти кнопки, які лежать вище в HTML
+      const parentSection = slider.closest('.categories-section');
+      const nextBtn = parentSection ? parentSection.querySelector(".swiper-button-next") : null;
+      const prevBtn = parentSection ? parentSection.querySelector(".swiper-button-prev") : null;
+
+      if (container) {
+        const mainSwiper = new Swiper(container, {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          speed: 1800,
+          // loop: true,
+          observer: true,
+          observeParents: true,
+          watchSlidesProgress: true,
+          navigation: {
+            nextEl: nextBtn, // Тепер кнопки успішно зв'яжуться зі слайдером
+            prevEl: prevBtn,
+          },
+        });
+      }
+    });
+  }
 
 
 });

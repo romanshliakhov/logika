@@ -17,6 +17,13 @@
   justify-content: space-between;
   gap: 20px;
 }
+.english-section__bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
 .english-section__left {
   padding: 0px 80px;
   display: -webkit-box;

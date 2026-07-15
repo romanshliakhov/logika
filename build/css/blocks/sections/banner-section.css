@@ -5,6 +5,14 @@
   position: relative;
   padding: 60px 0;
 }
+.banner-section__bg {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .banner-section__wrapp {
   display: -webkit-box;
   display: -ms-flexbox;

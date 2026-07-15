@@ -17,4 +17,15 @@
   align-items: center;
   gap: 60px;
 }
+.testimonials-section__items {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  gap: 40px 20px;
+}
 /*# sourceMappingURL=testimonials-section.css.map */
