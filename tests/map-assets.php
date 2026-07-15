@@ -12,7 +12,7 @@ if ( str_contains( $script, "fetch('img/maps/ukraine-regions.svg')" ) || ! str_c
 	exit( 1 );
 }
 
-foreach ( array( 'citiesEndpoint', 'branchesEndpoint', 'fetchMap', 'fetchCities', 'moveHeroForm', 'restoreHeroForm' ) as $contract ) {
+foreach ( array( 'branchesEndpoint', 'fetchMap', 'logikaCityContext', 'moveHeroForm', 'restoreHeroForm' ) as $contract ) {
 	if ( ! str_contains( $script, $contract ) && ! str_contains( $functions, $contract ) ) {
 		fwrite( STDERR, "School map is missing {$contract}.\n" );
 		exit( 1 );

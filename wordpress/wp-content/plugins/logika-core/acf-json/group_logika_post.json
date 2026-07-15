@@ -2,7 +2,7 @@
   "key": "group_logika_post",
   "title": "Редакційні поля запису",
   "fields": [
-    {"key":"field_post_related_city","label":"Пов'язане місто","name":"post_related_city","type":"post_object","post_type":["city"],"return_format":"id"},
+    {"key":"field_post_related_city","label":"Пов'язане місто","name":"post_related_city","type":"post_object","post_type":["city"],"return_format":"id","instructions":"Оберіть місто для локальної статті. Залиште порожнім для загальної статті."},
     {"key":"field_post_related_course","label":"Пов'язаний курс","name":"post_related_course","type":"post_object","post_type":["course"],"return_format":"id"},
     {"key":"field_post_is_offer","label":"Пропозиція","name":"post_is_offer","type":"true_false"},
     {"key":"field_post_answer_first_summary","label":"Коротка відповідь","name":"post_answer_first_summary","type":"textarea"},

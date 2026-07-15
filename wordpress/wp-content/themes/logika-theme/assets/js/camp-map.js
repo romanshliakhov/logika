@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const map = document.querySelector('[data-school-map]');
 
-  if (!map) return;
+  if (!map || !window.logikaCityContext) return;
 
   const regionNames = {
     cherkasy: 'Черкаська область', chernihiv: 'Чернігівська область', chernivtsi: 'Чернівецька область',
@@ -44,8 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return response.text();
   });
 
-  const fetchCities = () => requestJson(config.citiesEndpoint);
-
   const setFrame = (city, branches) => {
     const branch = branches.find(({ lat, lng }) => lat || lng);
     const lat = branch?.lat || city.lat;
@@ -87,8 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setFrame(city, branches);
   };
 
-  const selectCity = (city) => {
+  const selectCity = (city, persist = true) => {
     selectedCity = city;
+    if (persist) window.logikaCityContext.set(city);
     cityTitle.textContent = city.label.toUpperCase();
     details.hidden = false;
     locationsCount.textContent = 'Завантажуємо локації...';
@@ -162,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!config.mapUrl || !config.citiesEndpoint || !config.branchesEndpoint) return;
 
-  Promise.all([fetchMap(), fetchCities()])
+  Promise.all([fetchMap(), window.logikaCityContext.load()])
     .then(([svg, cityList]) => {
       const citiesByRegion = cityList.reduce((groups, city) => {
         const label = city.region?.label;
@@ -170,6 +169,12 @@ document.addEventListener('DOMContentLoaded', () => {
         groups.set(label, [...(groups.get(label) || []), city]);
         return groups;
       }, new Map());
+      const selectContextCity = (city) => {
+        const regionId = city?.region?.slug;
+        if (!city || !regionId || !regionNames[regionId]) return;
+        selectRegion(regionId, citiesByRegion);
+        selectCity(city, false);
+      };
 
       canvas.innerHTML = svg;
       canvas.querySelectorAll('path[id]').forEach((path) => {
@@ -190,6 +195,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       regionTitle.textContent = 'Оберіть область';
       cities.replaceChildren();
+      selectContextCity(window.logikaCityContext.get());
+      window.addEventListener('logika:city-change', ({ detail }) => selectContextCity(detail.city));
     })
     .catch(() => {
       canvas.textContent = 'Не вдалося завантажити карту областей.';
