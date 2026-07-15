@@ -190,3 +190,23 @@ test('staging smoke checks public homepage without REST rate-limit coupling', ()
   assert.doesNotMatch(smokeScript, /rest_route/);
   assert.doesNotMatch(smokeScript, /--head/);
 });
+
+test('staging database sync stays staging-only and never changes production', () => {
+  const stagingWorkflow = readFileSync(join(root, '.github/workflows/deploy-staging.yml'), 'utf8');
+  const productionWorkflow = readFileSync(join(root, '.github/workflows/deploy-production.yml'), 'utf8');
+  const exportScript = readFileSync(join(root, 'scripts/release/export-local-staging-db.sh'), 'utf8');
+  const importScript = readFileSync(join(root, 'scripts/release/import-staging-db.sh'), 'utf8');
+
+  assert.match(stagingWorkflow, /Import pending staging database dump/);
+  assert.match(stagingWorkflow, /scripts\/release\/import-staging-db\.sh/);
+  assert.doesNotMatch(productionWorkflow, /import-staging-db/);
+  assert.match(exportScript, /search-replace/);
+  assert.match(exportScript, /--export="\$sql_path"/);
+  assert.match(exportScript, /staging\.logika\.resumemyhost\.miy\.link/);
+  assert.match(exportScript, /production_url=/);
+  assert.match(exportScript, /Exported dump contains the production URL/);
+  assert.match(importScript, /incoming\/staging-db\.sql\.gz/);
+  assert.match(importScript, /db import/);
+  assert.match(importScript, /backup_dir=/);
+  assert.match(importScript, /No pending staging database dump/);
+});

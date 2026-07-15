@@ -25,6 +25,30 @@ each environment, with environment-specific values:
 Do not store WordPress passwords, database passwords, CRM credentials or
 Cloudflare tokens in GitHub workflow files or release archives.
 
+## Staging database sync
+
+Staging may receive a local WordPress database snapshot, but production must
+not. The GitHub runner cannot read a developer machine on push, so the sync is
+two-step:
+
+1. From the local WordPress checkout, run
+   `scripts/release/export-local-staging-db.sh`.
+2. If `DEPLOY_HOST`, `DEPLOY_USER` and `DEPLOY_ROOT` are set, the script uploads
+   a private pending dump to `DEPLOY_ROOT/incoming/staging-db.sql.gz`.
+3. The next `wordpress` branch staging deployment imports that pending dump,
+   backs up the previous staging database under `DEPLOY_ROOT/db-backups/`,
+   forces `home` and `siteurl` back to
+   `https://staging.logika.resumemyhost.miy.link`, sets `blog_public=0`, flushes
+   cache and moves the pending dump aside.
+
+The export uses WP-CLI `search-replace --export`, so serialized values are
+rewritten safely and the local database is not modified. The script refuses a
+dump that still contains localhost, DDEV or the production URL.
+
+This is a staging convenience only. Production database restore or migration
+still requires explicit approval, a protected backup, a staging restore test and
+a release-manifest migration flag.
+
 ## Server bootstrap
 
 Run the following only after a verified server backup and during a scheduled

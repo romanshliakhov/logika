@@ -17,6 +17,10 @@ artifact only through a manually approved GitHub Environment deployment.
   server plugins are not release payload.
 - [ ] The staging workflow has deployed a validated SHA and its smoke checks
   have passed.
+- [ ] If a local WordPress database snapshot is needed on staging, it is
+  exported with `scripts/release/export-local-staging-db.sh`, uploaded only to
+  `DEPLOY_ROOT/incoming/staging-db.sql.gz`, imported only by the staging
+  workflow, and followed by staging noindex/smoke evidence.
 - [ ] The production Environment requires an approver and deploys only an
   artifact downloaded from a successful staging workflow run.
 - [ ] A protected database plus managed-files backup is created before each
@@ -116,6 +120,8 @@ Autodeploy policy:
 
 ## 6. Database and migrations
 
+- [ ] Staging database sync, when used, is staging-only; production has no
+  automatic database import from local snapshots.
 - [ ] Production database backup exists before deployment.
 - [ ] Restore procedure has been tested on staging.
 - [ ] Plugin migrations are idempotent.

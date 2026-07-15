@@ -51,6 +51,15 @@ jobs:
           DEPLOY_SITE_ROOT: ${{ secrets.DEPLOY_SITE_ROOT }}
           WP_CLI_BIN: ${{ secrets.WP_CLI_BIN }}
         run: scripts/release/deploy.sh --artifact "${{ steps.artifact.outputs.path }}"
+      - name: Import pending staging database dump
+        env:
+          DEPLOY_HOST: ${{ secrets.SSH_HOST }}
+          DEPLOY_USER: ${{ secrets.SSH_USER }}
+          DEPLOY_PORT: ${{ secrets.SSH_PORT }}
+          DEPLOY_ROOT: ${{ secrets.DEPLOY_ROOT }}
+          DEPLOY_SITE_ROOT: ${{ secrets.DEPLOY_SITE_ROOT }}
+          WP_CLI_BIN: ${{ secrets.WP_CLI_BIN }}
+        run: scripts/release/import-staging-db.sh
       - name: Read-only server preflight
         env:
           DEPLOY_HOST: ${{ secrets.SSH_HOST }}
