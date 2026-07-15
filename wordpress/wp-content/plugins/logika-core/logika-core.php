@@ -17,6 +17,7 @@ define( 'LOGIKA_CORE_URL', plugin_dir_url( __FILE__ ) );
 require_once LOGIKA_CORE_PATH . 'src/AcfJson.php';
 require_once LOGIKA_CORE_PATH . 'src/ContentTypes.php';
 require_once LOGIKA_CORE_PATH . 'src/OptionsPage.php';
+require_once LOGIKA_CORE_PATH . 'src/CitySlug.php';
 require_once LOGIKA_CORE_PATH . 'src/CityApi.php';
 require_once LOGIKA_CORE_PATH . 'src/MediaApi.php';
 require_once LOGIKA_CORE_PATH . 'src/HomepageImageOverrides.php';

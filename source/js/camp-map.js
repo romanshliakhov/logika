@@ -93,11 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectCity = (city, persist = true) => {
     selectedCity = city;
     if (persist) {
-      cityContext.set(city);
-      if (city.url) {
-        window.location.assign(city.url);
-        return;
-      }
+      cityContext.set(city, true);
     }
     cityTitle.textContent = city.label.toUpperCase();
     details.hidden = false;

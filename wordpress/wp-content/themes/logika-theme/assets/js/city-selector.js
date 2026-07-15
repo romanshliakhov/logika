@@ -26,6 +26,9 @@ if (cityRoot && cityTrigger && window.logikaCityContext) {
   cityTrigger.setAttribute('role', 'button');
   cityTrigger.setAttribute('aria-expanded', 'false');
 
+  const initial = window.logikaCityContext.get();
+  if (initial && cityLabel) cityLabel.textContent = initial.label;
+
   const close = () => {
     cityRoot.classList.remove('header__location--open');
     cityTrigger.setAttribute('aria-expanded', 'false');
@@ -90,8 +93,8 @@ if (cityRoot && cityTrigger && window.logikaCityContext) {
         }
 
         option.addEventListener('click', () => {
-          window.logikaCityContext.set(city);
-          window.location.assign(city.url);
+          window.logikaCityContext.set(city, true);
+          close();
         });
         cityItem.append(option);
         citiesList.append(cityItem);

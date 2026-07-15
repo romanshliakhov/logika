@@ -23,6 +23,10 @@ Rules for agents and developers:
 - [ ] Add a homepage-only smooth-scroll handler for `/#lead-form` CTA links.
 - [ ] Cover the handler contract with a static regression test and run theme checks.
 
+### 2026-07-15: Lead form error contrast
+
+- [x] Set phone and submit error messages to the existing bright-red validation colour.
+
 ### 2026-07-15: Search in media centre
 
 - [x] Extend the existing media feed API with a published-articles search parameter.
