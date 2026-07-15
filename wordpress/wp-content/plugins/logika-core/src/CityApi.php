@@ -64,7 +64,8 @@ final class CityApi {
 					static fn( \WP_Post $city ): array => array(
 						'id'     => $city->ID,
 						'label'  => get_field( 'city_selected_label', $city->ID ) ?: $city->post_title,
-						'url'    => get_permalink( $city ),
+						'slug'   => CitySlug::for( $city ),
+						'url'    => CitySlug::url( $city ),
 						'lat'    => (float) get_field( 'city_lat', $city->ID ),
 						'lng'    => (float) get_field( 'city_lng', $city->ID ),
 						'region' => self::region( $city->ID ),

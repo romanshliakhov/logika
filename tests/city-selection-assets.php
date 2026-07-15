@@ -18,18 +18,24 @@ if ( ! str_contains( $context, 'logika-city-id' ) || ! str_contains( $context, '
 	exit( 1 );
 }
 
-if ( ! str_contains( $context, 'const cityUrl = (city)' ) || ! str_contains( $selector, 'logikaCityContext.url(city)' ) || ! str_contains( $map, 'cityContext.url?.(city)' ) ) {
-	fwrite( STDERR, "Navbar and map must open the selected city in the current page context.\n" );
+if ( ! str_contains( $context, 'window.history.pushState' ) || str_contains( $selector, 'window.location.assign' ) || str_contains( $map, 'window.location.assign' ) ) {
+	fwrite( STDERR, "City selection must update the context URL without navigating away.\n" );
 	exit( 1 );
 }
 
-if ( ! str_contains( $routing, '^cities/([^/]+)/(.+)/?$' ) || ! str_contains( $routing, 'logika_city' ) || ! str_contains( $routing, 'redirectCanonical' ) || ! str_contains( $routing, 'flushRules' ) ) {
+if ( ! str_contains( $routing, '^cities/([^/]+)/?$' ) || ! str_contains( $routing, 'resolveCity' ) || ! str_contains( $routing, '^cities/([^/]+)/(.+)/?$' ) || ! str_contains( $routing, 'logika_city' ) || ! str_contains( $routing, 'redirectCanonical' ) || ! str_contains( $routing, 'flushRules' ) ) {
 	fwrite( STDERR, "WordPress must resolve, preserve and activate city-prefixed page URLs.\n" );
 	exit( 1 );
 }
 
 if ( ! str_contains( $map, 'Object.entries(regionNames).find' ) || ! str_contains( $map, 'label === city.region?.label' ) ) {
 	fwrite( STDERR, "Map must resolve the selected city region by its public label.\n" );
+	exit( 1 );
+}
+
+$leads = $read( $root . '/wordpress/wp-content/themes/logika-theme/assets/js/leads.js' );
+if ( ! str_contains( $leads, "window.addEventListener('logika:city-change'" ) || ! str_contains( $leads, 'window.logikaCityContext?.get()' ) ) {
+	fwrite( STDERR, "Lead forms must inherit the shared selected city.\n" );
 	exit( 1 );
 }
 
@@ -40,6 +46,12 @@ if ( ! str_contains( $media, 'logika:city-change' ) || ! str_contains( $media, '
 
 if ( ! str_contains( $acf, 'Залиште порожнім для загальної статті.' ) ) {
 	fwrite( STDERR, "Article city field must explain the global fallback.\n" );
+	exit( 1 );
+}
+
+$city_acf = $read( $root . '/wordpress/wp-content/plugins/logika-core/acf-json/group_logika_city.json' );
+if ( ! str_contains( $city_acf, 'city_url_slug' ) ) {
+	fwrite( STDERR, "Cities need an editor-managed Latin URL key.\n" );
 	exit( 1 );
 }
 

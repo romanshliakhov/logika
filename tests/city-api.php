@@ -26,6 +26,12 @@ if ( empty( $kyiv['region']['label'] ) || 'Київська область' !== 
 	exit( 1 );
 }
 
+$akademmistechko = current( array_filter( $cities, static fn( array $city ): bool => 'Академмістечко' === $city['label'] ) );
+if ( '/cities/akademmistechko/' !== wp_parse_url( (string) ( $akademmistechko['url'] ?? '' ), PHP_URL_PATH ) ) {
+	fwrite( STDERR, "City context URLs must use Latin slugs.\n" );
+	exit( 1 );
+}
+
 $map_city = get_page_by_path( 'map-api-city', OBJECT, 'city' );
 $map_city_id = $map_city ? (int) $map_city->ID : (int) wp_insert_post( array( 'post_type' => 'city', 'post_name' => 'map-api-city', 'post_title' => 'Місто для карти', 'post_status' => 'publish' ) );
 

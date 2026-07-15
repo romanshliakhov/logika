@@ -90,8 +90,8 @@ if (cityRoot && cityTrigger && window.logikaCityContext) {
         }
 
         option.addEventListener('click', () => {
-          window.logikaCityContext.set(city);
-          window.location.assign(window.logikaCityContext.url(city));
+          window.logikaCityContext.set(city, true);
+          close();
         });
         cityItem.append(option);
         citiesList.append(cityItem);

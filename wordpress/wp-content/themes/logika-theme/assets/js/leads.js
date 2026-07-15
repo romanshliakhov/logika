@@ -241,7 +241,7 @@ document.querySelectorAll('[data-logika-city-select]').forEach((root) => {
     dropdown.hidden = false;
     search.focus();
   };
-  const selectCity = (city) => {
+  const selectCity = (city, updateContext = false, focus = false) => {
     valueInput.value = String(city.id);
     label.textContent = cityOptionLabel(city.label);
     root.classList.add('has-value');
@@ -252,7 +252,8 @@ document.querySelectorAll('[data-logika-city-select]').forEach((root) => {
     });
     valueInput.dispatchEvent(new Event('change', { bubbles: true }));
     close();
-    trigger.focus();
+    if (focus) trigger.focus();
+    if (updateContext) window.logikaCityContext?.set(city, true);
   };
   const setRegionState = (button, isOpen) => {
     button.closest('.main-form__city-region')?.classList.toggle('is-open', isOpen);
@@ -323,7 +324,7 @@ document.querySelectorAll('[data-logika-city-select]').forEach((root) => {
         option.textContent = cityOptionLabel(city.label);
         option.setAttribute('role', 'option');
         option.setAttribute('aria-selected', 'false');
-        option.addEventListener('click', () => selectCity(city));
+        option.addEventListener('click', () => selectCity(city, true, true));
         cityItem.append(option);
         citiesList.append(cityItem);
       });
@@ -351,8 +352,27 @@ document.querySelectorAll('[data-logika-city-select]').forEach((root) => {
     if (!root.contains(event.target)) close();
   });
 
-  cityRequest.then(renderCities).catch(() => { empty.hidden = false; });
+  Promise.all([cityRequest, window.logikaCityContext?.load() || Promise.resolve([])])
+    .then(([cities]) => {
+      renderCities(cities);
+      const city = window.logikaCityContext?.get();
+      if (city) selectCity(city);
+    })
+    .catch(() => { empty.hidden = false; });
+  window.addEventListener('logika:city-change', ({ detail }) => selectCity(detail.city));
 });
+
+const syncContextCity = (city) => {
+  if (!city) return;
+  document.querySelectorAll('[data-logika-lead-form] input[name="city_id"]').forEach((input) => {
+    if (input.closest('[data-logika-city-select]')) return;
+    input.value = String(city.id);
+    input.dispatchEvent(new Event('change', { bubbles: true }));
+  });
+};
+
+window.addEventListener('logika:city-change', ({ detail }) => syncContextCity(detail.city));
+window.logikaCityContext?.load().then(() => syncContextCity(window.logikaCityContext?.get()));
 const setStatus = (status, message) => {
   if (!status) return;
   status.hidden = false;
