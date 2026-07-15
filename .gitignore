@@ -1,1 +1,10 @@
 node_modules
+
+# Local/derived artifacts
+.worktrees/
+graphify-out/
+
+# Build artifacts in source branch workflows
+build/img/camp/
+source/img/camp/
+build/css/**/*.map
