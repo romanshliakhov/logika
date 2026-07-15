@@ -13,9 +13,15 @@ remote="$DEPLOY_USER@$DEPLOY_HOST"
 ssh -p "$deploy_port" "$remote" \
   "DEPLOY_SITE_ROOT='$DEPLOY_SITE_ROOT' WP_CLI_BIN='$wp_cli_bin' bash -s" <<'REMOTE_SCRIPT'
 set -euo pipefail
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" core version
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" theme is-active logika-theme
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" plugin is-active logika-core
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" plugin is-active logika-leads
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" rest route list --format=json
+
+wp_cli() {
+  read -r -a wp_cli_parts <<<"$WP_CLI_BIN"
+  "${wp_cli_parts[@]}" "$@"
+}
+
+wp_cli --path="$DEPLOY_SITE_ROOT" core version
+wp_cli --path="$DEPLOY_SITE_ROOT" theme is-active logika-theme
+wp_cli --path="$DEPLOY_SITE_ROOT" plugin is-active logika-core
+wp_cli --path="$DEPLOY_SITE_ROOT" plugin is-active logika-leads
+wp_cli --path="$DEPLOY_SITE_ROOT" rest route list --format=json
 REMOTE_SCRIPT

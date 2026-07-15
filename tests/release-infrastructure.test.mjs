@@ -124,3 +124,22 @@ test('release workflows enforce staged approval and document the readiness bound
   assert.match(deploymentGuide, /## Infrastructure release readiness/);
   assert.match(deploymentGuide, /## Application go-live readiness/);
 });
+
+test('release scripts support host-specific WP-CLI command secrets', () => {
+  const stagingWorkflow = readFileSync(join(root, '.github/workflows/deploy-staging.yml'), 'utf8');
+  const productionWorkflow = readFileSync(join(root, '.github/workflows/deploy-production.yml'), 'utf8');
+
+  for (const workflow of [stagingWorkflow, productionWorkflow]) {
+    assert.match(workflow, /WP_CLI_BIN: \$\{\{ secrets\.WP_CLI_BIN \}\}/);
+  }
+
+  for (const script of ['deploy.sh', 'preflight.sh', 'backup.sh']) {
+    const source = readFileSync(join(root, 'scripts/release', script), 'utf8');
+    assert.match(source, /wp_cli\(\) \{/);
+    assert.doesNotMatch(source, /"\$WP_CLI_BIN" --path=/);
+  }
+
+  const deployScript = readFileSync(join(root, 'scripts/release/deploy.sh'), 'utf8');
+  assert.match(deployScript, /wp_cli --path="\$DEPLOY_SITE_ROOT" theme activate logika-theme/);
+  assert.match(deployScript, /wp_cli --path="\$DEPLOY_SITE_ROOT" plugin activate logika-core logika-leads/);
+});

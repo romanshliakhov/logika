@@ -49,6 +49,7 @@ jobs:
           DEPLOY_PORT: ${{ secrets.SSH_PORT }}
           DEPLOY_ROOT: ${{ secrets.DEPLOY_ROOT }}
           DEPLOY_SITE_ROOT: ${{ secrets.DEPLOY_SITE_ROOT }}
+          WP_CLI_BIN: ${{ secrets.WP_CLI_BIN }}
         run: scripts/release/deploy.sh --artifact "${{ steps.artifact.outputs.path }}"
       - name: Read-only server preflight
         env:
@@ -56,6 +57,7 @@ jobs:
           DEPLOY_USER: ${{ secrets.SSH_USER }}
           DEPLOY_PORT: ${{ secrets.SSH_PORT }}
           DEPLOY_SITE_ROOT: ${{ secrets.DEPLOY_SITE_ROOT }}
+          WP_CLI_BIN: ${{ secrets.WP_CLI_BIN }}
         run: scripts/release/preflight.sh
       - name: Staging smoke checks
         run: scripts/release/smoke.sh --base-url https://staging.logika.resumemyhost.miy.link --expect-noindex

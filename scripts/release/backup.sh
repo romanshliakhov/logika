@@ -17,10 +17,15 @@ ssh -p "$deploy_port" "$remote" \
 set -euo pipefail
 umask 077
 
+wp_cli() {
+  read -r -a wp_cli_parts <<<"$WP_CLI_BIN"
+  "${wp_cli_parts[@]}" "$@"
+}
+
 backup_id="$(date -u +%Y%m%dT%H%M%SZ)"
 backup_dir="$DEPLOY_BACKUP_ROOT/$backup_id"
 mkdir -p "$backup_dir"
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" db export "$backup_dir/database.sql"
+wp_cli --path="$DEPLOY_SITE_ROOT" db export "$backup_dir/database.sql"
 gzip -9 "$backup_dir/database.sql"
 tar -C "$DEPLOY_SITE_ROOT" -czf "$backup_dir/managed-files.tar.gz" wp-config.php wp-content/uploads
 sha256sum "$backup_dir/database.sql.gz" "$backup_dir/managed-files.tar.gz" > "$backup_dir/SHA256SUMS"

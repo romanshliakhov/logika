@@ -20,6 +20,7 @@ each environment, with environment-specific values:
 | `DEPLOY_ROOT` | Private release root containing `releases/`, `current` and `backups/`. |
 | `DEPLOY_SITE_ROOT` | Existing WordPress root containing `wp-config.php` and `wp-content/uploads`. |
 | `DEPLOY_BACKUP_ROOT` | Protected production backup root; required only in `production`. |
+| `WP_CLI_BIN` | Optional remote WP-CLI command. On Plesk this can be `/opt/plesk/php/8.4/bin/php /usr/local/bin/wp`. |
 
 Do not store WordPress passwords, database passwords, CRM credentials or
 Cloudflare tokens in GitHub workflow files or release archives.

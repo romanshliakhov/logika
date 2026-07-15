@@ -76,6 +76,11 @@ ssh -p "$deploy_port" "$remote" \
   "DEPLOY_ROOT='$DEPLOY_ROOT' DEPLOY_SITE_ROOT='$DEPLOY_SITE_ROOT' RELEASE_ID='$release_id' WP_CLI_BIN='$wp_cli_bin' bash -s" <<'REMOTE_SCRIPT'
 set -euo pipefail
 
+wp_cli() {
+  read -r -a wp_cli_parts <<<"$WP_CLI_BIN"
+  "${wp_cli_parts[@]}" "$@"
+}
+
 release_dir="$DEPLOY_ROOT/releases/$RELEASE_ID"
 archive="$release_dir/release.tar.gz"
 expected_components=(
@@ -106,8 +111,10 @@ done
 
 ln -s "releases/$RELEASE_ID" "$DEPLOY_ROOT/current.next"
 mv -Tf "$DEPLOY_ROOT/current.next" "$DEPLOY_ROOT/current"
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" theme is-active logika-theme
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" plugin is-active logika-core
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" plugin is-active logika-leads
-"$WP_CLI_BIN" --path="$DEPLOY_SITE_ROOT" cache flush
+wp_cli --path="$DEPLOY_SITE_ROOT" theme activate logika-theme
+wp_cli --path="$DEPLOY_SITE_ROOT" plugin activate logika-core logika-leads
+wp_cli --path="$DEPLOY_SITE_ROOT" theme is-active logika-theme
+wp_cli --path="$DEPLOY_SITE_ROOT" plugin is-active logika-core
+wp_cli --path="$DEPLOY_SITE_ROOT" plugin is-active logika-leads
+wp_cli --path="$DEPLOY_SITE_ROOT" cache flush
 REMOTE_SCRIPT
