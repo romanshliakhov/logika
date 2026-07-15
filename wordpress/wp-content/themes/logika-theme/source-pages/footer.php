@@ -1,0 +1,109 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrapp">
+      <div class="footer__top">
+        <div class="footer__info">
+          <a class="footer__logo logo" href="/">
+            <img width='193' height='80' src='img/logo.svg' alt='Logika'>
+          </a>
+
+          <div class="footer__accreditation">
+            Найбільша в Україні школа програмування та англійської мови для учнів 7-16 років
+          </div>
+
+          <a class="btn btn--yellow" href="#">
+            Спробувати безкоштовно
+            <svg width='20' height='20'>
+              <use href='img/sprite/sprite.svg#arrow-right'></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer__box">
+          <div class="footer__navigation">
+            <div class="footer__title">Навігація</div>
+
+            <ul class="footer__menu">
+              <li>
+                <a href="/about.html">Про Logika</a>
+              </li>
+              <li>
+                <a href="/it-courses.html">Курси</a>
+              </li>
+              <li>
+                <a href="/camps.html">IT Табори</a>
+              </li>
+              <li>
+                <a href="/media-center.html">Медіа-центр</a>
+              </li>
+              <li>
+                <a href="/faq.html">FAQ</a>
+              </li>
+              <li>
+                <a href="#">Контакти</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__information">
+            <div class="footer__title">Інформація</div>
+
+            <ul class="footer__menu">
+              <li>
+                <a href="#">Вакансії</a>
+              </li>
+              <li>
+                <a href="#">Договір оферти <p>(для клієнтів в Україні)</p></a>
+              </li>
+              <li>
+                <a href="#">Договір оферти <p>(для клієнтів поза межами України)</p></a>
+              </li>
+              <li>
+                <a href="#">Освітня ліцензія</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__contacts">
+            <div class="footer__contacts-box">
+              <div class="footer__title">Наші соц. мережі</div>
+
+              <ul class="footer__socials">
+                <li>
+                  <a href="#" target="_blank">
+                    <svg width='46' height='46'>
+                      <use href='img/sprite/sprite.svg#Instagram'></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <svg width='46' height='46'>
+                      <use href='img/sprite/sprite.svg#Facebook'></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__contacts-box">
+              <div class="footer__title">Контакти</div>
+
+              <a class="footer__tel" href="tel:+380931707440" target="_blank">+ 38 (093) 170-74-40</a>
+              <a class="footer__email" href="mailto:kiev@logikaschool.com" target="_blank">kiev@logikaschool.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <p>© 2026 Logika</p>
+          <p>Всі права захищені</p>
+        </div>
+
+        <a class="footer__policy" href="#">Політика конфіденційності</a>
+      </div>
+    </div>
+  </div>
+</footer>

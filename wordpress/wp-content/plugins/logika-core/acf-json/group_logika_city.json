@@ -1,0 +1,26 @@
+{
+  "key": "group_logika_city",
+  "title": "Місто",
+  "fields": [
+    {"key":"field_city_external_id","label":"Зовнішній ID","name":"city_external_id","type":"text"},
+    {"key":"field_city_region","label":"Регіон","name":"city_region","type":"taxonomy","taxonomy":"region","field_type":"select","required":1,"return_format":"id"},
+    {"key":"field_city_lat","label":"Широта","name":"city_lat","type":"number","step":"0.000001"},
+    {"key":"field_city_lng","label":"Довгота","name":"city_lng","type":"number","step":"0.000001"},
+    {"key":"field_city_index_status","label":"Статус індексації","name":"city_index_status","type":"select","required":1,"choices":{"index":"Індексувати","noindex":"Не індексувати","review":"На перевірці"},"default_value":"review","return_format":"value"},
+    {"key":"field_city_selected_label","label":"Підпис у виборі міста","name":"city_selected_label","type":"text"},
+    {"key":"field_city_intro","label":"Вступ","name":"city_intro","type":"textarea"},
+    {"key":"field_city_seo_text","label":"SEO-текст","name":"city_seo_text","type":"wysiwyg"},
+    {"key":"field_city_seo_title","label":"SEO-заголовок","name":"city_seo_title","type":"text"},
+    {"key":"field_city_seo_description","label":"SEO-опис","name":"city_seo_description","type":"textarea"},
+    {"key":"field_city_schema_local_business","label":"LocalBusiness","name":"city_schema_local_business","type":"group","sub_fields":[{"key":"field_city_schema_name","label":"Назва","name":"name","type":"text"},{"key":"field_city_schema_description","label":"Опис","name":"description","type":"textarea"},{"key":"field_city_schema_telephone","label":"Телефон","name":"telephone","type":"text"},{"key":"field_city_schema_address","label":"Адреса","name":"address","type":"text"},{"key":"field_city_schema_price_range","label":"Ціновий діапазон","name":"price_range","type":"text"},{"key":"field_city_schema_same_as","label":"Профілі","name":"same_as","type":"url"}]},
+    {"key":"field_city_fallback_image","label":"Резервне зображення","name":"city_fallback_image","type":"image","return_format":"id"},
+    {"key":"field_city_related_courses","label":"Пов'язані курси","name":"city_related_courses","type":"relationship","post_type":["course"],"return_format":"id"},
+    {"key":"field_city_related_camps","label":"Пов'язані табори","name":"city_related_camps","type":"relationship","post_type":["camp"],"return_format":"id"},
+    {"key":"field_city_related_reviews","label":"Пов'язані відгуки","name":"city_related_reviews","type":"relationship","post_type":["review"],"return_format":"id"},
+    {"key":"field_city_related_faq","label":"Пов'язані FAQ","name":"city_related_faq","type":"relationship","post_type":["faq_item"],"return_format":"id"}
+  ],
+  "location": [[{"param":"post_type","operator":"==","value":"city"}]],
+  "active": true,
+  "position": "acf_after_title",
+  "show_in_rest": true
+}

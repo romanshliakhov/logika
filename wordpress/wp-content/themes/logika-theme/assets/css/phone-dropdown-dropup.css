@@ -1,0 +1,15 @@
+.main-form .iti--phone-dropdown-up .main-form__phone {
+	border-radius: 0 0 26px 26px;
+}
+
+.main-form .iti--phone-dropdown-up .iti__selected-flag {
+	border-radius: 0 0 0 26px;
+}
+
+.main-form .iti--phone-dropdown-up.iti--inline-dropdown .iti__dropdown-content {
+	margin-bottom: 0;
+	border-top: 1px solid var(--grey-100);
+	border-bottom: 0;
+	border-radius: 12px 12px 0 0;
+	box-shadow: none;
+}
