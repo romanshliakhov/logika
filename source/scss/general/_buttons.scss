@@ -1,13 +1,13 @@
 .btn {
   width: 100%;
-  padding: 16px;
+  padding: clamp(12px, 1.111vw, 16px);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
   border-radius: 12px;
   font-family: var(--font-primary);
-  font-size: clamp(14px, 2.083vw, 16px);
+  font-size: clamp(14px, 1.111vw, 16px);
   line-height: 140%;
   font-weight: 700;
   letter-spacing: -0.8px;
@@ -36,5 +36,11 @@
     background-color: var(--white);
     border: 1px solid var(--green);
     color: var(--green);
+  }
+
+  &--bordered-violet {
+    background-color: var(--white);
+    border: 1px solid var(--violet-100);
+    color: var(--violet-100);
   }
 }

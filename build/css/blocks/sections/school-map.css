@@ -71,6 +71,23 @@
   gap: 47px;
   margin: 0 0 60px;
 }
+.school-map__online {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 912px;
+  max-width: calc(100vw - 40px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto 60px;
+}
+.school-map__online[hidden] {
+  display: none;
+}
+.school-map__online .main-form {
+  width: 100%;
+}
 .school-map__canvas {
   min-height: 534px;
 }

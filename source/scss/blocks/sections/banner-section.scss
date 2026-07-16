@@ -6,9 +6,11 @@
 
     &__bg {
         position: absolute;
-        top: 16px;
+        top: 0px;
         right: 0;
         display: flex;
+        width: 1283px;
+        height: 100%;
     }
 
     &__wrapp {
@@ -50,10 +52,9 @@
     }
 
     &__form {
-        // flex-shrink: 0;
         max-width: 480px;
         width: 100%;
-        padding: 40px 30px;
+        padding: clamp(20px, 2.778vw, 40px) clamp(20px, 2.083vw, 30px);
         border-radius: 30px;
         background-color: var(--violet-100);
     }

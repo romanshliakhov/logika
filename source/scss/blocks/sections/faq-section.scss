@@ -4,6 +4,10 @@
     position: relative;
     padding: clamp(32px, 4.444vw, 64px) 0;
 
+    &--mode {
+
+    }
+
     &__left-bg {
         position: absolute;
         top: -20%;
@@ -16,6 +20,13 @@
         bottom: -5%;
         right: 0;
         display: flex;
+        width: clamp(213px, 23.889vw, 344px);
+        height: clamp(228px, 39.167vw, 564px);
+
+        picture,
+        img {
+            width: 100%;
+        }
     }
 
     &__wrapp {

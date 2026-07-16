@@ -199,8 +199,8 @@ window.addEventListener("DOMContentLoaded", () => {
           accordionParrent.dataset.single &&
           accordionParrent.dataset.breakpoint
         ) {
-          multipleSetting = accordionParrent.dataset.single; // true - включает сингл аккордион
-          breakpoinSetting = accordionParrent.dataset.breakpoint; // брейкпоинт сингл режима (если он true)
+          multipleSetting = accordionParrent.dataset.single;
+          breakpoinSetting = accordionParrent.dataset.breakpoint; 
         }
 
         const getAccordions = function (dataName = "[data-id]") {
@@ -213,18 +213,29 @@ window.addEventListener("DOMContentLoaded", () => {
         const closeAccordion = function (accordion, className = "active") {
           accordion.style.maxHeight = 0;
           removeCustomClass(accordion, className);
+
+          const itemParent = accordion.closest('.accordion__item');
+          if (itemParent) {
+            removeCustomClass(itemParent, className);
+          }
         };
 
         const openAccordion = function (accordion, className = "active") {
           accordion.style.maxHeight = accordion.scrollHeight + "px";
           addCustomClass(accordion, className);
+
+          // Добавляем active на родительский li (.accordion__item)
+          const itemParent = accordion.closest('.accordion__item');
+          if (itemParent) {
+            addCustomClass(itemParent, className);
+          }
         };
 
         const toggleAccordionButton = function (button, className = "active") {
           const childParrent = button.closest('.menu-has-child');
           toggleCustomClass(button, className);
 
-          if(childParrent) {
+          if (childParrent) {
             toggleCustomClass(childParrent, className);
           }
         };

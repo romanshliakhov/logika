@@ -1,7 +1,7 @@
 .main-form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: clamp(20px, 2.083vw, 30px);
 
     &__title {
         text-align: center;
@@ -16,11 +16,11 @@
     &__inputs {
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: clamp(12px, 1.25vw, 18px);
     }
 
     &__input {
-        height: 52px;
+        height: clamp(44px, 3.611vw, 52px);
         display: flex;
         align-items: center;
         padding: 0 16px;

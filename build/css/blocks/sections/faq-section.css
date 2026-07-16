@@ -20,6 +20,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: clamp(213px, 23.889vw, 344px);
+  height: clamp(228px, 39.167vw, 564px);
+}
+.faq-section__right-bg picture,
+.faq-section__right-bg img {
+  width: 100%;
 }
 .faq-section__wrapp {
   display: -webkit-box;
