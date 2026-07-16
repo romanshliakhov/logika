@@ -3,7 +3,6 @@
 /* stylelint-disable */
 .camp-details {
   padding: 80px 0;
-  background-color: var(--white);
 }
 .camp-details__content {
   display: -ms-grid;
