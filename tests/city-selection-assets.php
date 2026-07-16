@@ -38,6 +38,11 @@ if ( ! str_contains( $context, 'const syncHomeLinks' ) || ! str_contains( $conte
 	exit( 1 );
 }
 
+if ( ! str_contains( $context, 'const isHomepage' ) || ! str_contains( $context, 'window.history?.replaceState' ) ) {
+	fwrite( STDERR, "Changing city on the homepage must not reload it.\n" );
+	exit( 1 );
+}
+
 if ( ! str_contains( $routing, "'index.php?logika_city=\$matches[1]'" ) || str_contains( $routing, '^cities/([^/]+)/(.+)/?$' ) || ! str_contains( $routing, 'resolveCityHomepage' ) ) {
 	fwrite( STDERR, "Only the city homepage may use a city-prefixed URL.\n" );
 	exit( 1 );
