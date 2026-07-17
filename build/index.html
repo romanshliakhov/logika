@@ -22,7 +22,7 @@
   <div class="header__top">
     <div class="container">
       <div class="header__top-box">
-        <div class="header__contact">
+        <div class="header__contact header__contact--tel">
           <div class="header__contact-heading">
             <svg width='16' height='16'>
               <use href='img/sprite/sprite.svg#icon-phone'></use>
@@ -32,7 +32,7 @@
           <a class="header__contact-link" href="tel:+380931707440" target="_blank">+ 38 (093) 170-74-40</a>
         </div>
 
-        <div class="header__contact">
+        <div class="header__contact header__contact--email">
           <div class="header__contact-heading">
             <svg width='16' height='16'>
               <use href='img/sprite/sprite.svg#icon-email'></use>
@@ -95,58 +95,60 @@
             </div>
           </div>
 
-          <nav class="header__nav" data-single='true' data-breakpoint='576' data-accordion-init>
-            <ul class="menu">
-              <li class="menu-item">
-                <a class="menu-link" href="/about.html">Про Logika</a>
-              </li>
-              <li class="menu-item menu-has-child">
-                <a class="menu-link" href="#">Курси</a>
+          <div class="header__wrapp">
+            <nav class="header__nav" data-single='true' data-breakpoint='576' data-accordion-init>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a class="menu-link" href="/about.html">Про Logika</a>
+                </li>
+                <li class="menu-item menu-has-child">
+                  <a class="menu-link" href="#">Курси</a>
 
-                <button class="menu-button" data-id='courses'>
-                  <svg width='18' height='18'>
-                    <use href='img/sprite/sprite.svg#icon-caret-down'></use>
-                  </svg>
-                </button>
+                  <button class="menu-button" data-id='courses'>
+                    <svg width='18' height='18'>
+                      <use href='img/sprite/sprite.svg#icon-caret-down'></use>
+                    </svg>
+                  </button>
 
-                <ul class="sub-menu" data-content='courses'>
-                  <li class="menu-item">
-                    <a class="menu-link" href="/it-courses.html">IT Courses</a>
-                  </li>
-                  <li class="menu-item">
-                    <a class="menu-link" href="/en-courses.html">English Courses</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu-item">
-                <a class="menu-link" href="/camps.html">IT-табори</a>
-              </li>
-              <li class="menu-item">
-                <a class="menu-link" href="/media-center.html">Медіа-центр</a>
-              </li>
-              <li class="menu-item">
-                <a class="menu-link" href="/faq.html">FAQ</a>
-              </li>
-              <li class="menu-item">
-                <a class="menu-link" href="#">Контакти</a>
-              </li>
-            </ul>
-          </nav>
+                  <ul class="sub-menu" data-content='courses'>
+                    <li class="menu-item">
+                      <a class="menu-link" href="/it-courses.html">IT Courses</a>
+                    </li>
+                    <li class="menu-item">
+                      <a class="menu-link" href="/en-courses.html">English Courses</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link" href="/camps.html">IT-табори</a>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link" href="/media-center.html">Медіа-центр</a>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link" href="/faq.html">FAQ</a>
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link" href="#">Контакти</a>
+                </li>
+              </ul>
+            </nav>
 
-          <div class="header__controls">
-            <a class="header__login btn" href="https://student.logikaschool.com.ua/login" target="_blank">
-              <svg width='16' height='16'>
-                <use href='img/sprite/sprite.svg#icon-person'></use>
-              </svg>
-              <span>Увійти</span>
-            </a>
+            <div class="header__controls">
+              <a class="header__login btn" href="https://student.logikaschool.com.ua/login" target="_blank">
+                <svg width='16' height='16'>
+                  <use href='img/sprite/sprite.svg#icon-person'></use>
+                </svg>
+                <span>Увійти</span>
+              </a>
 
-            <button class="header__lesson btn btn--yellow" data-path="lesson">
-              Пробний урок
-              <svg width='20' height='20'>
-                <use href='img/sprite/sprite.svg#arrow-right'></use>
-              </svg>
-            </button>
+              <button class="header__lesson btn btn--yellow" data-path="lesson">
+                Пробний урок
+                <svg width='20' height='20'>
+                  <use href='img/sprite/sprite.svg#arrow-right'></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -160,8 +162,8 @@
 
    <main>
     <section class="banner-section">
-      <div class="banner-section__bg">
-        <img src="img/main-hero/main-hero-bg.svg" alt="">
+      <div class="banner-section__main-bg">
+        <img src="img/main-hero/main-pattern.svg" alt="">
       </div>
 
       <div class="container">
@@ -169,12 +171,15 @@
           <div class="banner-section__blocks">
             <div class="banner-section__left">
               <div class="banner-section__info">
-                <h1 class="banner-section__title">Найбільша в Україні школа програмування для дітей 7-17 років</h1>
+                <h1 class="banner-section__title">Програмування та англійська мова для дітей 7–17 років</h1>
                 <div class="banner-section__subtitle h4">Перші результати вже через 4 тижні</div>
               </div>
 
               <div class="banner-section__character-boy">
                 <img width='440' height='225' src='img/boy-character.svg' alt='boy-character'>
+                <div class="banner-section__decor">
+                  <img src="img/main-hero/main-hero-bg.svg" alt="">
+                </div>
               </div>
             </div>
             
@@ -1252,19 +1257,20 @@
               </div>
 
               <article class="media-section__contest">
+                <img class="media-section__background" src="img/media-center/figma/contest-art.svg" alt="" aria-hidden="true">
                 <span class="media-section__label">Logika Конкурси</span>
-                <img class="media-section__figma-art" src="img/media-center/figma/contests.svg" alt="">
                 <div>
                   <h3>Конкурси від<br>Logika</h3>
                   <p>Беріть участь у хакатонах, змаганнях, творчих ініціативах і отримуйте нагороди за призові місця.</p>
                 </div>
-                <a href="#" class="btn btn--yellow">Переглянути усі конкурси <svg width='20' height='20'><use href='img/sprite/sprite.svg#arrow-right'></use></svg></a>
+                <a href="/media-center.html" class="btn btn--yellow">Переглянути усі конкурси <svg width='20' height='20'><use href='img/sprite/sprite.svg#arrow-right'></use></svg></a>
               </article>
             </div>
 
             <div class="media-section__promos">
               <article class="media-section__promo media-section__promo--offer">
                 <span class="media-section__label">Акція</span>
+                <img class="media-section__background" src="img/media-center/figma/offer-background.svg" alt="">
                 <img class="media-section__figma-art" src="img/media-center/figma/offer.svg" alt="">
                 <div><h3>1=2</h3><h4>на усі курси 14-17 років</h4><p>Купуйте один курс та отримуйте другий у подарунок</p></div>
                 <a href="#" class="btn btn--yellow">Дізнатись більше <svg width='20' height='20'><use href='img/sprite/sprite.svg#arrow-right'></use></svg></a>
@@ -1286,22 +1292,22 @@
 
             <div class="media-section__blog-list">
               <article class="media-section__post">
-                <img src="img/media-center/blog-family.jpg" alt="Мама з дитиною навчаються за ноутбуком">
+                <img src="img/media-center/blog-placeholder.png" alt="Мама з дитиною навчаються за ноутбуком">
                 <span class="media-section__label">Logika Блог</span>
                 <h3>Як направити захоплення дитини комп'ютером у перспективну навичку?</h3>
-                <p>07.02.2022 &nbsp; 5 хв &nbsp; 25</p>
+                <p><span><img src="img/media-center/proicons_calendar.svg" alt="">07.02.2022</span><span><img src="img/media-center/formkit_time.svg" alt="">5хв</span><span><img src="img/media-center/proicons_eye.svg" alt="">25</span></p>
               </article>
               <article class="media-section__post">
-                <img src="img/media-center/blog-family.jpg" alt="Мама з дитиною навчаються за ноутбуком">
+                <img src="img/media-center/blog-placeholder.png" alt="Мама з дитиною навчаються за ноутбуком">
                 <span class="media-section__label">Logika Блог</span>
                 <h3>Як направити захоплення дитини комп'ютером у перспективну навичку?</h3>
-                <p>07.02.2022 &nbsp; 5 хв &nbsp; 25</p>
+                <p><span><img src="img/media-center/proicons_calendar.svg" alt="">07.02.2022</span><span><img src="img/media-center/formkit_time.svg" alt="">5хв</span><span><img src="img/media-center/proicons_eye.svg" alt="">25</span></p>
               </article>
               <article class="media-section__post">
-                <img src="img/media-center/blog-family.jpg" alt="Мама з дитиною навчаються за ноутбуком">
+                <img src="img/media-center/blog-placeholder.png" alt="Мама з дитиною навчаються за ноутбуком">
                 <span class="media-section__label">Logika Блог</span>
                 <h3>Як направити захоплення дитини комп'ютером у перспективну навичку?</h3>
-                <p>07.02.2022 &nbsp; 5 хв &nbsp; 25</p>
+                <p><span><img src="img/media-center/proicons_calendar.svg" alt="">07.02.2022</span><span><img src="img/media-center/formkit_time.svg" alt="">5хв</span><span><img src="img/media-center/proicons_eye.svg" alt="">25</span></p>
               </article>
             </div>
             </div>

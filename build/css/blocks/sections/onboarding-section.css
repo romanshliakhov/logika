@@ -3,6 +3,7 @@
 /* stylelint-disable */
 .onboarding-section {
   padding: clamp(40px, 7.813vw, 80px) 0;
+  overflow: hidden;
 }
 .onboarding-section__wrapp {
   display: -webkit-box;

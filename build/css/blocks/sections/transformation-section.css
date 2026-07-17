@@ -3,6 +3,7 @@
 /* stylelint-disable */
 .transformation-section {
   padding: clamp(40px, 7.813vw, 80px) 0;
+  overflow: hidden;
 }
 .transformation-section__wrapp {
   display: -webkit-box;
