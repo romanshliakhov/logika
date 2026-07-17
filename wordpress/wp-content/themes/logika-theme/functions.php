@@ -70,6 +70,9 @@ function logika_theme_assets(): void {
 	wp_enqueue_style( 'logika-lead-modal', $uri . '/css/lead-modal.css', array( 'logika-theme' ), $lead_modal_style_version );
 	if ( is_post_type_archive( 'camp' ) || is_page( 'camps' ) ) {
 		wp_enqueue_style( 'logika-camp-modal', $uri . '/css/camp-modal.css', array( 'logika-lead-modal' ), (string) filemtime( get_template_directory() . '/assets/css/camp-modal.css' ) );
+		foreach ( array( 'camp-booking', 'camp-formats', 'camp-highlights', 'camp-page-hero' ) as $section ) {
+			wp_enqueue_style( "logika-{$section}", "{$uri}/css/blocks/sections/{$section}.css", array( 'logika-theme' ), (string) filemtime( get_template_directory() . "/assets/css/blocks/sections/{$section}.css" ) );
+		}
 	}
 	wp_enqueue_style( 'logika-school-map-style', $uri . '/css/blocks/sections/school-map.css', array( 'logika-theme' ), $map_style_version );
 	wp_enqueue_style( 'logika-faq-banner-style', $uri . '/css/blocks/sections/faq-banner-section.css', array( 'logika-theme' ), $faq_banner_style_version );

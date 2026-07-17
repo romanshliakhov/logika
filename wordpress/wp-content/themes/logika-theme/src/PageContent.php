@@ -430,7 +430,7 @@ final class Logika_Theme_Page_Content {
 		foreach ( array_values( $ids ) as $index => $id ) {
 			$item = $templates[0][ $index % count( $templates[0] ) ];
 			$title = get_the_title( $id );
-			$item = self::replaceLeaf( $item, '#(<span class="camp-formats__season">)(.*?)(</span>)#s', $title );
+			$item = self::replaceLeaf( $item, '#(<span class="camp-formats__(?:season|item-season)">)(.*?)(</span>)#s', $title );
 			$item = (string) preg_replace( '#(<a\b[^>]*href=)(["\']).*?\2#', '$1$2' . esc_url( get_permalink( $id ) ) . '$2', $item, 1 );
 			$image = (int) get_field( 'camp_hero_image', $id );
 			$url = $image ? wp_get_attachment_image_url( $image, 'large' ) : false;
@@ -562,7 +562,7 @@ final class Logika_Theme_Page_Content {
 	private static function applyGallery( string $markup, string $source, int|string $context ): string {
 		$field = array( 'camps' => 'camp_archive_gallery', 'camp' => 'camp_gallery' )[ $source ] ?? '';
 		$images = $field ? array_values( array_filter( array_map( 'absint', (array) get_field( $field, $context ) ) ) ) : array();
-		if ( ! $images || ! preg_match( '#(<ul class=["\']swiper-wrapper["\']>)(.*?)(</ul>)#s', $markup, $list ) || ! preg_match( '#<div class="swiper-slide">.*?</div>\s*</div>#s', $list[2], $slide ) ) {
+		if ( ! $images || ! preg_match( '#(<ul class=["\']swiper-wrapper["\']>)(.*?)(</ul>)#s', $markup, $list ) || ! preg_match( '#(?:<div class="swiper-slide">.*?</div>\s*</div>|<li class="swiper-slide">.*?</div>\s*</li>)#s', $list[2], $slide ) ) {
 			return $markup;
 		}
 		$slides = '';
