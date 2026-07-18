@@ -41,6 +41,14 @@ test('build artifact contains only managed WordPress components and release meta
     assert.ok(archiveEntries.some((entry) => entry.startsWith('wordpress/wp-content/themes/logika-theme/')));
     assert.ok(archiveEntries.some((entry) => entry.startsWith('wordpress/wp-content/plugins/logika-core/')));
     assert.ok(archiveEntries.some((entry) => entry.startsWith('wordpress/wp-content/plugins/logika-leads/')));
+    for (const asset of ['css/style.css', 'js/main.js', 'img/sprite/sprite.svg']) {
+      const archiveAsset = `wordpress/wp-content/themes/logika-theme/assets/${asset}`;
+      assert.deepEqual(
+        execFileSync('tar', ['-xOzf', artifactPath, archiveAsset]),
+        readFileSync(join(root, 'build', asset)),
+        `${archiveAsset} must equal the current frontend build`,
+      );
+    }
     assert.ok(archiveEntries.every((entry) => (
       entry === 'release-manifest.json'
       || entry === 'wordpress/'
@@ -54,6 +62,16 @@ test('build artifact contains only managed WordPress components and release meta
   } finally {
     rmSync(outputDir, { recursive: true, force: true });
   }
+});
+
+test('artifact builder stages freshly built theme runtime assets', () => {
+  const builder = readFileSync(join(root, 'scripts/release/build-artifact.sh'), 'utf8');
+
+  assert.match(builder, /npm run backend/);
+  for (const assetDir of ['css', 'js', 'img']) {
+    assert.match(builder, new RegExp(`build/\\$asset_dir`));
+  }
+  assert.match(builder, /tar -C "\$staging_dir" -cf - "\$component"/);
 });
 
 test('deploy refuses to connect until every required target parameter is supplied', () => {

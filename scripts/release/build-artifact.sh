@@ -65,9 +65,22 @@ cleanup() {
 }
 trap cleanup EXIT
 
+(
+  cd "$source_root"
+  npm run backend >&2
+)
+
+tar -C "$source_root" -cf - "${components[@]}" | tar -C "$staging_dir" -xf -
+theme_assets="$staging_dir/wordpress/wp-content/themes/logika-theme/assets"
+
+for asset_dir in css js img; do
+  test -d "$source_root/build/$asset_dir"
+  tar -C "$source_root/build" -cf - "$asset_dir" | tar -C "$theme_assets" -xf -
+done
+
 component_checksums=()
 for component in "${components[@]}"; do
-  checksum="$(tar -C "$source_root" -cf - "$component" | sha256sum | awk '{print $1}')"
+  checksum="$(tar -C "$staging_dir" -cf - "$component" | sha256sum | awk '{print $1}')"
   component_checksums+=("$checksum")
 done
 
@@ -91,7 +104,6 @@ cat > "$staging_dir/release-manifest.json" <<EOF
 }
 EOF
 
-tar -C "$source_root" -cf - "${components[@]}" | tar -C "$staging_dir" -xf -
 tar -C "$staging_dir" -czf "$archive_path" release-manifest.json wordpress
 cp "$staging_dir/release-manifest.json" "$manifest_path"
 sha256sum "$archive_path" > "$archive_path.sha256"
