@@ -20,6 +20,7 @@ const categoriesCoursesSlider = document.querySelectorAll('.categories-section__
 const tripsSectionSlider = document.querySelectorAll('.trips-section__slider');
 const gallerySectionSlider = document.querySelectorAll('.gallery-section__slider');
 const campsHighlightsSlider = document.querySelectorAll('.camp-highlights__slider');
+const testimonialsSlider = document.querySelectorAll('.testimonials-section__slider');
 const campGalleries = document.querySelectorAll('[data-camp-gallery]');
 
 //------------------------------------------------
@@ -445,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (marqueeSectionSlider) {
+  if (marqueeSectionSlider && marqueeSectionSlider.length > 0) {
     marqueeSectionSlider.forEach(function (slider) {
       const container = slider.querySelector(".swiper-container");
 
@@ -464,10 +465,10 @@ document.addEventListener("DOMContentLoaded", function () {
         observer: true,
         observeParents: true,
       });
-    }
-  )};
+    });
+  }
 
-  if (englishSectionSlider) {
+  if (englishSectionSlider && englishSectionSlider.length > 0) {
     englishSectionSlider.forEach(function (slider) {
       const container = slider.querySelector(".swiper-container");
       const nextBtn = slider.querySelector(".swiper-button-next");
@@ -485,14 +486,13 @@ document.addEventListener("DOMContentLoaded", function () {
           prevEl: prevBtn,
         },
       });
-    }
-  )};
+    });
+  }
 
   if (categoriesCoursesSlider.length > 0) {
     categoriesCoursesSlider.forEach(function (slider) {
       const container = slider.querySelector(".swiper-container");
       
-      // Піднімаємося до спільного батька (сесії), щоб знайти кнопки, які лежать вище в HTML
       const parentSection = slider.closest('.categories-section');
       const nextBtn = parentSection ? parentSection.querySelector(".swiper-button-next") : null;
       const prevBtn = parentSection ? parentSection.querySelector(".swiper-button-prev") : null;
@@ -502,12 +502,11 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: 3,
           spaceBetween: 10,
           speed: 1800,
-          // loop: true,
           observer: true,
           observeParents: true,
           watchSlidesProgress: true,
           navigation: {
-            nextEl: nextBtn, // Тепер кнопки успішно зв'яжуться зі слайдером
+            nextEl: nextBtn, 
             prevEl: prevBtn,
           },
         });
@@ -640,6 +639,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  if (testimonialsSlider.length > 0) {
+    testimonialsSlider.forEach(function (slider) {
+      const container = slider.querySelector(".swiper-container");
+      if (!container) return;
+
+      let mainSwiper = null; 
+
+      const initOrDestroySlider = () => {
+        const windowWidth = window.innerWidth; 
+
+        if (windowWidth <= 1024) {
+          if (!mainSwiper) {
+            mainSwiper = new Swiper(container, {
+              speed: 1800,
+              loop: true,
+              observer: true,
+              observeParents: true,
+              watchSlidesProgress: true,
+              spaceBetween: 20,
+              slidesPerView: "auto",
+            });
+          }
+        } else {
+          if (mainSwiper) {
+            mainSwiper.destroy(true, true);
+            mainSwiper = null;
+          }
+        }
+      };
+
+      initOrDestroySlider();
+
+      let resizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(initOrDestroySlider, 150);
+      });
+    });
+  }
 });
 
 
