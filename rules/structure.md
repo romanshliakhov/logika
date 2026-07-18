@@ -1,3 +1,11 @@
+## Канонічний WordPress release
+
+- `.worktrees/wordpress` є єдиним канонічним джерелом staging release.
+- Release містить лише версіонований власний WordPress runtime; core,
+  сторонні плагіни, uploads і серверна конфігурація лишаються на середовищі.
+- Зміни з інших checkout переносяться до канонічного worktree окремо та не
+  копіюються неявно під час deploy.
+
 ## Dynamic article pages
 
 - `logika-core/acf-json/group_logika_post.json` owns the versioned ACF schema for standard post editorial fields and `group_logika_global.json` owns shared media-centre settings.
