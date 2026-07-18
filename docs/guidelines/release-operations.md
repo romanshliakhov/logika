@@ -4,6 +4,18 @@ This runbook applies to the `wordpress` deployment branch. It delivers only
 the checked-in Logika theme and plugins; production content, uploads,
 `wp-config.php` and unrelated plugins stay owned by their environment.
 
+## Canonical release source
+
+Build staging artifacts only from `.worktrees/wordpress` on branch
+`wordpress`. Before a local build, `scripts/release/release-source-status.sh .`
+reports dirty `source/` and WordPress runtime files in every other worktree.
+It is read-only: transfer a reviewed WordPress equivalent manually; do not copy
+an old static page or bundle over the active theme.
+
+`scripts/release/release-source-acknowledgements` may acknowledge one audited
+outside worktree state by branch and SHA-256 status fingerprint. Any later
+edit changes that fingerprint and blocks the build again.
+
 ## GitHub Environments
 
 Create `staging` and `production` Environments. Configure `production` with
@@ -76,6 +88,9 @@ JavaScript is deployed from the managed WordPress theme and is never replaced
 by the static frontend build. The archive still excludes source files,
 `build/`, uploads, `wp-config.php` and database content; it contains the
 complete runtime theme and project plugins.
+After staging the complete runtime tree, the builder writes
+`release-files.sha256`. Deploy verifies that manifest before switching
+`current`, so a truncated or changed artifact cannot become active.
 
 Use the preflight REST inventory as the source of truth. Configure the host or
 CDN not to cache `wp-admin`, `wp-login.php`, authenticated requests and the

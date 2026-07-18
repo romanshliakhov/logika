@@ -91,6 +91,8 @@ test('canonical source guard runs before an artifact build', () => {
   assert.match(guard, /git -C "\$source_root" worktree list --porcelain/);
   assert.match(guard, /status --porcelain -- source wordpress\/wp-content/);
   assert.match(guard, /\.DS_Store/);
+  assert.match(guard, /release-source-acknowledgements/);
+  assert.ok(existsSync(join(root, 'scripts/release/release-source-acknowledgements')));
   assert.ok(builder.indexOf('release-source-status.sh') < builder.indexOf('npm run backend'));
 });
 

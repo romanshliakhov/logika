@@ -17,4 +17,4 @@
 11. Синхронізувати міські позначки публікацій і показувати лише загальні матеріали або матеріали вибраного міста.
 12. Додати керовану ACF-сторінку `/vacancies/` з медіа Tilda, трьома вакансіями та чинним Google Form для заявок.
 13. [x] Перед пакуванням WordPress release збирати frontend assets і накладати `build/css` та `build/img` на тимчасову копію assets теми; штатний JS теми не замінювати static-збіркою.
-14. [ ] Зробити `.worktrees/wordpress` єдиним канонічним release-джерелом, перевіряти перенос правок з інших checkout і звіряти manifest активного runtime після staging deploy.
+14. [x] Зробити `.worktrees/wordpress` єдиним канонічним release-джерелом, перевіряти перенос правок з інших checkout і звіряти manifest активного runtime після staging deploy.
