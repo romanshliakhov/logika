@@ -94,6 +94,31 @@ test('canonical source guard runs before an artifact build', () => {
   assert.ok(builder.indexOf('release-source-status.sh') < builder.indexOf('npm run backend'));
 });
 
+test('release file manifest covers the staged WordPress runtime', () => {
+  const outputDir = mkdtempSync(join(tmpdir(), 'logika-release-manifest-test-'));
+
+  try {
+    const artifactPath = run('./scripts/release/build-artifact.sh', [
+      '--source-root', root,
+      '--output-dir', outputDir,
+    ], {
+      env: { ...process.env, RELEASE_SOURCE_IGNORE_OUTSIDE_EDITS: '1' },
+    }).trim();
+    const archiveEntries = execFileSync('tar', ['-tzf', artifactPath], { encoding: 'utf8' });
+    const deploy = readFileSync(join(root, 'scripts/release/deploy.sh'), 'utf8');
+
+    assert.match(archiveEntries, /^release-files\.sha256$/m);
+    assert.match(
+      execFileSync('tar', ['-xOzf', artifactPath, 'release-files.sha256'], { encoding: 'utf8' }),
+      /wordpress\/wp-content\/themes\/logika-theme\/assets\/js\/main\.js$/m,
+    );
+    assert.match(deploy, /sha256sum -c release-files\.sha256/);
+    assert.ok(deploy.indexOf('sha256sum -c release-files.sha256') < deploy.indexOf('current.next'));
+  } finally {
+    rmSync(outputDir, { recursive: true, force: true });
+  }
+});
+
 test('deploy refuses to connect until every required target parameter is supplied', () => {
   assert.throws(
     () => run('./scripts/release/deploy.sh', ['--artifact', '/tmp/release.tar.gz'], {

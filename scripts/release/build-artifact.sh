@@ -80,6 +80,11 @@ for asset_dir in css img; do
   tar -C "$source_root/build" -cf - "$asset_dir" | tar -C "$theme_assets" -xf -
 done
 
+(
+  cd "$staging_dir"
+  find wordpress -type f -print0 | sort -z | xargs -0 sha256sum
+) > "$staging_dir/release-files.sha256"
+
 component_checksums=()
 for component in "${components[@]}"; do
   checksum="$(tar -C "$staging_dir" -cf - "$component" | sha256sum | awk '{print $1}')"
@@ -106,7 +111,7 @@ cat > "$staging_dir/release-manifest.json" <<EOF
 }
 EOF
 
-tar -C "$staging_dir" -czf "$archive_path" release-manifest.json wordpress
+tar -C "$staging_dir" -czf "$archive_path" release-manifest.json release-files.sha256 wordpress
 cp "$staging_dir/release-manifest.json" "$manifest_path"
 sha256sum "$archive_path" > "$archive_path.sha256"
 
