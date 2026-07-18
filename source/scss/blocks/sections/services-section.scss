@@ -10,6 +10,12 @@
         top: 16px;
         right: 0;
         display: flex;
+        width: clamp(190px, 18.542vw, 356px);
+        height: clamp(356px, 34.167vw, 656px);
+
+        img {
+            object-fit: contain;
+        }
     }
 
     &__wrapp {
@@ -45,10 +51,97 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 80px;
+        gap: clamp(40px, 5.556vw, 80px);
 
         li:nth-child(even) {
-            flex-direction: row-reverse;
+            @include for-tablet {
+                flex-direction: row-reverse;
+            }
+
+            .services-section__item-ages {
+                @include for-desktop {
+                    right: initial;
+                    left: -75px;
+                }
+
+                @include desktop {
+                    right: initial;
+                    left: -25px;
+                }
+
+                @include mobile {
+                    left: -15px;
+                }
+            }
+        }
+
+        li:nth-child(1) {
+            .services-section__item-icon {
+                bottom: 0;
+                width: clamp(141px, 12.76vw, 245px);
+                height: clamp(120px, 10.833vw, 208px);
+
+                @include for-desktop {
+                    left: calc(clamp(25px, 4.427vw, 85px) * -1);
+                }
+
+                @include desktop {
+                    left: -25px;
+                }
+            }
+        }
+
+        li:nth-child(2) {
+            .services-section__item-icon {
+                top: 0;
+                width: clamp(134px, 12.135vw, 233px);
+                height: clamp(102px, 9.167vw, 176px);
+
+                @include for-desktop {
+                    right: -67px;
+                }
+
+                @include desktop {
+                    right: -25px;
+                }
+            }
+        }
+
+        li:nth-child(3) {
+            .services-section__item-icon {
+                top: 20px;
+                width: clamp(125px, 12.865vw, 247px);
+                height: clamp(90px, 9.167vw, 176px);
+
+                @include for-desktop {
+                    left: -67px;
+                }
+
+                @include desktop {
+                    left: -25px;
+                }
+            }
+
+            .services-section__item-image {
+                margin-left: 30px;
+            }
+        }
+
+        li:nth-child(4) {
+            .services-section__item-icon {
+                width: clamp(120px, 10.417vw, 200px);
+                height: clamp(123px, 10.677vw, 205px);
+
+                @include for-desktop {
+                    top: -60px;
+                    right: -23px;
+                }
+
+                @include desktop {
+                    top: 0px;
+                    right: -23px;
+                }
+            }
         }
     }
     
@@ -57,6 +150,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 20px clamp(50px, 4.861vw, 70px);
+
+        @include tablet {
+            flex-direction: column;
+        }
 
         &-media {
             position: relative;
@@ -64,10 +162,13 @@
             width: 100%;
             background-color: var(--violet-100);
             border-radius: 40px;
+            display: flex;
+            justify-content: center;
         }
 
         &-bg {
             display: flex;
+            justify-content: center;
             position: absolute;
             inset: 0;
         }
@@ -75,29 +176,64 @@
         &-ages {
             position: absolute;
             transform: rotate(-6deg);
-            padding: 10px 20px;
-            top: 43px;
-            right: -67px;
-            border: 8px solid var(--white);
+            padding: clamp(7px, 0.521vw, 10px) clamp(13px, 1.042vw, 20px);
+            top: clamp(33px, 4.199vw, 43px);
+            right: calc(clamp(25px, 4.427vw, 85px) * -1);
+            border: clamp(4px, 0.417vw, 8px) solid var(--white);
             background-color: var(--green);
             border-radius: 65px;
-            font-size: 36px;
+            font-size: clamp(18px, 1.875vw, 36px);
             line-height: 118%;
             font-weight: 700;
             letter-spacing: -1.8px;
             color: var(--white);
+
+            @include mobile {
+                right: -15px;
+            }
         }
 
         &-icon {
             position: absolute;
-            bottom: 0;
-            left: -67px;
             display: flex;
+
+            img {
+                object-fit: contain;
+            }
         }
 
         &-image {
-            margin-top: -80px;
+            position: relative;
+            z-index: 3;
             display: flex;
+
+            @include for-tablet {
+                margin-top: -60px;
+                margin-bottom: -1px;
+                height: clamp(440px, 34.444vw, 496px);
+            }
+
+            @include tablet {
+                margin-top: -30px;
+                margin-bottom: -1px;
+            }
+
+            @include for-mobile {
+                max-width: clamp(375px, 34.722vw, 500px);
+            }
+
+            @include mobile {
+                max-width: 255px;
+            }
+
+
+            picture,
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: bottom; 
+            }
         }
 
         &-content {
@@ -105,7 +241,11 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: clamp(12px, 2.93vw, 30px);
+
+            @include tablet {
+                text-align: center;
+            }
         }
 
         &-tags {
@@ -114,8 +254,12 @@
             flex-wrap: wrap;
             gap: 10px;
 
+            @include tablet {
+                justify-content: center;
+            }
+
             li {
-                padding: 10px 20px;
+                padding: clamp(7px, 0.694vw, 10px) clamp(13px, 1.389vw, 20px);
                 background-color: var(--light-blue);
                 border-radius: 56px;
             }
@@ -130,7 +274,15 @@
         &-btns {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 0 16px;
+
+            @include laptop {
+                flex-direction: column;
+
+                .btn {
+                    max-width: 100%;
+                }
+            }
         }
 
         &-lesson {
@@ -139,7 +291,9 @@
         }
 
         &-about {
-            width: fit-content;
+            @include for-desktop {
+                width: fit-content;
+            }
         }
     }
 }
