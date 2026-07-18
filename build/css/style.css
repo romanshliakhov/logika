@@ -6124,6 +6124,9 @@ a .offer-card__info {
   align-items: center;
   gap: clamp(40px, 3.125vw, 60px);
 }
+.onboarding-section__title {
+  text-align: center;
+}
 .onboarding-section__box {
   width: 100%;
   position: relative;
@@ -6143,6 +6146,7 @@ a .offer-card__info {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-top: 10px;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -6164,14 +6168,16 @@ a .offer-card__info {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: clamp(40px, 4.167vw, 80px);
+  gap: clamp(45px, 4.167vw, 80px);
   counter-reset: item-counter;
 }
-.onboarding-section__items li:nth-child(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+@media screen and (min-width: 768px) {
+  .onboarding-section__items li:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
 }
 .onboarding-section__item {
   display: -webkit-box;
@@ -6185,6 +6191,17 @@ a .offer-card__info {
   justify-content: center;
   gap: clamp(30px, 4.688vw, 90px);
   counter-increment: item-counter;
+}
+@media screen and (max-width: 767px) {
+  .onboarding-section__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 .onboarding-section__item-media {
   position: relative;
@@ -6274,6 +6291,18 @@ a .offer-card__info {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: clamp(15px, 1.563vw, 30px);
+}
+@media screen and (max-width: 767px) {
+  .onboarding-section__item-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 .onboarding-section__item-excerpt {
   color: var(--grey-500);
