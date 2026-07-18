@@ -40,6 +40,8 @@ source_root="$(cd "$source_root" && pwd -P)"
 mkdir -p "$output_dir"
 output_dir="$(cd "$output_dir" && pwd -P)"
 
+"$source_root/scripts/release/release-source-status.sh" "$source_root" >&2
+
 components=(
   "wordpress/wp-content/themes/logika-theme"
   "wordpress/wp-content/plugins/logika-core"

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFileSync, execSync } from 'node:child_process';
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import test from 'node:test';
@@ -23,7 +23,9 @@ test('build artifact contains only managed WordPress components and release meta
     const artifactPath = run('./scripts/release/build-artifact.sh', [
       '--source-root', root,
       '--output-dir', outputDir,
-    ]).trim();
+    ], {
+      env: { ...process.env, RELEASE_SOURCE_IGNORE_OUTSIDE_EDITS: '1' },
+    }).trim();
     const manifest = JSON.parse(readFileSync(join(outputDir, 'release-manifest.json'), 'utf8'));
     const archiveEntries = execFileSync('tar', ['-tzf', artifactPath], { encoding: 'utf8' })
       .trim()
@@ -77,6 +79,19 @@ test('artifact builder stages freshly built theme runtime assets', () => {
     assert.match(builder, new RegExp(`build/\\$asset_dir`));
   }
   assert.match(builder, /tar -C "\$staging_dir" -cf - "\$component"/);
+});
+
+test('canonical source guard runs before an artifact build', () => {
+  const sourceGuard = join(root, 'scripts/release/release-source-status.sh');
+  const builder = readFileSync(join(root, 'scripts/release/build-artifact.sh'), 'utf8');
+
+  assert.ok(existsSync(sourceGuard), 'release source guard must exist');
+  const guard = readFileSync(sourceGuard, 'utf8');
+  assert.match(guard, /git -C "\$source_root" branch --show-current/);
+  assert.match(guard, /git -C "\$source_root" worktree list --porcelain/);
+  assert.match(guard, /status --porcelain -- source wordpress\/wp-content/);
+  assert.match(guard, /\.DS_Store/);
+  assert.ok(builder.indexOf('release-source-status.sh') < builder.indexOf('npm run backend'));
 });
 
 test('deploy refuses to connect until every required target parameter is supplied', () => {
