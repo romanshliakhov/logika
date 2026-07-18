@@ -12,9 +12,10 @@ artifact only through a manually approved GitHub Environment deployment.
   port, release root, WordPress root, deploy key and pinned `known_hosts`.
 - [ ] Staging is `https://staging.logika.resumemyhost.miy.link`, has its own
   database and files, serves HTTPS and is non-indexable.
-- [ ] Managed component paths are verified symlinks to
-  `DEPLOY_ROOT/current/wordpress/...`; uploads, `wp-config.php` and unrelated
-  server plugins are not release payload.
+- [ ] The managed `wp-content` symlink targets the complete
+  `DEPLOY_ROOT/current/wordpress/wp-content` tree; do not deploy selected
+  themes/plugins or static build overlays. Only uploads, `wp-config.php` and
+  database content stay outside the release payload.
 - [ ] The staging workflow has deployed a validated SHA and its smoke checks
   have passed.
 - [ ] If a local WordPress database snapshot is needed on staging, it is
