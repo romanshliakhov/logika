@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFileSync, execSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
@@ -116,6 +117,29 @@ test('release file manifest covers the staged WordPress runtime', () => {
     );
     assert.match(deploy, /sha256sum -c release-files\.sha256/);
     assert.ok(deploy.indexOf('sha256sum -c release-files.sha256') < deploy.indexOf('current.next'));
+  } finally {
+    rmSync(outputDir, { recursive: true, force: true });
+  }
+});
+
+test('release id changes with the staged runtime manifest', () => {
+  const outputDir = mkdtempSync(join(tmpdir(), 'logika-release-id-test-'));
+
+  try {
+    const artifactPath = run('./scripts/release/build-artifact.sh', [
+      '--source-root', root,
+      '--output-dir', outputDir,
+    ], {
+      env: { ...process.env, RELEASE_SOURCE_IGNORE_OUTSIDE_EDITS: '1' },
+    }).trim();
+    const manifest = JSON.parse(readFileSync(join(outputDir, 'release-manifest.json'), 'utf8'));
+    const releaseFiles = execFileSync('tar', ['-xOzf', artifactPath, 'release-files.sha256']);
+
+    assert.equal(
+      manifest.releaseId,
+      createHash('sha256').update(releaseFiles).digest('hex').slice(0, 40),
+    );
+    assert.notEqual(manifest.releaseId, manifest.commitSha);
   } finally {
     rmSync(outputDir, { recursive: true, force: true });
   }

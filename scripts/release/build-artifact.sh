@@ -57,9 +57,6 @@ done
 
 commit_sha="$(git -C "$source_root" rev-parse HEAD)"
 commit_timestamp="$(git -C "$source_root" show -s --format=%cI HEAD)"
-release_id="$commit_sha"
-archive_path="$output_dir/logika-wordpress-$release_id.tar.gz"
-manifest_path="$output_dir/release-manifest.json"
 staging_dir="$(mktemp -d)"
 
 cleanup() {
@@ -84,6 +81,10 @@ done
   cd "$staging_dir"
   find wordpress -type f -print0 | sort -z | xargs -0 sha256sum
 ) > "$staging_dir/release-files.sha256"
+
+release_id="$(sha256sum "$staging_dir/release-files.sha256" | awk '{print substr($1, 1, 40)}')"
+archive_path="$output_dir/logika-wordpress-$release_id.tar.gz"
+manifest_path="$output_dir/release-manifest.json"
 
 component_checksums=()
 for component in "${components[@]}"; do

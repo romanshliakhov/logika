@@ -90,7 +90,8 @@ by the static frontend build. The archive still excludes source files,
 complete runtime theme and project plugins.
 After staging the complete runtime tree, the builder writes
 `release-files.sha256`. Deploy verifies that manifest before switching
-`current`, so a truncated or changed artifact cannot become active.
+`current`, so a truncated or changed artifact cannot become active. The
+release ID is derived from that manifest, not only from Git HEAD.
 
 Use the preflight REST inventory as the source of truth. Configure the host or
 CDN not to cache `wp-admin`, `wp-login.php`, authenticated requests and the
