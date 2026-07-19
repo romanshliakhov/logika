@@ -18,7 +18,6 @@ const marqueeSectionSlider = document.querySelectorAll('.marquee-section__slider
 const englishSectionSlider = document.querySelectorAll('.english-section__slider');
 const categoriesCoursesSlider = document.querySelectorAll('.categories-section__slider');
 const tripsSectionSlider = document.querySelectorAll('.trips-section__slider');
-const gallerySectionSlider = document.querySelectorAll('.gallery-section__slider');
 const campsHighlightsSlider = document.querySelectorAll('.camp-highlights__slider');
 const testimonialsSlider = document.querySelectorAll('.testimonials-section__slider');
 const campGalleries = document.querySelectorAll('[data-camp-gallery]');
@@ -546,16 +545,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (container && section) {
       new Swiper(container, { speed: 1800, loop: true, observer: true, observeParents: true, watchSlidesProgress: true, navigation: { nextEl: section.querySelector('.swiper-button-next'), prevEl: section.querySelector('.swiper-button-prev') }, breakpoints: { 320: { slidesPerView: 1.2, centeredSlides: true, spaceBetween: 10 }, 577: { slidesPerView: 'auto', centeredSlides: false, spaceBetween: 20 } } });
     }
-  });
-
-  gallerySectionSlider.forEach(function (slider) {
-    const container = slider.querySelector('.swiper-container');
-    let instance = null;
-    const toggle = () => {
-      if (window.innerWidth <= 1024 && !instance) instance = new Swiper(container, { speed: 1800, loop: true, observer: true, observeParents: true, watchSlidesProgress: true, spaceBetween: 10, breakpoints: { 320: { slidesPerView: 1.2, spaceBetween: 10 }, 576: { slidesPerView: 2, spaceBetween: 15 } } });
-      if (window.innerWidth > 1024 && instance) { instance.destroy(true, true); instance = null; }
-    };
-    if (container) { toggle(); window.addEventListener('resize', toggle); }
   });
 
 

@@ -7,6 +7,25 @@ require dirname(__DIR__) . '/wordpress/wp-load.php';
 $theme_path = get_template_directory();
 $errors     = array();
 
+foreach ( array( 'about', 'faq', 'it-courses', 'en-courses', 'camps', 'camp', 'it-course' ) as $source ) {
+	ob_start();
+	logika_theme_render_source_page( $source );
+	$markup = ob_get_clean();
+	if ( ! str_contains( $markup, 'testimonials-section__slider' ) || ! str_contains( $markup, 'swiper-wrapper' ) || ! str_contains( $markup, 'swiper-slide' ) ) {
+		$errors[] = "{$source} testimonials do not use the shared slider layout.";
+	}
+}
+
+$course = get_page_by_path( 'python-start', OBJECT, 'course' );
+if ( $course ) {
+	ob_start();
+	Logika_Theme_Source_Markup::renderPage( 'it-course', (int) $course->ID );
+	$course_markup = ob_get_clean();
+	if ( ! str_contains( $course_markup, 'testimonials-section__slider' ) ) {
+		$errors[] = 'Course page does not fall back to the shared testimonials slider.';
+	}
+}
+
 if ( ! function_exists( 'logika_theme_render_source_page' ) ) {
 	$errors[] = 'Source-page renderer is not registered.';
 } else {
@@ -51,7 +70,7 @@ if ( ! str_contains( $homepage, 'data-logika-phone-input' ) || ! str_contains( $
 	}
 
 	/*
-	 * Contract copied from main/build/index.html. These are structural markers,
+	 * Homepage structural contract. These are structural markers,
 	 * not content assertions: ACF may change values but must not replace the
 	 * supplied layout with a shorter template.
 	 */
@@ -60,8 +79,16 @@ if ( ! str_contains( $homepage, 'data-logika-phone-input' ) || ! str_contains( $
 		'<picture>'                       => 4,
 		'english-section__subtitle'       => 1,
 		'english-section__controls'       => 1,
-		'media-section__cards'            => 1,
+		'media-section__wrapp'            => 1,
+		'transformation-section__item-icon' => 2,
+		'onboarding-section__box'         => 1,
+		'testimonials-section__slider'    => 1,
+		'img/portfolio/Watch.svg'         => 1,
+		'portfolio-section__game'         => 1,
+		'portfolio-section__trial btn btn--yellow" href="#lead-form"' => 1,
 		'media-section__card'             => 6,
+		'director-feedback-section'       => 1,
+		'certificates-section__bg'        => 1,
 		'swiper-slide'                     => 17,
 	);
 

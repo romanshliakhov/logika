@@ -37,7 +37,7 @@ foreach ( array( 'wp_footer', 'template-parts/components/lead-modal' ) as $contr
 	}
 }
 
-foreach ( array( '[data-logika-modal]', '#lead-form', 'Escape', '.modal-close' ) as $contract ) {
+foreach ( array( '[data-logika-modal]', '#lead-form', 'Escape', '.modal-close', 'logikaCampId', 'campInput' ) as $contract ) {
 	if ( ! str_contains( $script, $contract ) ) {
 		$errors[] = "Lead modal interaction is missing {$contract}.";
 	}
@@ -77,6 +77,7 @@ foreach (
 		'data-logika-lead-form',
 		'name="form_id" value="trial_lesson"',
 		'name="idempotency_key"',
+		'name="camp_id"',
 		'img/modal-image.webp',
 	) as $marker
 ) {

@@ -106,7 +106,7 @@ h5,
     justify-content: space-between;
   }
 
-  .banner-section__bar li span {
+  .banner-section__bar li > span {
     width: clamp(36px, 3.889vw, 56px);
     height: clamp(36px, 3.889vw, 56px);
   }
@@ -252,7 +252,6 @@ h5,
 @media (max-width:767px){.breadcrumbs__wrapp{overflow-y:hidden;overflow-x:auto;width:calc(100vw - 16px);padding-right:16px}}
 @media (max-width:576px){.english-level{position:relative}.english-level[data-mob-button]::before{content:attr(data-mob-button);position:absolute;bottom:40%;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);padding:13px 35px;background-color:var(--bg-a);border-radius:50px;font-size:20px;line-height:100%;font-weight:500;color:var(--cl-b);-webkit-transition:.3s;transition:.3s}.english-level[data-mob-button]::before:active,.english-level[data-mob-button]::before:hover{background-color:var(--bg-c);color:var(--white)}}
 @media (max-width:1024px){:root{--header-height:130px}.testimonials-card:not(.is-image){padding:16px;border-radius:15px;background-color:#f0f0f0}}
-@media screen and (max-width:1024px){.gallery-card{height:465px}}
 @media screen and (min-width:577px){.trip-card{max-width:clamp(320px,32.292vw,465px)}}
 @media (min-width:768px){.cta-form__inputs{-ms-grid-columns:(1fr)[2];grid-template-columns:repeat(2,1fr)}}
 @media (max-width:767px){.cta-form__top{-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center}.cta-form__inputs{-ms-grid-columns:100%;grid-template-columns:100%}.cta-form__text{text-align:center}}
@@ -286,7 +285,7 @@ h5,
 @media (max-width:1024px){.banner-section__left{-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:40px}}
 @media (max-width:1024px){.banner-section__info{max-width:100%;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center}.banner-section__character-boy{z-index:6;padding-right:60px}.banner-section__right{margin-top:-20px}}
 @media (max-width:1024px){.banner-section__character-logika{position:absolute;top:-130px;right:-10px;width:65px;height:98px}}
-@media (min-width:1025px){.banner-section__character-logika{margin-top:-33px}.banner-section__bar{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.banner-section__bar li span{width:clamp(36px,3.889vw,56px);height:clamp(36px,3.889vw,56px)}}
+@media (min-width:1025px){.banner-section__character-logika{margin-top:-33px}.banner-section__bar{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.banner-section__bar li>span{width:clamp(36px,3.889vw,56px);height:clamp(36px,3.889vw,56px)}}
 @media (max-width:1024px) and (min-width:768px){.banner-section__bar{display:-ms-grid;display:grid;-ms-grid-columns:(1fr)[3];grid-template-columns:repeat(3,1fr)}}
 @media (max-width:767px){.banner-section__bar{display:-ms-grid;display:grid;-ms-grid-columns:(1fr)[2];grid-template-columns:repeat(2,1fr)}.banner-section__bar li{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;text-align:center}}
 @media (max-width:1240px){.camp-hero .banner-section__blocks{gap:20px}.camp-hero .banner-section__form{max-width:440px}.camp-hero .banner-section__bar{padding:24px;gap:20px}.camp-hero .banner-section__bar li{gap:10px}.camp-hero .banner-section__bar li span img{width:44px;height:44px}.camp-hero .banner-section__bar li p strong{font-size:16px}}

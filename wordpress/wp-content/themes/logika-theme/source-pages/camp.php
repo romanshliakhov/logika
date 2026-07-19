@@ -208,7 +208,7 @@
           <div class="camp-details__copy">
             <h2 id="camp-location-title">Локація</h2>
             <p>Комплекс розташований в 10 хвилинах від центру Львова (м. Винники, вул. Хмельницького, 9б). Має просторі піщані пляжі, озеро, 2 природних басейни, водні атракціони, аквапарк, тюбінг-парк, панорамний підйомник та багато іншого</p>
-            <a class="camp-details__cta btn btn--violet" href="#form">
+            <a class="camp-details__cta btn btn--violet" href="#lead-form" data-logika-camp-booking>
               Забронювати місце
               <svg width="20" height="20">
                 <use href="img/sprite/sprite.svg#arrow-right"></use>
@@ -245,7 +245,7 @@
           <div class="camp-details__copy">
             <h2 id="camp-accommodation-title">Проживання</h2>
             <p>Комфортні 4/6-місні номери з усіма зручностями</p>
-            <a class="camp-details__cta btn btn--violet" href="#form">
+            <a class="camp-details__cta btn btn--violet" href="#lead-form" data-logika-camp-booking>
               Забронювати місце
               <svg width="20" height="20">
                 <use href="img/sprite/sprite.svg#arrow-right"></use>
@@ -282,7 +282,7 @@
           <div class="camp-details__copy">
             <h2 id="camp-menu-title">Меню</h2>
             <p>4-х разове харчування з різноманітним вибором: широкий вибір страв на будь-який смак</p>
-            <a class="camp-details__cta btn btn--violet" href="#form">
+            <a class="camp-details__cta btn btn--violet" href="#lead-form" data-logika-camp-booking>
               Забронювати місце
               <svg width="20" height="20">
                 <use href="img/sprite/sprite.svg#arrow-right"></use>
@@ -480,13 +480,13 @@
               <img class="camp-booking__characters" src="img/camp/booking-characters.svg" alt="">
             </div>
 
-            <form class="camp-booking__form main-form">
-              <div class="camp-booking__form-title">
+            <form class="camp-booking__form banner-section__form main-form">
+              <div class="camp-booking__form-title main-form__title h5">
                 <span>Встигніть забронювати.</span>
                 Залиште заявку за 30 секунд — ми зателефонуємо і обговоримо усі деталі
               </div>
 
-              <div class="camp-booking__inputs">
+              <div class="camp-booking__inputs main-form__inputs">
                 <input class="main-form__input" type="text" name="name" placeholder="Ім’я">
                 <input class="main-form__input" type="tel" name="tel" placeholder="Номер телефону">
                 <select class="main-form__input" name="city" aria-label="Ваше місто">
@@ -505,9 +505,9 @@
                 </select>
               </div>
 
-              <button class="camp-booking__submit btn btn--yellow" type="submit">Відправити <span
+              <button class="camp-booking__submit main-form__btn btn btn--yellow" type="submit">Відправити <span
                   aria-hidden="true">→</span></button>
-              <p class="camp-booking__policy">Натискаючи, ви погоджуєтесь із <a href="#">Політикою
+              <p class="camp-booking__policy main-form__text">Натискаючи, ви погоджуєтесь із <a href="#">Політикою
                   конфіденційності</a>
               </p>
             </form>

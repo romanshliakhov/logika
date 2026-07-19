@@ -85,7 +85,7 @@
       </div>
     </section>
 
-    <section class="media-section">
+    <section class="media-section why-logika-section">
       <div class="container">
         <div class="media-section__wrapp">
           <h2 class="media-section__title h2">Чому тисячі батьків обирають Logika</h2>

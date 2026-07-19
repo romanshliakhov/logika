@@ -1,7 +1,7 @@
 {
   "source/js/main.js": {
-    "mtime": 1784457666.2721415,
-    "ast_hash": "9572d898877f840d74cb37cbcbc08263",
+    "mtime": 1784491205.6370254,
+    "ast_hash": "81eeac20e9be88240b8ef12842315e31",
     "semantic_hash": ""
   },
   "source/js/rangeSlider.js": {
@@ -1940,8 +1940,8 @@
     "semantic_hash": "cadf4be6d8dccfc878949850005bb78b"
   },
   "docs/plan.md": {
-    "mtime": 1784474484.419954,
-    "ast_hash": "28ba753794f6828173a919747e293347",
+    "mtime": 1784485648.8082447,
+    "ast_hash": "d3fa2371a49009ee0aa03d7405e144c5",
     "semantic_hash": ""
   },
   "docs/project.md": {
@@ -4180,8 +4180,8 @@
     "semantic_hash": ""
   },
   "tests/lead-modal.php": {
-    "mtime": 1784441690.052103,
-    "ast_hash": "0ea3067db4a253f600d84f8478df9965",
+    "mtime": 1784492055.1182096,
+    "ast_hash": "24f1b4008ea3ad1bcd17b390c25773cc",
     "semantic_hash": ""
   },
   "tests/lead-runtime-config.php": {
@@ -4210,8 +4210,8 @@
     "semantic_hash": ""
   },
   "tests/map-assets.php": {
-    "mtime": 1784308520.6155682,
-    "ast_hash": "3fd713766d64cfe72114c597bc19f1ab",
+    "mtime": 1784492268.5330434,
+    "ast_hash": "afc0c7cecd4e6e515501e7f931623293",
     "semantic_hash": ""
   },
   "tests/marketing-pages-acf.php": {
@@ -4315,8 +4315,8 @@
     "semantic_hash": ""
   },
   "tests/theme-source-pages.php": {
-    "mtime": 1784241961.8302758,
-    "ast_hash": "03c871191f2263ef747c53cdc0884ce6",
+    "mtime": 1784482465.4103844,
+    "ast_hash": "0a8c3b1e41bb2cd219a5815f5428ad73",
     "semantic_hash": ""
   },
   "tests/tilda-articles.php": {
@@ -4575,8 +4575,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/assets/js/main.js": {
-    "mtime": 1784457666.2711415,
-    "ast_hash": "02dd635c692be7ee32cd7766c26bc19e",
+    "mtime": 1784492055.1102095,
+    "ast_hash": "8d70ba4314a6557ef475e019e8bedbe2",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/assets/js/media-center.js": {
@@ -4620,8 +4620,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/functions.php": {
-    "mtime": 1784463147.6397226,
-    "ast_hash": "2079d55654797efec0d3e703f71502ee",
+    "mtime": 1784491205.6380253,
+    "ast_hash": "439972a8f0a4d9e082ceb0f71fa0d17f",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/header.php": {
@@ -4660,8 +4660,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/about.php": {
-    "mtime": 1784382177.2694721,
-    "ast_hash": "1c341d796cedf3cd69a96e4c7a6a7645",
+    "mtime": 1784490042.799613,
+    "ast_hash": "a36af340f1a5daba72495587db257f10",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/article.php": {
@@ -4670,8 +4670,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/camp.php": {
-    "mtime": 1784332196.9804075,
-    "ast_hash": "a27711eeceb3d3e3397246d528d17aa4",
+    "mtime": 1784492055.096209,
+    "ast_hash": "2dfcb83bb7b8360803d979d39cb3f02c",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/camps.php": {
@@ -4695,8 +4695,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/footer.php": {
-    "mtime": 1784399801.3630302,
-    "ast_hash": "eb59d14b3ac1a994a88c5b32e5bdf6fa",
+    "mtime": 1784491560.3323712,
+    "ast_hash": "dec9b8b3237899b3cc3e835236da9673",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/header.php": {
@@ -4705,8 +4705,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/index.php": {
-    "mtime": 1784393572.6139755,
-    "ast_hash": "454d513d69770a35a36cd0df2d2c3cfd",
+    "mtime": 1784484939.015986,
+    "ast_hash": "8c4c8700667d58823ed0090fe8df08ed",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/it-course.php": {
@@ -4725,8 +4725,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/media-center.php": {
-    "mtime": 1784215587.2967026,
-    "ast_hash": "acf7c5ce0e757be4d2a6178affb223da",
+    "mtime": 1784490042.800613,
+    "ast_hash": "73a4f306b54e8a17acb63f6c2786abfa",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/privacy-policy.php": {
@@ -4805,8 +4805,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/src/PageContent.php": {
-    "mtime": 1784465205.5428162,
-    "ast_hash": "4d175a2d93f9883ef3c279aee5b9c04d",
+    "mtime": 1784492055.105209,
+    "ast_hash": "2a88061c2292dc09bdd6f62f6bc4539f",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/src/PhoneCountry.php": {
@@ -4820,13 +4820,13 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/src/SourceMarkup.php": {
-    "mtime": 1784447497.488371,
-    "ast_hash": "c8f5cd0923bf7fadc0cb315bc7dfcb49",
+    "mtime": 1784480592.621114,
+    "ast_hash": "29b7971d3caccd3d820f58f053f28db7",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/src/Testimonials.php": {
-    "mtime": 1784312258.5745194,
-    "ast_hash": "bffa2bc08a1c60b3b5d1a41f4d3c0a84",
+    "mtime": 1784482269.032196,
+    "ast_hash": "08708f58e10968c11d3881c0fd53d45a",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/template-parts/components/camp-modal.php": {
@@ -4835,13 +4835,13 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/template-parts/components/lead-modal.php": {
-    "mtime": 1784384048.7570508,
+    "mtime": 1784483549.4464011,
     "ast_hash": "3483ccf3e6cb86a27b9e452af70d4476",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/template-parts/forms/lead.php": {
-    "mtime": 1784447497.488371,
-    "ast_hash": "57aeebc4e89c5b938d66da36116e1f69",
+    "mtime": 1784492055.1072092,
+    "ast_hash": "cfd840c2cf3aa4efbb4277b9e98b5cc4",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/template-parts/pages/about.php": {
@@ -4955,8 +4955,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/template-parts/sections/reviews.php": {
-    "mtime": 1784305083.6071239,
-    "ast_hash": "284d599aa9f92207a44347d4fa40c6e3",
+    "mtime": 1784482269.0331962,
+    "ast_hash": "b4ae906330bc89d7f14147a68e78b5d0",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/template-parts/sections/school-map.php": {
@@ -7915,8 +7915,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/assets/img/sprite/sprite.svg": {
-    "mtime": 1784401926.5844843,
-    "ast_hash": "1dda746ab37ac117654e8e50b6c8f654",
+    "mtime": 1784480608.0966022,
+    "ast_hash": "abed804421509cba79ff5b1adcaea3b8",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/assets/img/sprite/star.svg": {
@@ -8095,8 +8095,8 @@
     "semantic_hash": ""
   },
   "tests/camp-seasonal-page.php": {
-    "mtime": 1784330336.3863826,
-    "ast_hash": "f311d8bb26ae1fa1e0b1adf42e234c2c",
+    "mtime": 1784485558.6584136,
+    "ast_hash": "4b4ecc11db689135461eefe29a80b19e",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-18-seasonal-camp-pages.md": {
@@ -8115,13 +8115,13 @@
     "semantic_hash": ""
   },
   "scripts/seed-tilda-summer-camps.php": {
-    "mtime": 1784332425.8376918,
-    "ast_hash": "825ddcaefd1edeb498fcb2b66ca13218",
+    "mtime": 1784491527.6103246,
+    "ast_hash": "0e5e4e7817fb9e63578d653e73b70664",
     "semantic_hash": ""
   },
   "tests/tilda-summer-camp-formats.php": {
-    "mtime": 1784364817.2948205,
-    "ast_hash": "055ea674a517ca9b97d380c8dd953539",
+    "mtime": 1784492055.1122096,
+    "ast_hash": "3cc30ad1b0752ad4e39306e385ba0cf2",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-18-tilda-summer-camp-formats.md": {
@@ -8230,7 +8230,7 @@
     "semantic_hash": ""
   },
   "tests/director-feedback-lead.php": {
-    "mtime": 1784384056.5382972,
+    "mtime": 1784483472.5879893,
     "ast_hash": "edebb9181cb18231513a02d8965e801c",
     "semantic_hash": ""
   },
@@ -9427,6 +9427,351 @@
   ".playwright-cli/page-2026-07-19T15-38-36-759Z.png": {
     "mtime": 1784475516.7604005,
     "ast_hash": "c4d40bd527aa38b35ea25d3a0fcc7f8e",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T16-53-37-273Z.yml": {
+    "mtime": 1784480017.2745812,
+    "ast_hash": "58514e9178e79fe163771076131ab2ca",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T16-54-45-617Z.yml": {
+    "mtime": 1784480085.6189659,
+    "ast_hash": "e0ef0605664a03275bf14ba59020665b",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T17-05-29-055Z.yml": {
+    "mtime": 1784480729.0584095,
+    "ast_hash": "3230267408c5a427331a60e4ed7bfccb",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T16-53-39-309Z.png": {
+    "mtime": 1784480019.308881,
+    "ast_hash": "cacc64efd97b8a835c19b7c45d0a80cc",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T16-54-55-379Z.png": {
+    "mtime": 1784480095.3832726,
+    "ast_hash": "ed2ef440141a72787462ed54e0bc0c4a",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T16-55-19-201Z.png": {
+    "mtime": 1784480119.2010217,
+    "ast_hash": "8d10d539f2f946537d4de7e06df2c43b",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T16-55-24-890Z.png": {
+    "mtime": 1784480124.8922005,
+    "ast_hash": "d8abf823912da3eb75d82709f8819fef",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T16-57-07-817Z.png": {
+    "mtime": 1784480227.8184366,
+    "ast_hash": "44342ef566878d01be2650e0abbbe7d4",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T17-05-35-128Z.png": {
+    "mtime": 1784480735.129601,
+    "ast_hash": "2299171d5624015e31c5a11c9358b81e",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T17-05-57-404Z.png": {
+    "mtime": 1784480757.404306,
+    "ast_hash": "1a48fac17e21b9a2ee66170cd30a0112",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T17-06-00-896Z.png": {
+    "mtime": 1784480760.8974087,
+    "ast_hash": "e614ef99b6a09f373a3aeaad279a4929",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/certificates/certificates-bg.svg": {
+    "mtime": 1784480542.7165384,
+    "ast_hash": "5c3629dd85dc3a0d0182b5526b46aff3",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/onbording/onboarding-center-bg.svg": {
+    "mtime": 1784480542.699538,
+    "ast_hash": "b717fb246ef13d9b35c4a0d3417fbe89",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/services/service2.png": {
+    "mtime": 1784480542.6775372,
+    "ast_hash": "3524038266bfa20904b9f458414981bb",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/services/service2.svg": {
+    "mtime": 1784480542.6815374,
+    "ast_hash": "baedb95c4fa5f30db1be07bc8652c0f7",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/services/service2.webp": {
+    "mtime": 1784480564.6612313,
+    "ast_hash": "c996acce70d5d0140c5999958baa8269",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/services/service3.png": {
+    "mtime": 1784480542.6855376,
+    "ast_hash": "ff173853f8477cb0cdccf69078fd45fe",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/services/service3.svg": {
+    "mtime": 1784480542.6885376,
+    "ast_hash": "dd9d51a36a4eccb76b5cd8a62ad0fea1",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/services/service3.webp": {
+    "mtime": 1784480564.6662314,
+    "ast_hash": "27f4a2feb6207bf18a0110491db7ca76",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/services/service4.png": {
+    "mtime": 1784480542.6935377,
+    "ast_hash": "004c425b92c7f11ddda9c2ec50ef3106",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/services/service4.svg": {
+    "mtime": 1784480542.6965377,
+    "ast_hash": "875a3b93ef1d50130ec67d983886b36c",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/services/service4.webp": {
+    "mtime": 1784480564.6702316,
+    "ast_hash": "5ab92cfb735a45f9c191e153e2bc09c1",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/testimonials/testimonial2.png": {
+    "mtime": 1784480542.703538,
+    "ast_hash": "72cd680121bbcab664853713c85fc055",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/testimonials/testimonial2.webp": {
+    "mtime": 1784480564.6762319,
+    "ast_hash": "77a67faf3149fdd36a42f77178bb61b2",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/testimonials/testimonial3.png": {
+    "mtime": 1784480542.7085383,
+    "ast_hash": "fe22a5373ea0089825b015743a02bc19",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/testimonials/testimonial3.webp": {
+    "mtime": 1784480564.682232,
+    "ast_hash": "17a47b0485944309c271a99e7d0a02d9",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/testimonials/testimonial4.png": {
+    "mtime": 1784480542.7135384,
+    "ast_hash": "1a5ef9bae76dabdcf7050e439caf8fe8",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/testimonials/testimonial4.webp": {
+    "mtime": 1784480564.686232,
+    "ast_hash": "ac258bd5ee96e32b8b9baff3c7d211ee",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T17-15-11-041Z.yml": {
+    "mtime": 1784481311.0418706,
+    "ast_hash": "3a5afdb9d8731c7795101895510c5b37",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T17-18-21-369Z.yml": {
+    "mtime": 1784481501.3699012,
+    "ast_hash": "924ba13f436c71c9f6b782b8bca50fbb",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T17-22-27-389Z.yml": {
+    "mtime": 1784481747.3927205,
+    "ast_hash": "592a1675e6a0774978257e2f32ce66c5",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T17-22-33-571Z.yml": {
+    "mtime": 1784481753.5729167,
+    "ast_hash": "8d832138b8072a0ac347a2acf3e6baad",
+    "semantic_hash": ""
+  },
+  "tests/homepage-why-logika-section.php": {
+    "mtime": 1784490115.9829786,
+    "ast_hash": "6f69827f6b70ce8dafcfb42a603f5b65",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T18-16-14-917Z.yml": {
+    "mtime": 1784484974.9171116,
+    "ast_hash": "26f946b368e32a26c3b9702a767c34ad",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T18-16-57-544Z.yml": {
+    "mtime": 1784485017.545831,
+    "ast_hash": "4b9ac67c657ca1991c302bee905d1e1f",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T18-17-44-432Z.yml": {
+    "mtime": 1784485064.4327624,
+    "ast_hash": "7e9dbb056821a16454bc10534fea8b0f",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T18-24-58-452Z.yml": {
+    "mtime": 1784485498.4535244,
+    "ast_hash": "4aa8d22ad752cd6728c55ff881b02228",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T18-27-53-591Z.yml": {
+    "mtime": 1784485673.592023,
+    "ast_hash": "27e289b524b828cf91dce0ec1b8f3eaa",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/element-2026-07-19T18-17-10-812Z.png": {
+    "mtime": 1784485030.811864,
+    "ast_hash": "c3382ec0d5f7034d4153d264a8f5b6b1",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T18-16-25-072Z.png": {
+    "mtime": 1784484985.073816,
+    "ast_hash": "7d0ffc2583aed426f565d9a8cd1813bf",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T18-16-27-268Z.png": {
+    "mtime": 1784484987.2674987,
+    "ast_hash": "57e6681e639048283439a87ee546add1",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T18-25-16-526Z.png": {
+    "mtime": 1784485516.5276468,
+    "ast_hash": "9484b938e7c99278790623f09b872064",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/media-center/why-logika/background.png": {
+    "mtime": 1784488813.3475966,
+    "ast_hash": "f6d5e54b039bd715c0e8c9ccad1a4512",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-21-26-537Z.yml": {
+    "mtime": 1784488886.5399015,
+    "ast_hash": "39aec2ca5ae4ba0f32fe87cc0b1c2355",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-21-45-726Z.yml": {
+    "mtime": 1784488905.7310064,
+    "ast_hash": "6924828a4b9b5a75f4a575a84c1f3a2f",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-28-15-396Z.yml": {
+    "mtime": 1784489295.39776,
+    "ast_hash": "af4358888ee03aa4c54f7ee948d4d258",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-28-28-546Z.yml": {
+    "mtime": 1784489308.5488493,
+    "ast_hash": "0c614dcc16362e6ddd56f3e52d9c7605",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-35-15-486Z.yml": {
+    "mtime": 1784489715.488032,
+    "ast_hash": "59ad58e50e63d333cd9d00ca6f0fe1ec",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-36-52-878Z.yml": {
+    "mtime": 1784489812.88004,
+    "ast_hash": "5af4e7771e7cc54ec77a50592c32a812",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-37-15-630Z.yml": {
+    "mtime": 1784489835.6319,
+    "ast_hash": "9ac416094ba602ea069f88f2d27a0944",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-40-59-973Z.yml": {
+    "mtime": 1784490059.9738328,
+    "ast_hash": "c89451f02277464e66939a1e42da9488",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-42-37-186Z.yml": {
+    "mtime": 1784490157.1903107,
+    "ast_hash": "7351e213941526b52c8283ad3b6533f7",
+    "semantic_hash": ""
+  },
+  ".playwright-cli/page-2026-07-19T19-42-42-624Z.yml": {
+    "mtime": 1784490162.6249077,
+    "ast_hash": "797d197f670bfa6f26991a88d8105365",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-00.png": {
+    "mtime": 1784491535.7475848,
+    "ast_hash": "43e117efa2966543c2707a4aeae74ac9",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-01.png": {
+    "mtime": 1784491535.785586,
+    "ast_hash": "268b1f42646ea5caa67135ab0b2b4e5a",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-02.png": {
+    "mtime": 1784491535.8235874,
+    "ast_hash": "224ebce085c12233cc3b5cc9eaafd88c",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-03.png": {
+    "mtime": 1784491535.8595884,
+    "ast_hash": "64e08243a196ce1d10be761734d1e219",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-04.png": {
+    "mtime": 1784491535.8965898,
+    "ast_hash": "b97593e3a11f381a9e422c419c6fffee",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-05.png": {
+    "mtime": 1784491535.933591,
+    "ast_hash": "1122e95f7fbfa46e1f36e24745fed647",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-06.png": {
+    "mtime": 1784491535.9745922,
+    "ast_hash": "0bab7a0741088c9c8088e3210cd2377f",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-07.png": {
+    "mtime": 1784491536.0165935,
+    "ast_hash": "608b6636f65cbbb94ee22132aff54f69",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-08.png": {
+    "mtime": 1784491536.0545948,
+    "ast_hash": "0728ea0098fc5fb3d5adbc2854010509",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-09.png": {
+    "mtime": 1784491536.093596,
+    "ast_hash": "104c0e905d07951691be2ccd32693557",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-10.png": {
+    "mtime": 1784491536.1325972,
+    "ast_hash": "e81cb47fb0273a915296c8f5aad60eff",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-11.png": {
+    "mtime": 1784491536.1705985,
+    "ast_hash": "8cde964ceeb75ae8254fb3ec73585b96",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-12.png": {
+    "mtime": 1784491536.2095997,
+    "ast_hash": "7ef21d52c963a09585a7e61c2d619134",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-13.png": {
+    "mtime": 1784491536.248601,
+    "ast_hash": "5e8e0eb3ba48a832f8e7d7fa8eabe19b",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-14.png": {
+    "mtime": 1784491536.2866023,
+    "ast_hash": "b5b3f7baa73d6e4a29da3c741a9c38e6",
+    "semantic_hash": ""
+  },
+  "wordpress/wp-content/themes/logika-theme/assets/img/camp/activities/generated/icon-15.png": {
+    "mtime": 1784491536.3246033,
+    "ast_hash": "d6240444bd917414b56a600fe4e018c9",
     "semantic_hash": ""
   }
 }

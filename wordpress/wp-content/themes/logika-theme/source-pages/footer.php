@@ -39,9 +39,6 @@
               <li>
                 <a href="/faq.html">FAQ</a>
               </li>
-              <li>
-                <a href="#">Контакти</a>
-              </li>
             </ul>
           </div>
 

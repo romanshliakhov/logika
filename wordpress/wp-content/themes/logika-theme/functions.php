@@ -114,13 +114,15 @@ function logika_theme_assets(): void {
 		wp_enqueue_script( 'logika-vacancies-lightbox', $uri . '/js/vacancies-lightbox.js', array( 'logika-theme' ), $vacancies_lightbox_version, true );
 		wp_enqueue_script( 'logika-vacancies-details-dialog', $uri . '/js/vacancies-details-dialog.js', array( 'logika-theme' ), $vacancies_details_dialog_version, true );
 	}
+	if ( is_front_page() || get_query_var( 'logika_city' ) || is_page( array( 'about', 'media-center' ) ) ) {
+		wp_enqueue_style( 'logika-home-media-center', $uri . '/css/blocks/sections/media-section.css', array( 'logika-theme' ), $home_media_center_version );
+	}
 	if ( is_front_page() || get_query_var( 'logika_city' ) ) {
 		wp_enqueue_style( 'logika-home-banner-main', $uri . '/css/blocks/sections/home-banner-main.css', array( 'logika-theme-adaptive' ), $home_banner_main_version );
 		foreach ( array( 'marquee', 'services', 'english', 'transformation', 'onboarding', 'testimonials', 'portfolio', 'faq', 'certificates', 'partners' ) as $section ) {
 			wp_enqueue_style( "logika-home-{$section}-main", "{$uri}/css/blocks/sections/home-{$section}-main.css", array( 'logika-home-banner-main' ), (string) filemtime( get_template_directory() . "/assets/css/blocks/sections/home-{$section}-main.css" ) );
 		}
 		wp_enqueue_style( 'logika-director-feedback', $uri . '/css/blocks/sections/director-feedback.css', array( 'logika-theme' ), $director_feedback_style_version );
-		wp_enqueue_style( 'logika-home-media-center', $uri . '/css/blocks/sections/media-section.css', array( 'logika-theme' ), $home_media_center_version );
 		wp_enqueue_style( 'logika-home-media-center-mobile', $uri . '/css/blocks/sections/media-section-mobile.css', array( 'logika-home-media-center' ), $home_media_center_mobile_version );
 	}
 	if ( is_front_page() || get_query_var( 'logika_city' ) ) {
@@ -128,8 +130,9 @@ function logika_theme_assets(): void {
 		wp_enqueue_script( 'logika-home-city-seo', $uri . '/js/homepage-city-seo.js', array( 'logika-city-context' ), $home_city_seo_version, true );
 		wp_localize_script( 'logika-home-city-seo', 'logikaHomepageCitySeo', array( 'endpoint' => esc_url_raw( rest_url( 'logika/v1/cities/' ) ) ) );
 	}
+	wp_enqueue_style( 'logika-gallery-section', "{$uri}/css/blocks/sections/gallery-section.css", array( 'logika-theme' ), (string) filemtime( get_template_directory() . '/assets/css/blocks/sections/gallery-section.css' ) );
 	if ( is_singular( 'camp' ) || is_post_type_archive( 'camp' ) ) {
-		foreach ( array( 'trips-section', 'details-section', 'gallery-section', 'camp-extra' ) as $section ) {
+		foreach ( array( 'trips-section', 'details-section', 'camp-extra' ) as $section ) {
 			wp_enqueue_style( "logika-{$section}", "{$uri}/css/blocks/sections/{$section}.css", array( 'logika-theme' ), (string) filemtime( get_template_directory() . "/assets/css/blocks/sections/{$section}.css" ) );
 		}
 	}

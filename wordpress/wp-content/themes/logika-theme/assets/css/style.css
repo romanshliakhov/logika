@@ -2104,19 +2104,17 @@ a .offer-card__info {
 }
 
 .gallery-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+  aspect-ratio: 4/3;
+  overflow: hidden;
 }
 .gallery-card picture,
 .gallery-card img {
   width: 100%;
+  height: 100%;
   border-radius: 25px;
-}
-@media screen and (max-width: 1024px) {
-  .gallery-card {
-    height: 465px;
-  }
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .trip-card {
@@ -3513,7 +3511,7 @@ a .offer-card__info {
     text-align: center;
   }
 }
-.banner-section__bar li span {
+.banner-section__bar li > span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3521,7 +3519,7 @@ a .offer-card__info {
   flex-shrink: 0;
 }
 @media (min-width: 1025px) {
-  .banner-section__bar li span {
+  .banner-section__bar li > span {
     width: clamp(36px, 3.889vw, 56px);
     height: clamp(36px, 3.889vw, 56px);
   }

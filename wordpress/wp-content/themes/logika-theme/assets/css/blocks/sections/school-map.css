@@ -218,7 +218,8 @@
   list-style: none;
 }
 .school-map__schools li {
-  padding: 20px 0;
+  position: relative;
+  padding: 20px 52px 20px 0;
   border-bottom: 1px solid #e7e4ee;
   color: var(--violet-500);
   font-size: 20px;
@@ -294,7 +295,7 @@
     max-height: 400px;
   }
   .school-map__schools li {
-    padding: 14px 0;
+    padding: 14px 44px 14px 0;
     font-size: 16px;
   }
   .school-map__schools li span {

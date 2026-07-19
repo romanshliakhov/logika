@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 final class Logika_Theme_Testimonials {
 	public static function apply( string $markup, ?array $ids = null, int|string $image_context = 0 ): string {
+		$markup  = self::normalizeLayout( $markup );
 		$reviews = array_filter( array_map( 'get_post', array_slice( Logika_Theme_Entities::reviews( $ids ), 0, 12 ) ) );
 
 		if ( ! $reviews ) {
@@ -28,6 +29,14 @@ final class Logika_Theme_Testimonials {
 		);
 
 		return self::replaceDecorations( self::replaceAvatars( $markup, $reviews ), $image_context );
+	}
+
+	private static function normalizeLayout( string $markup ): string {
+		return (string) preg_replace_callback(
+			'#<ul class="testimonials-section__items">(.*?)</ul>#s',
+			static fn( array $matches ): string => '<div class="testimonials-section__slider"><div class="swiper-container"><ul class="swiper-wrapper">' . str_replace( 'class="testimonials-section__item"', 'class="swiper-slide"', $matches[1] ) . '</ul></div></div>',
+			$markup
+		);
 	}
 
 	/** @param array<int, \WP_Post> $reviews */

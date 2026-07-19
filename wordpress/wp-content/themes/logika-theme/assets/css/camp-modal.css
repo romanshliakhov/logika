@@ -67,7 +67,9 @@
 }
 
 .modal__camps-dates {
-  width: max-content;
+  width: fit-content;
+  max-width: calc(100% - 8px);
+  box-sizing: border-box;
   position: absolute;
   z-index: 2;
   top: 4px;
@@ -81,6 +83,7 @@
   font-weight: 700;
   line-height: 118%;
   letter-spacing: -0.8px;
+  text-align: center;
 }
 
 .modal__camps-info {

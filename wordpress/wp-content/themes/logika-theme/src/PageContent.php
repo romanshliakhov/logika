@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 final class Logika_Theme_Page_Content {
+	private const TILDA_CAMP_SLUGS = array( 'greece-2026', 'emily-resort-2026', 'carpathians-2026', 'city-camps-2026' );
+
 	private const TEXT_FIELDS = array(
 		'about' => array(
 			'about_hero_title' => 'Найбільша в Україні школа програмування для дітей 7-17 років',
@@ -128,8 +130,12 @@ final class Logika_Theme_Page_Content {
 		if ( ! $page_id || ! function_exists( 'get_field' ) ) {
 			return $markup;
 		}
+		$tilda_camp = 'camp' === $source && self::isTildaCamp( $page_id );
 
 		foreach ( self::TEXT_FIELDS[ $source ] ?? array() as $field => $default ) {
+			if ( $tilda_camp && 'camp_hero_text' !== $field ) {
+				continue;
+			}
 			$value = trim( (string) get_field( $field, $page_id ) );
 
 			if ( '' !== $value && self::plainText( $value ) !== self::plainText( $default ) ) {
@@ -149,17 +155,19 @@ final class Logika_Theme_Page_Content {
 		$markup = self::applySelectedContent( $markup, $source, $page_id );
 		$markup = self::applySectionFields( $markup, $source, $page_id );
 		$markup = self::applyGallery( $markup, $source, $page_id );
-		$markup = self::applyRepeaters( $markup, $source, $page_id );
+		$markup = self::applyRepeaters( $markup, $source, $page_id, $tilda_camp );
 		$markup = 'it-courses' === $source ? self::applyItCategories( $markup, $page_id ) : $markup;
 		$markup = 'it-courses' === $source ? self::applyItCatalogCards( $markup, $page_id ) : $markup;
-		$markup = 'camp' === $source ? self::applyCampDetails( $markup, $page_id ) : $markup;
+		$markup = 'camp' === $source ? ( $tilda_camp ? self::applyCampDetailGalleries( $markup, $page_id ) : self::applyCampDetails( $markup, $page_id ) ) : $markup;
 		$markup = 'camp' === $source ? self::applyCampHeroImages( $markup, $page_id ) : $markup;
 		$markup = 'camp' === $source ? self::applyCampHeroDates( $markup, $page_id ) : $markup;
 		$markup = 'camp' === $source ? self::applyCampHeroFacts( $markup, $page_id ) : $markup;
-		$markup = 'camp' === $source ? self::applyCampTrips( $markup, $page_id ) : $markup;
-		$markup = 'camp' === $source ? self::applyCampIncludes( $markup, $page_id ) : $markup;
-		$markup = 'camp' === $source ? self::applyCampExtraSections( $markup, $page_id ) : $markup;
-		$markup = 'camp' === $source ? self::applyCampBooking( $markup, $page_id ) : $markup;
+		$markup = 'camp' === $source ? (string) preg_replace( '#(data-logika-camp-booking)(>)#', '$1 data-logika-camp-id="' . $page_id . '" data-logika-form-id="hero_trial_lesson"$2', $markup ) : $markup;
+		$markup = 'camp' === $source && ! $tilda_camp ? self::applyCampTrips( $markup, $page_id ) : $markup;
+		$markup = 'camp' === $source && ! $tilda_camp ? self::applyCampIncludes( $markup, $page_id ) : $markup;
+		$markup = 'camp' === $source && ! $tilda_camp ? self::applyCampExtraSections( $markup, $page_id ) : $markup;
+		$markup = 'camp' === $source && $tilda_camp ? self::removeSection( $markup, 'camp-extra' ) : $markup;
+		$markup = 'camp' === $source && ! $tilda_camp ? self::applyCampBooking( $markup, $page_id ) : $markup;
 		$markup = 'it-course' === $source ? self::applyCourseLearn( $markup, $page_id ) : $markup;
 		$markup = 'it-course' === $source ? self::applyCoursePage( $markup, $page_id ) : $markup;
 		$markup = 'about' === $source ? self::applyAboutImageRows( $markup, $page_id ) : $markup;
@@ -171,6 +179,10 @@ final class Logika_Theme_Page_Content {
 	private static function replaceImageAsset( string $markup, string $default, string $url ): string {
 		$markup = str_replace( $default, esc_url( $url ), $markup );
 		return str_ends_with( $default, '.png' ) ? str_replace( substr( $default, 0, -4 ) . '.webp', esc_url( $url ), $markup ) : $markup;
+	}
+
+	private static function isTildaCamp( int|string $context ): bool {
+		return in_array( get_post_field( 'post_name', absint( $context ) ), self::TILDA_CAMP_SLUGS, true );
 	}
 
 	private static function applyItCatalogCards( string $markup, int|string $context ): string {
@@ -337,10 +349,6 @@ final class Logika_Theme_Page_Content {
 			$markup = self::replaceAccordion( $markup, implode( '', $items ), true );
 		}
 
-		if ( ! self::published( (array) get_field( 'course_related_reviews', $context ), 'review' ) ) {
-			$markup = self::removeSection( $markup, 'testimonials-section' );
-		}
-
 		return self::applyCourseContext( $markup, absint( $context ) );
 	}
 
@@ -441,7 +449,7 @@ final class Logika_Theme_Page_Content {
 		);
 	}
 
-	private static function applyRepeaters( string $markup, string $source, int|string $context ): string {
+	private static function applyRepeaters( string $markup, string $source, int|string $context, bool $tilda_camp = false ): string {
 		$configs = array(
 			'about' => array(
 				array( 'about_stats_items', 'about-stats__list', '', 'tail' ),
@@ -458,6 +466,9 @@ final class Logika_Theme_Page_Content {
 			'it-course' => array( array( 'course_process_items', 'process-section__items', 'process-section__item', 'card' ) ),
 		);
 		foreach ( $configs[ $source ] ?? array() as [ $field, $list_class, $item_class, $mode ] ) {
+			if ( $tilda_camp && 'camp' === $source && 'camp_benefits' === $field ) {
+				continue;
+			}
 			$rows = array_values( array_filter( (array) get_field( $field, $context ), 'is_array' ) );
 			if ( $rows ) {
 				$markup = self::replaceListRows( $markup, $list_class, $item_class, $rows, $mode );
@@ -473,7 +484,7 @@ final class Logika_Theme_Page_Content {
 			return $markup;
 		}
 		$index = 0;
-		return (string) preg_replace_callback(
+		$markup = (string) preg_replace_callback(
 			'#<section class="[^"]*\\bcamp-details\\b[^"]*"[^>]*>.*?</section>#s',
 			static function ( array $matches ) use ( $rows, &$index ): string {
 				$row = $rows[ $index++ ] ?? null;
@@ -483,8 +494,29 @@ final class Logika_Theme_Page_Content {
 				$section = $matches[0];
 				$title = trim( (string) ( $row['title'] ?? '' ) );
 				$text = trim( (string) ( $row['text'] ?? '' ) );
-				$section = $title ? self::replaceLeaf( $section, '#(<h2\b[^>]*>)(.*?)(</h2>)#s', $title ) : $section;
-				$section = $text ? self::replaceLeaf( $section, '#(<div class="camp-details__copy">.*?<p>)(.*?)(</p>)#s', $text ) : $section;
+				$section = $title ? self::replaceLeaf( $section, '#(<h2\\b[^>]*>)(.*?)(</h2>)#s', $title ) : $section;
+				return $text ? self::replaceLeaf( $section, '#(<div class="camp-details__copy">.*?<p>)(.*?)(</p>)#s', $text ) : $section;
+			},
+			$markup
+		);
+
+		return self::applyCampDetailGalleries( $markup, $context );
+	}
+
+	private static function applyCampDetailGalleries( string $markup, int|string $context ): string {
+		$rows = array_values( array_filter( (array) get_field( 'camp_details', $context ), 'is_array' ) );
+		if ( ! $rows ) {
+			return $markup;
+		}
+		$index = 0;
+		return (string) preg_replace_callback(
+			'#<section class="[^"]*\\bcamp-details\\b[^"]*"[^>]*>.*?</section>#s',
+			static function ( array $matches ) use ( $rows, &$index ): string {
+				$row = $rows[ $index++ ] ?? null;
+				if ( ! is_array( $row ) ) {
+					return $matches[0];
+				}
+				$section = $matches[0];
 				$images = array_values( array_filter( array_map( 'absint', (array) ( $row['gallery'] ?? array() ) ) ) );
 				if ( ! $images && ! empty( $row['image'] ) ) {
 					$images[] = absint( $row['image'] );
@@ -544,7 +576,7 @@ final class Logika_Theme_Page_Content {
 		$cta_label = trim( (string) get_field( 'camp_cta_label', $context ) );
 		if ( $cta_label ) {
 			$markup = (string) preg_replace( '#(<button class="main-form__btn btn btn--yellow" type="submit">).*?(\s*<svg)#s', '$1' . esc_html( $cta_label ) . '$2', $markup, 1 );
-			$markup = (string) preg_replace( '#(<a class="camp-details__cta btn btn--violet" href="\#form">).*?(\s*<svg)#s', '$1' . esc_html( $cta_label ) . '$2', $markup );
+			$markup = (string) preg_replace( '#(<a class="camp-details__cta btn btn--violet" href="\#lead-form" data-logika-camp-booking>).*?(\s*<svg)#s', '$1' . esc_html( $cta_label ) . '$2', $markup );
 		}
 
 		return $markup;
@@ -569,8 +601,8 @@ final class Logika_Theme_Page_Content {
 				if ( ! $url ) {
 					continue;
 				}
-				$slide = (string) preg_replace( '#\b(src|srcset)=(["\']).*?\2#', '$1=$2' . esc_url( $url ) . '$2', $template[0] );
-				$slides .= (string) preg_replace( '#(<img\b[^>]*\balt=)(["\']).*?\2#', '$1$2' . esc_attr( (string) ( $row['title'] ?? '' ) ) . '$2', $slide, 1 );
+				$slide = (string) preg_replace( '#\\b(src|srcset)=(["\']).*?\\2#', '$1=$2' . esc_url( $url ) . '$2', $template[0] );
+				$slides .= (string) preg_replace( '#(<img\\b[^>]*\\balt=)(["\']).*?\\2#', '$1$2' . esc_attr( (string) ( $row['title'] ?? '' ) ) . '$2', $slide, 1 );
 			}
 			$section = $slides ? str_replace( $list[0], $list[1] . $slides . $list[3], $section ) : $section;
 		}
@@ -593,7 +625,7 @@ final class Logika_Theme_Page_Content {
 
 	private static function applyCampBooking( string $markup, int|string $context ): string {
 		$rows = array_values( array_filter( (array) get_field( 'camp_booking_benefits', $context ), 'is_array' ) );
-		if ( $rows && preg_match( '#(<div class="camp-booking__benefits">\s*<ul>)(.*?)(</ul>)#s', $markup, $list ) ) {
+		if ( $rows && preg_match( '#(<div class="camp-booking__benefits">\\s*<ul>)(.*?)(</ul>)#s', $markup, $list ) ) {
 			$items = implode( '', array_map( static fn( array $row ): string => '<li>' . esc_html( (string) ( $row['text'] ?? '' ) ) . '</li>', $rows ) );
 			$markup = str_replace( $list[0], $list[1] . $items . $list[3], $markup );
 		}
@@ -603,7 +635,7 @@ final class Logika_Theme_Page_Content {
 		}
 		$submit_label = trim( (string) get_field( 'camp_booking_submit_label', $context ) );
 		if ( $submit_label ) {
-			$markup = (string) preg_replace( '#(<button class="camp-booking__submit btn btn--yellow" type="submit">).*?(\s*<span)#s', '$1' . esc_html( $submit_label ) . '$2', $markup, 1 );
+			$markup = (string) preg_replace( '#(<button class="camp-booking__submit btn btn--yellow" type="submit">).*?(\\s*<span)#s', '$1' . esc_html( $submit_label ) . '$2', $markup, 1 );
 		}
 
 		return $markup;
@@ -627,7 +659,7 @@ final class Logika_Theme_Page_Content {
 			$items .= '<article class="camp-extra__item">' . ( $title ? '<h2>' . esc_html( $title ) . '</h2>' : '' ) . ( $text ? '<div class="camp-extra__text">' . $text . '</div>' : '' ) . ( $gallery ? '<ul class="camp-extra__gallery">' . $gallery . '</ul>' : '' ) . '</article>';
 		}
 
-		return (string) preg_replace( '#(<div class="camp-extra__list">).*?(</div>\s*</div>\s*</section>)#s', '$1' . $items . '$2', $markup, 1 );
+		return (string) preg_replace( '#(<div class="camp-extra__list">).*?(</div>\\s*</div>\\s*</section>)#s', '$1' . $items . '$2', $markup, 1 );
 	}
 
 	private static function replaceListRows( string $markup, string $list_class, string $item_class, array $rows, string $mode ): string {
@@ -697,6 +729,9 @@ final class Logika_Theme_Page_Content {
 	private static function applyGallery( string $markup, string $source, int|string $context ): string {
 		$field = array( 'camps' => 'camp_archive_gallery', 'camp' => 'camp_gallery' )[ $source ] ?? '';
 		$images = $field ? array_values( array_filter( array_map( 'absint', (array) get_field( $field, $context ) ) ) ) : array();
+		if ( 'camp' === $source && self::isTildaCamp( $context ) ) {
+			$images = array_values( array_filter( $images, static fn( int $image ): bool => in_array( get_post_mime_type( $image ), array( 'image/jpeg', 'image/webp' ), true ) ) );
+		}
 		if ( ! $images ) {
 			return $markup;
 		}

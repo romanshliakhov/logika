@@ -6,6 +6,12 @@ $root = dirname( __DIR__ );
 $script = file_get_contents( $root . '/source/js/camp-map.js' ) ?: '';
 $functions = file_get_contents( $root . '/wordpress/wp-content/themes/logika-theme/functions.php' ) ?: '';
 $scss = file_get_contents( $root . '/source/scss/blocks/sections/school-map.scss' ) ?: '';
+$theme_css = file_get_contents( $root . '/wordpress/wp-content/themes/logika-theme/assets/css/blocks/sections/school-map.css' ) ?: '';
+
+if ( 1 !== preg_match( '/\.school-map__schools li\s*\{[^}]*position:\s*relative;[^}]*padding:\s*20px\s+52px\s+20px\s+0;/s', $theme_css ) ) {
+	fwrite( STDERR, "School map branch rows must contain their route icon.\n" );
+	exit( 1 );
+}
 
 if ( str_contains( $script, "fetch('img/maps/ukraine-regions.svg')" ) || ! str_contains( $script, 'logikaThemeAssets' ) || ! str_contains( $functions, 'mapUrl' ) ) {
 	fwrite( STDERR, "School map must fetch the theme asset URL, not a page-relative path.\n" );

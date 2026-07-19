@@ -8,13 +8,13 @@ $content    = (string) file_get_contents( $root . '/wordpress/wp-content/themes/
 $modal      = (string) file_get_contents( $root . '/wordpress/wp-content/themes/logika-theme/template-parts/components/camp-modal.php' );
 $errors     = array();
 
-foreach ( array( 'camp_card_image', 'camp_card_description', 'camp_hero_dates_text', 'camp_hero_form_title', 'camp_hero_facts', 'camp_includes', 'camp_booking_benefits', 'camp_booking_form_title' ) as $field ) {
+foreach ( array( 'camp_card_image', 'camp_card_description', 'camp_hero_dates_text', 'camp_hero_form_title', 'camp_hero_facts', 'camp_hero_images', 'camp_details', 'camp_gallery' ) as $field ) {
 	if ( ! str_contains( $group, '"name": "' . $field . '"' ) ) {
 		$errors[] = "Camp ACF field {$field} is missing.";
 	}
 }
 
-foreach ( array( 'applyCampHeroDates', 'applyCampHeroFacts', 'applyCampTrips', 'applyCampIncludes', 'applyCampBooking' ) as $method ) {
+foreach ( array( 'applyCampHeroDates', 'applyCampHeroFacts', 'applyCampHeroImages', 'applyCampDetailGalleries' ) as $method ) {
 	if ( ! str_contains( $content, 'function ' . $method ) ) {
 		$errors[] = "Camp page renderer is missing {$method}.";
 	}
@@ -24,7 +24,7 @@ if ( ! str_contains( $content, 'href="\\#form"' ) ) {
 	$errors[] = 'Camp CTA route must be escaped inside the renderer pattern.';
 }
 
-foreach ( array( '$camps  = get_posts( array(', 'get_permalink( $camp_id )', 'camp_card_description' ) as $marker ) {
+foreach ( array( 'get_posts( array(', 'get_permalink( $camp_id )', 'camp_card_description' ) as $marker ) {
 	if ( ! str_contains( $modal, $marker ) ) {
 		$errors[] = "Camp modal is missing {$marker}.";
 	}

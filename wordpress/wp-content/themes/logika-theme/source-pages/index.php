@@ -16,18 +16,19 @@
           <div class="banner-section__blocks">
             <div class="banner-section__left">
               <div class="banner-section__info">
-                <h1 class="banner-section__title">Програмування та англійська мова для дітей 7-30 років</h1>
+                <h1 class="banner-section__title">Програмування та англійська мова для дітей 7–17 років</h1>
                 <div class="banner-section__subtitle h4">Перші результати вже через 4 тижні</div>
               </div>
 
               <div class="banner-section__character-boy">
                 <img width='440' height='225' src='img/boy-character.svg' alt='boy-character'>
+
                 <div class="banner-section__decor">
                   <img src="img/main-hero/main-hero-bg.svg" alt="">
                 </div>
               </div>
             </div>
-            
+
             <div class="banner-section__right">
               <form class="banner-section__form main-form">
                 <div class="main-form__title h5">
@@ -49,7 +50,7 @@
                   </svg>
                 </button>
 
-                <p class="main-form__text">Натискаючи, ви погоджуєтесь із<a href="#">Політикою конфіденційності</a></p>
+                <p class="main-form__text">Натискаючи, ви погоджуєтесь із <a href="#">Політикою конфіденційності</a></p>
               </form>
 
               <div class="banner-section__character-logika">
@@ -203,7 +204,7 @@
                       <img src='img/services/service1.svg' alt=''>
                   </div>
                 </div>
-                
+
                 <div class="services-section__item-content">
                   <div class="services-section__item-title h3">Перший крок у свiт технологiй</div>
                   <ul class="services-section__item-tags">
@@ -212,13 +213,13 @@
                   <p class="services-section__item-excerpt">Допомагаємо дитині зробити перші впевнені кроки у світі технологій, розвиваючи логіку, увагу та базові комп’ютерні навички.</p>
 
                   <div class="services-section__item-btns">
-                    <a href="#" class="services-section__item-lesson btn btn--yellow">
+                    <button class="services-section__item-lesson btn btn--yellow" data-path="lesson">
                       Запис на безкоштовний урок
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#arrow-right'></use>
                       </svg>
-                    </a>
-                    <a href="#" class="services-section__item-about btn">
+                    </button>
+                    <a href="/it-courses.html" class="services-section__item-about btn">
                       Ознайомитись з курсами
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#arrow-right'></use>
@@ -236,18 +237,18 @@
 
                   <div class="services-section__item-image">
                     <picture>
-                      <source type='image/webp' srcset='img/services/service1.webp'>
-                      <img width='588' height='511' src='img/services/service1.png' alt=''>
+                      <source type='image/webp' srcset='img/services/service2.webp'>
+                      <img width='588' height='511' src='img/services/service2.png' alt=''>
                     </picture>
                   </div>
 
                   <div class="services-section__item-ages">9-11 рокiв</div>
 
                   <div class="services-section__item-icon">
-                      <img src='img/services/service1.svg' alt=''>
+                      <img src='img/services/service2.svg' alt=''>
                   </div>
                 </div>
-                
+
                 <div class="services-section__item-content">
                   <div class="services-section__item-title h3">Вiд iгор до власних проектiв</div>
                   <ul class="services-section__item-tags">
@@ -257,13 +258,13 @@
                   </ul>
                   <p class="services-section__item-excerpt">Діти переходять від ігор до створення власних проєктів, розвивають креативне мислення та вчаться працювати з різними цифровими інструментами.</p>
                   <div class="services-section__item-btns">
-                    <a href="#" class="services-section__item-lesson btn btn--yellow">
+                    <button class="services-section__item-lesson btn btn--yellow" data-path="lesson">
                       Запис на безкоштовний урок
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#arrow-right'></use>
                       </svg>
-                    </a>
-                    <a href="#" class="services-section__item-about btn">
+                    </button>
+                    <a href="/it-courses.html" class="services-section__item-about btn">
                       Ознайомитись з курсами
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#arrow-right'></use>
@@ -281,36 +282,36 @@
 
                   <div class="services-section__item-image">
                     <picture>
-                      <source type='image/webp' srcset='img/services/service1.webp'>
-                      <img width='588' height='511' src='img/services/service1.png' alt=''>
+                      <source type='image/webp' srcset='img/services/service3.webp'>
+                      <img width='588' height='511' src='img/services/service3.png' alt=''>
                     </picture>
                   </div>
 
                   <div class="services-section__item-ages">12-14 рокiв</div>
 
                   <div class="services-section__item-icon">
-                      <img src='img/services/service1.svg' alt=''>
+                      <img src='img/services/service3.svg' alt=''>
                   </div>
                 </div>
-                
+
                 <div class="services-section__item-content">
                   <div class="services-section__item-title h3">Серйознi навички для серйозних цiлей</div>
                   <ul class="services-section__item-tags">
-                    <li><a href="/courses/programming-projects/" class="h5">Python Start</a></li>
-                    <li><a href="/courses/programming-projects/" class="h5">Python Mastery</a></li>
-                    <li><a href="/courses/programming-projects/" class="h5">Графічний дизайн</a></li>
-                    <li><a href="/courses/programming-projects/" class="h5">Графічний дизайн 2.0</a></li>
-                    <li><a href="/courses/programming-projects/" class="h5">Створення веб-сайтів</a></li>
+                    <li class="h5">Python Start</li>
+                    <li class="h5">Python Mastery</li>
+                    <li class="h5">Графічний дизайн</li>
+                    <li class="h5">Графічний дизайн 2.0</li>
+                    <li class="h5">Створення веб-сайтів</li>
                   </ul>
                   <p class="services-section__item-excerpt">Поглиблюємо знання в програмуванні, працюємо над реальними проєктами та формуємо навички, які стануть основою для подальшого розвитку в IT.</p>
                   <div class="services-section__item-btns">
-                    <a href="#" class="services-section__item-lesson btn btn--yellow">
+                    <button class="services-section__item-lesson btn btn--yellow" data-path="lesson">
                       Запис на безкоштовний урок
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#arrow-right'></use>
                       </svg>
-                    </a>
-                    <a href="#" class="services-section__item-about btn">
+                    </button>
+                    <a href="/it-courses.html" class="services-section__item-about btn">
                       Ознайомитись з курсами
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#arrow-right'></use>
@@ -328,18 +329,18 @@
 
                   <div class="services-section__item-image">
                     <picture>
-                      <source type='image/webp' srcset='img/services/service1.webp'>
-                      <img width='588' height='511' src='img/services/service1.png' alt=''>
+                      <source type='image/webp' srcset='img/services/service4.webp'>
+                      <img width='588' height='511' src='img/services/service4.png' alt=''>
                     </picture>
                   </div>
 
                   <div class="services-section__item-ages">14-17 рокiв</div>
 
                   <div class="services-section__item-icon">
-                      <img src='img/services/service1.svg' alt=''>
+                      <img src='img/services/service4.svg' alt=''>
                   </div>
                 </div>
-                
+
                 <div class="services-section__item-content">
                   <div class="services-section__item-title h3">Перший крок у IT-кар'єру</div>
                   <ul class="services-section__item-tags">
@@ -350,13 +351,13 @@
                   </ul>
                   <p class="services-section__item-excerpt">Готуємо до перших кроків у кар’єрі: даємо практичні знання, знайомимо з сучасними технологіями та вчимо мислити як розробник.</p>
                   <div class="services-section__item-btns">
-                    <a href="#" class="services-section__item-lesson btn btn--yellow">
+                    <button class="services-section__item-lesson btn btn--yellow" data-path="lesson">
                       Запис на безкоштовний урок
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#arrow-right'></use>
                       </svg>
-                    </a>
-                    <a href="#" class="services-section__item-about btn">
+                    </button>
+                    <a href="/it-courses.html" class="services-section__item-about btn">
                       Ознайомитись з курсами
                       <svg width='20' height='20'>
                         <use href='img/sprite/sprite.svg#arrow-right'></use>
@@ -383,7 +384,7 @@
 
               <p class="english-section__text">Навчаємо говорити англійською впевнено з перших занять — через практику, живе спілкування та сучасні методики. Програма підбирається за віком і рівнем, щоб дитині було цікаво та комфортно вчитися.</p>
 
-              <a href="#" class="english-section__link btn btn--yellow">
+              <a href="/en-courses.html" class="english-section__link btn btn--yellow">
                 Дізнатись більше
                 <svg width='20' height='20'>
                   <use href='img/sprite/sprite.svg#arrow-right'></use>
@@ -505,13 +506,13 @@
 
                 <div class="english-section__controls">
                   <button class='swiper-btn swiper-button-prev'>
-                    <svg width='24' height='24'>
+                    <svg width='25' height='25'>
                       <use href='img/sprite/sprite.svg#icon-arrow-left'></use>
                     </svg>
                   </button>
                   <button class='swiper-btn swiper-button-next'>
                     <p>Наступні курси</p>
-                    <svg width='24' height='24'>
+                    <svg width='25' height='25'>
                       <use href='img/sprite/sprite.svg#icon-arrow-right'></use>
                     </svg>
                   </button>
@@ -527,22 +528,22 @@
       </div>
     </section>
 
-    <section class="media-section">
+    <section class="media-section why-logika-section">
       <div class="container">
         <div class="media-section__wrapp">
           <h2 class="media-section__title h2">Чому тисячі батьків обирають Logika</h2>
           <ul class="media-section__cards">
             <li class="media-section__card media-section__card--yellow media-section__card--platform">
               <img class="media-section__card-img" width="270" height="255" src="img/media-center/why-logika/platform.png" alt="Єдина платформа — єдина якість">
-              <div class="media-section__card-content"><h3>Єдина платформа — єдина якість</h3><p>Інтерактивний підручник, практичні завдання й трекер результатів забезпечують високу якість навчання.</p></div>
+              <div class="media-section__card-content"><h3>Єдина платформа – єдина якість</h3><p>Інтерактивний підручник, практичні завдання й трекер результатів забезпечують високу якість навчання.</p></div>
             </li>
             <li class="media-section__card media-section__card--violet media-section__card--projects">
               <img class="media-section__card-img" width="230" height="215" src="img/media-center/why-logika/projects.png" alt="Мінімум 5 реальних проєктів за курс">
-              <div class="media-section__card-content"><h3>Мінімум 5 реальних проєктів за курс</h3><p>Ігри, мультфільми, боти, сайти чи додатки — від ідеї до готового результату.</p></div>
+              <div class="media-section__card-content"><h3>Мінімум 5 реальних проєктів за курс</h3><p>Ігри, мультфільми, боти, сайти чи додатки - від ідеї до готового результату.</p></div>
             </li>
             <li class="media-section__card media-section__card--green media-section__card--open-lessons">
               <img class="media-section__card-img" width="257" height="235" src="img/media-center/why-logika/open-lessons.png" alt="Відкриті уроки для батьків">
-              <div class="media-section__card-content"><h3>Відкриті уроки для батьків</h3><p>Наприкінці модуля дитина презентує свій проєкт, а ви бачите реальний прогрес.</p></div>
+              <div class="media-section__card-content"><h3>Відкриті уроки для батьків</h3><p>Наприкінці модуля дитина презентує свої проєкти, а ви бачите реальний прогрес.</p></div>
             </li>
             <li class="media-section__card media-section__card--violet media-section__card--online-city">
               <img class="media-section__card-img" width="300" height="230" src="img/media-center/why-logika/online-city.png" alt="Онлайн або у вашому місті">
@@ -562,17 +563,21 @@
     </section>
 
     <section class="transformation-section">
+      <div class="transformation-section__bg">
+        <img src="img/services/services-section-bg.svg" alt="">
+      </div>
+
       <div class="container">
         <div class="transformation-section__wrapp">
           <div class="transformation-section__top">
               <h2 class="transformation-section__title">Дайте дитині шанс не просто грати, а створювати</h2>
 
-              <a href="#" class="transformation-section__link btn btn--yellow">
+              <button class="transformation-section__link btn btn--yellow" data-path="lesson">
                 Запис на безкоштовний урок
                 <svg width='20' height='20'>
                   <use href='img/sprite/sprite.svg#arrow-right'></use>
                 </svg>
-              </a>
+              </button>
           </div>
 
           <ul class="transformation-section__items">
@@ -586,9 +591,11 @@
 
               <span class="transformation-section__item-label">Було</span>
 
-              <div class="transformation-section__item-slogan">
-                <img class="transformation-section__item-slogan-decoration" width="190" height="180" src="img/transformation/4243.svg" alt="" aria-hidden="true">
-                <p>Просто грає в ігри</p>
+              <div class="transformation-section__item-slogan"><p>Просто грає в ігри</p></div>
+              <div class="transformation-section__item-icon">
+                <svg width='207' height='177'>
+                  <use href='img/sprite/sprite.svg#slogan-icon'></use>
+                </svg>
               </div>
             </li>
 
@@ -602,9 +609,11 @@
 
               <span class="transformation-section__item-label">Стало</span>
 
-              <div class="transformation-section__item-slogan">
-                <img class="transformation-section__item-slogan-decoration" width="190" height="180" src="img/transformation/421.svg" alt="" aria-hidden="true">
-                <p>Створює власні ігри</p>
+              <div class="transformation-section__item-slogan"><p>Створює власні ігри</p></div>
+              <div class="transformation-section__item-icon">
+                <svg width='207' height='177'>
+                  <use href='img/sprite/sprite.svg#slogan-icon'></use>
+                </svg>
               </div>
             </li>
           </ul>
@@ -613,76 +622,83 @@
     </section>
 
     <section class="onboarding-section">
-      <div class="onboarding-section__bg" aria-hidden="true">
-        <img src="img/onbording/group-3986.svg" alt="">
+      <div class="onboarding-section__bg">
+        <img src="img/services/services-section-bg.svg" alt="">
       </div>
+
       <div class="container">
         <div class="onboarding-section__wrapp">
-          <h2>Як розпочати навчання</h2>
+          <h2 class="onboarding-section__title">Як розпочати навчання</h2>
 
-          <ul class="onboarding-section__items">
-            <li class="onboarding-section__item">
-              <div class="onboarding-section__item-media">
-                <div class="onboarding-section__item-image">
-                  <img width='368' height='280' src='img/onbording/onbording1.svg' alt=''>
+          <div class="onboarding-section__box">
+            <div class="onboarding-section__box-bg">
+              <img src="img/onbording/onboarding-center-bg.svg" alt="">
+            </div>
+
+            <ul class="onboarding-section__items">
+              <li class="onboarding-section__item">
+                <div class="onboarding-section__item-media">
+                  <div class="onboarding-section__item-image">
+                    <img width='368' height='280' src='img/onbording/onbording1.svg' alt=''>
+                  </div>
                 </div>
-              </div>
-              
-              <div class="onboarding-section__item-content">
-                <div class="onboarding-section__item-title h3">Залишiть заявку</div>
 
-                <p class="onboarding-section__item-excerpt">Заповнiть форму або зателефонуйте. Менеджер зв'яжеться за 30 хвилин</p>
+                <div class="onboarding-section__item-content">
+                  <div class="onboarding-section__item-title h3">Залишiть заявку</div>
 
-                <a href="#" class="onboarding-section__item-lesson btn btn--yellow">
-                  Залишити заявку
-                  <svg width='20' height='20'>
-                    <use href='img/sprite/sprite.svg#arrow-right'></use>
-                  </svg>
-                </a>
-              </div>
-            </li>
+                  <p class="onboarding-section__item-excerpt">Заповнiть форму або зателефонуйте. Менеджер зв'яжеться за 30 хвилин</p>
 
-            <li class="onboarding-section__item">
-              <div class="onboarding-section__item-media">
-                <div class="onboarding-section__item-image">
-                  <img width='368' height='280' src='img/onbording/onbording2.svg' alt=''>
+                  <button class="onboarding-section__item-lesson btn btn--yellow" data-path="lesson">
+                    Залишити заявку
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#arrow-right'></use>
+                    </svg>
+                  </button>
                 </div>
-              </div>
-              
-              <div class="onboarding-section__item-content">
-                <div class="onboarding-section__item-title h3">Відвідайте безкоштовний пробний урок</div>
+              </li>
 
-                <p class="onboarding-section__item-excerpt">Дитина спробує, ви подивитесь. Жодних зобов'язань</p>
-
-                <a href="#" class="onboarding-section__item-lesson btn btn--yellow">
-                  Залишити заявку
-                  <svg width='20' height='20'>
-                    <use href='img/sprite/sprite.svg#arrow-right'></use>
-                  </svg>
-                </a>
-              </div>
-            </li>
-
-            <li class="onboarding-section__item">
-              <div class="onboarding-section__item-media">
-                <div class="onboarding-section__item-image">
-                  <img width='368' height='280' src='img/onbording/onbording3.svg' alt=''>
+              <li class="onboarding-section__item">
+                <div class="onboarding-section__item-media">
+                  <div class="onboarding-section__item-image">
+                    <img width='368' height='280' src='img/onbording/onbording2.svg' alt=''>
+                  </div>
                 </div>
-              </div>
-              
-              <div class="onboarding-section__item-content">
-                <div class="onboarding-section__item-title h3">Розпочніть навчання та отримайте результат</div>
 
-                <p class="onboarding-section__item-excerpt">Регулярнi заняття, власнi проекти, вiдкритi уроки для батькiв</p>
+                <div class="onboarding-section__item-content">
+                  <div class="onboarding-section__item-title h3">Відвідайте безкоштовний пробний урок</div>
 
-                <a href="#" class="onboarding-section__item-lesson btn btn--yellow">
-                  Залишити заявку
-                  <svg width='20' height='20'>
-                    <use href='img/sprite/sprite.svg#arrow-right'></use>
-                  </svg>
-                </a>
-              </div>
-            </li>
+                  <p class="onboarding-section__item-excerpt">Дитина спробує, ви подивитесь. Жодних зобов'язань</p>
+
+                  <button class="onboarding-section__item-lesson btn btn--yellow" data-path="lesson">
+                    Залишити заявку
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#arrow-right'></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+
+              <li class="onboarding-section__item">
+                <div class="onboarding-section__item-media">
+                  <div class="onboarding-section__item-image">
+                    <img width='368' height='280' src='img/onbording/onbording3.svg' alt=''>
+                  </div>
+                </div>
+
+                <div class="onboarding-section__item-content">
+                  <div class="onboarding-section__item-title h3">Розпочніть навчання та отримайте результат</div>
+
+                  <p class="onboarding-section__item-excerpt">Регулярнi заняття, власнi проекти, вiдкритi уроки для батькiв</p>
+
+                  <button class="onboarding-section__item-lesson btn btn--yellow" data-path="lesson">
+                    Залишити заявку
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#arrow-right'></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -691,288 +707,299 @@
     <section class="testimonials-section">
       <div class="container">
         <div class="testimonials-section__wrapp">
-          <h2>Довіра, підтверджена результатами</h2>
+          <h2 class="testimonials-section__title">Довіра, підтверджена результатами</h2>
 
           <div class="testimonials-section__box">
-            <ul class="testimonials-section__items">
-              <li class="testimonials-section__item">
-                <div class="testimonials-card is-image">
-                  <div class="testimonials-card__decor">
-                    <picture>
-                      <source type='image/webp' srcset='img/testimonials/testimonial.webp'>
-                      <img width='220' height='220' src='img/testimonials/testimonial.png' alt=''>
-                    </picture>
-
-                  </div>
-
-                  <div class="testimonials-card__watch">
-                    <svg width='34' height='34'>
-                      <use href='img/sprite/sprite.svg#watch'></use>
-                    </svg>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card">
-                  <div class="testimonials-card__box">
-                    <div class="testimonials-card__top">
-                      <div class="testimonials-card__avatar">
+            <div class="testimonials-section__slider">
+              <div class='swiper-container'>
+                <ul class='swiper-wrapper'>
+                  <li class='swiper-slide'>
+                    <div class="testimonials-card is-image">
+                      <div class="testimonials-card__decor">
                         <picture>
-                          <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
-                          <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                          <source type='image/webp' srcset='img/testimonials/testimonial.webp'>
+                          <img width='220' height='220' src='img/testimonials/testimonial.png' alt=''>
                         </picture>
+
                       </div>
 
-                      <div class="testimonials-card__info">
-                        <div class="testimonials-card__name">Анна Н.</div>
-                        <div class="testimonials-card__rating">
-                          <svg width='100' height='18'>
-                            <use href='img/sprite/sprite.svg#stars-rating'></use>
-                          </svg>
-                        </div>
+                      <div class="testimonials-card__watch">
+                        <svg width='34' height='34'>
+                          <use href='img/sprite/sprite.svg#watch'></use>
+                        </svg>
                       </div>
                     </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="testimonials-card">
+                      <div class="testimonials-card__box">
+                        <div class="testimonials-card__top">
+                          <div class="testimonials-card__avatar">
+                            <picture>
+                              <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
+                              <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                            </picture>
+                          </div>
 
-                    <span class="testimonials-card__tag">Python Mastery</span>
-
-                    <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card">
-                  <div class="testimonials-card__box">
-                    <div class="testimonials-card__top">
-                      <div class="testimonials-card__avatar">
-                        <picture>
-                          <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
-                          <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
-                        </picture>
-                      </div>
-
-                      <div class="testimonials-card__info">
-                        <div class="testimonials-card__name">Анна Н.</div>
-                        <div class="testimonials-card__rating">
-                          <svg width='100' height='18'>
-                            <use href='img/sprite/sprite.svg#stars-rating'></use>
-                          </svg>
+                          <div class="testimonials-card__info">
+                            <div class="testimonials-card__name">Анна Н.</div>
+                            <div class="testimonials-card__rating">
+                              <svg width='100' height='18'>
+                                <use href='img/sprite/sprite.svg#stars-rating'></use>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
+
+                        <span class="testimonials-card__tag">Python Mastery</span>
+
+                        <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
                       </div>
                     </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="testimonials-card">
+                      <div class="testimonials-card__box">
+                        <div class="testimonials-card__top">
+                          <div class="testimonials-card__avatar">
+                            <picture>
+                              <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
+                              <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                            </picture>
+                          </div>
 
-                    <span class="testimonials-card__tag">Python Mastery</span>
-
-                    <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card is-image">
-                  <div class="testimonials-card__decor">
-                    <picture>
-                      <source type='image/webp' srcset='img/testimonials/testimonial.webp'>
-                      <img width='220' height='220' src='img/testimonials/testimonial.png' alt=''>
-                    </picture>
-
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card">
-                  <div class="testimonials-card__box">
-                    <div class="testimonials-card__top">
-                      <div class="testimonials-card__avatar">
-                        <picture>
-                          <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
-                          <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
-                        </picture>
-                      </div>
-
-                      <div class="testimonials-card__info">
-                        <div class="testimonials-card__name">Анна Н.</div>
-                        <div class="testimonials-card__rating">
-                          <svg width='100' height='18'>
-                            <use href='img/sprite/sprite.svg#stars-rating'></use>
-                          </svg>
+                          <div class="testimonials-card__info">
+                            <div class="testimonials-card__name">Анна Н.</div>
+                            <div class="testimonials-card__rating">
+                              <svg width='100' height='18'>
+                                <use href='img/sprite/sprite.svg#stars-rating'></use>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
+
+                        <span class="testimonials-card__tag">Python Mastery</span>
+
+                        <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
                     </div>
-
-                    <span class="testimonials-card__tag">Python Mastery</span>
-
-                    <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card">
-                  <div class="testimonials-card__box">
-                    <div class="testimonials-card__top">
-                      <div class="testimonials-card__avatar">
+                  </li>
+                  <li class='swiper-slide'>
+                    <div class="testimonials-card is-image">
+                      <div class="testimonials-card__decor">
                         <picture>
-                          <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
-                          <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                          <source type='image/webp' srcset='img/testimonials/testimonial2.webp'>
+                          <img width='220' height='220' src='img/testimonials/testimonial2.png' alt=''>
                         </picture>
+
                       </div>
 
-                      <div class="testimonials-card__info">
-                        <div class="testimonials-card__name">Анна Н.</div>
-                        <div class="testimonials-card__rating">
-                          <svg width='100' height='18'>
-                            <use href='img/sprite/sprite.svg#stars-rating'></use>
-                          </svg>
-                        </div>
+                      <div class="testimonials-card__watch">
+                        <svg width='34' height='34'>
+                          <use href='img/sprite/sprite.svg#watch'></use>
+                        </svg>
                       </div>
                     </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="testimonials-card">
+                      <div class="testimonials-card__box">
+                        <div class="testimonials-card__top">
+                          <div class="testimonials-card__avatar">
+                            <picture>
+                              <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
+                              <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                            </picture>
+                          </div>
 
-                    <span class="testimonials-card__tag">Python Mastery</span>
-
-                    <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card">
-                  <div class="testimonials-card__box">
-                    <div class="testimonials-card__top">
-                      <div class="testimonials-card__avatar">
-                        <picture>
-                          <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
-                          <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
-                        </picture>
-                      </div>
-
-                      <div class="testimonials-card__info">
-                        <div class="testimonials-card__name">Анна Н.</div>
-                        <div class="testimonials-card__rating">
-                          <svg width='100' height='18'>
-                            <use href='img/sprite/sprite.svg#stars-rating'></use>
-                          </svg>
+                          <div class="testimonials-card__info">
+                            <div class="testimonials-card__name">Анна Н.</div>
+                            <div class="testimonials-card__rating">
+                              <svg width='100' height='18'>
+                                <use href='img/sprite/sprite.svg#stars-rating'></use>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
+
+                        <span class="testimonials-card__tag">Python Mastery</span>
+
+                        <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
                     </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="testimonials-card">
+                      <div class="testimonials-card__box">
+                        <div class="testimonials-card__top">
+                          <div class="testimonials-card__avatar">
+                            <picture>
+                              <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
+                              <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                            </picture>
+                          </div>
 
-                    <span class="testimonials-card__tag">Python Mastery</span>
-
-                    <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card">
-                  <div class="testimonials-card__box">
-                    <div class="testimonials-card__top">
-                      <div class="testimonials-card__avatar">
-                        <picture>
-                          <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
-                          <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
-                        </picture>
-                      </div>
-
-                      <div class="testimonials-card__info">
-                        <div class="testimonials-card__name">Анна Н.</div>
-                        <div class="testimonials-card__rating">
-                          <svg width='100' height='18'>
-                            <use href='img/sprite/sprite.svg#stars-rating'></use>
-                          </svg>
+                          <div class="testimonials-card__info">
+                            <div class="testimonials-card__name">Анна Н.</div>
+                            <div class="testimonials-card__rating">
+                              <svg width='100' height='18'>
+                                <use href='img/sprite/sprite.svg#stars-rating'></use>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
+
+                        <span class="testimonials-card__tag">Python Mastery</span>
+
+                        <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
                       </div>
                     </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="testimonials-card">
+                      <div class="testimonials-card__box">
+                        <div class="testimonials-card__top">
+                          <div class="testimonials-card__avatar">
+                            <picture>
+                              <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
+                              <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                            </picture>
+                          </div>
 
-                    <span class="testimonials-card__tag">Python Mastery</span>
-
-                    <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card is-image">
-                  <div class="testimonials-card__decor">
-                    <picture>
-                      <source type='image/webp' srcset='img/testimonials/testimonial.webp'>
-                      <img width='220' height='220' src='img/testimonials/testimonial.png' alt=''>
-                    </picture>
-
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card">
-                  <div class="testimonials-card__box">
-                    <div class="testimonials-card__top">
-                      <div class="testimonials-card__avatar">
-                        <picture>
-                          <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
-                          <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
-                        </picture>
-                      </div>
-
-                      <div class="testimonials-card__info">
-                        <div class="testimonials-card__name">Анна Н.</div>
-                        <div class="testimonials-card__rating">
-                          <svg width='100' height='18'>
-                            <use href='img/sprite/sprite.svg#stars-rating'></use>
-                          </svg>
+                          <div class="testimonials-card__info">
+                            <div class="testimonials-card__name">Анна Н.</div>
+                            <div class="testimonials-card__rating">
+                              <svg width='100' height='18'>
+                                <use href='img/sprite/sprite.svg#stars-rating'></use>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
+
+                        <span class="testimonials-card__tag">Python Mastery</span>
+
+                        <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
                     </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="testimonials-card">
+                      <div class="testimonials-card__box">
+                        <div class="testimonials-card__top">
+                          <div class="testimonials-card__avatar">
+                            <picture>
+                              <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
+                              <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                            </picture>
+                          </div>
 
-                    <span class="testimonials-card__tag">Python Mastery</span>
-
-                    <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card is-image">
-                  <div class="testimonials-card__decor">
-                    <picture>
-                      <source type='image/webp' srcset='img/testimonials/testimonial.webp'>
-                      <img width='220' height='220' src='img/testimonials/testimonial.png' alt=''>
-                    </picture>
-
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-section__item">
-                <div class="testimonials-card">
-                  <div class="testimonials-card__box">
-                    <div class="testimonials-card__top">
-                      <div class="testimonials-card__avatar">
-                        <picture>
-                          <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
-                          <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
-                        </picture>
-                      </div>
-
-                      <div class="testimonials-card__info">
-                        <div class="testimonials-card__name">Анна Н.</div>
-                        <div class="testimonials-card__rating">
-                          <svg width='100' height='18'>
-                            <use href='img/sprite/sprite.svg#stars-rating'></use>
-                          </svg>
+                          <div class="testimonials-card__info">
+                            <div class="testimonials-card__name">Анна Н.</div>
+                            <div class="testimonials-card__rating">
+                              <svg width='100' height='18'>
+                                <use href='img/sprite/sprite.svg#stars-rating'></use>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
+
+                        <span class="testimonials-card__tag">Python Mastery</span>
+
+                        <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
                       </div>
                     </div>
+                  </li>
+                  <li class='swiper-slide'>
+                    <div class="testimonials-card is-image">
+                      <div class="testimonials-card__decor">
+                        <picture>
+                          <source type='image/webp' srcset='img/testimonials/testimonial3.webp'>
+                          <img width='220' height='220' src='img/testimonials/testimonial3.png' alt=''>
+                        </picture>
 
-                    <span class="testimonials-card__tag">Python Mastery</span>
+                      </div>
 
-                    <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
+                      <div class="testimonials-card__watch">
+                        <svg width='34' height='34'>
+                          <use href='img/sprite/sprite.svg#watch'></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="testimonials-card">
+                      <div class="testimonials-card__box">
+                        <div class="testimonials-card__top">
+                          <div class="testimonials-card__avatar">
+                            <picture>
+                              <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
+                              <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                            </picture>
+                          </div>
+
+                          <div class="testimonials-card__info">
+                            <div class="testimonials-card__name">Анна Н.</div>
+                            <div class="testimonials-card__rating">
+                              <svg width='100' height='18'>
+                                <use href='img/sprite/sprite.svg#stars-rating'></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+
+                        <span class="testimonials-card__tag">Python Mastery</span>
+
+                        <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class='swiper-slide'>
+                    <div class="testimonials-card is-image">
+                      <div class="testimonials-card__decor">
+                        <picture>
+                          <source type='image/webp' srcset='img/testimonials/testimonial4.webp'>
+                          <img width='220' height='220' src='img/testimonials/testimonial4.png' alt=''>
+                        </picture>
+
+                      </div>
+
+                      <div class="testimonials-card__watch">
+                        <svg width='34' height='34'>
+                          <use href='img/sprite/sprite.svg#watch'></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="testimonials-card">
+                      <div class="testimonials-card__box">
+                        <div class="testimonials-card__top">
+                          <div class="testimonials-card__avatar">
+                            <picture>
+                              <source type='image/webp' srcset='img/testimonials/ANNA.webp'>
+                              <img width='56' height='56' src='img/testimonials/ANNA.png' alt=''>
+                            </picture>
+                          </div>
+
+                          <div class="testimonials-card__info">
+                            <div class="testimonials-card__name">Анна Н.</div>
+                            <div class="testimonials-card__rating">
+                              <svg width='100' height='18'>
+                                <use href='img/sprite/sprite.svg#stars-rating'></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+
+                        <span class="testimonials-card__tag">Python Mastery</span>
+
+                        <p class="testimonials-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis vestibulum ullamcorper. Curabitur arcu magna, lobortis vel sapien...</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -987,58 +1014,67 @@
         <div class="container portfolio-section__container">
           <div class="portfolio-section__viewport">
             <ul class="portfolio-section__slider">
-              <li class="portfolio-section__card">
+            <li class="portfolio-section__card">
+              <h3>Максим, 12 років</h3>
+              <div class="portfolio-section__photo">
+                <img src="img/portfolio/maxym.jpg" alt="Максим, учень курсу Python Start" loading="lazy">
+                <span class="portfolio-section__tag portfolio-section__tag--course">Python Start</span>
+                <span class="portfolio-section__tag portfolio-section__tag--topic">Python</span>
+              </div>
+              <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
+            </li>
+            <li class="portfolio-section__card">
+              <h3>Максим, 12 років</h3>
+              <div class="portfolio-section__photo">
+                <img src="img/portfolio/maxym.jpg" alt="Максим, учень курсу Python Start" loading="lazy">
+                <span class="portfolio-section__tag portfolio-section__tag--course">Python Start</span>
+                <span class="portfolio-section__tag portfolio-section__tag--topic">Python</span>
+              </div>
+              <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
+            </li>
+            <li class="portfolio-section__card portfolio-section__card--featured">
+              <div class="portfolio-section__content">
+                <span class="portfolio-section__tag">Python Start</span>
                 <h3>Максим, 12 років</h3>
-                <div class="portfolio-section__photo">
-                  <img src="img/portfolio/maxym.jpg" alt="Максим, учень курсу Python Start" loading="lazy">
-                  <span class="portfolio-section__tag portfolio-section__tag--course">Python Start</span>
-                  <span class="portfolio-section__tag portfolio-section__tag--topic">Python</span>
-                </div>
                 <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
-              </li>
-              <li class="portfolio-section__card">
-                <h3>Максим, 12 років</h3>
-                <div class="portfolio-section__photo">
-                  <img src="img/portfolio/maxym.jpg" alt="Максим, учень курсу Python Start" loading="lazy">
-                  <span class="portfolio-section__tag portfolio-section__tag--course">Python Start</span>
-                  <span class="portfolio-section__tag portfolio-section__tag--topic">Python</span>
-                </div>
-                <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
-              </li>
-              <li class="portfolio-section__card portfolio-section__card--featured">
-                <div class="portfolio-section__content">
-                  <span class="portfolio-section__tag">Python Start</span>
-                  <h3>Максим, 12 років</h3>
-                  <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
-                  <a class="portfolio-section__video" href="https://www.youtube.com/watch?v=7QN3QcMHMQ4" target="_blank" rel="noopener noreferrer">
-                    <img src="img/portfolio/Watch.svg" alt="" aria-hidden="true">
-                    Дивитись відеовідгук
-                  </a>
-                  <a class="portfolio-section__trial btn btn--yellow" href="#lead-form">
-                    Безкоштовний пробний урок
-                    <svg width="20" height="20" aria-hidden="true"><use href="img/sprite/sprite.svg#arrow-right"></use></svg>
-                  </a>
-                </div>
-                <img class="portfolio-section__game" src="img/portfolio/computer-game.png" alt="Гра, створена учнем на курсі Python Start" loading="lazy">
-              </li>
-              <li class="portfolio-section__card">
-                <h3>Максим, 12 років</h3>
-                <div class="portfolio-section__photo">
-                  <img src="img/portfolio/maxym.jpg" alt="Максим, учень курсу Python Start" loading="lazy">
-                  <span class="portfolio-section__tag portfolio-section__tag--course">Python Start</span>
-                  <span class="portfolio-section__tag portfolio-section__tag--topic">Python</span>
-                </div>
-                <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
-              </li>
-              <li class="portfolio-section__card">
-                <h3>Максим, 12 років</h3>
-                <div class="portfolio-section__photo">
-                  <img src="img/portfolio/maxym.jpg" alt="Максим, учень курсу Python Start" loading="lazy">
-                  <span class="portfolio-section__tag portfolio-section__tag--course">Python Start</span>
-                  <span class="portfolio-section__tag portfolio-section__tag--topic">Python</span>
-                </div>
-                <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
-              </li>
+                <a class="portfolio-section__video" href="https://www.youtube.com/watch?v=7QN3QcMHMQ4" target="_blank" rel="noopener noreferrer">
+                  <img src="img/portfolio/Watch.svg" alt="" aria-hidden="true">
+                  Дивитись відеовідгук
+                </a>
+                <a class="portfolio-section__trial btn btn--yellow" href="#lead-form">
+                  Безкоштовний пробний урок
+                  <svg width="20" height="20" aria-hidden="true"><use href="img/sprite/sprite.svg#arrow-right"></use></svg>
+                </a>
+              </div>
+              <img class="portfolio-section__game" src="img/portfolio/computer-game.png" alt="Гра, створена учнем на курсі Python Start" loading="lazy">
+            </li>
+            <li class="portfolio-section__card">
+              <h3>Максим, 12 років</h3>
+              <div class="portfolio-section__photo">
+                <img src="img/portfolio/maxym.jpg" alt="Максим, учень курсу Python Start" loading="lazy">
+                <span class="portfolio-section__tag portfolio-section__tag--course">Python Start</span>
+                <span class="portfolio-section__tag portfolio-section__tag--topic">Python</span>
+              </div>
+              <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
+            </li>
+            <li class="portfolio-section__card">
+              <h3>Максим, 12 років</h3>
+              <div class="portfolio-section__photo">
+                <img src="img/portfolio/maxym.jpg" alt="Максим, учень курсу Python Start" loading="lazy">
+                <span class="portfolio-section__tag portfolio-section__tag--course">Python Start</span>
+                <span class="portfolio-section__tag portfolio-section__tag--topic">Python</span>
+              </div>
+              <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
+            </li>
+            <li class="portfolio-section__card">
+              <h3>Максим, 12 років</h3>
+              <div class="portfolio-section__photo">
+                <img src="img/portfolio/maxym.jpg" alt="Максим, учень курсу Python Start" loading="lazy">
+                <span class="portfolio-section__tag portfolio-section__tag--course">Python Start</span>
+                <span class="portfolio-section__tag portfolio-section__tag--topic">Python</span>
+              </div>
+              <p>Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру</p>
+            </li>
             </ul>
           </div>
         </div>
@@ -1049,7 +1085,7 @@
       <div class="container">
         <div class="school-map__heading">
           <h2 id="school-map-title">Знайдіть свою школу або<br>навчайтесь онлайн</h2>
-        <p>Наші школи у 130 містах України — знайдіть зручний варіант поруч із вами або навчайтесь онлайн.</p>
+          <p>Наші школи у 130 містах України - знайдіть зручний варіант поруч із вами або навчайтесь онлайн.</p>
         </div>
         <div class="school-map__mode" role="group" aria-label="Формат навчання">
           <button class="is-active" type="button" data-map-mode="offline">Навчатися у нашому місті</button>
@@ -1085,7 +1121,7 @@
       </div>
     </section>
 
-    <section class="media-section media-center-section">
+    <section class="media-section">
       <div class="container">
         <div class="media-section__wrapp">
           <div class="media-section__top">
@@ -1183,7 +1219,7 @@
             </div>
           </div>
 
-          
+
         </div>
       </div>
     </section>
@@ -1227,7 +1263,7 @@
             </div>
 
             <div class="cta-section__character-logika">
-              <img width='97' height='146' src='img/cta/cta-icon.svg' alt='cta-icon'>
+              <img width='115' height='126' src='img/cta/cta-icon.svg' alt='cta-icon'>
             </div>
           </div>
 
@@ -1238,31 +1274,6 @@
           <div class="cta-section__bottom-bg">
             <img src="img/cta/cta-bottom-bg.svg" alt="">
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="nizhyn-school" data-city-home-seo aria-labelledby="nizhyn-school-title" hidden>
-      <div class="container">
-        <div class="nizhyn-school__intro">
-          <div class="nizhyn-school__copy">
-            <h2 class="nizhyn-school__title" id="nizhyn-school-title" data-city-home-seo-title></h2>
-            <div class="nizhyn-school__description" data-city-home-seo-description></div>
-            <a class="nizhyn-school__cta btn btn--yellow" href="#lead-form" data-city-home-seo-cta>
-              <span data-city-home-seo-cta-label></span>
-              <svg width="20" height="20" aria-hidden="true"><use href="img/sprite/sprite.svg#arrow-right"></use></svg>
-            </a>
-          </div>
-          <img class="nizhyn-school__illustration" data-city-home-seo-illustration alt="">
-        </div>
-        <div class="nizhyn-school__video">
-          <img data-city-home-seo-video-poster alt="">
-          <div class="nizhyn-school__video-overlay" aria-hidden="true"></div>
-          <div class="nizhyn-school__video-caption" data-city-home-seo-video-caption></div>
-          <button class="nizhyn-school__play" type="button" data-city-home-seo-video-play aria-label="Відтворити відео" aria-controls="city-home-seo-video">
-            <span aria-hidden="true"></span>
-          </button>
-          <iframe class="nizhyn-school__video-frame" id="city-home-seo-video" data-city-home-seo-video-frame title="Відео про школу" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen hidden></iframe>
         </div>
       </div>
     </section>
@@ -1278,7 +1289,7 @@
 
       <div class="container">
         <div class="faq-section__wrapp">
-          <h2>Питання та відповіді</h2>
+          <h2 class="faq-section__title">Питання та відповіді</h2>
 
           <ul class='accordion' data-default="1" data-single='true' data-breakpoint='576' data-accordion-init>
             <li class='accordion__item'>
@@ -1367,38 +1378,42 @@
 
     <section class="certificates-section">
         <div class="certificates-section__wrapp">
-            <div class="container">
-              <div class="certificates-section__box">
-                  <div class="certificates-section__info">
-                    <div class="certificates-section__text">
-                      <h2>Ура, подарункові сертифікати</h2>
-                      <h5>Вартість сертифікату на 2 місяці навчання = вартість 1-го місяця + вартість 2-го місяця зі знижкою 10%</h5>
-                      <p>Залиште заявку, і ми зв'яжемось з вами: відповімо на будь-які запитання і допоможемо обрати курс </p>
-                    </div>
+          <div class="certificates-section__bg">
+            <img src="img/certificates/certificates-bg.svg" alt="">
+          </div>
 
-                    <a class="btn btn--violet" href="#lead-form" data-logika-form-id="gift_certificate">
-                      Залишити заявку
-                      <svg width='20' height='20'>
-                        <use href='img/sprite/sprite.svg#arrow-right'></use>
-                      </svg>
-                    </a>
+          <div class="container">
+            <div class="certificates-section__box">
+                <div class="certificates-section__info">
+                  <div class="certificates-section__text">
+                    <h2>Ура, подарункові сертифікати</h2>
+                    <h5>Вартість сертифікату на 2 місяці навчання = вартість 1-го місяця + вартість 2-го місяця зі знижкою 10%</h5>
+                    <p>Залиште заявку, і ми зв'яжемось з вами: відповімо на будь-які запитання і допоможемо обрати курс </p>
                   </div>
 
-                  <div class="certificates-section__preview">
-                    <picture>
-                      <source type='image/webp' srcset='img/certificates/certificate.webp'>
-                      <img width='701' height='501' src='img/certificates/certificate.png' alt=''>
-                    </picture>
-                  </div>
-              </div>
+                  <button class="btn btn--violet" data-path="lesson" data-logika-form-id="gift_certificate">
+                    Залишити заявку
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#arrow-right'></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="certificates-section__preview">
+                  <picture>
+                    <source type='image/webp' srcset='img/certificates/certificate.webp'>
+                    <img width='701' height='501' src='img/certificates/certificate.png' alt=''>
+                  </picture>
+                </div>
             </div>
+          </div>
         </div>
     </section>
 
     <section class="partners-section">
       <div class="container">
         <div class="partners-section__wrapp">
-          <h2>Наші партнери</h2>
+          <h2 class="partners-section__title">Наші партнери</h2>
 
           <ul class="partners-section__gallery">
             <li>
@@ -1450,15 +1465,17 @@
               </picture>
             </li>
           </ul>
-          
+
         </div>
       </div>
     </section>
   </main>
 
   @include('partials/footer.html')
+  @include('partials/modals.html')
 
   <script src="js/swiper.js"></script>
+  <script type="module" src="js/modals.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/camp-map.js"></script>
 </body>

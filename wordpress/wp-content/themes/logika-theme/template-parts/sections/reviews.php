@@ -8,8 +8,8 @@ if ( ! $reviews ) {
 	return;
 }
 ?>
-<section class="testimonials-section"><div class="container"><div class="testimonials-section__wrapp"><h2><?php echo esc_html( $data['title'] ); ?></h2><div class="testimonials-section__box"><ul class="testimonials-section__items">
+<section class="testimonials-section"><div class="container"><div class="testimonials-section__wrapp"><h2><?php echo esc_html( $data['title'] ); ?></h2><div class="testimonials-section__box"><div class="testimonials-section__slider"><div class="swiper-container"><ul class="swiper-wrapper">
 	<?php foreach ( $reviews as $review_id ) : $name = (string) ( get_field( 'review_author_name', $review_id ) ?: get_the_title( $review_id ) ); ?>
-		<li class="testimonials-section__item"><div class="testimonials-card"><div class="testimonials-card__box"><div class="testimonials-card__top"><div class="testimonials-card__info"><div class="testimonials-card__name"><?php echo esc_html( $name ); ?></div></div></div><p class="testimonials-card__excerpt"><?php echo esc_html( wp_trim_words( wp_strip_all_tags( (string) get_field( 'review_text', $review_id ) ), 40, '…' ) ); ?></p></div></div></li>
+		<li class="swiper-slide"><div class="testimonials-card"><div class="testimonials-card__box"><div class="testimonials-card__top"><div class="testimonials-card__info"><div class="testimonials-card__name"><?php echo esc_html( $name ); ?></div></div></div><p class="testimonials-card__excerpt"><?php echo esc_html( wp_trim_words( wp_strip_all_tags( (string) get_field( 'review_text', $review_id ) ), 40, '…' ) ); ?></p></div></div></li>
 	<?php endforeach; ?>
-</ul></div></div></div></section>
+</ul></div></div></div></div></div></section>

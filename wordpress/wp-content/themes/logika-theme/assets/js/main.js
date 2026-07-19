@@ -18,8 +18,8 @@ const marqueeSectionSlider = document.querySelectorAll('.marquee-section__slider
 const englishSectionSlider = document.querySelectorAll('.english-section__slider');
 const categoriesCoursesSlider = document.querySelectorAll('.categories-section__slider');
 const tripsSectionSlider = document.querySelectorAll('.trips-section__slider');
-const gallerySectionSlider = document.querySelectorAll('.gallery-section__slider');
 const campsHighlightsSlider = document.querySelectorAll('.camp-highlights__slider');
+const testimonialsSlider = document.querySelectorAll('.testimonials-section__slider');
 const campGalleries = document.querySelectorAll('[data-camp-gallery]');
 
 //------------------------------------------------
@@ -197,6 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeButtons = leadModal.querySelectorAll('.modal-close');
   const firstInput = leadModal.querySelector('input[name="name"]');
   const courseInput = leadModal.querySelector('input[name="course_id"]');
+	const campInput = leadModal.querySelector('input[name="camp_id"]');
 	const formIdInput = leadModal.querySelector('input[name="form_id"]');
 	const ageField = leadModal.querySelector('[data-logika-age-field]');
 	const ageInput = ageField?.querySelector('select[name="child_age"]');
@@ -215,11 +216,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const openLeadModal = (nextTrigger) => {
     trigger = nextTrigger;
     if (courseInput) courseInput.value = nextTrigger.dataset.logikaCourseId || '';
+		if (campInput) campInput.value = nextTrigger.dataset.logikaCampId || '';
 		const formId = nextTrigger.dataset.logikaFormId || 'trial_lesson';
 		const isGiftCertificate = formId === 'gift_certificate';
 		const isDirectorMessage = formId === 'director_message';
 		if (formIdInput) formIdInput.value = formId;
-		if (modalTitle) modalTitle.textContent = isDirectorMessage ? 'Відправити лист директору' : 'Перший урок — безкоштовно.';
+		if (modalTitle) modalTitle.textContent = isDirectorMessage ? 'Відправити лист директору' : campInput?.value ? 'Запис на табір' : 'Перший урок — безкоштовно.';
 		leadModal.classList.toggle('is-director-message', isDirectorMessage);
 		if (ageField) ageField.hidden = isGiftCertificate || isDirectorMessage;
 		if (ageInput) {
@@ -600,16 +602,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  gallerySectionSlider.forEach(function (slider) {
-    const container = slider.querySelector('.swiper-container');
-    let instance = null;
-    const toggle = () => {
-      if (window.innerWidth <= 1024 && !instance) instance = new Swiper(container, { speed: 1800, loop: true, observer: true, observeParents: true, watchSlidesProgress: true, spaceBetween: 10, breakpoints: { 320: { slidesPerView: 1.2, spaceBetween: 10 }, 576: { slidesPerView: 2, spaceBetween: 15 } } });
-      if (window.innerWidth > 1024 && instance) { instance.destroy(true, true); instance = null; }
-    };
-    if (container) { toggle(); window.addEventListener('resize', toggle); }
-  });
-
   if (campsHighlightsSlider.length > 0) {
     campsHighlightsSlider.forEach(function (slider) {
       const container = slider.querySelector(".swiper-container");
@@ -647,6 +639,19 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  testimonialsSlider.forEach(function (slider) {
+    const container = slider.querySelector('.swiper-container');
+    if (!container) return;
+
+    let instance = null;
+    const toggle = () => {
+      if (window.innerWidth <= 1024 && !instance) instance = new Swiper(container, { speed: 1800, loop: true, observer: true, observeParents: true, watchSlidesProgress: true, spaceBetween: 20, slidesPerView: 'auto' });
+      if (window.innerWidth > 1024 && instance) { instance.destroy(true, true); instance = null; }
+    };
+    toggle();
+    window.addEventListener('resize', toggle);
+  });
 
 });
 

@@ -549,27 +549,28 @@
 }
 .media-section__cards {
   width: 100%;
-  max-width: 980px;
+  max-width: 1440px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[3];
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(22px, 3.125vw, 40px) clamp(24px, 3.906vw, 50px);
+  gap: 80px 50px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 .media-section__card {
   position: relative;
-  min-height: clamp(190px, 20.833vw, 240px);
+  height: 340px;
+  min-height: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  padding: clamp(92px, 11.719vw, 150px) 20px 26px;
-  border-radius: 22px;
+  padding: 128px 34px 30px;
+  border-radius: 30px;
   overflow: visible;
   color: var(--white);
 }
@@ -605,7 +606,7 @@
 }
 .media-section__card h3 {
   margin: 0;
-  font-size: clamp(18px, 1.667vw, 24px);
+  font-size: 30px;
   font-weight: 700;
   line-height: 110%;
   letter-spacing: -0.96px;
@@ -613,7 +614,7 @@
 }
 .media-section__card p {
   margin: 0;
-  font-size: clamp(11px, 0.903vw, 13px);
+  font-size: 18px;
   font-weight: 600;
   line-height: 125%;
   letter-spacing: -0.52px;
@@ -630,7 +631,7 @@
   background-color: var(--green);
 }
 .media-section__card-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -639,19 +640,91 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
+}
+.media-section__card--platform .media-section__card-content {
+  top: 127px;
+  left: 24px;
+  width: 303px;
+  height: 144px;
+}
+.media-section__card--projects .media-section__card-content {
+  top: 144px;
+  left: 45px;
+  width: 278px;
+  height: 144px;
+}
+.media-section__card--open-lessons .media-section__card-content {
+  top: 125px;
+  left: 44px;
+  width: 278px;
+  height: 144px;
+}
+.media-section__card--online-city .media-section__card-content {
+  top: 166px;
+  left: 45px;
+  width: 277px;
+  height: 122px;
+}
+.media-section__card--teachers .media-section__card-content {
+  top: 126px;
+  left: 39px;
+  width: 278px;
+  height: 144px;
+}
+.media-section__card--game-method .media-section__card-content {
+  top: 146px;
+  left: 40px;
+  width: 278px;
+  height: 144px;
 }
 .media-section__card-img {
   position: absolute;
   z-index: 1;
   top: 0;
   left: 50%;
-  width: min(85%, 290px);
+  width: auto;
   height: auto;
   pointer-events: none;
   -webkit-transform: translate(-50%, -34%);
   -ms-transform: translate(-50%, -34%);
   transform: translate(-50%, -34%);
+}
+.media-section__card--platform .media-section__card-img {
+  width: 253px;
+  -webkit-transform: translate(-50%, -49%);
+  -ms-transform: translate(-50%, -49%);
+  transform: translate(-50%, -49%);
+}
+.media-section__card--projects .media-section__card-img {
+  width: 259px;
+  -webkit-transform: translate(-50%, -38%);
+  -ms-transform: translate(-50%, -38%);
+  transform: translate(-50%, -38%);
+}
+.media-section__card--open-lessons .media-section__card-img {
+  width: 239px;
+  -webkit-transform: translate(-50%, -46%);
+  -ms-transform: translate(-50%, -46%);
+  transform: translate(-50%, -46%);
+}
+.media-section__card--online-city .media-section__card-img {
+  width: 276px;
+  -webkit-transform: translate(-50%, -28%);
+  -ms-transform: translate(-50%, -28%);
+  transform: translate(-50%, -28%);
+}
+.media-section__card--teachers .media-section__card-img {
+  width: 276px;
+  -webkit-transform: translate(-50%, -45%);
+  -ms-transform: translate(-50%, -45%);
+  transform: translate(-50%, -45%);
+}
+.media-section__card--game-method .media-section__card-img {
+  width: 289px;
+  -webkit-transform: translate(-50%, -33%);
+  -ms-transform: translate(-50%, -33%);
+  transform: translate(-50%, -33%);
 }
 .media-section__card--platform {
   margin-top: 18px;
@@ -670,6 +743,33 @@
 }
 .media-section__card--game-method {
   margin-top: 18px;
+}
+.why-logika-section {
+  padding-top: clamp(16px, 1.563vw, 24px);
+}
+.why-logika-section .media-section__wrapp {
+  position: relative;
+  isolation: isolate;
+  gap: clamp(96px, 8.333vw, 120px);
+}
+.why-logika-section .media-section__title,
+.why-logika-section .media-section__cards {
+  position: relative;
+  z-index: 1;
+}
+.why-logika-section .media-section__wrapp::before {
+  position: absolute;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+}
+.why-logika-section .media-section__wrapp::before {
+  top: 60px;
+  left: 50%;
+  width: 100vw;
+  aspect-ratio: 1920 / 920;
+  background: url("../../../img/media-center/why-logika/background.png") center / 100% 100% no-repeat;
+  transform: translateX(-50%);
 }
 @media (max-width: 1024px) {
   .media-section__cards-layout {
@@ -734,14 +834,30 @@
     height: 160px;
   }
   .media-section__cards {
-    max-width: 340px;
+    max-width: 366px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 62px;
   }
   .media-section__card {
-    min-height: 210px;
-    padding-top: 120px;
+    height: 340px;
+    min-height: 0;
+    padding: 128px 30px 30px;
+  }
+  .media-section__card h3 {
+    font-size: 24px;
+  }
+  .media-section__card p {
+    font-size: 18px;
+  }
+  .why-logika-section .media-section__wrapp {
+    gap: 128px;
+  }
+  .why-logika-section .media-section__wrapp::before {
+    top: 55px;
+    left: -2vw;
+    width: 220vw;
+    transform: none;
   }
 }
 /*# sourceMappingURL=media-section.css.map */
