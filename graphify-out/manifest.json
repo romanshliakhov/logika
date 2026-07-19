@@ -4670,8 +4670,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/camp.php": {
-    "mtime": 1784492055.096209,
-    "ast_hash": "2dfcb83bb7b8360803d979d39cb3f02c",
+    "mtime": 1784493360.1109357,
+    "ast_hash": "c0db2bba4715af1fd6bc79ef50b04db3",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/source-pages/camps.php": {
@@ -4805,8 +4805,8 @@
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/src/PageContent.php": {
-    "mtime": 1784492055.105209,
-    "ast_hash": "2a88061c2292dc09bdd6f62f6bc4539f",
+    "mtime": 1784493360.1189358,
+    "ast_hash": "bd51920f850d895fa888c274f4219f31",
     "semantic_hash": ""
   },
   "wordpress/wp-content/themes/logika-theme/src/PhoneCountry.php": {
@@ -8095,8 +8095,8 @@
     "semantic_hash": ""
   },
   "tests/camp-seasonal-page.php": {
-    "mtime": 1784485558.6584136,
-    "ast_hash": "4b4ecc11db689135461eefe29a80b19e",
+    "mtime": 1784493360.122936,
+    "ast_hash": "f8ca10489cdee8e87ad380b5469a5656",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-07-18-seasonal-camp-pages.md": {

@@ -1485,6 +1485,7 @@
   "1483": "allow_null",
   "1484": "typograf",
   "1485": "Стрілка між блоками навичок на сторінках англійських курсів",
+  "1486": "required",
   "1487": "ACF_Location_Current_User",
   "1488": "ACF_Location_Current_User_Role",
   "1489": "ACF_Location_Post_Format",
@@ -1502,5 +1503,7 @@
   "1501": "instructions",
   "1502": "gulp-cheerio",
   "1503": "del",
-  "1504": "english-b2-1-hero.php"
+  "1504": "english-b2-1-hero.php",
+  "1505": "instructions",
+  "1506": "del"
 }
