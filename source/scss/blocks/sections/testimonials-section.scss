@@ -1,24 +1,60 @@
 @import "../../general/mixins";
 
 .testimonials-section {
-    padding: clamp(40px, 7.813vw, 80px) 0;
+    overflow: hidden;
+    padding: clamp(20px, 4.167vw, 80px) 0;
 
     &__wrapp {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 60px;
+        gap: clamp(20px, 3.125vw, 60px);
+    }
+
+    &__title {
+        text-align: center;
     }
 
     &__box {
         width: 100%;
     }
 
-    &__items {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        align-items: stretch;
-        gap: 40px 20px;
+    &__slider {
+        @include tablet {
+            width: 100vw;
+        }
+
+        .swiper-wrapper {
+            @include for-desktop {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                align-items: stretch;
+                gap: 40px 20px;
+            }
+
+            @include desktop {
+                @include for-tablet {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    align-items: stretch;
+                    gap: 20px;
+                }
+            }
+
+            @include tablet {
+                width: 100%;
+            }
+        }
+        
+
+        .swiper-slide {
+            @include tablet {
+                max-width: 220px;
+                width: 100%;
+                height: initial;
+            }
+        }
     }
 }
