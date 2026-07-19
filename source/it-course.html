@@ -22,15 +22,15 @@
                 <p class="course-banner-section__text">Якщо ви маєте творчий підхід до роботи, бажаєте розробляти і створювати динамічні інтерфейси, вам однозначно дорога у фронтенд.</p>
                 <p class="course-banner-section__text">Frontend – це публічна частина web-додатків (веб-сайтів), з якою користувач може взаємодіяти і контактувати напряму. По суті, фронтенд – це все те, що бачить користувач при відкритті web-сторінки.</p>
               </div>
-
+              
               <div class="course-banner-section__btns">
-                <button class="course-banner-section__btn btn btn--violet">
+                <button class="course-banner-section__btn btn btn--violet" data-path="lesson">
                   Залишити заявку
                   <svg width='20' height='20'>
                     <use href='img/sprite/sprite.svg#arrow-right'></use>
                   </svg>
                 </button>
-                <a class="course-banner-section__btn btn btn--bordered-violet">
+                <a class="course-banner-section__btn btn btn--bordered-violet" href="#course-programm">
                   Програма курсу
                   <svg width='20' height='20'>
                     <use href='img/sprite/sprite.svg#icon-more'></use>
@@ -39,7 +39,7 @@
               </div>
 
             </div>
-
+            
             <div class="course-banner-section__right">
               <div class="course-banner-section__media">
                 <img width='590' height='605' src='img/course/it-course-image.svg' alt='boy-character'>
@@ -62,7 +62,7 @@
       </div>
 
       <div class="container">
-        <div class="learn-section__wrapp">
+        <div class="learn-section__wrapp"> 
           <h2 class="learn-section__title">На курсі учні навчаються</h2>
 
           <div class="learn-section__box">
@@ -152,18 +152,18 @@
                   </picture>
                 </div>
               </div>
-
+              
               <div class="process-section__item-content">
                 <div class="process-section__item-title h3">Як проходять уроки?</div>
 
                 <p class="process-section__item-excerpt">На кожному занятті вивчаємо новий інструмент і застосовуємо знання на практиці. Вчимося працювати індивідуально та в команді, проходимо всі етaпи фронтенд розробки.</p>
 
-                <a href="#" class="process-section__item-lesson btn btn--violet">
+                <button class="process-section__item-lesson btn btn--violet" data-path="lesson">
                   Залишити заявку
                   <svg width='20' height='20'>
                     <use href='img/sprite/sprite.svg#arrow-right'></use>
                   </svg>
-                </a>
+                </button>
               </div>
             </li>
 
@@ -176,18 +176,18 @@
                   </picture>
                 </div>
               </div>
-
+              
               <div class="process-section__item-content">
                 <div class="process-section__item-title h3">Проєктний підхід</div>
 
                 <p class="process-section__item-excerpt">Учні вивчать не тільки стек HTML/CSS/JS, а й повний цикл створення проекту: від дизайну інтерфейсів та розробки у VSCode до хостингу, публікації та просування готового сайту. Станьте розробником, який розуміє весь процес «під ключ».</p>
 
-                <a href="#" class="process-section__item-lesson btn btn--green">
+                <button class="process-section__item-lesson btn btn--green" data-path="lesson">
                   Залишити заявку
                   <svg width='20' height='20'>
                     <use href='img/sprite/sprite.svg#arrow-right'></use>
                   </svg>
-                </a>
+                </button>
               </div>
             </li>
           </div>
@@ -207,7 +207,7 @@
       </div>
     </section>
 
-    <section class="faq-section">
+    <section class="faq-section" id="course-programm">
       <div class="faq-section__left-bg">
         <img src="img/faq/faq-left-bg.svg" alt="">
       </div>
@@ -595,7 +595,7 @@
       <div class="container">
         <div class="school-map__heading">
           <h2 id="school-map-title">Знайдіть свою школу або<br>навчайтесь онлайн</h2>
-        <p>Наші школи у 130 містах України — знайдіть зручний варіант поруч із вами або навчайтесь онлайн.</p>
+          <p>Наші школи у 130 містах України - знайдіть зручний варіант поруч із вами або навчайтесь онлайн.</p>
         </div>
         <div class="school-map__mode" role="group" aria-label="Формат навчання">
           <button class="is-active" type="button" data-map-mode="offline">Навчатися у нашому місті</button>
@@ -776,8 +776,10 @@
   </main>
 
   @include('partials/footer.html')
+  @include('partials/modals.html')
 
   <script src="js/swiper.js"></script>
+  <script type="module" src="js/modals.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/camp-map.js"></script>
 </body>

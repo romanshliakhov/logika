@@ -7,10 +7,6 @@
 
   <main>
     <section class="banner-section">
-      <div class="banner-section__bg">
-        <img src="img/main-hero/main-hero-bg.svg" alt="">
-      </div>
-
       <div class="container">
         <div class="banner-section__wrapp">
           <div class="banner-section__blocks">
@@ -22,6 +18,9 @@
 
               <div class="banner-section__character-boy">
                 <img width='440' height='225' src='img/boy-character.svg' alt='boy-character'>
+                <div class="banner-section__decor">
+                  <img src="img/main-hero/main-hero-bg.svg" alt="">
+                </div>
               </div>
             </div>
             
@@ -1690,7 +1689,7 @@
       <div class="container">
         <div class="school-map__heading">
           <h2 id="school-map-title">Знайдіть свою школу або<br>навчайтесь онлайн</h2>
-        <p>Наші школи у 130 містах України — знайдіть зручний варіант поруч із вами або навчайтесь онлайн.</p>
+          <p>Наші школи у 130 містах України - знайдіть зручний варіант поруч із вами або навчайтесь онлайн.</p>
         </div>
         <div class="school-map__mode" role="group" aria-label="Формат навчання">
           <button class="is-active" type="button" data-map-mode="offline">Навчатися у нашому місті</button>
@@ -1871,8 +1870,10 @@
   </main>
 
   @include('partials/footer.html')
+  @include('partials/modals.html')
 
   <script src="js/swiper.js"></script>
+  <script type="module" src="js/modals.js"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/camp-map.js"></script>
 </body>
