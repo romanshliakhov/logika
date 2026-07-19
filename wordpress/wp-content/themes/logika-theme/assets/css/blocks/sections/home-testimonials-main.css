@@ -66,5 +66,28 @@
     width: 100%;
     height: initial;
   }
+
+  .testimonials-section__box {
+    width: 100vw;
+  }
+
+  .testimonials-section__items {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    overflow-x: auto;
+  }
+
+  .testimonials-section__item {
+    flex: 0 0 220px;
+    width: 220px;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .testimonials-section__items {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
 }
 /*# sourceMappingURL=testimonials-section.css.map */

@@ -4,7 +4,7 @@
 .trips-section {
   overflow: hidden;
   position: relative;
-  padding: clamp(20px, 7.813vw, 80px) 0;
+  padding: clamp(20px, 4.167vw, 80px) 0;
 }
 .trips-section__wrapp {
   display: -webkit-box;
@@ -163,22 +163,5 @@
 }
 .trips-section__control svg {
   fill: var(--white);
-}
-.trip-card {
-  width: 100%;
-  height: clamp(365px, 27.778vw, 400px);
-  border-radius: 20px;
-  display: flex;
-  overflow: hidden;
-}
-@media screen and (min-width: 577px) {
-  .trip-card {
-    max-width: clamp(320px, 32.292vw, 465px);
-  }
-}
-.trip-card picture,
-.trip-card img {
-  width: 100%;
-  height: 100%;
 }
 /*# sourceMappingURL=trips-section.css.map */

@@ -75,10 +75,13 @@
 .vacancies-cta h2,
 .vacancies-cta p { color: var(--white); }
 .vacancies-cta p:not(.vacancies-eyebrow) { color: var(--white); }
+.vacancies-cta h2 { font-weight: 600; letter-spacing: normal; }
+.vacancies-cta p:not(.vacancies-eyebrow) { font-weight: 500; letter-spacing: normal; }
 .vacancies-cta .btn { margin-top: 44px; }
 .vacancies-cta__inner > img { justify-self: center; max-width: 100%; max-height: 360px; }
 
 @media (max-width: 768px) {
+  .vacancies-cta h2 { margin-bottom: 16px; }
   .vacancies-benefits__character { position: static; display: block; margin: 0 auto 12px; transform: none; }
   .vacancies-benefits .vacancies-heading { padding-top: 0; }
   .vacancies-hero__inner,
