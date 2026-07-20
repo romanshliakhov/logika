@@ -18,18 +18,20 @@ function logika_homepage_city_seo_test_image( string $name, int $parent_id ): in
 
 $city_id  = (int) wp_insert_post( array( 'post_type' => 'city', 'post_name' => 'homepage-seo-city', 'post_title' => 'SEO тестове місто', 'post_status' => 'publish' ) );
 $draft_id = (int) wp_insert_post( array( 'post_type' => 'city', 'post_name' => 'homepage-seo-draft', 'post_title' => 'Чернетка SEO міста', 'post_status' => 'draft' ) );
+$seed_id  = (int) wp_insert_post( array( 'post_type' => 'city', 'post_name' => 'homepage-seo-seed', 'post_title' => 'Місто для заповнення', 'post_status' => 'publish' ) );
 $images   = array(
 	'illustration' => logika_homepage_city_seo_test_image( 'homepage-city-seo-illustration.png', $city_id ),
 	'poster'       => logika_homepage_city_seo_test_image( 'homepage-city-seo-poster.png', $city_id ),
 );
 
 register_shutdown_function(
-	static function () use ( $city_id, $draft_id, $images ): void {
+	static function () use ( $city_id, $draft_id, $seed_id, $images ): void {
 		foreach ( $images as $image_id ) {
 			wp_delete_attachment( $image_id, true );
 		}
 		wp_delete_post( $city_id, true );
 		wp_delete_post( $draft_id, true );
+		wp_delete_post( $seed_id, true );
 	}
 );
 
@@ -58,6 +60,16 @@ if ( 200 !== $partial->get_status() || 'https://www.youtube.com/watch?v=7QN3QcMH
 $draft = rest_do_request( new WP_REST_Request( 'GET', '/logika/v1/cities/' . $draft_id . '/homepage-seo' ) );
 if ( 404 !== $draft->get_status() ) {
 	$errors[] = 'Draft city homepage SEO content is publicly accessible.';
+}
+
+update_field( 'city_home_seo_title', 'Редакторський заголовок', $city_id );
+\Logika\Core\ContentMigration::seedHomepageCitySeo();
+$seed = rest_do_request( new WP_REST_Request( 'GET', '/logika/v1/cities/' . $seed_id . '/homepage-seo' ) );
+if ( 200 !== $seed->get_status() || ! str_contains( (string) ( $seed->get_data()['title'] ?? '' ), 'Місто для заповнення' ) || 'Редакторський заголовок' !== get_field( 'city_home_seo_title', $city_id ) ) {
+	$errors[] = 'City homepage SEO seed does not fill empty cities or preserve editor content.';
+}
+if ( ! get_field( 'city_home_seo_title', $draft_id ) ) {
+	$errors[] = 'City homepage SEO seed does not prepare draft cities for editors.';
 }
 
 $source = (string) file_get_contents( dirname(__DIR__) . '/wordpress/wp-content/themes/logika-theme/source-pages/index.php' );

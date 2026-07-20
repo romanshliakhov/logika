@@ -71,6 +71,40 @@ final class ContentMigration {
 		return self::$report;
 	}
 
+	public static function seedHomepageCitySeo( bool $dry_run = false ): array {
+		self::start( $dry_run );
+		$cities = get_posts( array( 'post_type' => 'city', 'post_status' => array( 'publish', 'draft', 'pending', 'private', 'future' ), 'posts_per_page' => -1, 'orderby' => 'ID', 'order' => 'ASC' ) );
+		$source = null;
+		foreach ( $cities as $city ) {
+			$fields = array( 'city_home_seo_title', 'city_home_seo_description', 'city_home_seo_cta_label', 'city_home_seo_illustration', 'city_home_seo_video_poster', 'city_home_seo_video_caption' );
+			if ( ! array_filter( $fields, static fn( string $field ): bool => self::emptyValue( get_field( $field, $city->ID ) ) ) ) {
+				$source = $city;
+				break;
+			}
+		}
+		if ( ! $source instanceof WP_Post ) {
+			self::$report['warnings'][] = 'Не знайдено заповненої міської SEO-секції для спільних медіа.';
+			return self::$report;
+		}
+		$media = array(
+			'city_home_seo_cta_label'    => (string) get_field( 'city_home_seo_cta_label', $source->ID ),
+			'city_home_seo_illustration' => get_field( 'city_home_seo_illustration', $source->ID ),
+			'city_home_seo_video_poster' => get_field( 'city_home_seo_video_poster', $source->ID ),
+			'city_home_seo_video_url'    => (string) get_field( 'city_home_seo_video_url', $source->ID ),
+		);
+		foreach ( $cities as $city ) {
+			$name = trim( $city->post_title );
+			self::fill( 'city_home_seo_title', $name . ' — курси програмування для дітей', $city->ID );
+			self::fill( 'city_home_seo_description', "У місті {$name} школа Logika допомагає дітям 7–17 років опанувати програмування на практиці. Навчання проходить у малих групах із викладачем та підтримкою на кожному кроці.\n\nНа безкоштовному пробному уроці дитина познайомиться з форматом занять, а батьки зможуть обрати зручний курс.", $city->ID );
+			self::fill( 'city_home_seo_video_caption', "Школа програмування для дітей у місті {$name}", $city->ID );
+			foreach ( $media as $field => $value ) {
+				self::fill( $field, $value, $city->ID );
+			}
+		}
+
+		return self::$report;
+	}
+
 	public static function seedArticleFaqs( bool $dry_run = false ): array {
 		self::start( $dry_run );
 		$items = array_map( static fn( array $item ): array => array( 'question' => (string) $item['question'], 'answer' => wpautop( (string) $item['answer'] ) ), (array) get_field( 'home_faq_items', (int) get_option( 'page_on_front' ) ) );
