@@ -1,5 +1,6 @@
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
     background-color: var(--white);
     box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.06);
     z-index: 5;
@@ -21,6 +22,16 @@
             @include small-tablet {
                 justify-content: space-between;
             }
+        }
+
+        &-city {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-right: auto;
+            color: var(--white);
+
+            svg { filter: brightness(0) invert(1); }
         }
     }
 

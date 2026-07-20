@@ -82,14 +82,13 @@
               <p>Крім основного навчання проводимо сезонні інтелектуальні квести з призами, їздимо в IT-табори до Карпат та заохочуємо до навчання різноманітними способами.</p>
               <strong>Наша основна мета – навчити цікаво, легко та ефективно!</strong>
             </div>
-            <a class="about-history__cta btn" href="#lead-form">Безкоштовний пробний урок&nbsp; →</a>
+            <button class="about-history__btn btn btn--violet" data-path="lesson">
+              Безкоштовний пробний урок
+              <svg width='20' height='20'><use href='img/sprite/sprite.svg#arrow-right'></use></svg>
+            </button>
           </div>
           <div class="about-history__image">
             <img src="img/about/anniversary-full.png" alt="Logika святкує чотири роки">
-            <span class="about-history__skill about-history__skill--team">командна робота</span>
-            <span class="about-history__skill about-history__skill--communication">комунікація</span>
-            <span class="about-history__skill about-history__skill--thinking">критичне мислення</span>
-            <span class="about-history__skill about-history__skill--creativity">креативність</span>
           </div>
         </div>
       </div>

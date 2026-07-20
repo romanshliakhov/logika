@@ -44,6 +44,11 @@ if ( str_contains( $article, 'search-form__btn' ) ) {
 	exit( 1 );
 }
 
+if ( ! str_contains( $article, "add_query_arg( 'tag', \$tag->slug, home_url( '/media-center/articles/' ) )" ) ) {
+	fwrite( STDERR, "Article tags must link to the filtered articles archive.\n" );
+	exit( 1 );
+}
+
 foreach ( array( "document.createElement('picture')", 'news-card__thumbnail', 'news-card__tags', 'news-card__details', "searchForm?.addEventListener('submit'", "searchInput?.addEventListener('input'", 'renderSuggestions', "url.searchParams.set('search'" ) as $marker ) {
 	if ( ! str_contains( $script, $marker ) ) {
 		fwrite( STDERR, "Media center script does not render article cards: {$marker}.\n" );

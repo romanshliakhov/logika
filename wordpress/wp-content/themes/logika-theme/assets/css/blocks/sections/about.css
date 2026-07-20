@@ -300,4 +300,16 @@
     letter-spacing: -1px;
   }
 }
+.about-directions ul { gap: 20px; max-width: none; }
+.about-outcomes ul { gap: 20px; max-width: none; margin: clamp(20px, 3.125vw, 60px) auto 0; }
+.about-history__layout { gap: 10px clamp(10px, 4.688vw, 90px); grid-template-columns: 1fr 41%; max-width: none; }
+.about-history__content p { font-size: clamp(14px, 1.25vw, 18px); font-weight: inherit; letter-spacing: inherit; line-height: inherit; }
+.about-history__content strong { font-size: clamp(16px, 1.389vw, 20px); font-weight: 600; line-height: 140%; }
+.about-history__btn { max-width: 670px; }
+.about-history__image { display: flex; justify-content: center; width: auto; height: auto; }
+.about-history__image img { position: static; width: auto; height: auto; max-width: 100%; }
+@media (min-width: 1241px) { .about-directions ul { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1240px) and (min-width: 768px) { .about-directions ul { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1025px) { .about-outcomes ul { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1024px) { .about-history__layout { grid-template-columns: 1fr; } .about-outcomes ul { grid-template-columns: 1fr; } }
 /*# sourceMappingURL=about.css.map */

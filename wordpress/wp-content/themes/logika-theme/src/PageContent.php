@@ -102,7 +102,7 @@ final class Logika_Theme_Page_Content {
 	);
 
 	private const IMAGE_FIELDS = array(
-		'about'        => array( 'about_hero_image' => 'img/about/hero-characters.png', 'about_history_image' => 'img/about/anniversary-full.png', 'about_cta_image' => 'img/cta/cta.png' ),
+		'about'        => array( 'about_hero_image' => 'img/about/hero-characters.png', 'about_history_image' => 'img/about/history-image.svg', 'about_cta_image' => 'img/cta/cta.png' ),
 		'it-courses'   => array( 'it_courses_hero_image' => 'img/boy-character.svg', 'it_courses_cta_image' => 'img/cta/cta.png' ),
 		'en-courses'   => array( 'english_courses_hero_image' => 'img/en-courses/en-courses.svg', 'english_courses_test_image' => 'img/en-courses/test-image.svg', 'english_courses_about_image' => 'img/en-courses/en-about-image.png', 'english_courses_cta_image' => 'img/cta/cta.png' ),
 		'faq'          => array( 'faq_page_hero_image' => 'img/faq/faq-image.svg', 'faq_page_hero_icon' => 'img/faq/faq-icon.svg', 'faq_page_cta_image' => 'img/cta/cta.png' ),
@@ -760,7 +760,7 @@ final class Logika_Theme_Page_Content {
 
 	private static function applySectionFields( string $markup, string $source, int|string $context ): string {
 		if ( in_array( $source, array( 'privacy-policy', 'contractoffer', 'litsenziia' ), true ) ) {
-			return self::applyLegalFields( $markup, $context );
+			return self::applyLegalFields( $markup, $context, $source );
 		}
 		if ( 'camp' === $source || 'it-course' === $source ) {
 			$title = get_the_title( (int) $context );
@@ -790,7 +790,7 @@ final class Logika_Theme_Page_Content {
 		return $markup;
 	}
 
-	private static function applyLegalFields( string $markup, int|string $context ): string {
+	private static function applyLegalFields( string $markup, int|string $context, string $source ): string {
 		$title = trim( (string) get_field( 'legal_intro_title', $context ) );
 		$intro = trim( (string) get_field( 'legal_intro_text', $context ) );
 		$rows = array_filter( (array) get_field( 'legal_sections', $context ), 'is_array' );
@@ -798,7 +798,7 @@ final class Logika_Theme_Page_Content {
 		if ( ! $title && ! $intro && ! $rows && ! $gallery ) {
 			return $markup;
 		}
-		$content = $title ? '<h2>' . esc_html( $title ) . '</h2>' : '';
+		$content = $title ? ( 'litsenziia' === $source ? '<h2 class="license-title">' : '<h2>' ) . esc_html( $title ) . '</h2>' : '';
 		$content .= wp_kses_post( $intro );
 		foreach ( $rows as $row ) {
 			$anchor = sanitize_title( (string) ( $row['anchor'] ?? '' ) );

@@ -1,6 +1,10 @@
 <div class="header__top">
     <div class="container">
       <div class="header__top-box">
+        <div class="header__top-city" data-logika-city-top hidden>
+          <svg width='16' height='16'><use href='img/sprite/sprite.svg#icon-location'></use></svg>
+          <span></span>
+        </div>
         <div class="header__contact header__contact--tel">
           <div class="header__contact-heading">
             <svg width='16' height='16'>

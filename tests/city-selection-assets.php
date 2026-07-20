@@ -6,6 +6,7 @@ $root = dirname( __DIR__ );
 $read = static fn( string $path ): string => is_readable( $path ) ? ( file_get_contents( $path ) ?: '' ) : '';
 $context = $read( $root . '/source/js/city-context.js' );
 $runtime_context = $read( $root . '/wordpress/wp-content/themes/logika-theme/assets/js/city-context.js' );
+$header = $read( $root . '/wordpress/wp-content/themes/logika-theme/source-pages/header.php' );
 $selector = $read( $root . '/wordpress/wp-content/themes/logika-theme/assets/js/city-selector.js' );
 $map = $read( $root . '/source/js/camp-map.js' );
 $runtime_map = $read( $root . '/wordpress/wp-content/themes/logika-theme/assets/js/camp-map.js' );
@@ -25,6 +26,12 @@ if ( ! str_contains( $context, 'logika-city-id' ) || ! str_contains( $context, '
 
 if ( ! str_contains( $context, 'JSON.stringify(city)' ) || ! str_contains( $context, 'const cachedCity' ) || ! str_contains( $context, '|| cachedCity()' ) ) {
 	fwrite( STDERR, "City context must restore the selected city before its REST list finishes loading.\n" );
+	exit( 1 );
+}
+
+if ( ! str_contains( $header, 'data-logika-city-top' ) || ! str_contains( $context, 'const applyTopCity' ) || ! str_contains( $context, "[data-logika-city-top]" ) || substr_count( $context, 'applyTopCity(city);' ) < 3 || ! str_contains( $context, 'applyTopCity(initial);' ) || $context !== $runtime_context ) {
+
+	fwrite( STDERR, "Selected city must update the purple header bar in source and runtime assets.\n" );
 	exit( 1 );
 }
 

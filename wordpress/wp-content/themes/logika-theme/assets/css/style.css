@@ -9928,4 +9928,6 @@ html{overflow-x:hidden}.main-form__honeypot{position:absolute;width:1px!importan
 .camp-booking__inputs .main-form__input{min-height:46px}
 .school-map__online .main-form{width:100%}
 
+.header__top-city{display:flex;align-items:center;gap:6px;margin-right:auto;color:var(--white)}.header__top-city svg{filter:brightness(0) invert(1)}
+
 @media (hover:hover){.btn:not(.header__login):hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(41,35,92,.18)}.btn:not(.header__login):hover svg{transform:translateX(4px)}}

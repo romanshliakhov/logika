@@ -31,6 +31,7 @@ $hero_button_label = get_field( 'cta_primary_label', 'option' ) ?: 'Спробу
 		<div class="school-map__layout">
 			<div class="school-map__visual">
 				<div class="school-map__canvas" data-map-canvas aria-live="polite"><p>Завантажуємо карту областей...</p></div>
+				<p>Дані карти © OpenStreetMap contributors</p>
 			</div>
 			<div class="school-map__selector">
 				<h3>Оберіть місто навчання</h3>

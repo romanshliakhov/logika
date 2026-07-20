@@ -82,6 +82,7 @@ function logika_theme_assets(): void {
 	$vacancies_lightbox_version = (string) filemtime( get_template_directory() . '/assets/js/vacancies-lightbox.js' );
 	$vacancies_details_dialog_version = (string) filemtime( get_template_directory() . '/assets/js/vacancies-details-dialog.js' );
 	$cta_style_version = (string) filemtime( get_template_directory() . '/assets/css/blocks/sections/cta-section.css' );
+	$about_style_version = (string) filemtime( get_template_directory() . '/assets/css/blocks/sections/about.css' );
 	wp_enqueue_style( 'logika-intl-tel-input', $uri . '/css/vendor/intl-tel-input/intlTelInput.min.css', array(), '20.1.0' );
 	wp_enqueue_style( 'logika-theme', $uri . '/css/style.css', array( 'logika-intl-tel-input' ), $style_version );
 	wp_enqueue_style( 'logika-cta-section', $uri . '/css/blocks/sections/cta-section.css', array( 'logika-theme' ), $cta_style_version );
@@ -134,6 +135,9 @@ function logika_theme_assets(): void {
 		wp_localize_script( 'logika-home-city-seo', 'logikaHomepageCitySeo', array( 'endpoint' => esc_url_raw( rest_url( 'logika/v1/cities/' ) ) ) );
 	}
 	wp_enqueue_style( 'logika-gallery-section', "{$uri}/css/blocks/sections/gallery-section.css", array( 'logika-theme' ), (string) filemtime( get_template_directory() . '/assets/css/blocks/sections/gallery-section.css' ) );
+	if ( is_page( 'about' ) ) {
+		wp_enqueue_style( 'logika-about', $uri . '/css/blocks/sections/about.css', array( 'logika-theme-adaptive' ), $about_style_version );
+	}
 	if ( is_singular( 'camp' ) || is_post_type_archive( 'camp' ) ) {
 		foreach ( array( 'trips-section', 'details-section', 'camp-extra' ) as $section ) {
 			wp_enqueue_style( "logika-{$section}", "{$uri}/css/blocks/sections/{$section}.css", array( 'logika-theme' ), (string) filemtime( get_template_directory() . "/assets/css/blocks/sections/{$section}.css" ) );
@@ -162,9 +166,10 @@ function logika_theme_assets(): void {
 	wp_localize_script( 'logika-leads', 'logikaLead', array( 'endpoint' => esc_url_raw( rest_url( 'logika/v1/leads' ) ), 'tokenEndpoint' => esc_url_raw( rest_url( 'logika/v1/forms/token' ) ), 'cityEndpoint' => esc_url_raw( rest_url( 'logika/v1/cities' ) ), 'phoneCountryDefault' => 'UA', 'phoneCountryEndpoint' => esc_url_raw( rest_url( 'logika/v1/phone-country' ) ), 'phoneUtilsUrl' => esc_url_raw( $uri . '/js/vendor/intl-tel-input/utils.js' ) ) );
 	wp_enqueue_script( 'logika-city-selector', $uri . '/js/city-selector.js', array( 'logika-city-context' ), $city_selector_version, true );
 	if ( is_page( 'media-center' ) || get_query_var( 'logika_blog' ) || get_query_var( 'logika_media_category' ) ) {
+		$media_tag = isset( $_GET['tag'] ) ? sanitize_title( wp_unslash( $_GET['tag'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		wp_enqueue_style( 'logika-media-search', $uri . '/css/media-search.css', array( 'logika-theme' ), $media_search_version );
 		wp_enqueue_script( 'logika-media-center', $uri . '/js/media-center.js', array( 'logika-city-context' ), $media_center_version, true );
-		wp_localize_script( 'logika-media-center', 'logikaMediaCenter', array( 'endpoint' => esc_url_raw( rest_url( 'logika/v1/media' ) ), 'category' => sanitize_key( (string) get_query_var( 'logika_media_category' ) ), 'featuredPost' => is_page( 'media-center' ) && function_exists( 'get_field' ) ? absint( get_field( 'media_center_featured_post', get_queried_object_id() ) ) : 0 ) );
+		wp_localize_script( 'logika-media-center', 'logikaMediaCenter', array( 'endpoint' => esc_url_raw( rest_url( 'logika/v1/media' ) ), 'category' => sanitize_key( (string) get_query_var( 'logika_media_category' ) ), 'tag' => $media_tag, 'featuredPost' => is_page( 'media-center' ) && function_exists( 'get_field' ) ? absint( get_field( 'media_center_featured_post', get_queried_object_id() ) ) : 0 ) );
 	}
 	if ( is_singular( 'post' ) ) {
 		wp_enqueue_script( 'logika-article-views', $uri . '/js/article-views.js', array(), $article_views_version, true );

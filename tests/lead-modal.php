@@ -57,7 +57,7 @@ if ( ! str_contains( $about, 'class="about-history__cta" href="#lead-form"' ) ) 
 	$errors[] = 'About trial lesson CTA must open the shared lead modal.';
 }
 
-if ( ! str_contains( $about_source, 'class="about-history__cta btn" href="#lead-form"' ) ) {
+if ( ! str_contains( $about_source, 'class="about-history__btn btn btn--violet" data-path="lesson"' ) ) {
 	$errors[] = 'Rendered About CTA must open the shared lead modal.';
 }
 

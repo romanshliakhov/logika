@@ -37,6 +37,10 @@ final class MediaApi {
 						'sanitize_callback' => 'sanitize_key',
 						'validate_callback' => static fn( $value ): bool => '' === $value || isset( MediaCategories::labels()[ $value ] ),
 					),
+					'tag' => array(
+						'sanitize_callback' => 'sanitize_title',
+						'validate_callback' => static fn( $value ): bool => strlen( (string) $value ) <= 200,
+					),
 					'featured' => array(
 						'sanitize_callback' => 'absint',
 					),
@@ -49,11 +53,13 @@ final class MediaApi {
 		$city_id = absint( $request->get_param( 'city' ) );
 		$search  = trim( (string) $request->get_param( 'search' ) );
 		$category = (string) $request->get_param( 'category' );
+		$tag     = (string) $request->get_param( 'tag' );
 		$featured = absint( $request->get_param( 'featured' ) );
+		$featured = $tag ? 0 : $featured;
 		$limit   = rest_sanitize_boolean( $request->get_param( 'all' ) ) ? -1 : ( $search ? self::SEARCH_LIMIT : self::LIMIT );
 
 		if ( ! $city_id ) {
-			return new WP_REST_Response( self::prioritize( self::cards( new WP_Query( self::latest_query( $search, $category, CityPostTags::commonTaxQuery(), $limit ) ) ), $featured, $search, $limit ) );
+			return new WP_REST_Response( self::prioritize( self::cards( new WP_Query( self::latest_query( $search, $category, $tag, CityPostTags::commonTaxQuery(), $limit ) ) ), $featured, $search, $limit ) );
 		}
 
 		$city = get_post( $city_id );
@@ -72,7 +78,7 @@ final class MediaApi {
 					'orderby'        => 'date',
 					'order'          => 'DESC',
 					'meta_query'     => self::visibility_query(),
-					'tax_query'      => CityPostTags::cityTaxQuery( $city_id ),
+						'tax_query'      => self::tagQuery( CityPostTags::cityTaxQuery( $city_id ), $tag ),
 					's'              => $search,
 					),
 					$category ? array( 'category_name' => $category ) : array()
@@ -90,7 +96,7 @@ final class MediaApi {
 					'orderby'        => 'date',
 					'order'          => 'DESC',
 					'meta_query'     => self::visibility_query(),
-					'tax_query'      => CityPostTags::commonTaxQuery(),
+						'tax_query'      => self::tagQuery( CityPostTags::commonTaxQuery(), $tag ),
 					's'              => $search,
 					),
 					$category ? array( 'category_name' => $category ) : array()
@@ -104,7 +110,7 @@ final class MediaApi {
 	/**
 	 * @return array<string, mixed>
 	 */
-	private static function latest_query( string $search = '', string $category = '', array $tax_query = array(), int $limit = self::LIMIT ): array {
+	private static function latest_query( string $search = '', string $category = '', string $tag = '', array $tax_query = array(), int $limit = self::LIMIT ): array {
 		$query = array(
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
@@ -118,9 +124,16 @@ final class MediaApi {
 			$query['s'] = $search;
 		}
 		if ( $category ) { $query['category_name'] = $category; }
+		$tax_query = self::tagQuery( $tax_query, $tag );
 		if ( $tax_query ) { $query['tax_query'] = $tax_query; }
 
 		return $query;
+	}
+
+	private static function tagQuery( array $tax_query, string $tag ): array {
+		if ( $tag ) { $tax_query[] = array( 'taxonomy' => 'post_tag', 'field' => 'slug', 'terms' => $tag ); }
+
+		return $tax_query;
 	}
 
 	/**

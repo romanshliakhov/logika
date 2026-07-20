@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const city = context.get();
       if (city) url.searchParams.set('city', city.id);
 	  if (config.category) url.searchParams.set('category', config.category);
+	  if (config.tag) url.searchParams.set('tag', config.tag);
       url.searchParams.set('search', search);
       fetch(url)
         .then((response) => response.ok ? response.json() : [])
@@ -230,6 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = new URL(config.endpoint, window.location.origin);
     if (city) url.searchParams.set('city', city.id);
 	if (config.category) url.searchParams.set('category', config.category);
+    if (config.tag) url.searchParams.set('tag', config.tag);
     if (config.featuredPost && !search) url.searchParams.set('featured', config.featuredPost);
     if (search) url.searchParams.set('search', search);
     if (isBlog) url.searchParams.set('all', '1');
