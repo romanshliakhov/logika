@@ -11,7 +11,7 @@ h1,
   font-size: clamp(36px, 4.167vw, 60px);
   line-height: 115%;
   font-weight: 700;
-  letter-spacing: -3px;
+  letter-spacing: calc(-1 * clamp(1.8px, 0.208vw, 3px));
   color: var(--violet-500);
 }
 
@@ -20,13 +20,13 @@ h2,
   font-size: clamp(32px, 3.889vw, 56px);
   line-height: 118%;
   font-weight: 700;
-  letter-spacing: -2.8px;
+  letter-spacing: calc(-1 * clamp(1.6px, 0.194vw, 2.8px));
   color: var(--violet-500);
 }
 
 h3,
 .h3 {
-  font-size: clamp(30px, 3.194vw, 46px);
+  font-size: clamp(30px, 2.396vw, 46px);
   line-height: 118%;
   font-weight: 700;
   letter-spacing: -2.3px;

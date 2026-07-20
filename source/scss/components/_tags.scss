@@ -1,17 +1,25 @@
 .tags {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: clamp(6px, 0.694vw, 10px);
+
+    @include mobile {
+        width: 100vw;
+        overflow: auto;
+        margin-right: -16px;
+        padding-right: 8px;
+    }
 
     li {
         padding: 10px 15px;
         border-radius: 46px;
-        font-size: 18px;
+        font-size: clamp(16px, 1.25vw, 18px);
         font-weight: 600;
         line-height: 140%;
         letter-spacing: -0.6px;
         border: 1px solid #D6C1E3;
         background: #EFDDFA;
         color: var(--violet-100);
+        white-space: nowrap;
     }
 }

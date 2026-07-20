@@ -1,18 +1,37 @@
 @import "../../general/mixins";
 
 .related-section {
-    padding: clamp(40px, 7.813vw, 80px) 0;
+    padding: clamp(20px, 4.167vw, 80px) 0;
     background-color: #F8F7FF;
 
     &__wrapp {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: clamp(20px, 3.906vw, 40px);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__btn {
+        width: fit-content;
+        flex-shrink: 0;
     }
 
     &__items {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+
+        @include for-tablet {
+            grid-template-columns: repeat(3, 1fr);  
+        }
+
+        @include tablet {
+            grid-template-columns: 100%;
+        }
     }
 }

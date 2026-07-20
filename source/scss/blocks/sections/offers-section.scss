@@ -1,19 +1,32 @@
 @import "../../general/mixins";
 
 .offers-section {
-    padding: clamp(40px, 7.813vw, 80px) 0;
+    padding: clamp(20px, 4.167vw, 80px) 0;
     background-color: #F8F7FF;
 
     &__wrapp {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: clamp(20px, 2.778vw, 40px);
     }
 
     &__items {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         align-items: stretch;
         gap: 20px;
+
+        @include for-desktop {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include desktop {
+            @include for-tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @include tablet {
+            grid-template-columns: 100%;
+        }
     }
 }

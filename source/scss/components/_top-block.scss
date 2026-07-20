@@ -1,5 +1,5 @@
 .top-block {
-    padding: 40px 0;
+    padding: clamp(20px, 2.778vw, 40px) 0;
     border: 1px solid #F0F0F0;
     background: #FAFDFF;
 
@@ -8,6 +8,6 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: clamp(15px, 1.389vw, 20px);
     }
 }
