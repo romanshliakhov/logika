@@ -180,8 +180,8 @@
 
                 <div class="courses-section__item-image">
                   <picture>
-                    <source type='image/webp' srcset='img/services/service1.webp'>
-                    <img width='588' height='511' src='img/services/service1.png' alt=''>
+                    <source type='image/webp' srcset='img/services/service2.webp'>
+                    <img width='588' height='511' src='img/services/service2.png' alt=''>
                   </picture>
                 </div>
               </div>
@@ -201,8 +201,8 @@
 
                 <div class="courses-section__item-image">
                   <picture>
-                    <source type='image/webp' srcset='img/services/service1.webp'>
-                    <img width='588' height='511' src='img/services/service1.png' alt=''>
+                    <source type='image/webp' srcset='img/services/service3.webp'>
+                    <img width='588' height='511' src='img/services/service3.png' alt=''>
                   </picture>
                 </div>
               </div>
@@ -222,8 +222,8 @@
 
                 <div class="courses-section__item-image">
                   <picture>
-                    <source type='image/webp' srcset='img/services/service1.webp'>
-                    <img width='588' height='511' src='img/services/service1.png' alt=''>
+                    <source type='image/webp' srcset='img/services/service4.webp'>
+                    <img width='588' height='511' src='img/services/service4.png' alt=''>
                   </picture>
                 </div>
               </div>

@@ -58,6 +58,7 @@ function logika_theme_assets(): void {
 	$version = wp_get_theme()->get( 'Version' );
 	$style_version = (string) filemtime( get_template_directory() . '/assets/css/style.css' );
 	$adaptive_style_version = (string) filemtime( get_template_directory() . '/assets/css/adaptive.css' );
+	$courses_responsive_version = (string) filemtime( get_template_directory() . '/assets/css/courses-responsive.css' );
 	$main_version = (string) filemtime( get_template_directory() . '/assets/js/main.js' );
 	$map_version = (string) filemtime( get_template_directory() . '/assets/js/camp-map.js' );
 	$city_context_version = (string) filemtime( get_template_directory() . '/assets/js/city-context.js' );
@@ -87,6 +88,7 @@ function logika_theme_assets(): void {
 	wp_enqueue_style( 'logika-breadcrumbs', $uri . '/css/breadcrumbs.css', array( 'logika-theme' ), (string) filemtime( get_template_directory() . '/assets/css/breadcrumbs.css' ) );
 	wp_enqueue_style( 'logika-course-card', $uri . '/css/course-card.css', array( 'logika-theme' ), (string) filemtime( get_template_directory() . '/assets/css/course-card.css' ) );
 	wp_enqueue_style( 'logika-theme-adaptive', $uri . '/css/adaptive.css', array( 'logika-theme' ), $adaptive_style_version );
+	wp_enqueue_style( 'logika-courses-responsive', $uri . '/css/courses-responsive.css', array( 'logika-theme-adaptive' ), $courses_responsive_version );
 	if ( is_404() ) {
 		wp_enqueue_style( 'logika-404', $uri . '/css/404.css', array( 'logika-theme-adaptive' ), (string) filemtime( get_template_directory() . '/assets/css/404.css' ) );
 	}

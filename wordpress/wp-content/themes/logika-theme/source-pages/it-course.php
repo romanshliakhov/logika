@@ -695,7 +695,7 @@
         <div class="faq-section__wrapp">
           <h2 class="faq-section__title">Питання та відповіді</h2>
 
-          <ul class='accordion' data-default="1" data-single='true' data-breakpoint='1920' data-accordion-init>
+          <ul class='accordion' data-default="1" data-single='true' data-breakpoint='576' data-accordion-init>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='1'>
                 Чи є FAQ для міста?
