@@ -8,6 +8,16 @@ $styles = file_get_contents($theme . '/assets/css/courses-responsive.css') ?: ''
 $scripts = file_get_contents($theme . '/assets/js/main.js') ?: '';
 $functions = file_get_contents($theme . '/functions.php') ?: '';
 
+foreach (array('it-course', 'it-courses') as $page) {
+	$template = file_get_contents("{$theme}/source-pages/{$page}.php") ?: '';
+	foreach (array('testimonials-section__title', 'testimonials-section__slider', "<div class='swiper-container'>", "<ul class='swiper-wrapper'>", 'testimonial2.webp', 'testimonial3.webp', 'testimonial4.webp') as $markup) {
+		if (!str_contains($template, $markup)) {
+			fwrite(STDERR, "{$page} runtime template is missing {$markup}.\n");
+			exit(1);
+		}
+	}
+}
+
 foreach (array('service1.webp', 'service2.webp', 'service3.webp', 'service4.webp') as $image) {
 	if (!str_contains($courses, $image)) {
 		fwrite(STDERR, "IT courses runtime markup is missing {$image}.\n");
