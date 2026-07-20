@@ -1,0 +1,148 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - generic [ref=f1e6]: "Телефон:"
+      - link "+ 38 (093) 170-74-40" [ref=f1e10] [cursor=pointer]:
+        - /url: tel:+380931707440
+    - generic [ref=f1e11]:
+      - generic [ref=f1e12]: "Email:"
+      - link "kiev@logikaschool.com" [ref=f1e16] [cursor=pointer]:
+        - /url: mailto:kiev@logikaschool.com
+    - generic [ref=f1e17]:
+      - generic [ref=f1e18]: "Соц. мережі:"
+      - list [ref=f1e19]:
+        - listitem [ref=f1e20]:
+          - link [ref=f1e21] [cursor=pointer]:
+            - /url: https://www.instagram.com/logika_it_school/
+        - listitem [ref=f1e24]:
+          - link [ref=f1e25] [cursor=pointer]:
+            - /url: https://www.facebook.com/logika.it.school/
+        - listitem [ref=f1e28]:
+          - link "TikTok" [ref=f1e29] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+  - banner [ref=f1e32]:
+    - generic [ref=f1e34]:
+      - link [ref=f1e36] [cursor=pointer]:
+        - /url: /
+        - img "Logika" [ref=f1e37]
+      - generic [ref=f1e39]:
+        - button [ref=f1e41] [cursor=pointer]:
+          - paragraph [ref=f1e45]: Оберіть місто
+        - generic [ref=f1e48]:
+          - navigation [ref=f1e49]:
+            - list [ref=f1e50]:
+              - listitem [ref=f1e51]:
+                - link "Про Logika" [ref=f1e52] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=f1e53]:
+                - link "Курси" [ref=f1e54] [cursor=pointer]:
+                  - /url: /it-courses/
+                - button
+              - listitem [ref=f1e55]:
+                - link "IT-табори" [ref=f1e56] [cursor=pointer]:
+                  - /url: /camps/
+              - listitem [ref=f1e57]:
+                - link "Медіа-центр" [ref=f1e58] [cursor=pointer]:
+                  - /url: /media-center/
+              - listitem [ref=f1e59]:
+                - link "FAQ" [ref=f1e60] [cursor=pointer]:
+                  - /url: /faq/
+              - listitem [ref=f1e61]:
+                - link "Вакансії" [ref=f1e62] [cursor=pointer]:
+                  - /url: /vacancies/
+          - generic [ref=f1e63]:
+            - link "Увійти" [ref=f1e64] [cursor=pointer]:
+              - /url: https://student.logikaschool.com.ua/login
+            - link "Пробний урок" [ref=f1e68] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+  - main [ref=f1e71]:
+    - region [ref=f1e72]:
+      - generic [ref=f1e74]:
+        - generic [ref=f1e75]:
+          - paragraph [ref=f1e76]: "404"
+          - generic [ref=f1e77]: ПОМИЛКА НАВІГАЦІЇ
+        - generic [ref=f1e78]:
+          - paragraph [ref=f1e79]: Сторінку не знайдено
+          - heading "Схоже, ця сторінка загубилася" [level=1] [ref=f1e80]
+          - paragraph [ref=f1e81]: "Повернімося до навчання: оберіть напрям або завітайте на головну сторінку Logika."
+          - generic [ref=f1e82]:
+            - link "На головну" [ref=f1e83] [cursor=pointer]:
+              - /url: http://logika.ddev.site/
+            - link "Обрати курс" [ref=f1e84] [cursor=pointer]:
+              - /url: http://logika.ddev.site/it-courses/
+  - contentinfo [ref=f1e85]:
+    - generic [ref=f1e87]:
+      - generic [ref=f1e88]:
+        - generic [ref=f1e89]:
+          - link [ref=f1e90] [cursor=pointer]:
+            - /url: /
+            - img "Logika" [ref=f1e91]
+          - generic [ref=f1e92]: Найбільша в Україні школа програмування та англійської мови для учнів 7–17 років
+          - link "Спробувати безкоштовно" [ref=f1e93] [cursor=pointer]:
+            - /url: http://logika.ddev.site/#lead-form
+        - generic [ref=f1e96]:
+          - generic [ref=f1e97]:
+            - generic [ref=f1e98]: Навігація
+            - list [ref=f1e99]:
+              - listitem [ref=f1e100]:
+                - link "Про Logika" [ref=f1e101] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/about/
+              - listitem [ref=f1e102]:
+                - link "Курси" [ref=f1e103] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/it-courses/
+              - listitem [ref=f1e104]:
+                - link "IT Табори" [ref=f1e105] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/camps/
+              - listitem [ref=f1e106]:
+                - link "Медіа-центр" [ref=f1e107] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/media-center/
+              - listitem [ref=f1e108]:
+                - link "FAQ" [ref=f1e109] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/faq/
+              - listitem [ref=f1e110]:
+                - link "Контакти" [ref=f1e111] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f1e112]:
+            - generic [ref=f1e113]: Інформація
+            - list [ref=f1e114]:
+              - listitem [ref=f1e115]:
+                - link "Вакансії" [ref=f1e116] [cursor=pointer]:
+                  - /url: /vacancies/
+              - listitem [ref=f1e117]:
+                - link [ref=f1e118] [cursor=pointer]:
+                  - /url: /contractoffer/
+                  - text: Договір оферти
+                  - paragraph [ref=f1e119]: (для клієнтів в Україні)
+              - listitem [ref=f1e120]:
+                - link [ref=f1e121] [cursor=pointer]:
+                  - /url: /contractoffer-overseas/
+                  - text: Договір оферти
+                  - paragraph [ref=f1e122]: (для клієнтів поза межами України)
+              - listitem [ref=f1e123]:
+                - link "Освітня ліцензія" [ref=f1e124] [cursor=pointer]:
+                  - /url: /litsenziia/
+          - generic [ref=f1e125]:
+            - generic [ref=f1e126]:
+              - generic [ref=f1e127]: Наші соц. мережі
+              - list [ref=f1e128]:
+                - listitem [ref=f1e129]:
+                  - link [ref=f1e130] [cursor=pointer]:
+                    - /url: https://www.instagram.com/logika_it_school/
+                - listitem [ref=f1e133]:
+                  - link [ref=f1e134] [cursor=pointer]:
+                    - /url: https://www.facebook.com/logika.it.school/
+                - listitem [ref=f1e137]:
+                  - link "TikTok" [ref=f1e138] [cursor=pointer]:
+                    - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+            - generic [ref=f1e141]:
+              - generic [ref=f1e142]: Контакти
+              - link "+ 38 (093) 170-74-40" [ref=f1e143] [cursor=pointer]:
+                - /url: tel:+380931707440
+              - link "kiev@logikaschool.com" [ref=f1e144] [cursor=pointer]:
+                - /url: mailto:kiev@logikaschool.com
+      - generic [ref=f1e145]:
+        - generic [ref=f1e146]:
+          - paragraph [ref=f1e147]: © 2026 Logika
+          - paragraph [ref=f1e148]: Всі права захищені
+        - link "Політика конфіденційності" [ref=f1e149] [cursor=pointer]:
+          - /url: http://logika.ddev.site/privacy-policy/

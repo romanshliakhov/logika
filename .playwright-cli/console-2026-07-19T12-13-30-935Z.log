@@ -1,0 +1,3 @@
+[     929ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://logika.ddev.site/this-route-does-not-exist-404/:0
+[  107626ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://logika.ddev.site/this-route-does-not-exist-404/:0
+[  118224ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://logika.ddev.site/this-route-does-not-exist-404/:0

@@ -3435,6 +3435,7 @@ a .offer-card__info {
   border-radius: 30px;
   background-color: var(--violet-100);
 }
+.page-id-988 .banner-section__form{background-color:#374c92}.page-id-988 .banner-section__info h4{color:#374c92}
 .banner-section__character-logika {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8216,6 +8217,7 @@ a .offer-card__info {
   margin: 0;
   color: inherit;
 }
+.license-title{text-align:center;font-size:80px}.license-documents{display:grid;grid-template-columns:1fr;gap:32px;max-width:900px;margin:0 auto}.license-documents img{display:block;width:100%;height:auto;margin:0 auto}
 .article-section__aside {
   position: sticky;
   top: calc(var(--header-height) + 20px);

@@ -7,6 +7,7 @@ require dirname(__DIR__) . '/wordpress/wp-load.php';
 $article = get_page_by_path( 'dynamic-article-test', OBJECT, 'post' );
 $article_id = $article ? (int) $article->ID : (int) wp_insert_post( array( 'post_type' => 'post', 'post_name' => 'dynamic-article-test', 'post_title' => 'Динамічна стаття', 'post_status' => 'publish' ) );
 wp_update_post( array( 'ID' => $article_id, 'post_title' => 'Динамічна стаття', 'post_excerpt' => 'Короткий опис пов’язаної статті.', 'post_content' => '<p>Вступ.</p><h2>Один розділ</h2><p>Текст.</p><h3>Один розділ</h3><blockquote class="wp-block-quote"><p>Виділена цитата.</p></blockquote>' ) );
+wp_update_post( array( 'ID' => $article_id, 'post_date' => '2020-01-01 12:00:00' ) );
 
 if ( ! post_type_exists( 'article_author' ) ) {
 	fwrite( STDERR, "Article author post type is missing.\n" );
@@ -49,11 +50,12 @@ add_filter( 'acf/format_value', $socials, 20, 3 );
 acf_flush_value_cache( 'options', 'global_social_links' );
 
 $output = Logika_Theme_Article_Page::render( $article_id );
+$modified_date = get_the_modified_date( 'd.m.Y', $article_id );
 remove_filter( 'acf/format_value', $socials, 20 );
 acf_flush_value_cache( 'options', 'global_social_links' );
 $errors = array();
 
-foreach ( array( 'Динамічна стаття', 'Тестова авторка', 'article-section__author-photo', 'https://instagram.com/logika', 'https://youtube.com/@logika', 'Instagram-filled', 'Facebook-filed', 'Youtube-filled', 'data-article-view-count', '&lt;script&gt;bad()', 'Опублікована пов’язана стаття', 'data-logika-lead-form', 'Надіслати заявку', 'cta-section__top-bg', 'faq-section__left-bg', 'Чи безпечна відповідь?', '<strong>Так.</strong>', 'wp-block-quote', 'Виділена цитата.' ) as $expected ) {
+foreach ( array( 'Динамічна стаття', 'Тестова авторка', $modified_date, 'article-section__author-photo', 'https://instagram.com/logika', 'https://youtube.com/@logika', 'Instagram-filled', 'Facebook-filed', 'Youtube-filled', 'data-article-view-count', '&lt;script&gt;bad()', 'Опублікована пов’язана стаття', 'data-logika-lead-form', 'Надіслати заявку', 'cta-section__top-bg', 'faq-section__left-bg', 'Чи безпечна відповідь?', '<strong>Так.</strong>', 'wp-block-quote', 'Виділена цитата.' ) as $expected ) {
 	if ( ! str_contains( $output, $expected ) ) {
 		$errors[] = "Missing article output: {$expected}";
 	}

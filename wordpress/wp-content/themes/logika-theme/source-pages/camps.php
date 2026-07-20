@@ -575,7 +575,7 @@
           <ul class='accordion' data-default="1" data-single='true' data-breakpoint='576' data-accordion-init>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='1'>
-                Скільки коштує навчання в Logika?
+                Чи є FAQ для міста?
               </button>
               <div class='accordion__content' data-content='1'>
                 <div class="editor">
@@ -585,7 +585,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='2'>
-                З якого віку можна навчатися в Logika?
+                Чи є FAQ для курсу?
               </button>
               <div class='accordion__content' data-content='2'>
                 <div class="editor">
@@ -595,7 +595,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='3'>
-                Чи потрібен досвід у програмуванні або англійській?
+                Для якого віку підходять курси?
               </button>
               <div class='accordion__content' data-content='3'>
                 <div class="editor">
@@ -605,7 +605,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='4'>
-                Як проходять заняття?
+                У якому форматі проходить навчання?
               </button>
               <div class='accordion__content' data-content='4'>
                 <div class="editor">
@@ -615,7 +615,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='5'>
-                Що отримає дитина під час навчання?
+                Чи можна відвідати пробний урок?
               </button>
               <div class='accordion__content' data-content='5'>
                 <div class="editor">
@@ -625,7 +625,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='6'>
-                Як записатися на безкоштовний пробний урок?
+                Як дізнатись ціну?
               </button>
               <div class='accordion__content' data-content='6'>
                 <div class="editor">
@@ -635,7 +635,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='7'>
-                Чим Logika відрізняється від інших шкіл?
+                Який розклад занять?
               </button>
               <div class='accordion__content' data-content='7'>
                 <div class="editor">

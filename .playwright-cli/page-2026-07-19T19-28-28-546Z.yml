@@ -1,0 +1,919 @@
+- generic [active] [ref=f16e1]:
+  - generic [ref=f16e4]:
+    - link "+ 38 (093) 170-74-40" [ref=f16e6] [cursor=pointer]:
+      - /url: tel:+380931707440
+    - list [ref=f16e8]:
+      - listitem [ref=f16e9]:
+        - link [ref=f16e10] [cursor=pointer]:
+          - /url: https://www.instagram.com/logika_it_school/
+      - listitem [ref=f16e13]:
+        - link [ref=f16e14] [cursor=pointer]:
+          - /url: https://www.facebook.com/logika.it.school/
+      - listitem [ref=f16e17]:
+        - link "TikTok" [ref=f16e18] [cursor=pointer]:
+          - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+  - banner [ref=f16e21]:
+    - generic [ref=f16e23]:
+      - link [ref=f16e25] [cursor=pointer]:
+        - /url: /
+        - img "Logika" [ref=f16e26]
+      - generic [ref=f16e28]:
+        - button [ref=f16e30] [cursor=pointer]:
+          - paragraph [ref=f16e34]: Оберіть місто
+        - generic [ref=f16e37]:
+          - navigation [ref=f16e38]:
+            - list [ref=f16e39]:
+              - listitem [ref=f16e40]:
+                - link "Про Logika" [ref=f16e41] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=f16e42]:
+                - link "Курси" [ref=f16e43] [cursor=pointer]:
+                  - /url: /it-courses/
+                - button [ref=f16e44] [cursor=pointer]
+                - list:
+                  - listitem [ref=f16e47]:
+                    - link "IT Курси" [ref=f16e48] [cursor=pointer]:
+                      - /url: /it-courses/
+                  - listitem [ref=f16e49]:
+                    - link "Курси англійської" [ref=f16e50] [cursor=pointer]:
+                      - /url: /english-courses/
+              - listitem [ref=f16e51]:
+                - link "IT-табори" [ref=f16e52] [cursor=pointer]:
+                  - /url: /camps/
+              - listitem [ref=f16e53]:
+                - link "Медіа-центр" [ref=f16e54] [cursor=pointer]:
+                  - /url: /media-center/
+              - listitem [ref=f16e55]:
+                - link "FAQ" [ref=f16e56] [cursor=pointer]:
+                  - /url: /faq/
+              - listitem [ref=f16e57]:
+                - link "Вакансії" [ref=f16e58] [cursor=pointer]:
+                  - /url: /vacancies/
+          - generic [ref=f16e59]:
+            - link "Увійти" [ref=f16e60] [cursor=pointer]:
+              - /url: https://student.logikaschool.com.ua/login
+            - link "Пробний урок" [ref=f16e64] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+      - button [ref=f16e67] [cursor=pointer]
+  - main [ref=f16e69]:
+    - generic [ref=f16e73]:
+      - generic [ref=f16e74]:
+        - generic [ref=f16e75]:
+          - generic [ref=f16e76]:
+            - heading "Програмування та англійська мова для дітей 7-30 років" [level=1] [ref=f16e77]
+            - generic [ref=f16e78]: Перші результати вже через 4 тижні
+          - img "boy-character" [ref=f16e80]
+        - generic [ref=f16e82]:
+          - generic [ref=f16e83]:
+            - generic [ref=f16e84]:
+              - generic [ref=f16e85]: Перший урок — безкоштовно.
+              - text: Залиште заявку за 30 секунд — ми зателефонуємо і підберемо зручний час
+            - generic [ref=f16e86]:
+              - textbox "Ім’я" [ref=f16e87]
+              - generic [ref=f16e89]:
+                - combobox "Обрана країна" [ref=f16e91]
+                - textbox "Номер телефону" [ref=f16e94]
+              - generic [ref=f16e95]:
+                - combobox
+                - button "Вік дитини (від 7 до 17)" [ref=f16e96] [cursor=pointer]
+            - button "Спробувати безкоштовно" [ref=f16e98] [cursor=pointer]
+            - textbox
+            - paragraph [ref=f16e101]:
+              - text: Натискаючи, ви погоджуєтесь із
+              - link "Політикою конфіденційності" [ref=f16e102] [cursor=pointer]:
+                - /url: http://logika.ddev.site/privacy-policy/
+          - img "boy-character" [ref=f16e104]
+      - list [ref=f16e105]:
+        - listitem [ref=f16e106]:
+          - img "З 2018 року на ринку" [ref=f16e108]
+          - paragraph [ref=f16e109]: З 2018 року на ринку
+        - listitem [ref=f16e110]:
+          - img "З 2018 року на ринку" [ref=f16e112]
+          - paragraph [ref=f16e113]: Освітня ліцензія
+        - listitem [ref=f16e114]:
+          - img "З 2018 року на ринку" [ref=f16e116]
+          - paragraph [ref=f16e117]: 4.9 рейтинг від клієнтів
+        - listitem [ref=f16e118]:
+          - img "З 2018 року на ринку" [ref=f16e120]
+          - paragraph [ref=f16e121]: 178 шкіл в Україні
+        - listitem [ref=f16e122]:
+          - img "З 2018 року на ринку" [ref=f16e124]
+          - paragraph [ref=f16e125]: 130 міст по Україні
+        - listitem [ref=f16e126]:
+          - img "З 2018 року на ринку" [ref=f16e128]
+          - paragraph [ref=f16e129]: 100тис+ успішних випускників
+    - list [ref=f16e133]:
+      - group "1 / 36" [ref=f16e134]:
+        - paragraph [ref=f16e136]: Перший урок – безкоштовно
+      - group "2 / 36" [ref=f16e137]:
+        - paragraph [ref=f16e139]: Навчання з результатом
+      - group "3 / 36" [ref=f16e140]:
+        - paragraph [ref=f16e142]: Уроки з живими викладачами
+      - group "4 / 36" [ref=f16e143]:
+        - paragraph [ref=f16e145]: Інтерактивне навчання
+      - group "5 / 36" [ref=f16e146]:
+        - paragraph [ref=f16e148]: Програмування для дітей 7-17
+      - group "6 / 36" [ref=f16e149]:
+        - paragraph [ref=f16e151]: Англійська мова
+      - group "7 / 36" [ref=f16e152]:
+        - paragraph [ref=f16e154]: Перший урок – безкоштовно
+      - group "8 / 36" [ref=f16e155]:
+        - paragraph [ref=f16e157]: Навчання з результатом
+      - group "9 / 36" [ref=f16e158]:
+        - paragraph [ref=f16e160]: Уроки з живими викладачами
+      - group "10 / 36" [ref=f16e161]:
+        - paragraph [ref=f16e163]: Інтерактивне навчання
+      - group "11 / 36" [ref=f16e164]:
+        - paragraph [ref=f16e166]: Програмування для дітей 7-17
+      - group "12 / 36" [ref=f16e167]:
+        - paragraph [ref=f16e169]: Англійська мова
+      - group "13 / 36" [ref=f16e170]:
+        - paragraph [ref=f16e172]: Перший урок – безкоштовно
+      - group "14 / 36" [ref=f16e173]:
+        - paragraph [ref=f16e175]: Навчання з результатом
+      - group "15 / 36" [ref=f16e176]:
+        - paragraph [ref=f16e178]: Уроки з живими викладачами
+      - group "16 / 36" [ref=f16e179]:
+        - paragraph [ref=f16e181]: Інтерактивне навчання
+      - group "17 / 36" [ref=f16e182]:
+        - paragraph [ref=f16e184]: Програмування для дітей 7-17
+      - group "18 / 36" [ref=f16e185]:
+        - paragraph [ref=f16e187]: Англійська мова
+      - group "19 / 36" [ref=f16e188]:
+        - paragraph [ref=f16e190]: Перший урок – безкоштовно
+      - group "20 / 36" [ref=f16e191]:
+        - paragraph [ref=f16e193]: Навчання з результатом
+      - group "21 / 36" [ref=f16e194]:
+        - paragraph [ref=f16e196]: Уроки з живими викладачами
+      - group "22 / 36" [ref=f16e197]:
+        - paragraph [ref=f16e199]: Інтерактивне навчання
+      - group "23 / 36" [ref=f16e200]:
+        - paragraph [ref=f16e202]: Програмування для дітей 7-17
+      - group "24 / 36" [ref=f16e203]:
+        - paragraph [ref=f16e205]: Англійська мова
+      - group "25 / 36" [ref=f16e206]:
+        - paragraph [ref=f16e208]: Перший урок – безкоштовно
+      - group "26 / 36" [ref=f16e209]:
+        - paragraph [ref=f16e211]: Навчання з результатом
+      - group "27 / 36" [ref=f16e212]:
+        - paragraph [ref=f16e214]: Уроки з живими викладачами
+      - group "28 / 36" [ref=f16e215]:
+        - paragraph [ref=f16e217]: Інтерактивне навчання
+      - group "29 / 36" [ref=f16e218]:
+        - paragraph [ref=f16e220]: Програмування для дітей 7-17
+      - group "30 / 36" [ref=f16e221]:
+        - paragraph [ref=f16e223]: Англійська мова
+      - group "31 / 36" [ref=f16e224]:
+        - paragraph [ref=f16e226]: Перший урок – безкоштовно
+      - group "32 / 36" [ref=f16e227]:
+        - paragraph [ref=f16e229]: Навчання з результатом
+      - group "33 / 36" [ref=f16e230]:
+        - paragraph [ref=f16e232]: Уроки з живими викладачами
+      - group "34 / 36" [ref=f16e233]:
+        - paragraph [ref=f16e235]: Інтерактивне навчання
+      - group "35 / 36" [ref=f16e236]:
+        - paragraph [ref=f16e238]: Програмування для дітей 7-17
+      - group "36 / 36" [ref=f16e239]:
+        - paragraph [ref=f16e241]: Англійська мова
+    - generic [ref=f16e245]:
+      - heading "Курси програмування" [level=2] [ref=f16e246]
+      - list [ref=f16e249]:
+        - listitem [ref=f16e250]:
+          - generic [ref=f16e251]: 7-8 рокiв
+          - generic [ref=f16e257]:
+            - generic [ref=f16e258]: Перший крок у свiт технологiй
+            - list [ref=f16e259]:
+              - listitem [ref=f16e260]:
+                - link "Комп'ютерна грамотність" [ref=f16e261] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/computer-literacy/
+            - paragraph [ref=f16e262]: Допомагаємо дитині зробити перші впевнені кроки у світі технологій, розвиваючи логіку, увагу та базові комп’ютерні навички.
+            - generic [ref=f16e263]:
+              - button "Запис на безкоштовний урок" [ref=f16e264] [cursor=pointer]
+              - link "Ознайомитись з курсами" [ref=f16e267] [cursor=pointer]:
+                - /url: http://logika.ddev.site/it-courses/
+        - listitem [ref=f16e270]:
+          - generic [ref=f16e271]: 9-11 рокiв
+          - generic [ref=f16e277]:
+            - generic [ref=f16e278]: Вiд iгор до власних проектiв
+            - list [ref=f16e279]:
+              - listitem [ref=f16e280]:
+                - link "Візуальне програмування" [ref=f16e281] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/visual-programming/
+              - listitem [ref=f16e282]:
+                - link "Геймдизайн" [ref=f16e283] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/game-design/
+              - listitem [ref=f16e284]:
+                - link "Основи штучного інтелекту" [ref=f16e285] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/artificial-intelligence/
+            - paragraph [ref=f16e286]: Діти переходять від ігор до створення власних проєктів, розвивають креативне мислення та вчаться працювати з різними цифровими інструментами.
+            - generic [ref=f16e287]:
+              - button "Запис на безкоштовний урок" [ref=f16e288] [cursor=pointer]
+              - link "Ознайомитись з курсами" [ref=f16e291] [cursor=pointer]:
+                - /url: http://logika.ddev.site/it-courses/
+        - listitem [ref=f16e294]:
+          - generic [ref=f16e295]: 12-14 рокiв
+          - generic [ref=f16e301]:
+            - generic [ref=f16e302]: Серйознi навички для серйозних цiлей
+            - list [ref=f16e303]:
+              - listitem [ref=f16e304]:
+                - link "Python Start" [ref=f16e305] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/python-start/
+              - listitem [ref=f16e306]:
+                - link "Python Mastery" [ref=f16e307] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/python-mastery/
+              - listitem [ref=f16e308]:
+                - link "Графічний дизайн" [ref=f16e309] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/graphic-design/
+              - listitem [ref=f16e310]:
+                - link "Графічний дизайн 2.0" [ref=f16e311] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/graphic-design-2-year/
+              - listitem [ref=f16e312]:
+                - link "Створення веб-сайтів" [ref=f16e313] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/websites/
+            - paragraph [ref=f16e314]: Поглиблюємо знання в програмуванні, працюємо над реальними проєктами та формуємо навички, які стануть основою для подальшого розвитку в IT.
+            - generic [ref=f16e315]:
+              - button "Запис на безкоштовний урок" [ref=f16e316] [cursor=pointer]
+              - link "Ознайомитись з курсами" [ref=f16e319] [cursor=pointer]:
+                - /url: http://logika.ddev.site/it-courses/
+        - listitem [ref=f16e322]:
+          - generic [ref=f16e323]: 14-17 рокiв
+          - generic [ref=f16e329]:
+            - generic [ref=f16e330]: Перший крок у IT-кар'єру
+            - list [ref=f16e331]:
+              - listitem [ref=f16e332]:
+                - link "Python Expert" [ref=f16e333] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/python-expert/
+              - listitem [ref=f16e334]:
+                - link "Python Advanced" [ref=f16e335] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/python-advanced/
+              - listitem [ref=f16e336]:
+                - link "Основи фронтенд розробки" [ref=f16e337] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/frontend/
+              - listitem [ref=f16e338]:
+                - link "Комп'ютерна грамотність для дорослих" [ref=f16e339] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/computer-literacy-14/
+            - paragraph [ref=f16e340]: "Готуємо до перших кроків у кар’єрі: даємо практичні знання, знайомимо з сучасними технологіями та вчимо мислити як розробник."
+            - generic [ref=f16e341]:
+              - button "Запис на безкоштовний урок" [ref=f16e342] [cursor=pointer]
+              - link "Ознайомитись з курсами" [ref=f16e345] [cursor=pointer]:
+                - /url: http://logika.ddev.site/it-courses/
+    - generic [ref=f16e350]:
+      - generic [ref=f16e352]:
+        - generic [ref=f16e353]:
+          - heading "Англiйська мова в Logika" [level=2] [ref=f16e354]
+          - generic [ref=f16e355]: Не просто уроки, а мовне середовище
+        - paragraph [ref=f16e356]: Навчаємо говорити англійською впевнено з перших занять — через практику, живе спілкування та сучасні методики. Програма підбирається за віком і рівнем, щоб дитині було цікаво та комфортно вчитися.
+        - link "Дізнатись більше" [ref=f16e357] [cursor=pointer]:
+          - /url: http://logika.ddev.site/english-courses/
+      - generic [ref=f16e362]:
+        - list [ref=f16e363]:
+          - group "1 / 18" [ref=f16e364]:
+            - generic [ref=f16e365]:
+              - generic [ref=f16e366]: 8-10 років
+              - img "Рівень А0" [ref=f16e368]
+              - generic [ref=f16e369]:
+                - generic [ref=f16e370]: Рівень A0
+                - paragraph [ref=f16e371]: Перші слова, фрази та знайомство з англійською.
+              - link "Обрати курс" [ref=f16e372] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a0/
+          - group "2 / 18" [ref=f16e375]:
+            - generic [ref=f16e376]:
+              - generic [ref=f16e377]: 10-12 років
+              - img "Рівень А1" [ref=f16e379]
+              - generic [ref=f16e380]:
+                - generic [ref=f16e381]: Рівень A1
+                - paragraph [ref=f16e382]: Розмовляємо про щоденне життя, родину, подорожі та інтереси.
+              - link "Обрати курс" [ref=f16e383] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a1/
+          - group "3 / 18" [ref=f16e386]:
+            - generic [ref=f16e387]:
+              - generic [ref=f16e388]: 12-13 років
+              - img "Рівень А2" [ref=f16e390]
+              - generic [ref=f16e391]:
+                - generic [ref=f16e392]: Рівень A2
+                - paragraph [ref=f16e393]: Закріплюємо базу та вчимося впевненіше пояснювати думки англійською.
+              - link "Обрати курс" [ref=f16e394] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a2/
+          - group "4 / 18" [ref=f16e397]:
+            - generic [ref=f16e398]:
+              - generic [ref=f16e399]: 13-15 років
+              - img "Рівень B1" [ref=f16e401]
+              - generic [ref=f16e402]:
+                - generic [ref=f16e403]: Рівень B1
+                - paragraph [ref=f16e404]: Вільніше висловлюємо думки, обговорюємо подорожі, технології та майбутню кар’єру.
+              - link "Обрати курс" [ref=f16e405] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b1/
+          - group "5 / 18" [ref=f16e408]:
+            - generic [ref=f16e409]:
+              - generic [ref=f16e410]: 15-17 років
+              - img "Рівень B2" [ref=f16e412]
+              - generic [ref=f16e413]:
+                - generic [ref=f16e414]: Рівень B2
+                - paragraph [ref=f16e415]: Відточуємо вільне спілкування, аргументацію та розуміння складних тем.
+              - link "Обрати курс" [ref=f16e416] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2/
+          - group "6 / 18" [ref=f16e419]:
+            - generic [ref=f16e420]:
+              - generic [ref=f16e421]: 8-17 років
+              - img "Рівень B2" [ref=f16e423]
+              - generic [ref=f16e424]:
+                - generic [ref=f16e425]: Рівень B2.1
+                - paragraph [ref=f16e426]: Обговорюємо складні теми, розширюємо словниковий запас та вчимося впевнено спілкуватися англійською.
+              - link "Обрати курс" [ref=f16e427] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2-1/
+          - group "7 / 18" [ref=f16e430]:
+            - generic [ref=f16e431]:
+              - generic [ref=f16e432]: 8-10 років
+              - img "Рівень А0" [ref=f16e434]
+              - generic [ref=f16e435]:
+                - generic [ref=f16e436]: Рівень A0
+                - paragraph [ref=f16e437]: Перші слова, фрази та знайомство з англійською.
+              - link "Обрати курс" [ref=f16e438] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a0/
+          - group "8 / 18" [ref=f16e441]:
+            - generic [ref=f16e442]:
+              - generic [ref=f16e443]: 10-12 років
+              - img "Рівень А1" [ref=f16e445]
+              - generic [ref=f16e446]:
+                - generic [ref=f16e447]: Рівень A1
+                - paragraph [ref=f16e448]: Розмовляємо про щоденне життя, родину, подорожі та інтереси.
+              - link "Обрати курс" [ref=f16e449] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a1/
+          - group "9 / 18" [ref=f16e452]:
+            - generic [ref=f16e453]:
+              - generic [ref=f16e454]: 12-13 років
+              - img "Рівень А2" [ref=f16e456]
+              - generic [ref=f16e457]:
+                - generic [ref=f16e458]: Рівень A2
+                - paragraph [ref=f16e459]: Закріплюємо базу та вчимося впевненіше пояснювати думки англійською.
+              - link "Обрати курс" [ref=f16e460] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a2/
+          - group "10 / 18" [ref=f16e463]:
+            - generic [ref=f16e464]:
+              - generic [ref=f16e465]: 13-15 років
+              - img "Рівень B1" [ref=f16e467]
+              - generic [ref=f16e468]:
+                - generic [ref=f16e469]: Рівень B1
+                - paragraph [ref=f16e470]: Вільніше висловлюємо думки, обговорюємо подорожі, технології та майбутню кар’єру.
+              - link "Обрати курс" [ref=f16e471] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b1/
+          - group "11 / 18" [ref=f16e474]:
+            - generic [ref=f16e475]:
+              - generic [ref=f16e476]: 15-17 років
+              - img "Рівень B2" [ref=f16e478]
+              - generic [ref=f16e479]:
+                - generic [ref=f16e480]: Рівень B2
+                - paragraph [ref=f16e481]: Відточуємо вільне спілкування, аргументацію та розуміння складних тем.
+              - link "Обрати курс" [ref=f16e482] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2/
+          - group "12 / 18" [ref=f16e485]:
+            - generic [ref=f16e486]:
+              - generic [ref=f16e487]: 8-17 років
+              - img "Рівень B2" [ref=f16e489]
+              - generic [ref=f16e490]:
+                - generic [ref=f16e491]: Рівень B2.1
+                - paragraph [ref=f16e492]: Обговорюємо складні теми, розширюємо словниковий запас та вчимося впевнено спілкуватися англійською.
+              - link "Обрати курс" [ref=f16e493] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2-1/
+          - group "13 / 18" [ref=f16e496]:
+            - generic [ref=f16e497]:
+              - generic [ref=f16e498]: 8-10 років
+              - img "Рівень А0" [ref=f16e500]
+              - generic [ref=f16e501]:
+                - generic [ref=f16e502]: Рівень A0
+                - paragraph [ref=f16e503]: Перші слова, фрази та знайомство з англійською.
+              - link "Обрати курс" [ref=f16e504] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a0/
+          - group "14 / 18" [ref=f16e507]:
+            - generic [ref=f16e508]:
+              - generic [ref=f16e509]: 10-12 років
+              - img "Рівень А1" [ref=f16e511]
+              - generic [ref=f16e512]:
+                - generic [ref=f16e513]: Рівень A1
+                - paragraph [ref=f16e514]: Розмовляємо про щоденне життя, родину, подорожі та інтереси.
+              - link "Обрати курс" [ref=f16e515] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a1/
+          - group "15 / 18" [ref=f16e518]:
+            - generic [ref=f16e519]:
+              - generic [ref=f16e520]: 12-13 років
+              - img "Рівень А2" [ref=f16e522]
+              - generic [ref=f16e523]:
+                - generic [ref=f16e524]: Рівень A2
+                - paragraph [ref=f16e525]: Закріплюємо базу та вчимося впевненіше пояснювати думки англійською.
+              - link "Обрати курс" [ref=f16e526] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a2/
+          - group "16 / 18" [ref=f16e529]:
+            - generic [ref=f16e530]:
+              - generic [ref=f16e531]: 13-15 років
+              - img "Рівень B1" [ref=f16e533]
+              - generic [ref=f16e534]:
+                - generic [ref=f16e535]: Рівень B1
+                - paragraph [ref=f16e536]: Вільніше висловлюємо думки, обговорюємо подорожі, технології та майбутню кар’єру.
+              - link "Обрати курс" [ref=f16e537] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b1/
+          - group "17 / 18" [ref=f16e540]:
+            - generic [ref=f16e541]:
+              - generic [ref=f16e542]: 15-17 років
+              - img "Рівень B2" [ref=f16e544]
+              - generic [ref=f16e545]:
+                - generic [ref=f16e546]: Рівень B2
+                - paragraph [ref=f16e547]: Відточуємо вільне спілкування, аргументацію та розуміння складних тем.
+              - link "Обрати курс" [ref=f16e548] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2/
+          - group "18 / 18" [ref=f16e551]:
+            - generic [ref=f16e552]:
+              - generic [ref=f16e553]: 8-17 років
+              - img "Рівень B2" [ref=f16e555]
+              - generic [ref=f16e556]:
+                - generic [ref=f16e557]: Рівень B2.1
+                - paragraph [ref=f16e558]: Обговорюємо складні теми, розширюємо словниковий запас та вчимося впевнено спілкуватися англійською.
+              - link "Обрати курс" [ref=f16e559] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2-1/
+        - generic [ref=f16e562]:
+          - button "Previous slide" [ref=f16e563] [cursor=pointer]
+          - button "Next slide" [ref=f16e566] [cursor=pointer]:
+            - paragraph [ref=f16e567]: Наступні курси
+    - generic [ref=f16e573]:
+      - heading "Чому тисячі батьків обирають Logika" [level=2] [ref=f16e574]
+      - list [ref=f16e575]:
+        - listitem [ref=f16e576]:
+          - img "Єдина платформа — єдина якість"
+          - generic [ref=f16e577]:
+            - heading "Єдина платформа – єдина якість" [level=3] [ref=f16e578]
+            - paragraph [ref=f16e579]: Інтерактивний підручник, практичні завдання й трекер результатів забезпечують високу якість навчання.
+        - listitem [ref=f16e580]:
+          - img "Мінімум 5 реальних проєктів за курс"
+          - generic [ref=f16e581]:
+            - heading "Мінімум 5 реальних проєктів за курс" [level=3] [ref=f16e582]
+            - paragraph [ref=f16e583]: Ігри, мультфільми, боти, сайти чи додатки - від ідеї до готового результату.
+        - listitem [ref=f16e584]:
+          - img "Відкриті уроки для батьків"
+          - generic [ref=f16e585]:
+            - heading "Відкриті уроки для батьків" [level=3] [ref=f16e586]
+            - paragraph [ref=f16e587]: Наприкінці модуля дитина презентує свої проєкти, а ви бачите реальний прогрес.
+        - listitem [ref=f16e588]:
+          - img "Онлайн або у вашому місті"
+          - generic [ref=f16e589]:
+            - heading "Онлайн або у вашому місті" [level=3] [ref=f16e590]
+            - paragraph [ref=f16e591]: Займайтеся у школі Logika або онлайн у невеликих групах.
+        - listitem [ref=f16e592]:
+          - img "Викладачі з профільною освітою"
+          - generic [ref=f16e593]:
+            - heading "Викладачі з профільною освітою" [level=3] [ref=f16e594]
+            - paragraph [ref=f16e595]: Багаторівневий відбір, навчання за методологією Logika та досвід роботи з дітьми.
+        - listitem [ref=f16e596]:
+          - img "Власна ігрова методика"
+          - generic [ref=f16e597]:
+            - heading "Власна ігрова методика" [level=3] [ref=f16e598]
+            - paragraph [ref=f16e599]: Навчаємо через сюжети, практику та залучення, а не через суху теорію.
+    - generic [ref=f16e603]:
+      - generic [ref=f16e604]:
+        - heading "Дайте дитині шанс не просто грати, а створювати" [level=2] [ref=f16e605]
+        - button "Запис на безкоштовний урок" [ref=f16e606] [cursor=pointer]
+      - list [ref=f16e609]:
+        - listitem [ref=f16e610]:
+          - generic [ref=f16e613]: Було
+          - paragraph [ref=f16e615]: Просто грає в ігри
+        - listitem [ref=f16e619]:
+          - generic [ref=f16e622]: Стало
+          - paragraph [ref=f16e624]: Створює власні ігри
+    - generic [ref=f16e630]:
+      - heading "Як розпочати навчання" [level=2] [ref=f16e631]
+      - list [ref=f16e633]:
+        - listitem [ref=f16e634]:
+          - generic [ref=f16e637]:
+            - generic [ref=f16e638]: Залишiть заявку
+            - paragraph [ref=f16e639]: Заповнiть форму або зателефонуйте. Менеджер зв'яжеться за 30 хвилин
+            - button "Залишити заявку" [ref=f16e640] [cursor=pointer]
+        - listitem [ref=f16e643]:
+          - generic [ref=f16e646]:
+            - generic [ref=f16e647]: Відвідайте безкоштовний пробний урок
+            - paragraph [ref=f16e648]: Дитина спробує, ви подивитесь. Жодних зобов'язань
+            - button "Залишити заявку" [ref=f16e649] [cursor=pointer]
+        - listitem [ref=f16e652]:
+          - generic [ref=f16e655]:
+            - generic [ref=f16e656]: Розпочніть навчання та отримайте результат
+            - paragraph [ref=f16e657]: Регулярнi заняття, власнi проекти, вiдкритi уроки для батькiв
+            - button "Залишити заявку" [ref=f16e658] [cursor=pointer]
+    - generic [ref=f16e663]:
+      - heading "Довіра, підтверджена результатами" [level=2] [ref=f16e664]
+      - list [ref=f16e668]:
+        - group "1 / 36" [ref=f16e669]
+        - group "2 / 36" [ref=f16e676]:
+          - generic [ref=f16e678]:
+            - generic [ref=f16e679]: Тетяна
+            - generic [ref=f16e686]: Python Mastery
+            - paragraph [ref=f16e687]: Доброго ранку! Перш за все дуже дякую вам і всій команді за чудовий табір! Ксюша приїхала задоволена, наповнена емоціями та враженнями. З найкращими спогадами. Просто супер!) В такому результаті дуже…
+        - group "3 / 36" [ref=f16e688]:
+          - generic [ref=f16e690]:
+            - generic [ref=f16e691]: Роман
+            - generic [ref=f16e699]: Python Mastery
+            - paragraph [ref=f16e700]: Багато писати не збираюся, напишу коротко – дитині дуже подобається і це саме головне, як на мене! Подобаються як самі заняття, так і виконання домашніх завдань, підхід та гарне відношення…
+        - group "4 / 36" [ref=f16e701]
+        - group "5 / 36" [ref=f16e708]:
+          - generic [ref=f16e710]:
+            - generic [ref=f16e711]: Вікторія
+            - generic [ref=f16e718]: Python Mastery
+            - paragraph [ref=f16e719]: Доброго дня, не знаю, можливо у Вас є чарівна паличка…Та Даша кожен наступний раз приїзджає з табору ще більше задоволена 🤗і водночас засмучена🙃, що так швидко пролетів час.Ваша робота безцінна,…
+        - group "6 / 36" [ref=f16e720]:
+          - generic [ref=f16e722]:
+            - generic [ref=f16e723]: Тетяна
+            - generic [ref=f16e730]: Python Mastery
+            - paragraph [ref=f16e731]: Дякуємо безмежно🥰 Софійка в захваті, каже наступного року теж хоче їхати
+        - group "7 / 36" [ref=f16e732]:
+          - generic [ref=f16e734]:
+            - generic [ref=f16e735]: Sova
+            - generic [ref=f16e742]: Python Mastery
+            - paragraph [ref=f16e743]: Доброго вечора! Ви неймовірні!!!!! Діти мої у захваті!!!І вже чекають літнього табору! Ми з Сашком вже забронювали місце)))) Величезна подяка від Сашкового тата,він вже два роки на війні і такий…
+        - group "8 / 36" [ref=f16e744]:
+          - generic [ref=f16e746]:
+            - generic [ref=f16e747]: Наталія
+            - generic [ref=f16e754]: Python Mastery
+            - paragraph [ref=f16e755]: Вони такі задоволені))) На запитання, чи хотіли б там ще залишитись відповіли одноголосно ТАК! Засмаглі, з купою позитивних емоцій! Дуже дякую ВАМ! Дякую за організцію такого класного відпочинку!
+        - group "9 / 36" [ref=f16e756]
+        - group "10 / 36" [ref=f16e763]:
+          - generic [ref=f16e765]:
+            - generic [ref=f16e766]: Катерина
+            - generic [ref=f16e774]: Python Mastery
+            - paragraph [ref=f16e775]: Мене дуже тішить, що мій син нарешті чимось зацікавився сильно, а саме навчанням у школі Logika. До навчання у школі були суцільні стрілялки і гонки кожен день, зараз почав багато…
+        - group "11 / 36" [ref=f16e776]
+        - group "12 / 36" [ref=f16e783]:
+          - generic [ref=f16e785]:
+            - generic [ref=f16e786]: Наталія
+            - generic [ref=f16e793]: Python Mastery
+            - paragraph [ref=f16e794]: Хочу висловити щиру подяку за бездоганну організацію та насичений змістовний відпочинок. Син отримав позитивний заряд емоцій, вмінь, знань,зустрів нових друзів. Кожен день у таборі був не схожий на інший. Від’їжджає…
+        - group "13 / 36" [ref=f16e795]
+        - group "14 / 36" [ref=f16e802]:
+          - generic [ref=f16e804]:
+            - generic [ref=f16e805]: Тетяна
+            - generic [ref=f16e812]: Python Mastery
+            - paragraph [ref=f16e813]: Доброго ранку! Перш за все дуже дякую вам і всій команді за чудовий табір! Ксюша приїхала задоволена, наповнена емоціями та враженнями. З найкращими спогадами. Просто супер!) В такому результаті дуже…
+        - group "15 / 36" [ref=f16e814]:
+          - generic [ref=f16e816]:
+            - generic [ref=f16e817]: Роман
+            - generic [ref=f16e825]: Python Mastery
+            - paragraph [ref=f16e826]: Багато писати не збираюся, напишу коротко – дитині дуже подобається і це саме головне, як на мене! Подобаються як самі заняття, так і виконання домашніх завдань, підхід та гарне відношення…
+        - group "16 / 36" [ref=f16e827]
+        - group "17 / 36" [ref=f16e834]:
+          - generic [ref=f16e836]:
+            - generic [ref=f16e837]: Вікторія
+            - generic [ref=f16e844]: Python Mastery
+            - paragraph [ref=f16e845]: Доброго дня, не знаю, можливо у Вас є чарівна паличка…Та Даша кожен наступний раз приїзджає з табору ще більше задоволена 🤗і водночас засмучена🙃, що так швидко пролетів час.Ваша робота безцінна,…
+        - group "18 / 36" [ref=f16e846]:
+          - generic [ref=f16e848]:
+            - generic [ref=f16e849]: Тетяна
+            - generic [ref=f16e856]: Python Mastery
+            - paragraph [ref=f16e857]: Дякуємо безмежно🥰 Софійка в захваті, каже наступного року теж хоче їхати
+        - group "19 / 36" [ref=f16e858]:
+          - generic [ref=f16e860]:
+            - generic [ref=f16e861]: Sova
+            - generic [ref=f16e868]: Python Mastery
+            - paragraph [ref=f16e869]: Доброго вечора! Ви неймовірні!!!!! Діти мої у захваті!!!І вже чекають літнього табору! Ми з Сашком вже забронювали місце)))) Величезна подяка від Сашкового тата,він вже два роки на війні і такий…
+        - group "20 / 36" [ref=f16e870]:
+          - generic [ref=f16e872]:
+            - generic [ref=f16e873]: Наталія
+            - generic [ref=f16e880]: Python Mastery
+            - paragraph [ref=f16e881]: Вони такі задоволені))) На запитання, чи хотіли б там ще залишитись відповіли одноголосно ТАК! Засмаглі, з купою позитивних емоцій! Дуже дякую ВАМ! Дякую за організцію такого класного відпочинку!
+        - group "21 / 36" [ref=f16e882]
+        - group "22 / 36" [ref=f16e889]:
+          - generic [ref=f16e891]:
+            - generic [ref=f16e892]: Катерина
+            - generic [ref=f16e900]: Python Mastery
+            - paragraph [ref=f16e901]: Мене дуже тішить, що мій син нарешті чимось зацікавився сильно, а саме навчанням у школі Logika. До навчання у школі були суцільні стрілялки і гонки кожен день, зараз почав багато…
+        - group "23 / 36" [ref=f16e902]
+        - group "24 / 36" [ref=f16e909]:
+          - generic [ref=f16e911]:
+            - generic [ref=f16e912]: Наталія
+            - generic [ref=f16e919]: Python Mastery
+            - paragraph [ref=f16e920]: Хочу висловити щиру подяку за бездоганну організацію та насичений змістовний відпочинок. Син отримав позитивний заряд емоцій, вмінь, знань,зустрів нових друзів. Кожен день у таборі був не схожий на інший. Від’їжджає…
+        - group "25 / 36" [ref=f16e921]
+        - group "26 / 36" [ref=f16e928]:
+          - generic [ref=f16e930]:
+            - generic [ref=f16e931]: Тетяна
+            - generic [ref=f16e938]: Python Mastery
+            - paragraph [ref=f16e939]: Доброго ранку! Перш за все дуже дякую вам і всій команді за чудовий табір! Ксюша приїхала задоволена, наповнена емоціями та враженнями. З найкращими спогадами. Просто супер!) В такому результаті дуже…
+        - group "27 / 36" [ref=f16e940]:
+          - generic [ref=f16e942]:
+            - generic [ref=f16e943]: Роман
+            - generic [ref=f16e951]: Python Mastery
+            - paragraph [ref=f16e952]: Багато писати не збираюся, напишу коротко – дитині дуже подобається і це саме головне, як на мене! Подобаються як самі заняття, так і виконання домашніх завдань, підхід та гарне відношення…
+        - group "28 / 36" [ref=f16e953]
+        - group "29 / 36" [ref=f16e960]:
+          - generic [ref=f16e962]:
+            - generic [ref=f16e963]: Вікторія
+            - generic [ref=f16e970]: Python Mastery
+            - paragraph [ref=f16e971]: Доброго дня, не знаю, можливо у Вас є чарівна паличка…Та Даша кожен наступний раз приїзджає з табору ще більше задоволена 🤗і водночас засмучена🙃, що так швидко пролетів час.Ваша робота безцінна,…
+        - group "30 / 36" [ref=f16e972]:
+          - generic [ref=f16e974]:
+            - generic [ref=f16e975]: Тетяна
+            - generic [ref=f16e982]: Python Mastery
+            - paragraph [ref=f16e983]: Дякуємо безмежно🥰 Софійка в захваті, каже наступного року теж хоче їхати
+        - group "31 / 36" [ref=f16e984]:
+          - generic [ref=f16e986]:
+            - generic [ref=f16e987]: Sova
+            - generic [ref=f16e994]: Python Mastery
+            - paragraph [ref=f16e995]: Доброго вечора! Ви неймовірні!!!!! Діти мої у захваті!!!І вже чекають літнього табору! Ми з Сашком вже забронювали місце)))) Величезна подяка від Сашкового тата,він вже два роки на війні і такий…
+        - group "32 / 36" [ref=f16e996]:
+          - generic [ref=f16e998]:
+            - generic [ref=f16e999]: Наталія
+            - generic [ref=f16e1006]: Python Mastery
+            - paragraph [ref=f16e1007]: Вони такі задоволені))) На запитання, чи хотіли б там ще залишитись відповіли одноголосно ТАК! Засмаглі, з купою позитивних емоцій! Дуже дякую ВАМ! Дякую за організцію такого класного відпочинку!
+        - group "33 / 36" [ref=f16e1008]
+        - group "34 / 36" [ref=f16e1015]:
+          - generic [ref=f16e1017]:
+            - generic [ref=f16e1018]: Катерина
+            - generic [ref=f16e1026]: Python Mastery
+            - paragraph [ref=f16e1027]: Мене дуже тішить, що мій син нарешті чимось зацікавився сильно, а саме навчанням у школі Logika. До навчання у школі були суцільні стрілялки і гонки кожен день, зараз почав багато…
+        - group "35 / 36" [ref=f16e1028]
+        - group "36 / 36" [ref=f16e1035]:
+          - generic [ref=f16e1037]:
+            - generic [ref=f16e1038]: Наталія
+            - generic [ref=f16e1045]: Python Mastery
+            - paragraph [ref=f16e1046]: Хочу висловити щиру подяку за бездоганну організацію та насичений змістовний відпочинок. Син отримав позитивний заряд емоцій, вмінь, знань,зустрів нових друзів. Кожен день у таборі був не схожий на інший. Від’їжджає…
+    - region [ref=f16e1047]:
+      - generic [ref=f16e1048]:
+        - heading "Проекти наших учнів" [level=2] [ref=f16e1050]
+        - list [ref=f16e1053]:
+          - listitem [ref=f16e1054]:
+            - heading "Максим, 12 років" [level=3] [ref=f16e1055]
+            - generic [ref=f16e1056]:
+              - img "Максим, учень курсу Python Start" [ref=f16e1057]
+              - generic [ref=f16e1058]: Python Start
+              - generic [ref=f16e1059]: Python
+            - paragraph [ref=f16e1060]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+          - listitem [ref=f16e1061]:
+            - heading "Максим, 12 років" [level=3] [ref=f16e1062]
+            - generic [ref=f16e1063]:
+              - img "Максим, учень курсу Python Start" [ref=f16e1064]
+              - generic [ref=f16e1065]: Python Start
+              - generic [ref=f16e1066]: Python
+            - paragraph [ref=f16e1067]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+          - listitem [ref=f16e1068]:
+            - generic [ref=f16e1069]:
+              - generic [ref=f16e1070]: Python Start
+              - heading "Максим, 12 років" [level=3] [ref=f16e1071]
+              - paragraph [ref=f16e1072]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+              - link "Дивитись відеовідгук" [ref=f16e1073] [cursor=pointer]:
+                - /url: https://www.youtube.com/watch?v=7QN3QcMHMQ4
+              - link "Безкоштовний пробний урок" [ref=f16e1075] [cursor=pointer]:
+                - /url: "#lead-form"
+            - img "Гра, створена учнем на курсі Python Start" [ref=f16e1078]
+          - listitem [ref=f16e1079]:
+            - heading "Максим, 12 років" [level=3] [ref=f16e1080]
+            - generic [ref=f16e1081]:
+              - img "Максим, учень курсу Python Start" [ref=f16e1082]
+              - generic [ref=f16e1083]: Python Start
+              - generic [ref=f16e1084]: Python
+            - paragraph [ref=f16e1085]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+          - listitem [ref=f16e1086]:
+            - heading "Максим, 12 років" [level=3] [ref=f16e1087]
+            - generic [ref=f16e1088]:
+              - img "Максим, учень курсу Python Start" [ref=f16e1089]
+              - generic [ref=f16e1090]: Python Start
+              - generic [ref=f16e1091]: Python
+            - paragraph [ref=f16e1092]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+          - listitem [ref=f16e1093]:
+            - heading "Максим, 12 років" [level=3] [ref=f16e1094]
+            - generic [ref=f16e1095]:
+              - img "Максим, учень курсу Python Start" [ref=f16e1096]
+              - generic [ref=f16e1097]: Python Start
+              - generic [ref=f16e1098]: Python
+            - paragraph [ref=f16e1099]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+    - region [ref=f16e1100]:
+      - generic [ref=f16e1101]:
+        - generic [ref=f16e1102]:
+          - heading "Знайдіть свою школу або навчайтесь онлайн" [level=2] [ref=f16e1103]
+          - paragraph [ref=f16e1104]: Наші школи у 130 містах України — знайдіть зручний варіант поруч із вами або навчайтесь онлайн.
+        - group "Формат навчання" [ref=f16e1105]:
+          - button "Навчатися у нашому місті" [ref=f16e1106] [cursor=pointer]
+          - button "Онлайн навчання" [ref=f16e1107] [cursor=pointer]
+        - generic [ref=f16e1108]:
+          - paragraph [ref=f16e1111]: Завантажуємо карту областей...
+          - generic [ref=f16e1112]:
+            - heading "Оберіть місто навчання" [level=3] [ref=f16e1113]
+            - paragraph [ref=f16e1114]: Ми підкажемо зручний варіант у вибраній області.
+            - heading "Дніпропетровська область" [level=4] [ref=f16e1115]
+    - generic [ref=f16e1118]:
+      - generic [ref=f16e1119]:
+        - heading "Медіа-центр" [level=2] [ref=f16e1120]
+        - paragraph [ref=f16e1121]: Новини, події та корисні матеріали про навчання, розвиток дітей і світ технологій.
+        - generic [ref=f16e1122]:
+          - link "Запис на безкоштовний урок" [ref=f16e1123] [cursor=pointer]:
+            - /url: http://logika.ddev.site/#lead-form
+          - link "Перейти до Медіа-центру" [ref=f16e1126] [cursor=pointer]:
+            - /url: http://logika.ddev.site/media-center/
+      - generic [ref=f16e1130]:
+        - generic [ref=f16e1131]:
+          - article [ref=f16e1132]:
+            - generic [ref=f16e1133]:
+              - generic [ref=f16e1134]: Logika Новини
+              - generic [ref=f16e1135]: Корисне для батьків
+          - generic [ref=f16e1136]:
+            - heading "Що нового у Logika" [level=3] [ref=f16e1137]
+            - paragraph [ref=f16e1138]: Актуальні новини, події та важливі оновлення школи.
+            - link "Перейти до розділу" [ref=f16e1139] [cursor=pointer]:
+              - /url: /media-center/
+          - article [ref=f16e1142]:
+            - generic [ref=f16e1143]: Logika Конкурси
+            - generic [ref=f16e1144]:
+              - heading "Конкурси від Logika" [level=3] [ref=f16e1145]
+              - paragraph [ref=f16e1146]: Беріть участь у хакатонах, змаганнях, творчих ініціативах і отримуйте нагороди за призові місця.
+            - link "Переглянути усі конкурси" [ref=f16e1147] [cursor=pointer]:
+              - /url: /media-center/
+        - generic [ref=f16e1150]:
+          - article [ref=f16e1151]:
+            - generic [ref=f16e1152]: Акція
+            - generic [ref=f16e1153]:
+              - heading "1=2" [level=3] [ref=f16e1154]
+              - heading "на усі курси 14-17 років" [level=4] [ref=f16e1155]
+              - paragraph [ref=f16e1156]: Купуйте один курс та отримуйте другий у подарунок
+            - link "Дізнатись більше" [ref=f16e1157] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+          - article [ref=f16e1160]:
+            - generic [ref=f16e1161]: Акція
+            - generic [ref=f16e1162]:
+              - heading "-10%" [level=3] [ref=f16e1163]
+              - heading "на обрані курси" [level=4] [ref=f16e1164]
+              - paragraph [ref=f16e1165]: Спробуйте навчання за вигідною ціною
+            - link "Дізнатись більше" [ref=f16e1166] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+          - article [ref=f16e1169]:
+            - generic [ref=f16e1170]: Конкурс
+            - heading "LogiRace 2026" [level=3] [ref=f16e1171]
+            - paragraph [ref=f16e1172]: "Уявіть майбутнє і створіть свій світ на Червоній планеті: ландшафт, технології, роботів, транспорт, ресурси та екосистему."
+            - link "Дізнатись більше" [ref=f16e1173] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+        - generic [ref=f16e1176]:
+          - link "Відеоігри — чи є плюси? Logika Блог Відеоігри — чи є плюси? 26.10.2021 1 хв 1" [ref=f16e1177] [cursor=pointer]:
+            - /url: http://logika.ddev.site/media-center/articles/videogames/
+            - img "Відеоігри — чи є плюси?" [ref=f16e1178]
+            - generic [ref=f16e1179]: Logika Блог
+            - heading "Відеоігри — чи є плюси?" [level=3] [ref=f16e1180]
+            - paragraph [ref=f16e1181]:
+              - generic [ref=f16e1182]: 26.10.2021
+              - generic [ref=f16e1183]: 1 хв
+              - generic [ref=f16e1184]: "1"
+          - 'link "Розвиток майбутніх програмістів: як допомогти? Logika Блог Розвиток майбутніх програмістів: як допомогти? 14.10.2021 1 хв 1" [ref=f16e1185] [cursor=pointer]':
+            - /url: http://logika.ddev.site/media-center/articles/developmentofyoungprogrammers/
+            - 'img "Розвиток майбутніх програмістів: як допомогти?" [ref=f16e1186]'
+            - generic [ref=f16e1187]: Logika Блог
+            - 'heading "Розвиток майбутніх програмістів: як допомогти?" [level=3] [ref=f16e1188]'
+            - paragraph [ref=f16e1189]:
+              - generic [ref=f16e1190]: 14.10.2021
+              - generic [ref=f16e1191]: 1 хв
+              - generic [ref=f16e1192]: "1"
+          - link "Концентрація уваги — міф чи реальність? Logika Блог Концентрація уваги — міф чи реальність? 20.09.2021 1 хв 1" [ref=f16e1193] [cursor=pointer]:
+            - /url: http://logika.ddev.site/media-center/articles/concentration/
+            - img "Концентрація уваги — міф чи реальність?" [ref=f16e1194]
+            - generic [ref=f16e1195]: Logika Блог
+            - heading "Концентрація уваги — міф чи реальність?" [level=3] [ref=f16e1196]
+            - paragraph [ref=f16e1197]:
+              - generic [ref=f16e1198]: 20.09.2021
+              - generic [ref=f16e1199]: 1 хв
+              - generic [ref=f16e1200]: "1"
+    - generic [ref=f16e1203]:
+      - generic [ref=f16e1205]:
+        - generic [ref=f16e1206]:
+          - heading "Підберемо курс саме для вашої дитини!" [level=2] [ref=f16e1207]
+          - paragraph [ref=f16e1208]: Ми зателефонуємо в зручний час
+        - generic [ref=f16e1209]:
+          - textbox "Ім’я" [ref=f16e1210]
+          - generic [ref=f16e1213]:
+            - combobox "Обрана країна" [ref=f16e1215]
+            - textbox "Номер телефону" [ref=f16e1218]
+          - button "Оберіть місто" [ref=f16e1220] [cursor=pointer]
+          - generic [ref=f16e1222]:
+            - combobox
+            - button "Вік дитини (від 7 до 17)" [ref=f16e1223] [cursor=pointer]
+        - generic [ref=f16e1225]:
+          - button "Отримати консультацію" [ref=f16e1226] [cursor=pointer]
+          - paragraph [ref=f16e1229]:
+            - text: Натискаючи, ви погоджуєтесь із
+            - link "Політикою конфіденційності" [ref=f16e1230] [cursor=pointer]:
+              - /url: http://logika.ddev.site/privacy-policy/
+        - textbox
+      - generic [ref=f16e1231]:
+        - img "cta girl" [ref=f16e1234]
+        - img "cta-icon" [ref=f16e1236]
+    - generic [ref=f16e1241]:
+      - heading "Питання та відповіді" [level=2] [ref=f16e1242]
+      - list [ref=f16e1243]:
+        - listitem [ref=f16e1244]:
+          - button "Скільки коштує навчання в Logika?" [ref=f16e1245] [cursor=pointer]
+          - paragraph [ref=f16e1248]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=f16e1249]:
+          - button "З якого віку можна навчатися в Logika?" [ref=f16e1250] [cursor=pointer]
+          - paragraph [ref=f16e1252]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=f16e1253]:
+          - button "Чи потрібен досвід у програмуванні або англійській?" [ref=f16e1254] [cursor=pointer]
+          - paragraph [ref=f16e1256]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=f16e1257]:
+          - button "Як проходять заняття?" [ref=f16e1258] [cursor=pointer]
+          - paragraph [ref=f16e1260]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=f16e1261]:
+          - button "Що отримає дитина під час навчання?" [ref=f16e1262] [cursor=pointer]
+          - paragraph [ref=f16e1264]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=f16e1265]:
+          - button "Як записатися на безкоштовний пробний урок?" [ref=f16e1266] [cursor=pointer]
+          - paragraph [ref=f16e1268]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=f16e1269]:
+          - button "Чим Logika відрізняється від інших шкіл?" [ref=f16e1270] [cursor=pointer]
+          - paragraph [ref=f16e1272]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+    - region [ref=f16e1273]:
+      - generic [ref=f16e1275]:
+        - heading "Бажаєте залишити відгук?" [level=2] [ref=f16e1276]
+        - link "Написати директору" [ref=f16e1277] [cursor=pointer]:
+          - /url: "#lead-form"
+    - generic [ref=f16e1283]:
+      - generic [ref=f16e1284]:
+        - heading "Ура, подарункові сертифікати" [level=2] [ref=f16e1285]
+        - heading "Вартість сертифікату на 2 місяці навчання = вартість 1-го місяця + вартість 2-го місяця зі знижкою 10%" [level=5] [ref=f16e1286]
+        - paragraph [ref=f16e1287]: "Залиште заявку, і ми зв'яжемось з вами: відповімо на будь-які запитання і допоможемо обрати курс"
+      - button "Залишити заявку" [ref=f16e1288] [cursor=pointer]
+    - generic [ref=f16e1295]:
+      - heading "Наші партнери" [level=2] [ref=f16e1296]
+      - list [ref=f16e1297]:
+        - listitem [ref=f16e1298]
+        - listitem [ref=f16e1300]
+        - listitem [ref=f16e1302]
+        - listitem [ref=f16e1304]
+        - listitem [ref=f16e1306]
+        - listitem [ref=f16e1308]
+        - listitem [ref=f16e1310]
+        - listitem [ref=f16e1312]
+  - contentinfo [ref=f16e1314]:
+    - generic [ref=f16e1316]:
+      - generic [ref=f16e1317]:
+        - generic [ref=f16e1318]:
+          - link [ref=f16e1319] [cursor=pointer]:
+            - /url: /
+            - img "Logika" [ref=f16e1320]
+          - generic [ref=f16e1321]: Найбільша в Україні школа програмування та англійської мови для учнів 7–17 років
+          - link "Спробувати безкоштовно" [ref=f16e1322] [cursor=pointer]:
+            - /url: http://logika.ddev.site/#lead-form
+        - generic [ref=f16e1325]:
+          - generic [ref=f16e1326]:
+            - generic [ref=f16e1327]: Навігація
+            - list [ref=f16e1328]:
+              - listitem [ref=f16e1329]:
+                - link "Про Logika" [ref=f16e1330] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/about/
+              - listitem [ref=f16e1331]:
+                - link "Курси" [ref=f16e1332] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/it-courses/
+              - listitem [ref=f16e1333]:
+                - link "IT Табори" [ref=f16e1334] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/camps/
+              - listitem [ref=f16e1335]:
+                - link "Медіа-центр" [ref=f16e1336] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/media-center/
+              - listitem [ref=f16e1337]:
+                - link "FAQ" [ref=f16e1338] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/faq/
+              - listitem [ref=f16e1339]:
+                - link "Контакти" [ref=f16e1340] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f16e1341]:
+            - generic [ref=f16e1342]: Інформація
+            - list [ref=f16e1343]:
+              - listitem [ref=f16e1344]:
+                - link "Вакансії" [ref=f16e1345] [cursor=pointer]:
+                  - /url: /vacancies/
+              - listitem [ref=f16e1346]:
+                - link [ref=f16e1347] [cursor=pointer]:
+                  - /url: /contractoffer/
+                  - text: Договір оферти
+                  - paragraph [ref=f16e1348]: (для клієнтів в Україні)
+              - listitem [ref=f16e1349]:
+                - link [ref=f16e1350] [cursor=pointer]:
+                  - /url: /contractoffer-overseas/
+                  - text: Договір оферти
+                  - paragraph [ref=f16e1351]: (для клієнтів поза межами України)
+              - listitem [ref=f16e1352]:
+                - link "Освітня ліцензія" [ref=f16e1353] [cursor=pointer]:
+                  - /url: /litsenziia/
+          - generic [ref=f16e1354]:
+            - generic [ref=f16e1355]:
+              - generic [ref=f16e1356]: Наші соц. мережі
+              - list [ref=f16e1357]:
+                - listitem [ref=f16e1358]:
+                  - link [ref=f16e1359] [cursor=pointer]:
+                    - /url: https://www.instagram.com/logika_it_school/
+                - listitem [ref=f16e1362]:
+                  - link [ref=f16e1363] [cursor=pointer]:
+                    - /url: https://www.facebook.com/logika.it.school/
+                - listitem [ref=f16e1366]:
+                  - link "TikTok" [ref=f16e1367] [cursor=pointer]:
+                    - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+            - generic [ref=f16e1370]:
+              - generic [ref=f16e1371]: Контакти
+              - link "+ 38 (093) 170-74-40" [ref=f16e1372] [cursor=pointer]:
+                - /url: tel:+380931707440
+              - link "kiev@logikaschool.com" [ref=f16e1373] [cursor=pointer]:
+                - /url: mailto:kiev@logikaschool.com
+      - generic [ref=f16e1374]:
+        - generic [ref=f16e1375]:
+          - paragraph [ref=f16e1376]: © 2026 Logika
+          - paragraph [ref=f16e1377]: Всі права захищені
+        - link "Політика конфіденційності" [ref=f16e1378] [cursor=pointer]:
+          - /url: http://logika.ddev.site/privacy-policy/

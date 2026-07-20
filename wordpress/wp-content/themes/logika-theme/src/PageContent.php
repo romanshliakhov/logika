@@ -26,7 +26,7 @@ final class Logika_Theme_Page_Content {
 			'it_courses_hero_title' => 'Найбільша в Україні школа програмування для дітей 7-17 років',
 			'it_courses_hero_text' => 'Перші результати вже через 4 тижні',
 			'it_courses_catalog_title' => 'Курси програмування для дітей 7-17 років',
-			'it_courses_categories_title' => 'Курси для дітей 7-8 років',
+			'it_courses_categories_title' => 'Курси для дітей 7 - 8 років',
 			'it_courses_map_title' => 'Знайдіть свою школу або<br>навчайтесь онлайн',
 			'it_courses_map_text' => 'Наші школи у 130 містах України - знайдіть зручний варіант поруч із вами або навчайтесь онлайн.',
 			'it_courses_cta_title' => 'Підберемо курс саме для вашої дитини!',
@@ -418,7 +418,7 @@ final class Logika_Theme_Page_Content {
 					$card = $template[0];
 					$min = (int) get_field( 'course_age_min', $id );
 					$max = (int) get_field( 'course_age_max', $id );
-					$age = $min ? $min . ( $max ? '-' . $max : '+' ) . ' років' : '';
+					$age = $min ? $min . ( $max ? ' - ' . $max : '+' ) . ' років' : '';
 					$card = $age ? self::replaceLeaf( $card, '#(<span class="course-card__label">)(.*?)(</span>)#s', $age ) : $card;
 					$card = self::replaceLeaf( $card, '#(<span class="course-card__title h4">)(.*?)(</span>)#s', get_the_title( $id ) );
 					$text = trim( (string) get_field( 'course_card_description', $id ) ) ?: trim( (string) get_field( 'course_short_description', $id ) );
@@ -836,6 +836,7 @@ final class Logika_Theme_Page_Content {
 		}
 		if ( $course_field ) {
 			$courses = self::published( (array) get_field( $course_field, $page_id ), 'course' );
+			$courses = array_values( array_filter( $courses, static fn( int $id ): bool => 'english-b2-1' !== get_post_field( 'post_name', $id ) ) );
 			if ( $courses ) {
 				$markup = self::applyEnglishCourses( $markup, $courses );
 			}
@@ -883,7 +884,7 @@ final class Logika_Theme_Page_Content {
 			$item = $templates[0][ min( $index, count( $templates[0] ) - 1 ) ];
 			$min = (int) get_field( 'course_age_min', $id );
 			$max = (int) get_field( 'course_age_max', $id );
-			$age = $min ? $min . ( $max ? '-' . $max : '+' ) . ' років' : '';
+			$age = $min ? $min . ( $max ? ' - ' . $max : '+' ) . ' років' : '';
 			$item = $age ? self::replaceLeaf( $item, '#(<div class="english-level__ages">)(.*?)(</div>)#s', $age ) : $item;
 			$item = self::replaceLeaf( $item, '#(<span class="h4">)(.*?)(</span>)#s', get_the_title( $id ) );
 			$text = trim( (string) get_field( 'course_short_description', $id ) );

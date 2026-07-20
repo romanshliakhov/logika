@@ -33,17 +33,6 @@
       "instructions": "Вкажіть значення для поля «Сезон»."
     },
     {
-      "key": "field_camp_format",
-      "label": "Формат навчання",
-      "name": "camp_format",
-      "type": "taxonomy",
-      "taxonomy": "learning_format",
-      "field_type": "select",
-      "required": 1,
-      "return_format": "id",
-      "instructions": "Оберіть значення для поля «Формат навчання»."
-    },
-    {
       "key": "field_camp_related_cities",
       "label": "Міста",
       "name": "camp_related_cities",

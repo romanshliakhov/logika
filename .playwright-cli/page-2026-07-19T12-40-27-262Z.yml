@@ -1,0 +1,405 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e4]:
+    - generic [ref=f21e5]:
+      - generic [ref=f21e6]: "Телефон:"
+      - link "+ 38 (093) 170-74-40" [ref=f21e10] [cursor=pointer]:
+        - /url: tel:+380931707440
+    - generic [ref=f21e11]:
+      - generic [ref=f21e12]: "Email:"
+      - link "kiev@logikaschool.com" [ref=f21e16] [cursor=pointer]:
+        - /url: mailto:kiev@logikaschool.com
+    - generic [ref=f21e17]:
+      - generic [ref=f21e18]: "Соц. мережі:"
+      - list [ref=f21e19]:
+        - listitem [ref=f21e20]:
+          - link [ref=f21e21] [cursor=pointer]:
+            - /url: https://www.instagram.com/logika_it_school/
+        - listitem [ref=f21e24]:
+          - link [ref=f21e25] [cursor=pointer]:
+            - /url: https://www.facebook.com/logika.it.school/
+        - listitem [ref=f21e28]:
+          - link "TikTok" [ref=f21e29] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+  - banner [ref=f21e32]:
+    - generic [ref=f21e34]:
+      - link [ref=f21e36] [cursor=pointer]:
+        - /url: /
+        - img "Logika" [ref=f21e37]
+      - generic [ref=f21e39]:
+        - button [ref=f21e41] [cursor=pointer]:
+          - paragraph [ref=f21e45]: Оберіть місто
+        - generic [ref=f21e48]:
+          - navigation [ref=f21e49]:
+            - list [ref=f21e50]:
+              - listitem [ref=f21e51]:
+                - link "Про Logika" [ref=f21e52] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=f21e53]:
+                - link "Курси" [ref=f21e54] [cursor=pointer]:
+                  - /url: /it-courses/
+                - button
+              - listitem [ref=f21e55]:
+                - link "IT-табори" [ref=f21e56] [cursor=pointer]:
+                  - /url: /camps/
+              - listitem [ref=f21e57]:
+                - link "Медіа-центр" [ref=f21e58] [cursor=pointer]:
+                  - /url: /media-center/
+              - listitem [ref=f21e59]:
+                - link "FAQ" [ref=f21e60] [cursor=pointer]:
+                  - /url: /faq/
+              - listitem [ref=f21e61]:
+                - link "Вакансії" [ref=f21e62] [cursor=pointer]:
+                  - /url: /vacancies/
+          - generic [ref=f21e63]:
+            - link "Увійти" [ref=f21e64] [cursor=pointer]:
+              - /url: https://student.logikaschool.com.ua/login
+            - link "Пробний урок" [ref=f21e68] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+  - generic [ref=f21e71]:
+    - link "Головна" [ref=f21e72] [cursor=pointer]:
+      - /url: http://logika.ddev.site/
+    - generic [ref=f21e73]: /
+    - link "Курси" [ref=f21e74] [cursor=pointer]:
+      - /url: http://logika.ddev.site/it-courses/
+    - generic [ref=f21e75]: /
+    - text: Рівень A1
+  - main [ref=f21e76]:
+    - generic [ref=f21e80]:
+      - paragraph [ref=f21e81]: Курс англійської мови A1
+      - heading "Рівень A1" [level=1] [ref=f21e82]
+      - paragraph [ref=f21e83]: Розмовляємо про щоденне життя, родину, подорожі та інтереси.
+      - link "Записатися на безкоштовний урок" [ref=f21e84] [cursor=pointer]:
+        - /url: "#lead-form"
+    - generic [ref=f21e87]:
+      - generic [ref=f21e88]:
+        - generic [ref=f21e89]:
+          - paragraph [ref=f21e90]: Logika English
+          - heading "Англійська, якою хочеться говорити" [level=2] [ref=f21e91]
+        - generic [ref=f21e92]:
+          - article [ref=f21e93]:
+            - heading "Говоримо з першого заняття" [level=3] [ref=f21e94]
+            - paragraph [ref=f21e95]: Замість пасивного запам’ятовування — жива англійська у діалогах, іграх та проєктах.
+          - article [ref=f21e96]:
+            - heading "Розуміємо, а не зазубрюємо" [level=3] [ref=f21e97]
+            - paragraph [ref=f21e98]: Пояснюємо граматику на прикладах і відразу використовуємо її в мовленні.
+          - article [ref=f21e99]:
+            - heading "Навчаємося через інтереси" [level=3] [ref=f21e100]
+            - paragraph [ref=f21e101]: Теми, матеріали й завдання відповідають віку та інтересам дітей.
+      - figure [ref=f21e102]
+    - generic [ref=f21e104]:
+      - figure [ref=f21e105]
+      - generic [ref=f21e106]:
+        - generic [ref=f21e107]:
+          - paragraph [ref=f21e108]: Результат курсу
+          - heading "Ваша дитина зможе" [level=2] [ref=f21e109]
+        - list [ref=f21e110]:
+          - listitem [ref=f21e111]:
+            - generic [ref=f21e112]: "01"
+            - text: Підтримає простий діалог у знайомих ситуаціях
+          - listitem [ref=f21e113]:
+            - generic [ref=f21e114]: "02"
+            - text: Навчиться розповідати про свої плани та вподобання
+          - listitem [ref=f21e115]:
+            - generic [ref=f21e116]: "03"
+            - text: Збільшить активний словниковий запас
+    - generic [ref=f21e118]:
+      - generic [ref=f21e119]:
+        - paragraph [ref=f21e120]: Формат навчання
+        - heading "На заняттях багато практики" [level=2] [ref=f21e121]
+      - generic [ref=f21e122]:
+        - article [ref=f21e123]:
+          - generic [ref=f21e124]: "01"
+          - heading "2 заняття на тиждень" [level=3] [ref=f21e125]
+          - paragraph [ref=f21e126]: Стабільний темп, який допомагає бачити прогрес без перевантаження.
+        - article [ref=f21e127]:
+          - generic [ref=f21e128]: "02"
+          - heading "Рівень визначаємо тестуванням" [level=3] [ref=f21e129]
+          - paragraph [ref=f21e130]: Дитина навчається в групі, де комфортно говорити та розвиватися.
+        - article [ref=f21e131]:
+          - generic [ref=f21e132]: "03"
+          - heading "Практика та проєкти" [level=3] [ref=f21e133]
+          - paragraph [ref=f21e134]: Кожне заняття поєднує лексику, граматику, сприйняття на слух і розмову.
+    - generic [ref=f21e136]:
+      - generic [ref=f21e137]:
+        - paragraph [ref=f21e138]: Більше, ніж мова
+        - heading "Розвиваємо важливі навички" [level=2] [ref=f21e139]
+      - list [ref=f21e140]:
+        - listitem [ref=f21e141]:
+          - generic [ref=f21e142]: "01"
+          - text: Упевненість у спілкуванні
+        - listitem [ref=f21e143]:
+          - generic [ref=f21e144]: "02"
+          - text: Критичне мислення
+        - listitem [ref=f21e145]:
+          - generic [ref=f21e146]: "03"
+          - text: Уміння презентувати себе
+        - listitem [ref=f21e147]:
+          - generic [ref=f21e148]: "04"
+          - text: Командна робота
+        - listitem [ref=f21e149]:
+          - generic [ref=f21e150]: "05"
+          - text: Самостійність у навчанні
+    - generic [ref=f21e152]:
+      - generic [ref=f21e153]:
+        - paragraph [ref=f21e154]: Програма
+        - heading "Що вивчатиме дитина" [level=2] [ref=f21e155]
+      - list [ref=f21e156]:
+        - listitem [ref=f21e157]:
+          - button "Модуль 1. Моє щоденне життя" [ref=f21e158] [cursor=pointer]:
+            - text: Модуль 1. Моє щоденне життя
+            - generic [ref=f21e159]: +
+          - list [ref=f21e160]:
+            - listitem [ref=f21e161]: •Мій типовий день
+            - listitem [ref=f21e162]: •У школі
+            - listitem [ref=f21e163]: •На вихідних
+        - listitem [ref=f21e164]:
+          - button "Модуль 2. У місті" [ref=f21e165] [cursor=pointer]:
+            - text: Модуль 2. У місті
+            - generic [ref=f21e166]: +
+          - list [ref=f21e167]:
+            - listitem [ref=f21e168]: •Локації та об’єкти
+            - listitem [ref=f21e169]: •Транспорт
+        - listitem [ref=f21e170]:
+          - button "Модуль 3. Симпатії та антипатії" [ref=f21e171] [cursor=pointer]:
+            - text: Модуль 3. Симпатії та антипатії
+            - generic [ref=f21e172]: +
+          - list [ref=f21e173]:
+            - listitem [ref=f21e174]: •Хобі
+            - listitem [ref=f21e175]: •Фільми та книги
+        - listitem [ref=f21e176]:
+          - button "Модуль 4. Моя родина" [ref=f21e177] [cursor=pointer]:
+            - text: Модуль 4. Моя родина
+            - generic [ref=f21e178]: +
+          - list [ref=f21e179]:
+            - listitem [ref=f21e180]: •Члени родини
+            - listitem [ref=f21e181]: •Зовнішній вигляд і характер
+        - listitem [ref=f21e182]:
+          - button "Модуль 5. Вдома" [ref=f21e183] [cursor=pointer]:
+            - text: Модуль 5. Вдома
+            - generic [ref=f21e184]: +
+          - list [ref=f21e185]:
+            - listitem [ref=f21e186]: •У моєму будинку
+            - listitem [ref=f21e187]: •Домашні справи
+        - listitem [ref=f21e188]:
+          - button "Модуль 6. Їжа" [ref=f21e189] [cursor=pointer]:
+            - text: Модуль 6. Їжа
+            - generic [ref=f21e190]: +
+          - list [ref=f21e191]:
+            - listitem [ref=f21e192]: •Типи їжі
+            - listitem [ref=f21e193]: •Рецепти та кафе
+        - listitem [ref=f21e194]:
+          - button "Модуль 7. Подорожі" [ref=f21e195] [cursor=pointer]:
+            - text: Модуль 7. Подорожі
+            - generic [ref=f21e196]: +
+          - list [ref=f21e197]:
+            - listitem [ref=f21e198]: •Види транспорту
+            - listitem [ref=f21e199]: •В аеропорту
+        - listitem [ref=f21e200]:
+          - button "Модуль 8. Шопінг" [ref=f21e201] [cursor=pointer]:
+            - text: Модуль 8. Шопінг
+            - generic [ref=f21e202]: +
+          - list [ref=f21e203]:
+            - listitem [ref=f21e204]: •Магазини
+            - listitem [ref=f21e205]: •Купуємо одяг
+        - listitem [ref=f21e206]:
+          - button "Модуль 9. В інтернеті" [ref=f21e207] [cursor=pointer]:
+            - text: Модуль 9. В інтернеті
+            - generic [ref=f21e208]: +
+          - list [ref=f21e209]:
+            - listitem [ref=f21e210]: •Технології та пристрої
+            - listitem [ref=f21e211]: •Соціальні мережі
+        - listitem [ref=f21e212]:
+          - button "Модуль 10. Навколо природи" [ref=f21e213] [cursor=pointer]:
+            - text: Модуль 10. Навколо природи
+            - generic [ref=f21e214]: +
+          - list [ref=f21e215]:
+            - listitem [ref=f21e216]: •У дикій природі
+            - listitem [ref=f21e217]: •Погода
+    - region [ref=f21e218]:
+      - generic [ref=f21e219]:
+        - generic [ref=f21e220]:
+          - heading "Знайдіть свою школу або навчайтесь онлайн" [level=2] [ref=f21e221]: Знайдіть свою школу абонавчайтесь онлайн
+          - paragraph [ref=f21e222]: Наші школи у 130 містах України — знайдіть зручний варіант поруч із вами або навчайтесь онлайн.
+        - group "Формат навчання" [ref=f21e223]:
+          - button "Навчатися у нашому місті" [ref=f21e224] [cursor=pointer]
+          - button "Онлайн навчання" [ref=f21e225] [cursor=pointer]
+        - generic [ref=f21e226]:
+          - paragraph [ref=f21e229]: Завантажуємо карту областей...
+          - generic [ref=f21e230]:
+            - heading "Оберіть місто навчання" [level=3] [ref=f21e231]
+            - paragraph [ref=f21e232]: Ми підкажемо зручний варіант у вибраній області.
+            - heading "Дніпропетровська область" [level=4] [ref=f21e233]
+    - generic [ref=f21e238]:
+      - generic [ref=f21e239]:
+        - heading "Підберемо курс саме для вашої дитини!" [level=2] [ref=f21e240]
+        - paragraph [ref=f21e241]: Ми зателефонуємо в зручний час
+      - generic [ref=f21e242]:
+        - textbox "Ім’я" [ref=f21e243]
+        - generic [ref=f21e245]:
+          - combobox "Обрана країна" [ref=f21e247]
+          - textbox "Номер телефону" [ref=f21e250]
+        - button "Оберіть місто" [ref=f21e252] [cursor=pointer]
+        - generic [ref=f21e254]:
+          - combobox
+          - button "Вік дитини (від 7 до 17)" [ref=f21e255] [cursor=pointer]
+      - textbox
+      - generic [ref=f21e257]:
+        - button "Отримати консультацію" [ref=f21e258] [cursor=pointer]
+        - paragraph [ref=f21e259]:
+          - text: Натискаючи, ви погоджуєтесь із
+          - link "Політикою конфідційності" [ref=f21e260] [cursor=pointer]:
+            - /url: http://logika.ddev.site/privacy-policy/
+        - paragraph
+    - generic [ref=f21e266]:
+      - generic [ref=f21e267]:
+        - heading "Доступні курси" [level=2] [ref=f21e268]
+        - paragraph [ref=f21e269]: Для дітей від 8 до 17 років
+      - list [ref=f21e270]:
+        - listitem [ref=f21e271]:
+          - generic [ref=f21e272]:
+            - generic [ref=f21e273]: 8-10 років
+            - img "Рівень A0" [ref=f21e275]
+            - generic [ref=f21e276]:
+              - generic [ref=f21e277]: Рівень A0
+              - paragraph [ref=f21e278]: 8-10 років
+            - generic [ref=f21e279]:
+              - link "Записатись" [ref=f21e280] [cursor=pointer]:
+                - /url: "#lead-form"
+              - link "Детальніше" [ref=f21e281] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a0/
+        - listitem [ref=f21e282]:
+          - generic [ref=f21e283]:
+            - generic [ref=f21e284]: 12-13 років
+            - img "Рівень A2" [ref=f21e286]
+            - generic [ref=f21e287]:
+              - generic [ref=f21e288]: Рівень A2
+              - paragraph [ref=f21e289]: 12-13 років
+            - generic [ref=f21e290]:
+              - link "Записатись" [ref=f21e291] [cursor=pointer]:
+                - /url: "#lead-form"
+              - link "Детальніше" [ref=f21e292] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a2/
+        - listitem [ref=f21e293]:
+          - generic [ref=f21e294]:
+            - generic [ref=f21e295]: 13-15 років
+            - img "Рівень B1" [ref=f21e297]
+            - generic [ref=f21e298]:
+              - generic [ref=f21e299]: Рівень B1
+              - paragraph [ref=f21e300]: 13-15 років
+            - generic [ref=f21e301]:
+              - link "Записатись" [ref=f21e302] [cursor=pointer]:
+                - /url: "#lead-form"
+              - link "Детальніше" [ref=f21e303] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b1/
+        - listitem [ref=f21e304]:
+          - generic [ref=f21e305]:
+            - generic [ref=f21e306]: 15-17 років
+            - img "Рівень B2" [ref=f21e308]
+            - generic [ref=f21e309]:
+              - generic [ref=f21e310]: Рівень B2
+              - paragraph [ref=f21e311]: 15-17 років
+            - generic [ref=f21e312]:
+              - link "Записатись" [ref=f21e313] [cursor=pointer]:
+                - /url: "#lead-form"
+              - link "Детальніше" [ref=f21e314] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2/
+        - listitem [ref=f21e315]:
+          - generic [ref=f21e316]:
+            - generic [ref=f21e317]: 8-17 років
+            - img "Рівень B2.1" [ref=f21e319]
+            - generic [ref=f21e320]:
+              - generic [ref=f21e321]: Рівень B2.1
+              - paragraph [ref=f21e322]: 8-17 років
+            - generic [ref=f21e323]:
+              - link "Записатись" [ref=f21e324] [cursor=pointer]:
+                - /url: "#lead-form"
+              - link "Детальніше" [ref=f21e325] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2-1/
+    - generic [ref=f21e328]:
+      - heading "Питання та відповіді" [level=2] [ref=f21e329]
+      - list [ref=f21e330]:
+        - listitem [ref=f21e331]:
+          - button "Чи можна відвідати пробний урок?" [ref=f21e332] [cursor=pointer]
+          - paragraph [ref=f21e334]: Так, перед початком навчання дитина може відвідати безкоштовний пробний урок, познайомитися з викладачем і спробувати формат занять.
+        - listitem [ref=f21e335]:
+          - button "Для якого віку підходять курси?" [ref=f21e336] [cursor=pointer]
+          - paragraph [ref=f21e338]: Курси англійської мови підходять дітям від 7 до 17 років. Групу підбираємо за віком і рівнем підготовки, щоб навчання було комфортним та ефективним.
+        - listitem [ref=f21e339]:
+          - button "У якому форматі проходить навчання?" [ref=f21e340] [cursor=pointer]
+          - paragraph [ref=f21e342]: Навчання проходить офлайн у школах Logika у вашому місті або онлайн у невеликих групах. В обох форматах є живе спілкування, практика та підтримка викладача.
+  - contentinfo [ref=f21e343]:
+    - generic [ref=f21e345]:
+      - generic [ref=f21e346]:
+        - generic [ref=f21e347]:
+          - link [ref=f21e348] [cursor=pointer]:
+            - /url: /
+            - img "Logika" [ref=f21e349]
+          - generic [ref=f21e350]: Найбільша в Україні школа програмування та англійської мови для учнів 7–17 років
+          - link "Спробувати безкоштовно" [ref=f21e351] [cursor=pointer]:
+            - /url: http://logika.ddev.site/#lead-form
+        - generic [ref=f21e354]:
+          - generic [ref=f21e355]:
+            - generic [ref=f21e356]: Навігація
+            - list [ref=f21e357]:
+              - listitem [ref=f21e358]:
+                - link "Про Logika" [ref=f21e359] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/about/
+              - listitem [ref=f21e360]:
+                - link "Курси" [ref=f21e361] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/it-courses/
+              - listitem [ref=f21e362]:
+                - link "IT Табори" [ref=f21e363] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/camps/
+              - listitem [ref=f21e364]:
+                - link "Медіа-центр" [ref=f21e365] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/media-center/
+              - listitem [ref=f21e366]:
+                - link "FAQ" [ref=f21e367] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/faq/
+              - listitem [ref=f21e368]:
+                - link "Контакти" [ref=f21e369] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f21e370]:
+            - generic [ref=f21e371]: Інформація
+            - list [ref=f21e372]:
+              - listitem [ref=f21e373]:
+                - link "Вакансії" [ref=f21e374] [cursor=pointer]:
+                  - /url: /vacancies/
+              - listitem [ref=f21e375]:
+                - link [ref=f21e376] [cursor=pointer]:
+                  - /url: /contractoffer/
+                  - text: Договір оферти
+                  - paragraph [ref=f21e377]: (для клієнтів в Україні)
+              - listitem [ref=f21e378]:
+                - link [ref=f21e379] [cursor=pointer]:
+                  - /url: /contractoffer-overseas/
+                  - text: Договір оферти
+                  - paragraph [ref=f21e380]: (для клієнтів поза межами України)
+              - listitem [ref=f21e381]:
+                - link "Освітня ліцензія" [ref=f21e382] [cursor=pointer]:
+                  - /url: /litsenziia/
+          - generic [ref=f21e383]:
+            - generic [ref=f21e384]:
+              - generic [ref=f21e385]: Наші соц. мережі
+              - list [ref=f21e386]:
+                - listitem [ref=f21e387]:
+                  - link [ref=f21e388] [cursor=pointer]:
+                    - /url: https://www.instagram.com/logika_it_school/
+                - listitem [ref=f21e391]:
+                  - link [ref=f21e392] [cursor=pointer]:
+                    - /url: https://www.facebook.com/logika.it.school/
+                - listitem [ref=f21e395]:
+                  - link "TikTok" [ref=f21e396] [cursor=pointer]:
+                    - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+            - generic [ref=f21e399]:
+              - generic [ref=f21e400]: Контакти
+              - link "+ 38 (093) 170-74-40" [ref=f21e401] [cursor=pointer]:
+                - /url: tel:+380931707440
+              - link "kiev@logikaschool.com" [ref=f21e402] [cursor=pointer]:
+                - /url: mailto:kiev@logikaschool.com
+      - generic [ref=f21e403]:
+        - generic [ref=f21e404]:
+          - paragraph [ref=f21e405]: © 2026 Logika
+          - paragraph [ref=f21e406]: Всі права захищені
+        - link "Політика конфіденційності" [ref=f21e407] [cursor=pointer]:
+          - /url: http://logika.ddev.site/privacy-policy/

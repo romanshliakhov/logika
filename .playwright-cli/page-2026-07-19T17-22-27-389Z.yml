@@ -1,0 +1,263 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e4]:
+    - generic [ref=f7e5]:
+      - generic [ref=f7e6]: "Телефон:"
+      - link "+ 38 (093) 170-74-40" [ref=f7e10] [cursor=pointer]:
+        - /url: tel:+380931707440
+    - generic [ref=f7e11]:
+      - generic [ref=f7e12]: "Email:"
+      - link "kiev@logikaschool.com" [ref=f7e16] [cursor=pointer]:
+        - /url: mailto:kiev@logikaschool.com
+    - generic [ref=f7e17]:
+      - generic [ref=f7e18]: "Соц. мережі:"
+      - list [ref=f7e19]:
+        - listitem [ref=f7e20]:
+          - link [ref=f7e21] [cursor=pointer]:
+            - /url: https://www.instagram.com/logika_it_school/
+        - listitem [ref=f7e24]:
+          - link [ref=f7e25] [cursor=pointer]:
+            - /url: https://www.facebook.com/logika.it.school/
+        - listitem [ref=f7e28]:
+          - link "TikTok" [ref=f7e29] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+  - banner [ref=f7e32]:
+    - generic [ref=f7e34]:
+      - link [ref=f7e36] [cursor=pointer]:
+        - /url: /
+        - img "Logika" [ref=f7e37]
+      - generic [ref=f7e39]:
+        - button [ref=f7e41] [cursor=pointer]:
+          - paragraph [ref=f7e45]: Оберіть місто
+        - generic [ref=f7e48]:
+          - navigation [ref=f7e49]:
+            - list [ref=f7e50]:
+              - listitem [ref=f7e51]:
+                - link "Про Logika" [ref=f7e52] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=f7e53]:
+                - link "Курси" [ref=f7e54] [cursor=pointer]:
+                  - /url: /it-courses/
+                - button
+              - listitem [ref=f7e55]:
+                - link "IT-табори" [ref=f7e56] [cursor=pointer]:
+                  - /url: /camps/
+              - listitem [ref=f7e57]:
+                - link "Медіа-центр" [ref=f7e58] [cursor=pointer]:
+                  - /url: /media-center/
+              - listitem [ref=f7e59]:
+                - link "FAQ" [ref=f7e60] [cursor=pointer]:
+                  - /url: /faq/
+              - listitem [ref=f7e61]:
+                - link "Вакансії" [ref=f7e62] [cursor=pointer]:
+                  - /url: /vacancies/
+          - generic [ref=f7e63]:
+            - link "Увійти" [ref=f7e64] [cursor=pointer]:
+              - /url: https://student.logikaschool.com.ua/login
+            - link "Пробний урок" [ref=f7e68] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+  - main [ref=f7e71]:
+    - generic [ref=f7e74]:
+      - generic [ref=f7e75]:
+        - link "Головна" [ref=f7e76] [cursor=pointer]:
+          - /url: http://logika.ddev.site/
+        - generic [ref=f7e77]: /
+        - text: Питання-відповідь
+      - generic [ref=f7e78]:
+        - generic [ref=f7e79]:
+          - generic [ref=f7e80]: FAQ
+          - generic [ref=f7e81]:
+            - heading "Часті запитання про навчання в Logika" [level=1] [ref=f7e82]
+            - paragraph [ref=f7e83]: Зібрали відповіді на найпоширеніші запитання про курси, формати навчання, розклад, вартість і викладачів.
+          - generic [ref=f7e84]:
+            - link "Найпоширеніші питання" [ref=f7e85] [cursor=pointer]:
+              - /url: "#faq"
+            - link "Безкоштовний пробний урок" [ref=f7e88] [cursor=pointer]:
+              - /url: "#lead-form"
+        - generic [ref=f7e91]:
+          - img "boy-character" [ref=f7e93]
+          - img "boy-character" [ref=f7e95]
+    - generic [ref=f7e98]:
+      - heading "Найпоширеніші питання" [level=2] [ref=f7e99]
+      - list [ref=f7e100]:
+        - listitem [ref=f7e101]:
+          - button "Як дізнатись ціну?" [ref=f7e102] [cursor=pointer]
+          - paragraph [ref=f7e104]: Залиште заявку на навчання, і найближчим часом з вами зв’яжеться наш менеджер-консультант, щоб розрахувати для вас фінальну вартість курсу. Вона залежить від того, який формат (онлайн або офлайн) і пакет (від 4 до 36 занять) ви оберете, а також від міста, можливих пільг і поточних знижок.
+        - listitem [ref=f7e105]:
+          - button "Який розклад занять?" [ref=f7e106] [cursor=pointer]
+          - paragraph [ref=f7e108]: Графік у кожної групи індивідуальний. Більшість груп з програмування займається по вихідним 1 раз на тиждень. Тривалість 1 заняття — 90 хв. З англійської мови заняття проходять двічі на тиждень, тривалість — 90 хв/заняття.
+        - listitem [ref=f7e109]:
+          - button "Чи потрібно дитині мати досвід в програмуванні, щоб навчатись в Logika?" [ref=f7e110] [cursor=pointer]
+          - paragraph [ref=f7e112]: Ні, досвід програмування не обов’язковий. Ми навчаємо з нуля.
+        - listitem [ref=f7e113]:
+          - button "Чи потрібно мати ноутбук для занять?" [ref=f7e114] [cursor=pointer]
+          - paragraph [ref=f7e116]: На уроки в класі ми забезпечуємо учнів всім необхідним. Для онлайн занять, а також для виконання домашньої практики потрібен комп’ютер (ноутбук). Програми курсів не вимагають надпотужного приладу.
+        - listitem [ref=f7e117]:
+          - button "Хто викладає курси?" [ref=f7e118] [cursor=pointer]
+          - paragraph [ref=f7e120]: У нас працюють висококваліфіковані викладачі з профільною освітою та досвідом роботи з дітьми. Всі викладачі проходять багаторівневе тестування та навчання за методологією Logika. Ми обираємо тих, хто закоханий у свою справу.
+        - listitem [ref=f7e121]:
+          - button "У нашому місті немає школи Logika. Чи можемо ми навчатись віддалено?" [ref=f7e122] [cursor=pointer]
+          - paragraph [ref=f7e124]: "Так! У Logika є своя онлайн-школа. Ви можете займатися з будь-якої точки світу: все, що потрібно – доступ до інтернету. А щоб викладач міг приділити увагу кожній дитині, онлайн-заняття проходять в невеликих групах до 12 дітей."
+        - listitem [ref=f7e125]:
+          - button "Чи отримає дитина диплом?" [ref=f7e126] [cursor=pointer]
+          - paragraph [ref=f7e128]: Так! По закінченню курсу у кожної групи є випускне заняття, де учні захищають свої проєкти та отримують іменні дипломи.
+    - generic [ref=f7e131]:
+      - heading "Довіра, підтверджена результатами" [level=2] [ref=f7e132]
+      - list [ref=f7e134]:
+        - listitem [ref=f7e135]
+        - listitem [ref=f7e142]:
+          - generic [ref=f7e144]:
+            - generic [ref=f7e145]: Олена
+            - generic [ref=f7e153]: Python Mastery
+            - paragraph [ref=f7e154]: Відгук із ACF для міста.
+        - listitem [ref=f7e155]:
+          - generic [ref=f7e157]:
+            - generic [ref=f7e158]: Тетяна
+            - generic [ref=f7e165]: Python Mastery
+            - paragraph [ref=f7e166]: Дякуємо безмежно🥰 Софійка в захваті, каже наступного року теж хоче їхати
+        - listitem [ref=f7e167]
+        - listitem [ref=f7e171]:
+          - generic [ref=f7e173]:
+            - generic [ref=f7e174]: Інна
+            - generic [ref=f7e181]: Python Mastery
+            - paragraph [ref=f7e182]: Щиро дякуємо організаторам за незабутні враження від відпочинку) Дитина хоче ще!
+        - listitem [ref=f7e183]:
+          - generic [ref=f7e185]:
+            - generic [ref=f7e186]: Роман
+            - generic [ref=f7e194]: Python Mastery
+            - paragraph [ref=f7e195]: Багато писати не збираюся, напишу коротко – дитині дуже подобається і це саме головне, як на мене! Подобаються як самі заняття, так і виконання домашніх завдань, підхід та гарне відношення…
+        - listitem [ref=f7e196]:
+          - generic [ref=f7e198]:
+            - generic [ref=f7e199]: Катерина
+            - generic [ref=f7e207]: Python Mastery
+            - paragraph [ref=f7e208]: Мене дуже тішить, що мій син нарешті чимось зацікавився сильно, а саме навчанням у школі Logika. До навчання у школі були суцільні стрілялки і гонки кожен день, зараз почав багато…
+        - listitem [ref=f7e209]:
+          - generic [ref=f7e211]:
+            - generic [ref=f7e212]: Аліна
+            - generic [ref=f7e220]: Python Mastery
+            - paragraph [ref=f7e221]: Щиро дякую всій вашій дружній команді за професіоналізм, за те, що працюєте на якість, за те, що переймаєтеся кожним учнем та його успіхами! Вже вкотре радіємо, що обрали для свого…
+        - listitem [ref=f7e222]
+        - listitem [ref=f7e226]:
+          - generic [ref=f7e228]:
+            - generic [ref=f7e229]: Вікторія
+            - generic [ref=f7e236]: Python Mastery
+            - paragraph [ref=f7e237]: Доброго дня, не знаю, можливо у Вас є чарівна паличка…Та Даша кожен наступний раз приїзджає з табору ще більше задоволена 🤗і водночас засмучена🙃, що так швидко пролетів час.Ваша робота безцінна,…
+        - listitem [ref=f7e238]
+        - listitem [ref=f7e242]:
+          - generic [ref=f7e244]:
+            - generic [ref=f7e245]: Sova
+            - generic [ref=f7e252]: Python Mastery
+            - paragraph [ref=f7e253]: Доброго вечора! Ви неймовірні!!!!! Діти мої у захваті!!!І вже чекають літнього табору! Ми з Сашком вже забронювали місце)))) Величезна подяка від Сашкового тата,він вже два роки на війні і такий…
+    - region [ref=f7e254]:
+      - generic [ref=f7e255]:
+        - generic [ref=f7e256]:
+          - heading "Знайдіть свою школу або навчайтесь онлайн" [level=2] [ref=f7e257]: Знайдіть свою школу абонавчайтесь онлайн
+          - paragraph [ref=f7e258]: Наші школи у 130 містах України — знайдіть зручний варіант поруч із вами або навчайтесь онлайн.
+        - group "Формат навчання" [ref=f7e259]:
+          - button "Навчатися у нашому місті" [ref=f7e260] [cursor=pointer]
+          - button "Онлайн навчання" [ref=f7e261] [cursor=pointer]
+        - generic [ref=f7e262]:
+          - paragraph [ref=f7e265]: Завантажуємо карту областей...
+          - generic [ref=f7e266]:
+            - heading "Оберіть місто навчання" [level=3] [ref=f7e267]
+            - paragraph [ref=f7e268]: Ми підкажемо зручний варіант у вибраній області.
+            - heading "Дніпропетровська область" [level=4] [ref=f7e269]
+    - generic [ref=f7e272]:
+      - generic [ref=f7e274]:
+        - generic [ref=f7e275]:
+          - heading "Підберемо курс саме для вашої дитини!" [level=2] [ref=f7e276]
+          - paragraph [ref=f7e277]: Ми зателефонуємо в зручний час
+        - generic [ref=f7e278]:
+          - textbox "Ім’я" [ref=f7e279]
+          - generic [ref=f7e281]:
+            - combobox "Обрана країна" [ref=f7e283]
+            - textbox "Номер телефону" [ref=f7e286]
+          - button "Оберіть місто" [ref=f7e288] [cursor=pointer]
+          - generic [ref=f7e290]:
+            - combobox
+            - button "Вік дитини (від 7 до 17)" [ref=f7e291] [cursor=pointer]
+        - generic [ref=f7e293]:
+          - button "Отримати консультацію" [ref=f7e294] [cursor=pointer]
+          - paragraph [ref=f7e297]:
+            - text: Натискаючи, ви погоджуєтесь із
+            - link "Політикою конфіденційності" [ref=f7e298] [cursor=pointer]:
+              - /url: http://logika.ddev.site/privacy-policy/
+        - textbox
+      - generic [ref=f7e299]:
+        - img "cta girl" [ref=f7e302]
+        - img "cta-icon" [ref=f7e304]
+  - contentinfo [ref=f7e307]:
+    - generic [ref=f7e309]:
+      - generic [ref=f7e310]:
+        - generic [ref=f7e311]:
+          - link [ref=f7e312] [cursor=pointer]:
+            - /url: /
+            - img "Logika" [ref=f7e313]
+          - generic [ref=f7e314]: Найбільша в Україні школа програмування та англійської мови для учнів 7–17 років
+          - link "Спробувати безкоштовно" [ref=f7e315] [cursor=pointer]:
+            - /url: http://logika.ddev.site/#lead-form
+        - generic [ref=f7e318]:
+          - generic [ref=f7e319]:
+            - generic [ref=f7e320]: Навігація
+            - list [ref=f7e321]:
+              - listitem [ref=f7e322]:
+                - link "Про Logika" [ref=f7e323] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/about/
+              - listitem [ref=f7e324]:
+                - link "Курси" [ref=f7e325] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/it-courses/
+              - listitem [ref=f7e326]:
+                - link "IT Табори" [ref=f7e327] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/camps/
+              - listitem [ref=f7e328]:
+                - link "Медіа-центр" [ref=f7e329] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/media-center/
+              - listitem [ref=f7e330]:
+                - link "FAQ" [ref=f7e331] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/faq/
+              - listitem [ref=f7e332]:
+                - link "Контакти" [ref=f7e333] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=f7e334]:
+            - generic [ref=f7e335]: Інформація
+            - list [ref=f7e336]:
+              - listitem [ref=f7e337]:
+                - link "Вакансії" [ref=f7e338] [cursor=pointer]:
+                  - /url: /vacancies/
+              - listitem [ref=f7e339]:
+                - link [ref=f7e340] [cursor=pointer]:
+                  - /url: /contractoffer/
+                  - text: Договір оферти
+                  - paragraph [ref=f7e341]: (для клієнтів в Україні)
+              - listitem [ref=f7e342]:
+                - link [ref=f7e343] [cursor=pointer]:
+                  - /url: /contractoffer-overseas/
+                  - text: Договір оферти
+                  - paragraph [ref=f7e344]: (для клієнтів поза межами України)
+              - listitem [ref=f7e345]:
+                - link "Освітня ліцензія" [ref=f7e346] [cursor=pointer]:
+                  - /url: /litsenziia/
+          - generic [ref=f7e347]:
+            - generic [ref=f7e348]:
+              - generic [ref=f7e349]: Наші соц. мережі
+              - list [ref=f7e350]:
+                - listitem [ref=f7e351]:
+                  - link [ref=f7e352] [cursor=pointer]:
+                    - /url: https://www.instagram.com/logika_it_school/
+                - listitem [ref=f7e355]:
+                  - link [ref=f7e356] [cursor=pointer]:
+                    - /url: https://www.facebook.com/logika.it.school/
+                - listitem [ref=f7e359]:
+                  - link "TikTok" [ref=f7e360] [cursor=pointer]:
+                    - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+            - generic [ref=f7e363]:
+              - generic [ref=f7e364]: Контакти
+              - link "+ 38 (093) 170-74-40" [ref=f7e365] [cursor=pointer]:
+                - /url: tel:+380931707440
+              - link "kiev@logikaschool.com" [ref=f7e366] [cursor=pointer]:
+                - /url: mailto:kiev@logikaschool.com
+      - generic [ref=f7e367]:
+        - generic [ref=f7e368]:
+          - paragraph [ref=f7e369]: © 2026 Logika
+          - paragraph [ref=f7e370]: Всі права захищені
+        - link "Політика конфіденційності" [ref=f7e371] [cursor=pointer]:
+          - /url: http://logika.ddev.site/privacy-policy/

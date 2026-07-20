@@ -1,0 +1,1655 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: "Телефон:"
+      - link "+ 38 (093) 170-74-40" [ref=e10] [cursor=pointer]:
+        - /url: tel:+380931707440
+    - generic [ref=e11]:
+      - generic [ref=e12]: "Email:"
+      - link "kiev@logikaschool.com" [ref=e16] [cursor=pointer]:
+        - /url: mailto:kiev@logikaschool.com
+    - generic [ref=e17]:
+      - generic [ref=e18]: "Соц. мережі:"
+      - list [ref=e19]:
+        - listitem [ref=e20]:
+          - link [ref=e21] [cursor=pointer]:
+            - /url: https://www.instagram.com/logika_it_school/
+        - listitem [ref=e24]:
+          - link [ref=e25] [cursor=pointer]:
+            - /url: https://www.facebook.com/logika.it.school/
+        - listitem [ref=e28]:
+          - link "TikTok" [ref=e29] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+  - banner [ref=e32]:
+    - generic [ref=e34]:
+      - link [ref=e36] [cursor=pointer]:
+        - /url: http://logika.ddev.site/cities/kyiv/
+        - img "Logika" [ref=e37]
+      - generic [ref=e39]:
+        - button [ref=e1113] [cursor=pointer]:
+          - paragraph [ref=e45]: Київ
+        - generic [ref=e48]:
+          - navigation [ref=e49]:
+            - list [ref=e50]:
+              - listitem [ref=e51]:
+                - link "Про Logika" [ref=e52] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e53]:
+                - link "Курси" [ref=e54] [cursor=pointer]:
+                  - /url: /it-courses/
+                - button [ref=e55] [cursor=pointer]
+                - list:
+                  - listitem [ref=e58]:
+                    - link "IT Курси" [ref=e59] [cursor=pointer]:
+                      - /url: /it-courses/
+                  - listitem [ref=e60]:
+                    - link "Курси англійської" [ref=e61] [cursor=pointer]:
+                      - /url: /english-courses/
+              - listitem [ref=e62]:
+                - link "IT-табори" [ref=e63] [cursor=pointer]:
+                  - /url: /camps/
+              - listitem [ref=e64]:
+                - link "Медіа-центр" [ref=e65] [cursor=pointer]:
+                  - /url: /media-center/
+              - listitem [ref=e66]:
+                - link "FAQ" [ref=e67] [cursor=pointer]:
+                  - /url: /faq/
+              - listitem [ref=e68]:
+                - link "Вакансії" [ref=e69] [cursor=pointer]:
+                  - /url: /vacancies/
+          - generic [ref=e70]:
+            - link "Увійти" [ref=e71] [cursor=pointer]:
+              - /url: https://student.logikaschool.com.ua/login
+            - link "Пробний урок" [ref=e75] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+      - button [ref=e78] [cursor=pointer]
+  - main [ref=e80]:
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - generic [ref=e87]:
+            - heading "Програмування та англійська мова для дітей в м. Київ" [level=1] [ref=e88]
+            - generic [ref=e89]: Найбільша офлайн школа в місті Київ. Доступний онлайн формат
+          - img "boy-character" [ref=e91]
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96]: Перший урок — безкоштовно.
+              - text: Залиште заявку за 30 секунд — ми зателефонуємо і підберемо зручний час
+            - generic [ref=e97]:
+              - textbox "Ім’я" [ref=e98]
+              - generic [ref=e100]:
+                - generic [ref=e101] [cursor=pointer]:
+                  - combobox "Обрана країна" [expanded] [active] [ref=e102]:
+                    - generic [ref=e1114]: Україна +380
+                    - generic [ref=e1115]: "+380"
+                  - generic [ref=e1189]:
+                    - searchbox "Пошук країни..." [ref=e1190]
+                    - listbox "Список країн" [ref=e1191]:
+                      - option "Україна +380" [selected] [ref=e1192]:
+                        - generic [ref=e1195]: Україна
+                        - generic [ref=e1196]: "+380"
+                      - option "Словаччина +421" [ref=e1197]:
+                        - generic [ref=e1200]: Словаччина
+                        - generic [ref=e1201]: "+421"
+                      - option "Польща +48" [ref=e1202]:
+                        - generic [ref=e1205]: Польща
+                        - generic [ref=e1206]: "+48"
+                      - option "Чехія +420" [ref=e1207]:
+                        - generic [ref=e1210]: Чехія
+                        - generic [ref=e1211]: "+420"
+                      - option "Німеччина +49" [ref=e1212]:
+                        - generic [ref=e1215]: Німеччина
+                        - generic [ref=e1216]: "+49"
+                      - option "Румунія +40" [ref=e1217]:
+                        - generic [ref=e1220]: Румунія
+                        - generic [ref=e1221]: "+40"
+                      - option "Молдова +373" [ref=e1222]:
+                        - generic [ref=e1225]: Молдова
+                        - generic [ref=e1226]: "+373"
+                      - option "Велика Британія +44" [ref=e1227]:
+                        - generic [ref=e1230]: Велика Британія
+                        - generic [ref=e1231]: "+44"
+                      - option "Канада +1" [ref=e1232]:
+                        - generic [ref=e1235]: Канада
+                        - generic [ref=e1236]: "+1"
+                      - listitem [ref=e1237]
+                      - option "Єгипет +20" [ref=e1238]:
+                        - generic [ref=e1241]: Єгипет
+                        - generic [ref=e1242]: "+20"
+                      - option "Ємен +967" [ref=e1243]:
+                        - generic [ref=e1246]: Ємен
+                        - generic [ref=e1247]: "+967"
+                      - option "Ізраїль +972" [ref=e1248]:
+                        - generic [ref=e1251]: Ізраїль
+                        - generic [ref=e1252]: "+972"
+                      - option "Індонезія +62" [ref=e1253]:
+                        - generic [ref=e1256]: Індонезія
+                        - generic [ref=e1257]: "+62"
+                      - option "Індія +91" [ref=e1258]:
+                        - generic [ref=e1261]: Індія
+                        - generic [ref=e1262]: "+91"
+                      - option "Ірак +964" [ref=e1263]:
+                        - generic [ref=e1266]: Ірак
+                        - generic [ref=e1267]: "+964"
+                      - option "Іран +98" [ref=e1268]:
+                        - generic [ref=e1271]: Іран
+                        - generic [ref=e1272]: "+98"
+                      - option "Ірландія +353" [ref=e1273]:
+                        - generic [ref=e1276]: Ірландія
+                        - generic [ref=e1277]: "+353"
+                      - option "Ісландія +354" [ref=e1278]:
+                        - generic [ref=e1281]: Ісландія
+                        - generic [ref=e1282]: "+354"
+                      - option "Іспанія +34" [ref=e1283]:
+                        - generic [ref=e1286]: Іспанія
+                        - generic [ref=e1287]: "+34"
+                      - option "Італія +39" [ref=e1288]:
+                        - generic [ref=e1291]: Італія
+                        - generic [ref=e1292]: "+39"
+                      - option "Австралія +61" [ref=e1293]:
+                        - generic [ref=e1296]: Австралія
+                        - generic [ref=e1297]: "+61"
+                      - option "Австрія +43" [ref=e1298]:
+                        - generic [ref=e1301]: Австрія
+                        - generic [ref=e1302]: "+43"
+                      - option "Азербайджан +994" [ref=e1303]:
+                        - generic [ref=e1306]: Азербайджан
+                        - generic [ref=e1307]: "+994"
+                      - option "Аландські Острови +358" [ref=e1308]:
+                        - generic [ref=e1311]: Аландські Острови
+                        - generic [ref=e1312]: "+358"
+                      - option "Албанія +355" [ref=e1313]:
+                        - generic [ref=e1316]: Албанія
+                        - generic [ref=e1317]: "+355"
+                      - option "Алжир +213" [ref=e1318]:
+                        - generic [ref=e1321]: Алжир
+                        - generic [ref=e1322]: "+213"
+                      - option "Американське Самоа +1" [ref=e1323]:
+                        - generic [ref=e1326]: Американське Самоа
+                        - generic [ref=e1327]: "+1"
+                      - option "Ангола +244" [ref=e1328]:
+                        - generic [ref=e1331]: Ангола
+                        - generic [ref=e1332]: "+244"
+                      - option "Андорра +376" [ref=e1333]:
+                        - generic [ref=e1336]: Андорра
+                        - generic [ref=e1337]: "+376"
+                      - option "Антиґуа і Барбуда +1" [ref=e1338]:
+                        - generic [ref=e1341]: Антиґуа і Барбуда
+                        - generic [ref=e1342]: "+1"
+                      - option "Анґілья +1" [ref=e1343]:
+                        - generic [ref=e1346]: Анґілья
+                        - generic [ref=e1347]: "+1"
+                      - option "Аргентина +54" [ref=e1348]:
+                        - generic [ref=e1351]: Аргентина
+                        - generic [ref=e1352]: "+54"
+                      - option "Аруба +297" [ref=e1353]:
+                        - generic [ref=e1356]: Аруба
+                        - generic [ref=e1357]: "+297"
+                      - option "Афганістан +93" [ref=e1358]:
+                        - generic [ref=e1361]: Афганістан
+                        - generic [ref=e1362]: "+93"
+                      - option "Багамські Острови +1" [ref=e1363]:
+                        - generic [ref=e1366]: Багамські Острови
+                        - generic [ref=e1367]: "+1"
+                      - option "Бангладеш +880" [ref=e1368]:
+                        - generic [ref=e1371]: Бангладеш
+                        - generic [ref=e1372]: "+880"
+                      - option "Барбадос +1" [ref=e1373]:
+                        - generic [ref=e1376]: Барбадос
+                        - generic [ref=e1377]: "+1"
+                      - option "Бахрейн +973" [ref=e1378]:
+                        - generic [ref=e1381]: Бахрейн
+                        - generic [ref=e1382]: "+973"
+                      - option "Бельґія +32" [ref=e1383]:
+                        - generic [ref=e1386]: Бельґія
+                        - generic [ref=e1387]: "+32"
+                      - option "Беліз +501" [ref=e1388]:
+                        - generic [ref=e1391]: Беліз
+                        - generic [ref=e1392]: "+501"
+                      - option "Бенін +229" [ref=e1393]:
+                        - generic [ref=e1396]: Бенін
+                        - generic [ref=e1397]: "+229"
+                      - option "Бермудські Острови +1" [ref=e1398]:
+                        - generic [ref=e1401]: Бермудські Острови
+                        - generic [ref=e1402]: "+1"
+                      - option "Болгарія +359" [ref=e1403]:
+                        - generic [ref=e1406]: Болгарія
+                        - generic [ref=e1407]: "+359"
+                      - option "Болівія +591" [ref=e1408]:
+                        - generic [ref=e1411]: Болівія
+                        - generic [ref=e1412]: "+591"
+                      - option "Боснія і Герцеґовина +387" [ref=e1413]:
+                        - generic [ref=e1416]: Боснія і Герцеґовина
+                        - generic [ref=e1417]: "+387"
+                      - option "Ботсвана +267" [ref=e1418]:
+                        - generic [ref=e1421]: Ботсвана
+                        - generic [ref=e1422]: "+267"
+                      - option "Бразілія +55" [ref=e1423]:
+                        - generic [ref=e1426]: Бразілія
+                        - generic [ref=e1427]: "+55"
+                      - option "Британська територія в Індійському Океані +246" [ref=e1428]:
+                        - generic [ref=e1431]: Британська територія в Індійському Океані
+                        - generic [ref=e1432]: "+246"
+                      - option "Британські Віргінські острови +1" [ref=e1433]:
+                        - generic [ref=e1436]: Британські Віргінські острови
+                        - generic [ref=e1437]: "+1"
+                      - option "Бруней +673" [ref=e1438]:
+                        - generic [ref=e1441]: Бруней
+                        - generic [ref=e1442]: "+673"
+                      - option "Буркіна-Фасо +226" [ref=e1443]:
+                        - generic [ref=e1446]: Буркіна-Фасо
+                        - generic [ref=e1447]: "+226"
+                      - option "Бурунді +257" [ref=e1448]:
+                        - generic [ref=e1451]: Бурунді
+                        - generic [ref=e1452]: "+257"
+                      - option "Бутан +975" [ref=e1453]:
+                        - generic [ref=e1456]: Бутан
+                        - generic [ref=e1457]: "+975"
+                      - option "Білорусь +375" [ref=e1458]:
+                        - generic [ref=e1461]: Білорусь
+                        - generic [ref=e1462]: "+375"
+                      - option "Вʼєтнам +84" [ref=e1463]:
+                        - generic [ref=e1466]: Вʼєтнам
+                        - generic [ref=e1467]: "+84"
+                      - option "Вануату +678" [ref=e1468]:
+                        - generic [ref=e1471]: Вануату
+                        - generic [ref=e1472]: "+678"
+                      - option "Ватикан +39" [ref=e1473]:
+                        - generic [ref=e1476]: Ватикан
+                        - generic [ref=e1477]: "+39"
+                      - option "Венесуела +58" [ref=e1478]:
+                        - generic [ref=e1481]: Венесуела
+                        - generic [ref=e1482]: "+58"
+                      - option "Віргінські острови, США +1" [ref=e1483]:
+                        - generic [ref=e1486]: Віргінські острови, США
+                        - generic [ref=e1487]: "+1"
+                      - option "Вірменія +374" [ref=e1488]:
+                        - generic [ref=e1491]: Вірменія
+                        - generic [ref=e1492]: "+374"
+                      - option "Габон +241" [ref=e1493]:
+                        - generic [ref=e1496]: Габон
+                        - generic [ref=e1497]: "+241"
+                      - option "Гамбія +220" [ref=e1498]:
+                        - generic [ref=e1501]: Гамбія
+                        - generic [ref=e1502]: "+220"
+                      - option "Гана +233" [ref=e1503]:
+                        - generic [ref=e1506]: Гана
+                        - generic [ref=e1507]: "+233"
+                      - option "Гаїті +509" [ref=e1508]:
+                        - generic [ref=e1511]: Гаїті
+                        - generic [ref=e1512]: "+509"
+                      - option "Гвінея +224" [ref=e1513]:
+                        - generic [ref=e1516]: Гвінея
+                        - generic [ref=e1517]: "+224"
+                      - option "Гвінея-Бісау +245" [ref=e1518]:
+                        - generic [ref=e1521]: Гвінея-Бісау
+                        - generic [ref=e1522]: "+245"
+                      - option "Гондурас +504" [ref=e1523]:
+                        - generic [ref=e1526]: Гондурас
+                        - generic [ref=e1527]: "+504"
+                      - option "Гонконг, О.А.Р. Китаю +852" [ref=e1528]:
+                        - generic [ref=e1531]: Гонконг, О.А.Р. Китаю
+                        - generic [ref=e1532]: "+852"
+                      - option "Греція +30" [ref=e1533]:
+                        - generic [ref=e1536]: Греція
+                        - generic [ref=e1537]: "+30"
+                      - option "Грузія +995" [ref=e1538]:
+                        - generic [ref=e1541]: Грузія
+                        - generic [ref=e1542]: "+995"
+                      - option "Данія +45" [ref=e1543]:
+                        - generic [ref=e1546]: Данія
+                        - generic [ref=e1547]: "+45"
+                      - option "Джерсі +44" [ref=e1548]:
+                        - generic [ref=e1551]: Джерсі
+                        - generic [ref=e1552]: "+44"
+                      - option "Джибуті +253" [ref=e1553]:
+                        - generic [ref=e1556]: Джибуті
+                        - generic [ref=e1557]: "+253"
+                      - option "Домініка +1" [ref=e1558]:
+                        - generic [ref=e1561]: Домініка
+                        - generic [ref=e1562]: "+1"
+                      - option "Домініканська Республіка +1" [ref=e1563]:
+                        - generic [ref=e1566]: Домініканська Республіка
+                        - generic [ref=e1567]: "+1"
+                      - option "Еквадор +593" [ref=e1568]:
+                        - generic [ref=e1571]: Еквадор
+                        - generic [ref=e1572]: "+593"
+                      - option "Екваторіальна Гвінея +240" [ref=e1573]:
+                        - generic [ref=e1576]: Екваторіальна Гвінея
+                        - generic [ref=e1577]: "+240"
+                      - option "Еритрея +291" [ref=e1578]:
+                        - generic [ref=e1581]: Еритрея
+                        - generic [ref=e1582]: "+291"
+                      - option "Есватіні +268" [ref=e1583]:
+                        - generic [ref=e1586]: Есватіні
+                        - generic [ref=e1587]: "+268"
+                      - option "Естонія +372" [ref=e1588]:
+                        - generic [ref=e1591]: Естонія
+                        - generic [ref=e1592]: "+372"
+                      - option "Ефіопія +251" [ref=e1593]:
+                        - generic [ref=e1596]: Ефіопія
+                        - generic [ref=e1597]: "+251"
+                      - option "Замбія +260" [ref=e1598]:
+                        - generic [ref=e1601]: Замбія
+                        - generic [ref=e1602]: "+260"
+                      - option "Західна Сахара +212" [ref=e1603]:
+                        - generic [ref=e1606]: Західна Сахара
+                        - generic [ref=e1607]: "+212"
+                      - option "Зімбабве +263" [ref=e1608]:
+                        - generic [ref=e1611]: Зімбабве
+                        - generic [ref=e1612]: "+263"
+                      - option "Йорданія +962" [ref=e1613]:
+                        - generic [ref=e1616]: Йорданія
+                        - generic [ref=e1617]: "+962"
+                      - option "Кабо-Верде +238" [ref=e1618]:
+                        - generic [ref=e1621]: Кабо-Верде
+                        - generic [ref=e1622]: "+238"
+                      - option "Казахстан +7" [ref=e1623]:
+                        - generic [ref=e1626]: Казахстан
+                        - generic [ref=e1627]: "+7"
+                      - option "Кайманові Острови +1" [ref=e1628]:
+                        - generic [ref=e1631]: Кайманові Острови
+                        - generic [ref=e1632]: "+1"
+                      - option "Камбоджа +855" [ref=e1633]:
+                        - generic [ref=e1636]: Камбоджа
+                        - generic [ref=e1637]: "+855"
+                      - option "Камерун +237" [ref=e1638]:
+                        - generic [ref=e1641]: Камерун
+                        - generic [ref=e1642]: "+237"
+                      - option "Катар +974" [ref=e1643]:
+                        - generic [ref=e1646]: Катар
+                        - generic [ref=e1647]: "+974"
+                      - option "Кенія +254" [ref=e1648]:
+                        - generic [ref=e1651]: Кенія
+                        - generic [ref=e1652]: "+254"
+                      - option "Киргизстан +996" [ref=e1653]:
+                        - generic [ref=e1656]: Киргизстан
+                        - generic [ref=e1657]: "+996"
+                      - option "Китай +86" [ref=e1658]:
+                        - generic [ref=e1661]: Китай
+                        - generic [ref=e1662]: "+86"
+                      - option "Кокосові (Кілінґ) Острови +61" [ref=e1663]:
+                        - generic [ref=e1666]: Кокосові (Кілінґ) Острови
+                        - generic [ref=e1667]: "+61"
+                      - option "Колумбія +57" [ref=e1668]:
+                        - generic [ref=e1671]: Колумбія
+                        - generic [ref=e1672]: "+57"
+                      - option "Комори +269" [ref=e1673]:
+                        - generic [ref=e1676]: Комори
+                        - generic [ref=e1677]: "+269"
+                      - option "Конго – Браззавіль +242" [ref=e1678]:
+                        - generic [ref=e1681]: Конго – Браззавіль
+                        - generic [ref=e1682]: "+242"
+                      - option "Конго – Кіншаса +243" [ref=e1683]:
+                        - generic [ref=e1686]: Конго – Кіншаса
+                        - generic [ref=e1687]: "+243"
+                      - option "Косово +383" [ref=e1688]:
+                        - generic [ref=e1691]: Косово
+                        - generic [ref=e1692]: "+383"
+                      - option "Коста-Ріка +506" [ref=e1693]:
+                        - generic [ref=e1696]: Коста-Ріка
+                        - generic [ref=e1697]: "+506"
+                      - option "Кот-дʼІвуар +225" [ref=e1698]:
+                        - generic [ref=e1701]: Кот-дʼІвуар
+                        - generic [ref=e1702]: "+225"
+                      - option "Куба +53" [ref=e1703]:
+                        - generic [ref=e1706]: Куба
+                        - generic [ref=e1707]: "+53"
+                      - option "Кувейт +965" [ref=e1708]:
+                        - generic [ref=e1711]: Кувейт
+                        - generic [ref=e1712]: "+965"
+                      - option "Кюрасао +599" [ref=e1713]:
+                        - generic [ref=e1716]: Кюрасао
+                        - generic [ref=e1717]: "+599"
+                      - option "Кіпр +357" [ref=e1718]:
+                        - generic [ref=e1721]: Кіпр
+                        - generic [ref=e1722]: "+357"
+                      - option "Кірібаті +686" [ref=e1723]:
+                        - generic [ref=e1726]: Кірібаті
+                        - generic [ref=e1727]: "+686"
+                      - option "Лаос +856" [ref=e1728]:
+                        - generic [ref=e1731]: Лаос
+                        - generic [ref=e1732]: "+856"
+                      - option "Латвія +371" [ref=e1733]:
+                        - generic [ref=e1736]: Латвія
+                        - generic [ref=e1737]: "+371"
+                      - option "Лесото +266" [ref=e1738]:
+                        - generic [ref=e1741]: Лесото
+                        - generic [ref=e1742]: "+266"
+                      - option "Литва +370" [ref=e1743]:
+                        - generic [ref=e1746]: Литва
+                        - generic [ref=e1747]: "+370"
+                      - option "Люксембурґ +352" [ref=e1748]:
+                        - generic [ref=e1751]: Люксембурґ
+                        - generic [ref=e1752]: "+352"
+                      - option "Ліберія +231" [ref=e1753]:
+                        - generic [ref=e1756]: Ліберія
+                        - generic [ref=e1757]: "+231"
+                      - option "Ліван +961" [ref=e1758]:
+                        - generic [ref=e1761]: Ліван
+                        - generic [ref=e1762]: "+961"
+                      - option "Лівія +218" [ref=e1763]:
+                        - generic [ref=e1766]: Лівія
+                        - generic [ref=e1767]: "+218"
+                      - option "Ліхтенштейн +423" [ref=e1768]:
+                        - generic [ref=e1771]: Ліхтенштейн
+                        - generic [ref=e1772]: "+423"
+                      - option "Мʼянма (Бірма) +95" [ref=e1773]:
+                        - generic [ref=e1776]: Мʼянма (Бірма)
+                        - generic [ref=e1777]: "+95"
+                      - option "Мавританія +222" [ref=e1778]:
+                        - generic [ref=e1781]: Мавританія
+                        - generic [ref=e1782]: "+222"
+                      - option "Маврікій +230" [ref=e1783]:
+                        - generic [ref=e1786]: Маврікій
+                        - generic [ref=e1787]: "+230"
+                      - option "Мадагаскар +261" [ref=e1788]:
+                        - generic [ref=e1791]: Мадагаскар
+                        - generic [ref=e1792]: "+261"
+                      - option "Майотта +262" [ref=e1793]:
+                        - generic [ref=e1796]: Майотта
+                        - generic [ref=e1797]: "+262"
+                      - option "Макао, О.А.Р Китаю +853" [ref=e1798]:
+                        - generic [ref=e1801]: Макао, О.А.Р Китаю
+                        - generic [ref=e1802]: "+853"
+                      - option "Малаві +265" [ref=e1803]:
+                        - generic [ref=e1806]: Малаві
+                        - generic [ref=e1807]: "+265"
+                      - option "Малайзія +60" [ref=e1808]:
+                        - generic [ref=e1811]: Малайзія
+                        - generic [ref=e1812]: "+60"
+                      - option "Мальдіви +960" [ref=e1813]:
+                        - generic [ref=e1816]: Мальдіви
+                        - generic [ref=e1817]: "+960"
+                      - option "Мальта +356" [ref=e1818]:
+                        - generic [ref=e1821]: Мальта
+                        - generic [ref=e1822]: "+356"
+                      - option "Малі +223" [ref=e1823]:
+                        - generic [ref=e1826]: Малі
+                        - generic [ref=e1827]: "+223"
+                      - option "Марокко +212" [ref=e1828]:
+                        - generic [ref=e1831]: Марокко
+                        - generic [ref=e1832]: "+212"
+                      - option "Мартініка +596" [ref=e1833]:
+                        - generic [ref=e1836]: Мартініка
+                        - generic [ref=e1837]: "+596"
+                      - option "Маршаллові Острови +692" [ref=e1838]:
+                        - generic [ref=e1841]: Маршаллові Острови
+                        - generic [ref=e1842]: "+692"
+                      - option "Мексика +52" [ref=e1843]:
+                        - generic [ref=e1846]: Мексика
+                        - generic [ref=e1847]: "+52"
+                      - option "Мозамбік +258" [ref=e1848]:
+                        - generic [ref=e1851]: Мозамбік
+                        - generic [ref=e1852]: "+258"
+                      - option "Монако +377" [ref=e1853]:
+                        - generic [ref=e1856]: Монако
+                        - generic [ref=e1857]: "+377"
+                      - option "Монголія +976" [ref=e1858]:
+                        - generic [ref=e1861]: Монголія
+                        - generic [ref=e1862]: "+976"
+                      - option "Монтсеррат +1" [ref=e1863]:
+                        - generic [ref=e1866]: Монтсеррат
+                        - generic [ref=e1867]: "+1"
+                      - option "Мікронезія +691" [ref=e1868]:
+                        - generic [ref=e1871]: Мікронезія
+                        - generic [ref=e1872]: "+691"
+                      - option "Намібія +264" [ref=e1873]:
+                        - generic [ref=e1876]: Намібія
+                        - generic [ref=e1877]: "+264"
+                      - option "Науру +674" [ref=e1878]:
+                        - generic [ref=e1881]: Науру
+                        - generic [ref=e1882]: "+674"
+                      - option "Непал +977" [ref=e1883]:
+                        - generic [ref=e1886]: Непал
+                        - generic [ref=e1887]: "+977"
+                      - option "Нова Зеландія +64" [ref=e1888]:
+                        - generic [ref=e1891]: Нова Зеландія
+                        - generic [ref=e1892]: "+64"
+                      - option "Нова Каледонія +687" [ref=e1893]:
+                        - generic [ref=e1896]: Нова Каледонія
+                        - generic [ref=e1897]: "+687"
+                      - option "Норвеґія +47" [ref=e1898]:
+                        - generic [ref=e1901]: Норвеґія
+                        - generic [ref=e1902]: "+47"
+                      - option "Нігер +227" [ref=e1903]:
+                        - generic [ref=e1906]: Нігер
+                        - generic [ref=e1907]: "+227"
+                      - option "Нігерія +234" [ref=e1908]:
+                        - generic [ref=e1911]: Нігерія
+                        - generic [ref=e1912]: "+234"
+                      - option "Нідерланди +31" [ref=e1913]:
+                        - generic [ref=e1916]: Нідерланди
+                        - generic [ref=e1917]: "+31"
+                      - option "Нідерландські Карибські острови +599" [ref=e1918]:
+                        - generic [ref=e1921]: Нідерландські Карибські острови
+                        - generic [ref=e1922]: "+599"
+                      - option "Нікараґуа +505" [ref=e1923]:
+                        - generic [ref=e1926]: Нікараґуа
+                        - generic [ref=e1927]: "+505"
+                      - option "Ніуе +683" [ref=e1928]:
+                        - generic [ref=e1931]: Ніуе
+                        - generic [ref=e1932]: "+683"
+                      - option "Обʼєднані Арабські Емірати +971" [ref=e1933]:
+                        - generic [ref=e1936]: Обʼєднані Арабські Емірати
+                        - generic [ref=e1937]: "+971"
+                      - option "Оман +968" [ref=e1938]:
+                        - generic [ref=e1941]: Оман
+                        - generic [ref=e1942]: "+968"
+                      - option "Острови Кука +682" [ref=e1943]:
+                        - generic [ref=e1946]: Острови Кука
+                        - generic [ref=e1947]: "+682"
+                      - option "Острови Теркс і Кайкос +1" [ref=e1948]:
+                        - generic [ref=e1951]: Острови Теркс і Кайкос
+                        - generic [ref=e1952]: "+1"
+                      - option "Острів Вознесіння +247" [ref=e1953]:
+                        - generic [ref=e1956]: Острів Вознесіння
+                        - generic [ref=e1957]: "+247"
+                      - option "Острів Мен +44" [ref=e1958]:
+                        - generic [ref=e1961]: Острів Мен
+                        - generic [ref=e1962]: "+44"
+                      - option "Острів Норфолк +672" [ref=e1963]:
+                        - generic [ref=e1966]: Острів Норфолк
+                        - generic [ref=e1967]: "+672"
+                      - option "Острів Різдва +61" [ref=e1968]:
+                        - generic [ref=e1971]: Острів Різдва
+                        - generic [ref=e1972]: "+61"
+                      - option "Острів Святої Єлени +290" [ref=e1973]:
+                        - generic [ref=e1976]: Острів Святої Єлени
+                        - generic [ref=e1977]: "+290"
+                      - option "Пакистан +92" [ref=e1978]:
+                        - generic [ref=e1981]: Пакистан
+                        - generic [ref=e1982]: "+92"
+                      - option "Палау +680" [ref=e1983]:
+                        - generic [ref=e1986]: Палау
+                        - generic [ref=e1987]: "+680"
+                      - option "Палестинські території +970" [ref=e1988]:
+                        - generic [ref=e1991]: Палестинські території
+                        - generic [ref=e1992]: "+970"
+                      - option "Панама +507" [ref=e1993]:
+                        - generic [ref=e1996]: Панама
+                        - generic [ref=e1997]: "+507"
+                      - option "Папуа-Нова Ґвінея +675" [ref=e1998]:
+                        - generic [ref=e2001]: Папуа-Нова Ґвінея
+                        - generic [ref=e2002]: "+675"
+                      - option "Параґвай +595" [ref=e2003]:
+                        - generic [ref=e2006]: Параґвай
+                        - generic [ref=e2007]: "+595"
+                      - option "Перу +51" [ref=e2008]:
+                        - generic [ref=e2011]: Перу
+                        - generic [ref=e2012]: "+51"
+                      - option "Портуґалія +351" [ref=e2013]:
+                        - generic [ref=e2016]: Портуґалія
+                        - generic [ref=e2017]: "+351"
+                      - option "Пуерто-Ріко +1" [ref=e2018]:
+                        - generic [ref=e2021]: Пуерто-Ріко
+                        - generic [ref=e2022]: "+1"
+                      - option "Південна Корея +82" [ref=e2023]:
+                        - generic [ref=e2026]: Південна Корея
+                        - generic [ref=e2027]: "+82"
+                      - option "Південний Судан +211" [ref=e2028]:
+                        - generic [ref=e2031]: Південний Судан
+                        - generic [ref=e2032]: "+211"
+                      - option "Південно-Африканська Республіка +27" [ref=e2033]:
+                        - generic [ref=e2036]: Південно-Африканська Республіка
+                        - generic [ref=e2037]: "+27"
+                      - option "Північна Корея +850" [ref=e2038]:
+                        - generic [ref=e2041]: Північна Корея
+                        - generic [ref=e2042]: "+850"
+                      - option "Північна Македонія +389" [ref=e2043]:
+                        - generic [ref=e2046]: Північна Македонія
+                        - generic [ref=e2047]: "+389"
+                      - option "Північні Маріанські Острови +1" [ref=e2048]:
+                        - generic [ref=e2051]: Північні Маріанські Острови
+                        - generic [ref=e2052]: "+1"
+                      - option "Реюньйон +262" [ref=e2053]:
+                        - generic [ref=e2056]: Реюньйон
+                        - generic [ref=e2057]: "+262"
+                      - option "Росія +7" [ref=e2058]:
+                        - generic [ref=e2061]: Росія
+                        - generic [ref=e2062]: "+7"
+                      - option "Руанда +250" [ref=e2063]:
+                        - generic [ref=e2066]: Руанда
+                        - generic [ref=e2067]: "+250"
+                      - option "Сальвадор +503" [ref=e2068]:
+                        - generic [ref=e2071]: Сальвадор
+                        - generic [ref=e2072]: "+503"
+                      - option "Самоа +685" [ref=e2073]:
+                        - generic [ref=e2076]: Самоа
+                        - generic [ref=e2077]: "+685"
+                      - option "Сан-Маріно +378" [ref=e2078]:
+                        - generic [ref=e2081]: Сан-Маріно
+                        - generic [ref=e2082]: "+378"
+                      - option "Сан-Томе і Прінсіпі +239" [ref=e2083]:
+                        - generic [ref=e2086]: Сан-Томе і Прінсіпі
+                        - generic [ref=e2087]: "+239"
+                      - option "Саудівська Аравія +966" [ref=e2088]:
+                        - generic [ref=e2091]: Саудівська Аравія
+                        - generic [ref=e2092]: "+966"
+                      - option "Сейшельські Острови +248" [ref=e2093]:
+                        - generic [ref=e2096]: Сейшельські Острови
+                        - generic [ref=e2097]: "+248"
+                      - option "Сен-Бартельмі +590" [ref=e2098]:
+                        - generic [ref=e2101]: Сен-Бартельмі
+                        - generic [ref=e2102]: "+590"
+                      - option "Сен-Мартен +590" [ref=e2103]:
+                        - generic [ref=e2106]: Сен-Мартен
+                        - generic [ref=e2107]: "+590"
+                      - option "Сен-Пʼєр і Мікелон +508" [ref=e2108]:
+                        - generic [ref=e2111]: Сен-Пʼєр і Мікелон
+                        - generic [ref=e2112]: "+508"
+                      - option "Сенегал +221" [ref=e2113]:
+                        - generic [ref=e2116]: Сенегал
+                        - generic [ref=e2117]: "+221"
+                      - option "Сент-Вінсент і Ґренадіни +1" [ref=e2118]:
+                        - generic [ref=e2121]: Сент-Вінсент і Ґренадіни
+                        - generic [ref=e2122]: "+1"
+                      - option "Сент-Кітс і Невіс +1" [ref=e2123]:
+                        - generic [ref=e2126]: Сент-Кітс і Невіс
+                        - generic [ref=e2127]: "+1"
+                      - option "Сент-Люсія +1" [ref=e2128]:
+                        - generic [ref=e2131]: Сент-Люсія
+                        - generic [ref=e2132]: "+1"
+                      - option "Сербія +381" [ref=e2133]:
+                        - generic [ref=e2136]: Сербія
+                        - generic [ref=e2137]: "+381"
+                      - option "Сирія +963" [ref=e2138]:
+                        - generic [ref=e2141]: Сирія
+                        - generic [ref=e2142]: "+963"
+                      - option "Словенія +386" [ref=e2143]:
+                        - generic [ref=e2146]: Словенія
+                        - generic [ref=e2147]: "+386"
+                      - option "Соломонові Острови +677" [ref=e2148]:
+                        - generic [ref=e2151]: Соломонові Острови
+                        - generic [ref=e2152]: "+677"
+                      - option "Сомалі +252" [ref=e2153]:
+                        - generic [ref=e2156]: Сомалі
+                        - generic [ref=e2157]: "+252"
+                      - option "Сполучені Штати +1" [ref=e2158]:
+                        - generic [ref=e2161]: Сполучені Штати
+                        - generic [ref=e2162]: "+1"
+                      - option "Судан +249" [ref=e2163]:
+                        - generic [ref=e2166]: Судан
+                        - generic [ref=e2167]: "+249"
+                      - option "Сурінам +597" [ref=e2168]:
+                        - generic [ref=e2171]: Сурінам
+                        - generic [ref=e2172]: "+597"
+                      - option "Сьєрра-Леоне +232" [ref=e2173]:
+                        - generic [ref=e2176]: Сьєрра-Леоне
+                        - generic [ref=e2177]: "+232"
+                      - option "Сінгапур +65" [ref=e2178]:
+                        - generic [ref=e2181]: Сінгапур
+                        - generic [ref=e2182]: "+65"
+                      - option "Сінт-Мартен +1" [ref=e2183]:
+                        - generic [ref=e2186]: Сінт-Мартен
+                        - generic [ref=e2187]: "+1"
+                      - option "Таджикистан +992" [ref=e2188]:
+                        - generic [ref=e2191]: Таджикистан
+                        - generic [ref=e2192]: "+992"
+                      - option "Тайвань +886" [ref=e2193]:
+                        - generic [ref=e2196]: Тайвань
+                        - generic [ref=e2197]: "+886"
+                      - option "Танзанія +255" [ref=e2198]:
+                        - generic [ref=e2201]: Танзанія
+                        - generic [ref=e2202]: "+255"
+                      - option "Таїланд +66" [ref=e2203]:
+                        - generic [ref=e2206]: Таїланд
+                        - generic [ref=e2207]: "+66"
+                      - option "Того +228" [ref=e2208]:
+                        - generic [ref=e2211]: Того
+                        - generic [ref=e2212]: "+228"
+                      - option "Токелау +690" [ref=e2213]:
+                        - generic [ref=e2216]: Токелау
+                        - generic [ref=e2217]: "+690"
+                      - option "Тонґа +676" [ref=e2218]:
+                        - generic [ref=e2221]: Тонґа
+                        - generic [ref=e2222]: "+676"
+                      - option "Трінідад і Тобаґо +1" [ref=e2223]:
+                        - generic [ref=e2226]: Трінідад і Тобаґо
+                        - generic [ref=e2227]: "+1"
+                      - option "Тувалу +688" [ref=e2228]:
+                        - generic [ref=e2231]: Тувалу
+                        - generic [ref=e2232]: "+688"
+                      - option "Туніс +216" [ref=e2233]:
+                        - generic [ref=e2236]: Туніс
+                        - generic [ref=e2237]: "+216"
+                      - option "Туреччина +90" [ref=e2238]:
+                        - generic [ref=e2241]: Туреччина
+                        - generic [ref=e2242]: "+90"
+                      - option "Туркменістан +993" [ref=e2243]:
+                        - generic [ref=e2246]: Туркменістан
+                        - generic [ref=e2247]: "+993"
+                      - option "Тімор-Лешті +670" [ref=e2248]:
+                        - generic [ref=e2251]: Тімор-Лешті
+                        - generic [ref=e2252]: "+670"
+                      - option "Уганда +256" [ref=e2253]:
+                        - generic [ref=e2256]: Уганда
+                        - generic [ref=e2257]: "+256"
+                      - option "Угорщина +36" [ref=e2258]:
+                        - generic [ref=e2261]: Угорщина
+                        - generic [ref=e2262]: "+36"
+                      - option "Узбекистан +998" [ref=e2263]:
+                        - generic [ref=e2266]: Узбекистан
+                        - generic [ref=e2267]: "+998"
+                      - option "Уолліс і Футуна +681" [ref=e2268]:
+                        - generic [ref=e2271]: Уолліс і Футуна
+                        - generic [ref=e2272]: "+681"
+                      - option "Уруґвай +598" [ref=e2273]:
+                        - generic [ref=e2276]: Уруґвай
+                        - generic [ref=e2277]: "+598"
+                      - option "Фарерські Острови +298" [ref=e2278]:
+                        - generic [ref=e2281]: Фарерські Острови
+                        - generic [ref=e2282]: "+298"
+                      - option "Фолклендські Острови +500" [ref=e2283]:
+                        - generic [ref=e2286]: Фолклендські Острови
+                        - generic [ref=e2287]: "+500"
+                      - option "Французька Полінезія +689" [ref=e2288]:
+                        - generic [ref=e2291]: Французька Полінезія
+                        - generic [ref=e2292]: "+689"
+                      - option "Французька Ґвіана +594" [ref=e2293]:
+                        - generic [ref=e2296]: Французька Ґвіана
+                        - generic [ref=e2297]: "+594"
+                      - option "Франція +33" [ref=e2298]:
+                        - generic [ref=e2301]: Франція
+                        - generic [ref=e2302]: "+33"
+                      - option "Фіджі +679" [ref=e2303]:
+                        - generic [ref=e2306]: Фіджі
+                        - generic [ref=e2307]: "+679"
+                      - option "Філіппіни +63" [ref=e2308]:
+                        - generic [ref=e2311]: Філіппіни
+                        - generic [ref=e2312]: "+63"
+                      - option "Фінляндія +358" [ref=e2313]:
+                        - generic [ref=e2316]: Фінляндія
+                        - generic [ref=e2317]: "+358"
+                      - option "Хорватія +385" [ref=e2318]:
+                        - generic [ref=e2321]: Хорватія
+                        - generic [ref=e2322]: "+385"
+                      - option "Центральноафриканська Республіка +236" [ref=e2323]:
+                        - generic [ref=e2326]: Центральноафриканська Республіка
+                        - generic [ref=e2327]: "+236"
+                      - option "Чад +235" [ref=e2328]:
+                        - generic [ref=e2331]: Чад
+                        - generic [ref=e2332]: "+235"
+                      - option "Чорногорія +382" [ref=e2333]:
+                        - generic [ref=e2336]: Чорногорія
+                        - generic [ref=e2337]: "+382"
+                      - option "Чілі +56" [ref=e2338]:
+                        - generic [ref=e2341]: Чілі
+                        - generic [ref=e2342]: "+56"
+                      - option "Швейцарія +41" [ref=e2343]:
+                        - generic [ref=e2346]: Швейцарія
+                        - generic [ref=e2347]: "+41"
+                      - option "Швеція +46" [ref=e2348]:
+                        - generic [ref=e2351]: Швеція
+                        - generic [ref=e2352]: "+46"
+                      - option "Шпіцберген та Ян-Маєн +47" [ref=e2353]:
+                        - generic [ref=e2356]: Шпіцберген та Ян-Маєн
+                        - generic [ref=e2357]: "+47"
+                      - option "Шрі-Ланка +94" [ref=e2358]:
+                        - generic [ref=e2361]: Шрі-Ланка
+                        - generic [ref=e2362]: "+94"
+                      - option "Ямайка +1" [ref=e2363]:
+                        - generic [ref=e2366]: Ямайка
+                        - generic [ref=e2367]: "+1"
+                      - option "Японія +81" [ref=e2368]:
+                        - generic [ref=e2371]: Японія
+                        - generic [ref=e2372]: "+81"
+                      - option "Ґайана +592" [ref=e2373]:
+                        - generic [ref=e2376]: Ґайана
+                        - generic [ref=e2377]: "+592"
+                      - option "Ґваделупа +590" [ref=e2378]:
+                        - generic [ref=e2381]: Ґваделупа
+                        - generic [ref=e2382]: "+590"
+                      - option "Ґватемала +502" [ref=e2383]:
+                        - generic [ref=e2386]: Ґватемала
+                        - generic [ref=e2387]: "+502"
+                      - option "Ґернсі +44" [ref=e2388]:
+                        - generic [ref=e2391]: Ґернсі
+                        - generic [ref=e2392]: "+44"
+                      - option "Ґренада +1" [ref=e2393]:
+                        - generic [ref=e2396]: Ґренада
+                        - generic [ref=e2397]: "+1"
+                      - option "Ґренландія +299" [ref=e2398]:
+                        - generic [ref=e2401]: Ґренландія
+                        - generic [ref=e2402]: "+299"
+                      - option "Ґуам +1" [ref=e2403]:
+                        - generic [ref=e2406]: Ґуам
+                        - generic [ref=e2407]: "+1"
+                      - option "Ґібралтар +350" [ref=e2408]:
+                        - generic [ref=e2411]: Ґібралтар
+                        - generic [ref=e2412]: "+350"
+                - textbox "Номер телефону" [ref=e105]
+              - generic [ref=e106]:
+                - combobox
+                - button "Вік дитини (від 7 до 17)" [ref=e107] [cursor=pointer]
+            - button "Спробувати безкоштовно" [ref=e109] [cursor=pointer]
+            - textbox
+            - paragraph [ref=e112]:
+              - text: Натискаючи, ви погоджуєтесь із
+              - link "Політикою конфіденційності" [ref=e113] [cursor=pointer]:
+                - /url: http://logika.ddev.site/privacy-policy/
+          - img "boy-character" [ref=e115]
+      - list [ref=e116]:
+        - listitem [ref=e117]:
+          - img "З 2018 року на ринку" [ref=e119]
+          - paragraph [ref=e120]: З 2018 року на ринку
+        - listitem [ref=e121]:
+          - img "З 2018 року на ринку" [ref=e123]
+          - paragraph [ref=e124]: Освітня ліцензія
+        - listitem [ref=e125]:
+          - img "З 2018 року на ринку" [ref=e127]
+          - paragraph [ref=e128]: 4.9 рейтинг від клієнтів
+        - listitem [ref=e129]:
+          - img "З 2018 року на ринку" [ref=e131]
+          - paragraph [ref=e132]: 178 шкіл в Україні
+        - listitem [ref=e133]:
+          - img "З 2018 року на ринку" [ref=e135]
+          - paragraph [ref=e136]: 130 міст по Україні
+        - listitem [ref=e137]:
+          - img "З 2018 року на ринку" [ref=e139]
+          - paragraph [ref=e140]: 100тис+ успішних випускників
+    - list [ref=e144]:
+      - group "1 / 36" [ref=e145]:
+        - paragraph [ref=e147]: Перший урок – безкоштовно
+      - group "2 / 36" [ref=e148]:
+        - paragraph [ref=e150]: Навчання з результатом
+      - group "3 / 36" [ref=e151]:
+        - paragraph [ref=e153]: Уроки з живими викладачами
+      - group "4 / 36" [ref=e154]:
+        - paragraph [ref=e156]: Інтерактивне навчання
+      - group "5 / 36" [ref=e157]:
+        - paragraph [ref=e159]: Програмування для дітей 7-17
+      - group "6 / 36" [ref=e160]:
+        - paragraph [ref=e162]: Англійська мова
+      - group "7 / 36" [ref=e163]:
+        - paragraph [ref=e165]: Перший урок – безкоштовно
+      - group "8 / 36" [ref=e166]:
+        - paragraph [ref=e168]: Навчання з результатом
+      - group "9 / 36" [ref=e169]:
+        - paragraph [ref=e171]: Уроки з живими викладачами
+      - group "10 / 36" [ref=e172]:
+        - paragraph [ref=e174]: Інтерактивне навчання
+      - group "11 / 36" [ref=e175]:
+        - paragraph [ref=e177]: Програмування для дітей 7-17
+      - group "12 / 36" [ref=e178]:
+        - paragraph [ref=e180]: Англійська мова
+      - group "13 / 36" [ref=e181]:
+        - paragraph [ref=e183]: Перший урок – безкоштовно
+      - group "14 / 36" [ref=e184]:
+        - paragraph [ref=e186]: Навчання з результатом
+      - group "15 / 36" [ref=e187]:
+        - paragraph [ref=e189]: Уроки з живими викладачами
+      - group "16 / 36" [ref=e190]:
+        - paragraph [ref=e192]: Інтерактивне навчання
+      - group "17 / 36" [ref=e193]:
+        - paragraph [ref=e195]: Програмування для дітей 7-17
+      - group "18 / 36" [ref=e196]:
+        - paragraph [ref=e198]: Англійська мова
+      - group "19 / 36" [ref=e199]:
+        - paragraph [ref=e201]: Перший урок – безкоштовно
+      - group "20 / 36" [ref=e202]:
+        - paragraph [ref=e204]: Навчання з результатом
+      - group "21 / 36" [ref=e205]:
+        - paragraph [ref=e207]: Уроки з живими викладачами
+      - group "22 / 36" [ref=e208]:
+        - paragraph [ref=e210]: Інтерактивне навчання
+      - group "23 / 36" [ref=e211]:
+        - paragraph [ref=e213]: Програмування для дітей 7-17
+      - group "24 / 36" [ref=e214]:
+        - paragraph [ref=e216]: Англійська мова
+      - group "25 / 36" [ref=e217]:
+        - paragraph [ref=e219]: Перший урок – безкоштовно
+      - group "26 / 36" [ref=e220]:
+        - paragraph [ref=e222]: Навчання з результатом
+      - group "27 / 36" [ref=e223]:
+        - paragraph [ref=e225]: Уроки з живими викладачами
+      - group "28 / 36" [ref=e226]:
+        - paragraph [ref=e228]: Інтерактивне навчання
+      - group "29 / 36" [ref=e229]:
+        - paragraph [ref=e231]: Програмування для дітей 7-17
+      - group "30 / 36" [ref=e232]:
+        - paragraph [ref=e234]: Англійська мова
+      - group "31 / 36" [ref=e235]:
+        - paragraph [ref=e237]: Перший урок – безкоштовно
+      - group "32 / 36" [ref=e238]:
+        - paragraph [ref=e240]: Навчання з результатом
+      - group "33 / 36" [ref=e241]:
+        - paragraph [ref=e243]: Уроки з живими викладачами
+      - group "34 / 36" [ref=e244]:
+        - paragraph [ref=e246]: Інтерактивне навчання
+      - group "35 / 36" [ref=e247]:
+        - paragraph [ref=e249]: Програмування для дітей 7-17
+      - group "36 / 36" [ref=e250]:
+        - paragraph [ref=e252]: Англійська мова
+    - generic [ref=e256]:
+      - heading "Курси програмування" [level=2] [ref=e257]
+      - list [ref=e260]:
+        - listitem [ref=e261]:
+          - generic [ref=e262]: 7-8 рокiв
+          - generic [ref=e268]:
+            - generic [ref=e269]: Перший крок у свiт технологiй
+            - list [ref=e270]:
+              - listitem [ref=e271]:
+                - link "Комп'ютерна грамотність" [ref=e272] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/computer-literacy/
+            - paragraph [ref=e273]: Допомагаємо дитині зробити перші впевнені кроки у світі технологій, розвиваючи логіку, увагу та базові комп’ютерні навички.
+            - generic [ref=e274]:
+              - link "Запис на безкоштовний урок" [ref=e275] [cursor=pointer]:
+                - /url: http://logika.ddev.site/#lead-form
+              - link "Ознайомитись з курсами" [ref=e278] [cursor=pointer]:
+                - /url: http://logika.ddev.site/it-courses/
+        - listitem [ref=e281]:
+          - generic [ref=e282]: 9-11 рокiв
+          - generic [ref=e288]:
+            - generic [ref=e289]: Вiд iгор до власних проектiв
+            - list [ref=e290]:
+              - listitem [ref=e291]:
+                - link "Візуальне програмування" [ref=e292] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/visual-programming/
+              - listitem [ref=e293]:
+                - link "Геймдизайн" [ref=e294] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/game-design/
+              - listitem [ref=e295]:
+                - link "Основи штучного інтелекту" [ref=e296] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/artificial-intelligence/
+            - paragraph [ref=e297]: Діти переходять від ігор до створення власних проєктів, розвивають креативне мислення та вчаться працювати з різними цифровими інструментами.
+            - generic [ref=e298]:
+              - link "Запис на безкоштовний урок" [ref=e299] [cursor=pointer]:
+                - /url: http://logika.ddev.site/#lead-form
+              - link "Ознайомитись з курсами" [ref=e302] [cursor=pointer]:
+                - /url: http://logika.ddev.site/it-courses/
+        - listitem [ref=e305]:
+          - generic [ref=e306]: 12-14 рокiв
+          - generic [ref=e312]:
+            - generic [ref=e313]: Серйознi навички для серйозних цiлей
+            - list [ref=e314]:
+              - listitem [ref=e315]:
+                - link "Python Start" [ref=e316] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/python-start/
+              - listitem [ref=e317]:
+                - link "Python Mastery" [ref=e318] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/python-mastery/
+              - listitem [ref=e319]:
+                - link "Графічний дизайн" [ref=e320] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/graphic-design/
+              - listitem [ref=e321]:
+                - link "Графічний дизайн 2.0" [ref=e322] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/graphic-design-2-year/
+              - listitem [ref=e323]:
+                - link "Створення веб-сайтів" [ref=e324] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/websites/
+            - paragraph [ref=e325]: Поглиблюємо знання в програмуванні, працюємо над реальними проєктами та формуємо навички, які стануть основою для подальшого розвитку в IT.
+            - generic [ref=e326]:
+              - link "Запис на безкоштовний урок" [ref=e327] [cursor=pointer]:
+                - /url: http://logika.ddev.site/#lead-form
+              - link "Ознайомитись з курсами" [ref=e330] [cursor=pointer]:
+                - /url: http://logika.ddev.site/it-courses/
+        - listitem [ref=e333]:
+          - generic [ref=e334]: 14-17 рокiв
+          - generic [ref=e340]:
+            - generic [ref=e341]: Перший крок у IT-кар'єру
+            - list [ref=e342]:
+              - listitem [ref=e343]:
+                - link "Python Expert" [ref=e344] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/python-expert/
+              - listitem [ref=e345]:
+                - link "Python Advanced" [ref=e346] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/python-advanced/
+              - listitem [ref=e347]:
+                - link "Основи фронтенд розробки" [ref=e348] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/frontend/
+              - listitem [ref=e349]:
+                - link "Комп'ютерна грамотність для дорослих" [ref=e350] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/courses/computer-literacy-14/
+            - paragraph [ref=e351]: "Готуємо до перших кроків у кар’єрі: даємо практичні знання, знайомимо з сучасними технологіями та вчимо мислити як розробник."
+            - generic [ref=e352]:
+              - link "Запис на безкоштовний урок" [ref=e353] [cursor=pointer]:
+                - /url: http://logika.ddev.site/#lead-form
+              - link "Ознайомитись з курсами" [ref=e356] [cursor=pointer]:
+                - /url: http://logika.ddev.site/it-courses/
+    - generic [ref=e361]:
+      - generic [ref=e363]:
+        - generic [ref=e364]:
+          - heading "Англiйська мова в Logika" [level=2] [ref=e365]
+          - generic [ref=e366]: Не просто уроки, а мовне середовище
+        - paragraph [ref=e367]: Навчаємо говорити англійською впевнено з перших занять — через практику, живе спілкування та сучасні методики. Програма підбирається за віком і рівнем, щоб дитині було цікаво та комфортно вчитися.
+        - link "Дізнатись більше" [ref=e368] [cursor=pointer]:
+          - /url: http://logika.ddev.site/english-courses/
+      - generic [ref=e373]:
+        - list [ref=e374]:
+          - group "1 / 18" [ref=e375]:
+            - generic [ref=e376]:
+              - generic [ref=e377]: 8-10 років
+              - img "Рівень А0" [ref=e379]
+              - generic [ref=e380]:
+                - generic [ref=e381]: Рівень A0
+                - paragraph [ref=e382]: Перші слова, фрази та знайомство з англійською.
+              - link "Обрати курс" [ref=e383] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a0/
+          - group "2 / 18" [ref=e386]:
+            - generic [ref=e387]:
+              - generic [ref=e388]: 10-12 років
+              - img "Рівень А1" [ref=e390]
+              - generic [ref=e391]:
+                - generic [ref=e392]: Рівень A1
+                - paragraph [ref=e393]: Розмовляємо про щоденне життя, родину, подорожі та інтереси.
+              - link "Обрати курс" [ref=e394] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a1/
+          - group "3 / 18" [ref=e397]:
+            - generic [ref=e398]:
+              - generic [ref=e399]: 12-13 років
+              - img "Рівень А2" [ref=e401]
+              - generic [ref=e402]:
+                - generic [ref=e403]: Рівень A2
+                - paragraph [ref=e404]: Закріплюємо базу та вчимося впевненіше пояснювати думки англійською.
+              - link "Обрати курс" [ref=e405] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a2/
+          - group "4 / 18" [ref=e408]:
+            - generic [ref=e409]:
+              - generic [ref=e410]: 13-15 років
+              - img "Рівень B1" [ref=e412]
+              - generic [ref=e413]:
+                - generic [ref=e414]: Рівень B1
+                - paragraph [ref=e415]: Вільніше висловлюємо думки, обговорюємо подорожі, технології та майбутню кар’єру.
+              - link "Обрати курс" [ref=e416] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b1/
+          - group "5 / 18" [ref=e419]:
+            - generic [ref=e420]:
+              - generic [ref=e421]: 15-17 років
+              - img "Рівень B2" [ref=e423]
+              - generic [ref=e424]:
+                - generic [ref=e425]: Рівень B2
+                - paragraph [ref=e426]: Відточуємо вільне спілкування, аргументацію та розуміння складних тем.
+              - link "Обрати курс" [ref=e427] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2/
+          - group "6 / 18" [ref=e430]:
+            - generic [ref=e431]:
+              - generic [ref=e432]: 8-17 років
+              - img "Рівень B2" [ref=e434]
+              - generic [ref=e435]:
+                - generic [ref=e436]: Рівень B2.1
+                - paragraph [ref=e437]: Обговорюємо складні теми, розширюємо словниковий запас та вчимося впевнено спілкуватися англійською.
+              - link "Обрати курс" [ref=e438] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2-1/
+          - group "7 / 18" [ref=e441]:
+            - generic [ref=e442]:
+              - generic [ref=e443]: 8-10 років
+              - img "Рівень А0" [ref=e445]
+              - generic [ref=e446]:
+                - generic [ref=e447]: Рівень A0
+                - paragraph [ref=e448]: Перші слова, фрази та знайомство з англійською.
+              - link "Обрати курс" [ref=e449] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a0/
+          - group "8 / 18" [ref=e452]:
+            - generic [ref=e453]:
+              - generic [ref=e454]: 10-12 років
+              - img "Рівень А1" [ref=e456]
+              - generic [ref=e457]:
+                - generic [ref=e458]: Рівень A1
+                - paragraph [ref=e459]: Розмовляємо про щоденне життя, родину, подорожі та інтереси.
+              - link "Обрати курс" [ref=e460] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a1/
+          - group "9 / 18" [ref=e463]:
+            - generic [ref=e464]:
+              - generic [ref=e465]: 12-13 років
+              - img "Рівень А2" [ref=e467]
+              - generic [ref=e468]:
+                - generic [ref=e469]: Рівень A2
+                - paragraph [ref=e470]: Закріплюємо базу та вчимося впевненіше пояснювати думки англійською.
+              - link "Обрати курс" [ref=e471] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a2/
+          - group "10 / 18" [ref=e474]:
+            - generic [ref=e475]:
+              - generic [ref=e476]: 13-15 років
+              - img "Рівень B1" [ref=e478]
+              - generic [ref=e479]:
+                - generic [ref=e480]: Рівень B1
+                - paragraph [ref=e481]: Вільніше висловлюємо думки, обговорюємо подорожі, технології та майбутню кар’єру.
+              - link "Обрати курс" [ref=e482] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b1/
+          - group "11 / 18" [ref=e485]:
+            - generic [ref=e486]:
+              - generic [ref=e487]: 15-17 років
+              - img "Рівень B2" [ref=e489]
+              - generic [ref=e490]:
+                - generic [ref=e491]: Рівень B2
+                - paragraph [ref=e492]: Відточуємо вільне спілкування, аргументацію та розуміння складних тем.
+              - link "Обрати курс" [ref=e493] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2/
+          - group "12 / 18" [ref=e496]:
+            - generic [ref=e497]:
+              - generic [ref=e498]: 8-17 років
+              - img "Рівень B2" [ref=e500]
+              - generic [ref=e501]:
+                - generic [ref=e502]: Рівень B2.1
+                - paragraph [ref=e503]: Обговорюємо складні теми, розширюємо словниковий запас та вчимося впевнено спілкуватися англійською.
+              - link "Обрати курс" [ref=e504] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2-1/
+          - group "13 / 18" [ref=e507]:
+            - generic [ref=e508]:
+              - generic [ref=e509]: 8-10 років
+              - img "Рівень А0" [ref=e511]
+              - generic [ref=e512]:
+                - generic [ref=e513]: Рівень A0
+                - paragraph [ref=e514]: Перші слова, фрази та знайомство з англійською.
+              - link "Обрати курс" [ref=e515] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a0/
+          - group "14 / 18" [ref=e518]:
+            - generic [ref=e519]:
+              - generic [ref=e520]: 10-12 років
+              - img "Рівень А1" [ref=e522]
+              - generic [ref=e523]:
+                - generic [ref=e524]: Рівень A1
+                - paragraph [ref=e525]: Розмовляємо про щоденне життя, родину, подорожі та інтереси.
+              - link "Обрати курс" [ref=e526] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a1/
+          - group "15 / 18" [ref=e529]:
+            - generic [ref=e530]:
+              - generic [ref=e531]: 12-13 років
+              - img "Рівень А2" [ref=e533]
+              - generic [ref=e534]:
+                - generic [ref=e535]: Рівень A2
+                - paragraph [ref=e536]: Закріплюємо базу та вчимося впевненіше пояснювати думки англійською.
+              - link "Обрати курс" [ref=e537] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-a2/
+          - group "16 / 18" [ref=e540]:
+            - generic [ref=e541]:
+              - generic [ref=e542]: 13-15 років
+              - img "Рівень B1" [ref=e544]
+              - generic [ref=e545]:
+                - generic [ref=e546]: Рівень B1
+                - paragraph [ref=e547]: Вільніше висловлюємо думки, обговорюємо подорожі, технології та майбутню кар’єру.
+              - link "Обрати курс" [ref=e548] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b1/
+          - group "17 / 18" [ref=e551]:
+            - generic [ref=e552]:
+              - generic [ref=e553]: 15-17 років
+              - img "Рівень B2" [ref=e555]
+              - generic [ref=e556]:
+                - generic [ref=e557]: Рівень B2
+                - paragraph [ref=e558]: Відточуємо вільне спілкування, аргументацію та розуміння складних тем.
+              - link "Обрати курс" [ref=e559] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2/
+          - group "18 / 18" [ref=e562]:
+            - generic [ref=e563]:
+              - generic [ref=e564]: 8-17 років
+              - img "Рівень B2" [ref=e566]
+              - generic [ref=e567]:
+                - generic [ref=e568]: Рівень B2.1
+                - paragraph [ref=e569]: Обговорюємо складні теми, розширюємо словниковий запас та вчимося впевнено спілкуватися англійською.
+              - link "Обрати курс" [ref=e570] [cursor=pointer]:
+                - /url: http://logika.ddev.site/courses/english-b2-1/
+        - generic [ref=e573]:
+          - button "Previous slide" [ref=e574] [cursor=pointer]
+          - button "Next slide" [ref=e577] [cursor=pointer]:
+            - paragraph [ref=e578]: Наступні курси
+    - generic [ref=e584]:
+      - heading "Чому тисячі батьків обирають Logika" [level=2] [ref=e585]
+      - list [ref=e586]:
+        - listitem [ref=e587]:
+          - img "Єдина платформа — єдина якість"
+          - generic [ref=e588]:
+            - heading "Єдина платформа — єдина якість" [level=3] [ref=e589]
+            - paragraph [ref=e590]: Інтерактивний підручник, практичні завдання й трекер результатів забезпечують високу якість навчання.
+        - listitem [ref=e591]:
+          - img "Мінімум 5 реальних проєктів за курс"
+          - generic [ref=e592]:
+            - heading "Мінімум 5 реальних проєктів за курс" [level=3] [ref=e593]
+            - paragraph [ref=e594]: Ігри, мультфільми, боти, сайти чи додатки — від ідеї до готового результату.
+        - listitem [ref=e595]:
+          - img "Відкриті уроки для батьків"
+          - generic [ref=e596]:
+            - heading "Відкриті уроки для батьків" [level=3] [ref=e597]
+            - paragraph [ref=e598]: Наприкінці модуля дитина презентує свій проєкт, а ви бачите реальний прогрес.
+        - listitem [ref=e599]:
+          - img "Онлайн або у вашому місті"
+          - generic [ref=e600]:
+            - heading "Онлайн або у вашому місті" [level=3] [ref=e601]
+            - paragraph [ref=e602]: Займайтеся у школі Logika або онлайн у невеликих групах.
+        - listitem [ref=e603]:
+          - img "Викладачі з профільною освітою"
+          - generic [ref=e604]:
+            - heading "Викладачі з профільною освітою" [level=3] [ref=e605]
+            - paragraph [ref=e606]: Багаторівневий відбір, навчання за методологією Logika та досвід роботи з дітьми.
+        - listitem [ref=e607]:
+          - img "Власна ігрова методика"
+          - generic [ref=e608]:
+            - heading "Власна ігрова методика" [level=3] [ref=e609]
+            - paragraph [ref=e610]: Навчаємо через сюжети, практику та залучення, а не через суху теорію.
+    - generic [ref=e613]:
+      - generic [ref=e614]:
+        - heading "Дайте дитині шанс не просто грати, а створювати" [level=2] [ref=e615]
+        - link "Запис на безкоштовний урок" [ref=e616] [cursor=pointer]:
+          - /url: http://logika.ddev.site/#lead-form
+      - list [ref=e619]:
+        - listitem [ref=e620]:
+          - generic [ref=e623]: Було
+          - paragraph [ref=e626]: Просто грає в ігри
+        - listitem [ref=e627]:
+          - generic [ref=e630]: Стало
+          - paragraph [ref=e633]: Створює власні ігри
+    - generic [ref=e636]:
+      - heading "Як розпочати навчання" [level=2] [ref=e637]
+      - list [ref=e638]:
+        - listitem [ref=e639]:
+          - generic [ref=e642]:
+            - generic [ref=e643]: Залишiть заявку
+            - paragraph [ref=e644]: Заповнiть форму або зателефонуйте. Менеджер зв'яжеться за 30 хвилин
+            - link "Залишити заявку" [ref=e645] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+        - listitem [ref=e648]:
+          - generic [ref=e651]:
+            - generic [ref=e652]: Відвідайте безкоштовний пробний урок
+            - paragraph [ref=e653]: Дитина спробує, ви подивитесь. Жодних зобов'язань
+            - link "Залишити заявку" [ref=e654] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+        - listitem [ref=e657]:
+          - generic [ref=e660]:
+            - generic [ref=e661]: Розпочніть навчання та отримайте результат
+            - paragraph [ref=e662]: Регулярнi заняття, власнi проекти, вiдкритi уроки для батькiв
+            - link "Залишити заявку" [ref=e663] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+    - generic [ref=e668]:
+      - heading "Довіра, підтверджена результатами" [level=2] [ref=e669]
+      - list [ref=e671]:
+        - listitem [ref=e672]
+        - listitem [ref=e679]:
+          - generic [ref=e681]:
+            - generic [ref=e682]: Тетяна
+            - generic [ref=e689]: Python Mastery
+            - paragraph [ref=e690]: Доброго ранку! Перш за все дуже дякую вам і всій команді за чудовий табір! Ксюша приїхала задоволена, наповнена емоціями та враженнями. З найкращими спогадами. Просто супер!) В такому результаті дуже…
+        - listitem [ref=e691]:
+          - generic [ref=e693]:
+            - generic [ref=e694]: Роман
+            - generic [ref=e702]: Python Mastery
+            - paragraph [ref=e703]: Багато писати не збираюся, напишу коротко – дитині дуже подобається і це саме головне, як на мене! Подобаються як самі заняття, так і виконання домашніх завдань, підхід та гарне відношення…
+        - listitem [ref=e704]
+        - listitem [ref=e708]:
+          - generic [ref=e710]:
+            - generic [ref=e711]: Вікторія
+            - generic [ref=e718]: Python Mastery
+            - paragraph [ref=e719]: Доброго дня, не знаю, можливо у Вас є чарівна паличка…Та Даша кожен наступний раз приїзджає з табору ще більше задоволена 🤗і водночас засмучена🙃, що так швидко пролетів час.Ваша робота безцінна,…
+        - listitem [ref=e720]:
+          - generic [ref=e722]:
+            - generic [ref=e723]: Тетяна
+            - generic [ref=e730]: Python Mastery
+            - paragraph [ref=e731]: Дякуємо безмежно🥰 Софійка в захваті, каже наступного року теж хоче їхати
+        - listitem [ref=e732]:
+          - generic [ref=e734]:
+            - generic [ref=e735]: Sova
+            - generic [ref=e742]: Python Mastery
+            - paragraph [ref=e743]: Доброго вечора! Ви неймовірні!!!!! Діти мої у захваті!!!І вже чекають літнього табору! Ми з Сашком вже забронювали місце)))) Величезна подяка від Сашкового тата,він вже два роки на війні і такий…
+        - listitem [ref=e744]:
+          - generic [ref=e746]:
+            - generic [ref=e747]: Наталія
+            - generic [ref=e754]: Python Mastery
+            - paragraph [ref=e755]: Вони такі задоволені))) На запитання, чи хотіли б там ще залишитись відповіли одноголосно ТАК! Засмаглі, з купою позитивних емоцій! Дуже дякую ВАМ! Дякую за організцію такого класного відпочинку!
+        - listitem [ref=e756]
+        - listitem [ref=e760]:
+          - generic [ref=e762]:
+            - generic [ref=e763]: Катерина
+            - generic [ref=e771]: Python Mastery
+            - paragraph [ref=e772]: Мене дуже тішить, що мій син нарешті чимось зацікавився сильно, а саме навчанням у школі Logika. До навчання у школі були суцільні стрілялки і гонки кожен день, зараз почав багато…
+        - listitem [ref=e773]
+        - listitem [ref=e777]:
+          - generic [ref=e779]:
+            - generic [ref=e780]: Наталія
+            - generic [ref=e787]: Python Mastery
+            - paragraph [ref=e788]: Хочу висловити щиру подяку за бездоганну організацію та насичений змістовний відпочинок. Син отримав позитивний заряд емоцій, вмінь, знань,зустрів нових друзів. Кожен день у таборі був не схожий на інший. Від’їжджає…
+    - region [ref=e789]:
+      - generic [ref=e790]:
+        - heading "Проекти наших учнів" [level=2] [ref=e792]
+        - list [ref=e795]:
+          - listitem [ref=e796]:
+            - heading "Максим, 12 років" [level=3] [ref=e797]
+            - generic [ref=e798]:
+              - img "Максим, учень курсу Python Start" [ref=e799]
+              - generic [ref=e800]: Python Start
+              - generic [ref=e801]: Python
+            - paragraph [ref=e802]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+          - listitem [ref=e803]:
+            - heading "Максим, 12 років" [level=3] [ref=e804]
+            - generic [ref=e805]:
+              - img "Максим, учень курсу Python Start" [ref=e806]
+              - generic [ref=e807]: Python Start
+              - generic [ref=e808]: Python
+            - paragraph [ref=e809]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+          - listitem [ref=e810]:
+            - generic [ref=e811]:
+              - generic [ref=e812]: Python Start
+              - heading "Максим, 12 років" [level=3] [ref=e813]
+              - paragraph [ref=e814]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+              - link "Дивитись відеовідгук" [ref=e815] [cursor=pointer]:
+                - /url: https://www.youtube.com/watch?v=7QN3QcMHMQ4
+              - link "Безкоштовний пробний урок" [ref=e817] [cursor=pointer]:
+                - /url: "#lead-form"
+            - img "Гра, створена учнем на курсі Python Start" [ref=e820]
+          - listitem [ref=e821]:
+            - heading "Максим, 12 років" [level=3] [ref=e822]
+            - generic [ref=e823]:
+              - img "Максим, учень курсу Python Start" [ref=e824]
+              - generic [ref=e825]: Python Start
+              - generic [ref=e826]: Python
+            - paragraph [ref=e827]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+          - listitem [ref=e828]:
+            - heading "Максим, 12 років" [level=3] [ref=e829]
+            - generic [ref=e830]:
+              - img "Максим, учень курсу Python Start" [ref=e831]
+              - generic [ref=e832]: Python Start
+              - generic [ref=e833]: Python
+            - paragraph [ref=e834]: Максим освоїв курс Python Start і вже створив свою першу комп’ютерну гру
+    - region [ref=e835]:
+      - generic [ref=e836]:
+        - generic [ref=e837]:
+          - heading "Знайдіть свою школу або навчайтесь онлайн" [level=2] [ref=e838]
+          - paragraph [ref=e839]: Наші школи у 130 містах України — знайдіть зручний варіант поруч із вами або навчайтесь онлайн.
+        - group "Формат навчання" [ref=e840]:
+          - button "Навчатися у нашому місті" [ref=e841] [cursor=pointer]
+          - button "Онлайн навчання" [ref=e842] [cursor=pointer]
+        - generic [ref=e843]:
+          - img "Map of Ukraine" [ref=e1116]:
+            - button "Черкаська область" [ref=e1117] [cursor=pointer]
+            - button "Чернігівська область" [ref=e1118] [cursor=pointer]
+            - button "Чернівецька область" [ref=e1119] [cursor=pointer]
+            - generic "Crimea"
+            - button "Дніпропетровська область" [ref=e1120] [cursor=pointer]
+            - button "Івано-Франківська область" [ref=e1121] [cursor=pointer]
+            - button "Харківська область" [ref=e1122] [cursor=pointer]
+            - button "Хмельницька область" [ref=e1123] [cursor=pointer]
+            - button "Кіровоградська область" [ref=e1124] [cursor=pointer]
+            - button "Київська область" [ref=e1125] [cursor=pointer]
+            - button "місто Київ" [pressed] [ref=e1126] [cursor=pointer]
+            - button "Львівська область" [ref=e1127] [cursor=pointer]
+            - button "Миколаївська область" [ref=e1128] [cursor=pointer]
+            - button "Одеська область" [ref=e1129] [cursor=pointer]
+            - button "Полтавська область" [ref=e1130] [cursor=pointer]
+            - button "Рівненська область" [ref=e1131] [cursor=pointer]
+            - button "Тернопільська область" [ref=e1132] [cursor=pointer]
+            - button "Вінницька область" [ref=e1133] [cursor=pointer]
+            - button "Волинська область" [ref=e1134] [cursor=pointer]
+            - button "Закарпатська область" [ref=e1135] [cursor=pointer]
+            - button "Запорізька область" [ref=e1136] [cursor=pointer]
+            - button "Запорізька область" [ref=e1137] [cursor=pointer]
+            - button "Житомирська область" [ref=e1138] [cursor=pointer]
+          - generic [ref=e847]:
+            - heading "Оберіть місто навчання" [level=3] [ref=e848]
+            - paragraph [ref=e849]: Ми підкажемо зручний варіант у вибраній області.
+            - heading "місто Київ" [level=4] [ref=e1139]
+            - button "Київ" [ref=e1141] [cursor=pointer]
+        - generic [ref=e1142]:
+          - heading "КИЇВ" [level=3] [ref=e1143]
+          - generic [ref=e1144]:
+            - generic [ref=e1145]:
+              - paragraph [ref=e1146]: Усі локації (9)
+              - list [ref=e1147]:
+                - listitem [ref=e1148]:
+                  - text: Академмістечко
+                  - generic [ref=e1149]: вул. Василя Стуса, 35-А
+                - listitem [ref=e1150]:
+                  - text: Борщагівка
+                  - generic [ref=e1151]: бульвар Кольцова, 14Д
+                - listitem [ref=e1152]:
+                  - text: ВДНХ
+                  - generic [ref=e1153]: вул. Степана Рудницького, 2Б
+                - listitem [ref=e1154]:
+                  - text: Виноградар
+                  - generic [ref=e1155]: вул. Сергія Данченка, 3
+                - listitem [ref=e1156]:
+                  - text: Лівобережна
+                  - generic [ref=e1157]: вул. Регенераторна, 4
+                - listitem [ref=e1158]:
+                  - text: Оболонь
+                  - generic [ref=e1159]: просп. Героїв Сталінграда, 14
+                - listitem [ref=e1160]:
+                  - text: Позняки
+                  - generic [ref=e1161]: вул. Срібнокільська, 12
+                - listitem [ref=e1162]:
+                  - text: Солом'янка
+                  - generic [ref=e1163]: вул. Єреванська, 30
+                - listitem [ref=e1164]:
+                  - text: Троєщина
+                  - generic [ref=e1165]: просп. Маяковського, 26
+            - iframe [ref=e1166]
+    - generic [ref=e853]:
+      - generic [ref=e854]:
+        - heading "Медіа-центр" [level=2] [ref=e855]
+        - paragraph [ref=e856]: Новини, події та корисні матеріали про навчання, розвиток дітей і світ технологій.
+        - generic [ref=e857]:
+          - link "Запис на безкоштовний урок" [ref=e858] [cursor=pointer]:
+            - /url: http://logika.ddev.site/#lead-form
+          - link "Перейти до Медіа-центру" [ref=e861] [cursor=pointer]:
+            - /url: http://logika.ddev.site/media-center/
+      - generic [ref=e865]:
+        - generic [ref=e866]:
+          - article [ref=e867]:
+            - generic [ref=e868]:
+              - generic [ref=e869]: Logika Новини
+              - generic [ref=e870]: Корисне для батьків
+          - generic [ref=e871]:
+            - heading "Що нового у Logika" [level=3] [ref=e872]
+            - paragraph [ref=e873]: Актуальні новини, події та важливі оновлення школи.
+            - link "Перейти до розділу" [ref=e874] [cursor=pointer]:
+              - /url: /media-center/
+          - article [ref=e877]:
+            - generic [ref=e878]: Logika Конкурси
+            - generic [ref=e879]:
+              - heading "Конкурси від Logika" [level=3] [ref=e880]
+              - paragraph [ref=e881]: Беріть участь у хакатонах, змаганнях, творчих ініціативах і отримуйте нагороди за призові місця.
+            - link "Переглянути усі конкурси" [ref=e882] [cursor=pointer]:
+              - /url: /media-center/
+        - generic [ref=e885]:
+          - article [ref=e886]:
+            - generic [ref=e887]: Акція
+            - generic [ref=e888]:
+              - heading "1=2" [level=3] [ref=e889]
+              - heading "на усі курси 14-17 років" [level=4] [ref=e890]
+              - paragraph [ref=e891]: Купуйте один курс та отримуйте другий у подарунок
+            - link "Дізнатись більше" [ref=e892] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+          - article [ref=e895]:
+            - generic [ref=e896]: Акція
+            - generic [ref=e897]:
+              - heading "-10%" [level=3] [ref=e898]
+              - heading "на обрані курси" [level=4] [ref=e899]
+              - paragraph [ref=e900]: Спробуйте навчання за вигідною ціною
+            - link "Дізнатись більше" [ref=e901] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+          - article [ref=e904]:
+            - generic [ref=e905]: Конкурс
+            - heading "LogiRace 2026" [level=3] [ref=e906]
+            - paragraph [ref=e907]: "Уявіть майбутнє і створіть свій світ на Червоній планеті: ландшафт, технології, роботів, транспорт, ресурси та екосистему."
+            - link "Дізнатись більше" [ref=e908] [cursor=pointer]:
+              - /url: http://logika.ddev.site/#lead-form
+        - generic [ref=e911]:
+          - link "Відеоігри — чи є плюси? Logika Блог Відеоігри — чи є плюси? 26.10.2021 1 хв 1" [ref=e912] [cursor=pointer]:
+            - /url: http://logika.ddev.site/media-center/articles/videogames/
+            - img "Відеоігри — чи є плюси?" [ref=e913]
+            - generic [ref=e914]: Logika Блог
+            - heading "Відеоігри — чи є плюси?" [level=3] [ref=e915]
+            - paragraph [ref=e916]:
+              - generic [ref=e917]: 26.10.2021
+              - generic [ref=e918]: 1 хв
+              - generic [ref=e919]: "1"
+          - 'link "Розвиток майбутніх програмістів: як допомогти? Logika Блог Розвиток майбутніх програмістів: як допомогти? 14.10.2021 1 хв 1" [ref=e920] [cursor=pointer]':
+            - /url: http://logika.ddev.site/media-center/articles/developmentofyoungprogrammers/
+            - 'img "Розвиток майбутніх програмістів: як допомогти?" [ref=e921]'
+            - generic [ref=e922]: Logika Блог
+            - 'heading "Розвиток майбутніх програмістів: як допомогти?" [level=3] [ref=e923]'
+            - paragraph [ref=e924]:
+              - generic [ref=e925]: 14.10.2021
+              - generic [ref=e926]: 1 хв
+              - generic [ref=e927]: "1"
+          - link "Концентрація уваги — міф чи реальність? Logika Блог Концентрація уваги — міф чи реальність? 20.09.2021 1 хв 1" [ref=e928] [cursor=pointer]:
+            - /url: http://logika.ddev.site/media-center/articles/concentration/
+            - img "Концентрація уваги — міф чи реальність?" [ref=e929]
+            - generic [ref=e930]: Logika Блог
+            - heading "Концентрація уваги — міф чи реальність?" [level=3] [ref=e931]
+            - paragraph [ref=e932]:
+              - generic [ref=e933]: 20.09.2021
+              - generic [ref=e934]: 1 хв
+              - generic [ref=e935]: "1"
+    - generic [ref=e938]:
+      - generic [ref=e940]:
+        - generic [ref=e941]:
+          - heading "Підберемо курс саме для вашої дитини!" [level=2] [ref=e942]
+          - paragraph [ref=e943]: Ми зателефонуємо в зручний час
+        - generic [ref=e944]:
+          - textbox "Ім’я" [ref=e945]
+          - generic [ref=e948]:
+            - combobox "Обрана країна" [ref=e950]:
+              - generic [ref=e1167]: Україна +380
+              - generic [ref=e1168]: "+380"
+            - textbox "Номер телефону" [ref=e953]
+          - button "м. Київ" [ref=e1169] [cursor=pointer]
+          - generic [ref=e957]:
+            - combobox
+            - button "Вік дитини (від 7 до 17)" [ref=e958] [cursor=pointer]
+        - generic [ref=e960]:
+          - button "Отримати консультацію" [ref=e961] [cursor=pointer]
+          - paragraph [ref=e964]:
+            - text: Натискаючи, ви погоджуєтесь із
+            - link "Політикою конфіденційності" [ref=e965] [cursor=pointer]:
+              - /url: http://logika.ddev.site/privacy-policy/
+        - textbox
+      - generic [ref=e966]:
+        - img "cta girl" [ref=e969]
+        - img "cta-icon" [ref=e971]
+    - region [ref=e1170]:
+      - generic [ref=e1171]:
+        - generic [ref=e1172]:
+          - generic [ref=e1173]:
+            - heading "Курси програмування для дітей у Києві" [level=2] [ref=e1174]
+            - generic [ref=e1175]:
+              - paragraph [ref=e1176]: У Києві працює офлайн-школа Logika для дітей 7–17 років. Тут можна вивчати програмування та англійську в невеликих групах, з викладачем поруч і можливістю почати з безкоштовного пробного уроку.
+              - paragraph [ref=e1177]: На заняттях діти створюють власні проєкти, розвивають логіку, цифрові навички та впевненість у сучасних технологіях. Оберіть формат навчання поруч із домом у Києві.
+            - link "Запис на безкоштовний урок" [ref=e1178] [cursor=pointer]:
+              - /url: "#lead-form"
+          - img "Діти навчаються програмуванню в Києві" [ref=e1182]
+        - generic [ref=e1183]:
+          - img "Учні Logika під час занять" [ref=e1184]
+          - generic [ref=e1186]: Школа програмування для дітей у Києві
+          - 'button "Відтворити відео: Курси програмування для дітей у Києві" [ref=e1187] [cursor=pointer]'
+    - generic [ref=e976]:
+      - heading "Питання та відповіді" [level=2] [ref=e977]
+      - list [ref=e978]:
+        - listitem [ref=e979]:
+          - button "Скільки коштує навчання в Logika?" [ref=e980] [cursor=pointer]
+          - paragraph [ref=e983]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=e984]:
+          - button "З якого віку можна навчатися в Logika?" [ref=e985] [cursor=pointer]
+          - paragraph [ref=e987]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=e988]:
+          - button "Чи потрібен досвід у програмуванні або англійській?" [ref=e989] [cursor=pointer]
+          - paragraph [ref=e991]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=e992]:
+          - button "Як проходять заняття?" [ref=e993] [cursor=pointer]
+          - paragraph [ref=e995]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=e996]:
+          - button "Що отримає дитина під час навчання?" [ref=e997] [cursor=pointer]
+          - paragraph [ref=e999]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=e1000]:
+          - button "Як записатися на безкоштовний пробний урок?" [ref=e1001] [cursor=pointer]
+          - paragraph [ref=e1003]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+        - listitem [ref=e1004]:
+          - button "Чим Logika відрізняється від інших шкіл?" [ref=e1005] [cursor=pointer]
+          - paragraph [ref=e1007]: Вартість залежить від обраного формату навчання, пакета занять, міста, можливих пільг і поточних знижок. Залиште заявку, і менеджер допоможе підібрати оптимальний варіант та розрахує фінальну вартість.
+    - region [ref=e1008]:
+      - generic [ref=e1010]:
+        - heading "Бажаєте залишити відгук?" [level=2] [ref=e1011]
+        - link "Написати директору" [ref=e1012] [cursor=pointer]:
+          - /url: "#lead-form"
+    - generic [ref=e1017]:
+      - generic [ref=e1018]:
+        - heading "Ура, подарункові сертифікати" [level=2] [ref=e1019]
+        - heading "Вартість сертифікату на 2 місяці навчання = вартість 1-го місяця + вартість 2-го місяця зі знижкою 10%" [level=5] [ref=e1020]
+        - paragraph [ref=e1021]: "Залиште заявку, і ми зв'яжемось з вами: відповімо на будь-які запитання і допоможемо обрати курс"
+      - link "Залишити заявку" [ref=e1022] [cursor=pointer]:
+        - /url: "#lead-form"
+    - generic [ref=e1029]:
+      - heading "Наші партнери" [level=2] [ref=e1030]
+      - list [ref=e1031]:
+        - listitem [ref=e1032]
+        - listitem [ref=e1034]
+        - listitem [ref=e1036]
+        - listitem [ref=e1038]
+        - listitem [ref=e1040]
+        - listitem [ref=e1042]
+        - listitem [ref=e1044]
+        - listitem [ref=e1046]
+  - contentinfo [ref=e1048]:
+    - generic [ref=e1050]:
+      - generic [ref=e1051]:
+        - generic [ref=e1052]:
+          - link [ref=e1053] [cursor=pointer]:
+            - /url: http://logika.ddev.site/cities/kyiv/
+            - img "Logika" [ref=e1054]
+          - generic [ref=e1055]: Найбільша в Україні школа програмування та англійської мови для учнів 7–17 років
+          - link "Спробувати безкоштовно" [ref=e1056] [cursor=pointer]:
+            - /url: http://logika.ddev.site/#lead-form
+        - generic [ref=e1059]:
+          - generic [ref=e1060]:
+            - generic [ref=e1061]: Навігація
+            - list [ref=e1062]:
+              - listitem [ref=e1063]:
+                - link "Про Logika" [ref=e1064] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/about/
+              - listitem [ref=e1065]:
+                - link "Курси" [ref=e1066] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/it-courses/
+              - listitem [ref=e1067]:
+                - link "IT Табори" [ref=e1068] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/camps/
+              - listitem [ref=e1069]:
+                - link "Медіа-центр" [ref=e1070] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/media-center/
+              - listitem [ref=e1071]:
+                - link "FAQ" [ref=e1072] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/faq/
+              - listitem [ref=e1073]:
+                - link "Контакти" [ref=e1074] [cursor=pointer]:
+                  - /url: http://logika.ddev.site/cities/kyiv/
+          - generic [ref=e1075]:
+            - generic [ref=e1076]: Інформація
+            - list [ref=e1077]:
+              - listitem [ref=e1078]:
+                - link "Вакансії" [ref=e1079] [cursor=pointer]:
+                  - /url: /vacancies/
+              - listitem [ref=e1080]:
+                - link [ref=e1081] [cursor=pointer]:
+                  - /url: /contractoffer/
+                  - text: Договір оферти
+                  - paragraph [ref=e1082]: (для клієнтів в Україні)
+              - listitem [ref=e1083]:
+                - link [ref=e1084] [cursor=pointer]:
+                  - /url: /contractoffer-overseas/
+                  - text: Договір оферти
+                  - paragraph [ref=e1085]: (для клієнтів поза межами України)
+              - listitem [ref=e1086]:
+                - link "Освітня ліцензія" [ref=e1087] [cursor=pointer]:
+                  - /url: /litsenziia/
+          - generic [ref=e1088]:
+            - generic [ref=e1089]:
+              - generic [ref=e1090]: Наші соц. мережі
+              - list [ref=e1091]:
+                - listitem [ref=e1092]:
+                  - link [ref=e1093] [cursor=pointer]:
+                    - /url: https://www.instagram.com/logika_it_school/
+                - listitem [ref=e1096]:
+                  - link [ref=e1097] [cursor=pointer]:
+                    - /url: https://www.facebook.com/logika.it.school/
+                - listitem [ref=e1100]:
+                  - link "TikTok" [ref=e1101] [cursor=pointer]:
+                    - /url: https://www.tiktok.com/@logika_fun?lang=uk-UA
+            - generic [ref=e1104]:
+              - generic [ref=e1105]: Контакти
+              - link "+ 38 (093) 170-74-40" [ref=e1106] [cursor=pointer]:
+                - /url: tel:+380931707440
+              - link "kiev@logikaschool.com" [ref=e1107] [cursor=pointer]:
+                - /url: mailto:kiev@logikaschool.com
+      - generic [ref=e1108]:
+        - generic [ref=e1109]:
+          - paragraph [ref=e1110]: © 2026 Logika
+          - paragraph [ref=e1111]: Всі права захищені
+        - link "Політика конфіденційності" [ref=e1112] [cursor=pointer]:
+          - /url: http://logika.ddev.site/privacy-policy/

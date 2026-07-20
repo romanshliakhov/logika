@@ -281,10 +281,10 @@ final class ContentMigration {
 				'it_courses_hero_image' => '@asset:boy-character.svg',
 				'it_courses_catalog_title' => self::legacy( $id, 'it_courses_page_texts', 'Курси програмування для дітей 7-17 років' ),
 				'it_courses_catalog_cards' => array(
-					array( 'label' => '7-8 років', 'anchor' => '#years7', 'image' => '@asset:services/service1.png', 'background' => '@asset:services/services-bg.svg' ),
-					array( 'label' => '9-11 років', 'anchor' => '#years9', 'image' => '@asset:services/service1.png', 'background' => '@asset:services/services-bg.svg' ),
-					array( 'label' => '12-14 років', 'anchor' => '#years12', 'image' => '@asset:services/service1.png', 'background' => '@asset:services/services-bg.svg' ),
-					array( 'label' => '14-17 років', 'anchor' => '#years14', 'image' => '@asset:services/service1.png', 'background' => '@asset:services/services-bg.svg' ),
+					array( 'label' => '7 - 8 років', 'anchor' => '#years7', 'image' => '@asset:services/service1.png', 'background' => '@asset:services/services-bg.svg' ),
+					array( 'label' => '9 - 11 років', 'anchor' => '#years9', 'image' => '@asset:services/service1.png', 'background' => '@asset:services/services-bg.svg' ),
+					array( 'label' => '12 - 14 років', 'anchor' => '#years12', 'image' => '@asset:services/service1.png', 'background' => '@asset:services/services-bg.svg' ),
+					array( 'label' => '14 - 17 років', 'anchor' => '#years14', 'image' => '@asset:services/service1.png', 'background' => '@asset:services/services-bg.svg' ),
 				),
 				'it_courses_marquee_items' => self::textRows( array( 'Перший урок — безкоштовно', 'Навчання з результатом', 'Уроки з живими викладачами', 'Інтерактивне навчання' ) ),
 				'it_courses_age_categories' => self::courseCategories( (array) get_field( 'it_courses_featured_courses', $id ) ?: $courses ),
@@ -820,7 +820,7 @@ final class ContentMigration {
 
 	private static function courseCategories( array $ids ): array {
 		$ids = array_values( array_filter( array_map( 'absint', $ids ) ) );
-		$titles = array( 'Курси для дітей 7–8 років', 'Курси для дітей 9–11 років', 'Курси для дітей 12–14 років', 'Курси для дітей 14–17 років' );
+		$titles = array( 'Курси для дітей 7 - 8 років', 'Курси для дітей 9 - 11 років', 'Курси для дітей 12 - 14 років', 'Курси для дітей 14 - 17 років' );
 		$chunks = array_chunk( $ids, max( 1, (int) ceil( count( $ids ) / 4 ) ) );
 
 		return array_map( static fn( string $title, int $index ): array => array( 'title' => $title, 'courses' => $chunks[ $index ] ?? array() ), $titles, array_keys( $titles ) );

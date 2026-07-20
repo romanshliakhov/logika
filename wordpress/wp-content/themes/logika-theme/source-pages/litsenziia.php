@@ -16,7 +16,7 @@
           <div class="article-section__box">
             <div class="article-section__content" style="grid-template-columns: minmax(0, 1fr);">
               <div class="article-section__editor">
-                <h2 style="text-align:center;">ОСВІТНЯ ЛІЦЕНЗІЯ</h2>
+                <h2 class="license-title">ОСВІТНЯ ЛІЦЕНЗІЯ</h2>
                 <div class="license-documents" style="display:grid;gap:16px;width:min(100%,800px);margin:16px auto 0;">
                   <img src="img/litsenziia/1.jpg.webp" alt="Освітня ліцензія, сторінка 1" style="width:100%;height:auto;display:block;">
                   <img src="img/litsenziia/4.webp" alt="Освітня ліцензія, сторінка 2" style="width:100%;height:auto;display:block;">

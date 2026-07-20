@@ -24,7 +24,7 @@
                 <img width='440' height='225' src='img/boy-character.svg' alt='boy-character'>
               </div>
             </div>
-            
+
             <div class="banner-section__right">
               <form class="banner-section__form main-form">
                 <div class="main-form__title h5">
@@ -186,7 +186,7 @@
                 </div>
               </div>
 
-              <div class="courses-section__item-ages">7<span class="age-range-separator">-</span>8 рокiв</div>
+              <div class="courses-section__item-ages">7 - 8 рокiв</div>
 
               <a href="#years7" class="courses-section__item-link btn btn--white">
                 Переглянути курси
@@ -207,7 +207,7 @@
                 </div>
               </div>
 
-              <div class="courses-section__item-ages">9<span class="age-range-separator">-</span>11 рокiв</div>
+              <div class="courses-section__item-ages">9 - 11 рокiв</div>
 
               <a href="#years9" class="courses-section__item-link btn btn--white">
                 Переглянути курси
@@ -228,7 +228,7 @@
                 </div>
               </div>
 
-              <div class="courses-section__item-ages">12<span class="age-range-separator">-</span>14 рокiв</div>
+              <div class="courses-section__item-ages">12 - 14 рокiв</div>
 
               <a href="#years12" class="courses-section__item-link btn btn--white">
                 Переглянути курси
@@ -249,7 +249,7 @@
                 </div>
               </div>
 
-              <div class="courses-section__item-ages">14<span class="age-range-separator">-</span>17 рокiв</div>
+              <div class="courses-section__item-ages">14 - 17 рокiв</div>
 
               <a href="#years14" class="courses-section__item-link btn btn--white">
                 Переглянути курси
@@ -260,11 +260,11 @@
       </div>
     </section>
 
-    <section class="categories-section" id="years7"> 
+    <section class="categories-section" id="years7">
       <div class="container">
         <div class="categories-section__wrapp">
           <div class="categories-section__top">
-            <h2 class="categories-section__title">Курси для дітей 7-8 років</h2>  
+            <h2 class="categories-section__title">Курси для дітей 7 - 8 років</h2>
 
             <div class="categories-section__controls">
               <div class="categories-section__controls-btn swiper-button-prev">
@@ -287,8 +287,8 @@
                 <ul class='swiper-wrapper'>
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -328,11 +328,11 @@
       </div>
     </section>
 
-    <section class="categories-section" id="years9"> 
+    <section class="categories-section" id="years9">
       <div class="container">
         <div class="categories-section__wrapp">
           <div class="categories-section__top">
-            <h2 class="categories-section__title">Курси для дітей 9-11 років</h2>  
+            <h2 class="categories-section__title">Курси для дітей 9 - 11 років</h2>
 
             <div class="categories-section__controls">
               <div class="categories-section__controls-btn swiper-button-prev">
@@ -355,8 +355,8 @@
                 <ul class='swiper-wrapper'>
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -391,8 +391,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -427,8 +427,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -468,11 +468,11 @@
       </div>
     </section>
 
-    <section class="categories-section" id="years12"> 
+    <section class="categories-section" id="years12">
       <div class="container">
         <div class="categories-section__wrapp">
           <div class="categories-section__top">
-            <h2 class="categories-section__title">Курси для дітей 12-14 років</h2>  
+            <h2 class="categories-section__title">Курси для дітей 12 - 14 років</h2>
 
             <div class="categories-section__controls">
               <div class="categories-section__controls-btn swiper-button-prev">
@@ -495,8 +495,8 @@
                 <ul class='swiper-wrapper'>
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -531,8 +531,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -567,8 +567,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -603,8 +603,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -639,8 +639,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -675,8 +675,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -711,8 +711,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -747,8 +747,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -783,8 +783,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -819,8 +819,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -855,8 +855,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -891,8 +891,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -932,11 +932,11 @@
       </div>
     </section>
 
-    <section class="categories-section" id="years14"> 
+    <section class="categories-section" id="years14">
       <div class="container">
         <div class="categories-section__wrapp">
           <div class="categories-section__top">
-            <h2 class="categories-section__title">Курси для дітей 14-17 років</h2>  
+            <h2 class="categories-section__title">Курси для дітей 14 - 17 років</h2>
 
             <div class="categories-section__controls">
               <div class="categories-section__controls-btn swiper-button-prev">
@@ -959,8 +959,8 @@
                 <ul class='swiper-wrapper'>
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -995,8 +995,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1031,8 +1031,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1067,8 +1067,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1103,8 +1103,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1139,8 +1139,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1175,8 +1175,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1211,8 +1211,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1247,8 +1247,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1283,8 +1283,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1319,8 +1319,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1355,8 +1355,8 @@
 
                   <li class='swiper-slide'>
                     <div class="course-card">
-                      <span class="course-card__label">7-8 років</span>
-                      
+                      <span class="course-card__label">7 - 8 років</span>
+
                       <div class="course-card__media">
                         <div class="course-card__bg">
                           <img width='359' height='223' src='img/courses/course-bg.svg' alt=''>
@@ -1796,7 +1796,7 @@
           <ul class='accordion' data-default="1" data-single='true' data-breakpoint='576' data-accordion-init>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='1'>
-                Скільки коштує навчання в Logika?
+                Чи є FAQ для міста?
               </button>
               <div class='accordion__content' data-content='1'>
                 <div class="editor">
@@ -1806,7 +1806,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='2'>
-                З якого віку можна навчатися в Logika?
+                Чи є FAQ для курсу?
               </button>
               <div class='accordion__content' data-content='2'>
                 <div class="editor">
@@ -1816,7 +1816,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='3'>
-                Чи потрібен досвід у програмуванні або англійській?
+                Для якого віку підходять курси?
               </button>
               <div class='accordion__content' data-content='3'>
                 <div class="editor">
@@ -1826,7 +1826,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='4'>
-                Як проходять заняття?
+                У якому форматі проходить навчання?
               </button>
               <div class='accordion__content' data-content='4'>
                 <div class="editor">
@@ -1836,7 +1836,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='5'>
-                Що отримає дитина під час навчання?
+                Чи можна відвідати пробний урок?
               </button>
               <div class='accordion__content' data-content='5'>
                 <div class="editor">
@@ -1846,7 +1846,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='6'>
-                Як записатися на безкоштовний пробний урок?
+                Як дізнатись ціну?
               </button>
               <div class='accordion__content' data-content='6'>
                 <div class="editor">
@@ -1856,7 +1856,7 @@
             </li>
             <li class='accordion__item'>
               <button class='accordion__btn h5' data-id='7'>
-                Чим Logika відрізняється від інших шкіл?
+                Який розклад занять?
               </button>
               <div class='accordion__content' data-content='7'>
                 <div class="editor">
