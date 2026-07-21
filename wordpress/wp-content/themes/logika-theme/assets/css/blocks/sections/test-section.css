@@ -2,20 +2,34 @@
 /* stylelint-disable */
 /* stylelint-disable */
 .test-section {
-  padding: clamp(40px, 4.167vw, 80px) 0;
+  padding: clamp(20px, 4.167vw, 80px) 0;
 }
 .test-section__wrapp {
   position: relative;
-  padding: 60px 0;
+  padding: clamp(20px, 3.125vw, 60px) clamp(20px, 6.25vw, 120px) clamp(20px, 3.125vw, 60px) clamp(20px, 4.167vw, 80px);
   background-color: var(--violet-500);
-  border-radius: 40px;
+  border-radius: clamp(20px, 2.083vw, 40px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px 20px;
+}
+@media (max-width: 576px) {
+  .test-section__wrapp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 .test-section__bg {
   display: -webkit-box;
@@ -25,7 +39,6 @@
   inset: 0;
 }
 .test-section__left {
-  padding: 0px 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +47,7 @@
   justify-content: center;
 }
 .test-section__content {
-  max-width: 510px;
+  max-width: 725px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +59,19 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 30px;
+  gap: clamp(15px, 3.906vw, 30px);
+}
+@media (max-width: 576px) {
+  .test-section__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 .test-section__box {
   display: -webkit-box;
@@ -71,8 +96,21 @@
   max-width: 400px;
 }
 .test-section__right {
-  max-width: 720px;
-  width: 100%;
-  margin-right: -1px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 576px) {
+  .test-section__right {
+    padding: 0 30px;
+  }
+}
+.test-section__image {
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 /*# sourceMappingURL=test-section.css.map */
