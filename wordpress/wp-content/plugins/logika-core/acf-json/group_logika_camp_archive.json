@@ -1,326 +1,852 @@
 {
-  "key": "group_logika_camp_archive",
-  "title": "Сторінка: Табори",
-  "fields": [
-    {
-      "key": "field_camp_archive_tab_hero",
-      "label": "Перший екран",
-      "name": "",
-      "type": "tab",
-      "instructions": ""
-    },
-    {
-      "key": "field_camp_archive_hero_title",
-      "label": "Заголовок hero",
-      "name": "camp_archive_hero_title",
-      "type": "text",
-      "instructions": "Заповніть поле «Заголовок hero»."
-    },
-    {
-      "key": "field_camp_archive_hero_text",
-      "label": "Текст hero",
-      "name": "camp_archive_hero_text",
-      "type": "textarea",
-      "instructions": "Заповніть поле «Текст hero»."
-    },
-    {
-      "key": "field_camp_archive_hero_image",
-      "label": "Зображення hero",
-      "name": "camp_archive_hero_image",
-      "type": "image",
-      "instructions": "Заповніть поле «Зображення hero».",
-      "return_format": "id",
-      "preview_size": "medium"
-    },
-    {
-      "key": "field_camp_archive_tab_benefits",
-      "label": "Переваги",
-      "name": "",
-      "type": "tab",
-      "instructions": ""
-    },
-    {
-      "key": "field_camp_archive_benefits_title",
-      "label": "Заголовок переваг",
-      "name": "camp_archive_benefits_title",
-      "type": "text",
-      "instructions": "Заповніть поле «Заголовок переваг»."
-    },
-    {
-      "key": "field_camp_archive_benefits",
-      "label": "Переваги",
-      "name": "camp_archive_benefits",
-      "type": "repeater",
-      "instructions": "Додавайте елементи та змінюйте їхній порядок перетягуванням.",
-      "layout": "block",
-      "button_label": "Додати елемент",
-      "sub_fields": [
+    "key": "group_logika_camp_archive",
+    "title": "Сторінка: Табори",
+    "fields": [
         {
-          "key": "field_camp_archive_benefit_item_title",
-          "label": "Заголовок",
-          "name": "title",
-          "type": "text",
-          "instructions": "Заповніть поле «Заголовок»."
+            "key": "field_camp_archive_tab_hero",
+            "label": "Перший екран",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
-          "key": "field_camp_archive_benefit_item_text",
-          "label": "Текст",
-          "name": "text",
-          "type": "textarea",
-          "instructions": "Заповніть поле «Текст»."
+            "key": "field_camp_archive_hero_title",
+            "label": "Заголовок hero",
+            "name": "camp_archive_hero_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заповніть поле «Заголовок hero».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-          "key": "field_camp_archive_benefit_item_image",
-          "label": "Зображення",
-          "name": "image",
-          "type": "image",
-          "instructions": "Заповніть поле «Зображення».",
-          "return_format": "id",
-          "preview_size": "medium"
+            "key": "field_camp_archive_hero_text",
+            "label": "Текст hero",
+            "name": "camp_archive_hero_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Заповніть поле «Текст hero».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": ""
+        },
+        {
+            "key": "field_camp_archive_hero_image",
+            "label": "Зображення hero",
+            "name": "camp_archive_hero_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Заповніть поле «Зображення hero».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_camp_archive_tab_benefits",
+            "label": "Переваги",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_camp_archive_benefits_title",
+            "label": "Заголовок переваг",
+            "name": "camp_archive_benefits_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заповніть поле «Заголовок переваг».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_camp_archive_benefits",
+            "label": "Переваги",
+            "name": "camp_archive_benefits",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Додавайте елементи та змінюйте їхній порядок перетягуванням.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "button_label": "Додати елемент",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_camp_archive_benefit_item_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Заповніть поле «Заголовок».",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_camp_archive_benefits"
+                },
+                {
+                    "key": "field_camp_archive_benefit_item_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Заповніть поле «Текст».",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "rows": "",
+                    "parent_repeater": "field_camp_archive_benefits"
+                },
+                {
+                    "key": "field_camp_archive_benefit_item_image",
+                    "label": "Зображення",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Заповніть поле «Зображення».",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": "",
+                    "parent_repeater": "field_camp_archive_benefits"
+                }
+            ]
+        },
+        {
+            "key": "field_camp_archive_tab_formats",
+            "label": "Формати",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_camp_archive_formats_title",
+            "label": "Заголовок форматів",
+            "name": "camp_archive_formats_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заповніть поле «Заголовок форматів».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_camp_archive_formats",
+            "label": "Формати таборів",
+            "name": "camp_archive_formats",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Оберіть табори у порядку показу карток на сторінці.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "camp"
+            ],
+            "return_format": "id",
+            "filters": [
+                "search"
+            ],
+            "taxonomy": [],
+            "min": 0,
+            "max": 0,
+            "elements": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_camp_archive_summer_camps",
+            "label": "Табори у вікні «Літо»",
+            "name": "camp_archive_summer_camps",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Табори, що показуються у вікні вибору зміни при натисканні на картку «Літо». Якщо залишити порожнім — використовуються табори з поля «Формати таборів» вище, у яких поле «Сезон» дорівнює «Літо».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "camp"
+            ],
+            "return_format": "id",
+            "filters": [
+                "search"
+            ],
+            "taxonomy": [],
+            "min": 0,
+            "max": 0,
+            "elements": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_camp_archive_autumn_camps",
+            "label": "Табори у вікні «Осінь»",
+            "name": "camp_archive_autumn_camps",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Табори, що показуються у вікні вибору зміни при натисканні на картку «Осінь». Якщо залишити порожнім — використовуються табори з поля «Формати таборів» вище, у яких поле «Сезон» дорівнює «Осінь».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "camp"
+            ],
+            "return_format": "id",
+            "filters": [
+                "search"
+            ],
+            "taxonomy": [],
+            "min": 0,
+            "max": 0,
+            "elements": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_camp_archive_winter_camps",
+            "label": "Табори у вікні «Зима»",
+            "name": "camp_archive_winter_camps",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Табори, що показуються у вікні вибору зміни при натисканні на картку «Зима». Якщо залишити порожнім — використовуються табори з поля «Формати таборів» вище, у яких поле «Сезон» дорівнює «Зима».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "camp"
+            ],
+            "return_format": "id",
+            "filters": [
+                "search"
+            ],
+            "taxonomy": [],
+            "min": 0,
+            "max": 0,
+            "elements": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_camp_archive_spring_camps",
+            "label": "Табори у вікні «Весна»",
+            "name": "camp_archive_spring_camps",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Табори, що показуються у вікні вибору зміни при натисканні на картку «Весна». Якщо залишити порожнім — використовуються табори з поля «Формати таборів» вище, у яких поле «Сезон» дорівнює «Весна».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "camp"
+            ],
+            "return_format": "id",
+            "filters": [
+                "search"
+            ],
+            "taxonomy": [],
+            "min": 0,
+            "max": 0,
+            "elements": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_camp_archive_tab_booking",
+            "label": "Бронювання",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_camp_archive_booking_title",
+            "label": "Заголовок бронювання",
+            "name": "camp_archive_booking_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заповніть поле «Заголовок бронювання».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_camp_archive_booking_text",
+            "label": "Текст бронювання",
+            "name": "camp_archive_booking_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Заповніть поле «Текст бронювання».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": ""
+        },
+        {
+            "key": "field_camp_archive_booking_image",
+            "label": "Зображення бронювання",
+            "name": "camp_archive_booking_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Заповніть поле «Зображення бронювання».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_camp_archive_tab_history",
+            "label": "Історія",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_camp_archive_history_title",
+            "label": "Заголовок історії",
+            "name": "camp_archive_history_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заповніть поле «Заголовок історії».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_camp_archive_history_text",
+            "label": "Текст історії",
+            "name": "camp_archive_history_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Заповніть поле «Текст історії».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_camp_archive_history_image",
+            "label": "Зображення історії",
+            "name": "camp_archive_history_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Заповніть поле «Зображення історії».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_camp_archive_history_reviews",
+            "label": "Відео-відгуки міст",
+            "name": "camp_archive_history_reviews",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Відгуки із заповненим посиланням на відеовідгук. Якщо нічого не обрано — беруться схвалені відгуки з відео автоматично.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "review"
+            ],
+            "return_format": "id",
+            "filters": [
+                "search"
+            ],
+            "taxonomy": [],
+            "min": 0,
+            "max": 0,
+            "elements": [],
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_camp_archive_history_caption_prefix",
+            "label": "Префікс підпису слайда",
+            "name": "camp_archive_history_caption_prefix",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "До префікса додається назва міста: «Школа програмування для дітей у місті Київ».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Школа програмування для дітей у місті",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_camp_archive_history_limit",
+            "label": "Максимум слайдів",
+            "name": "camp_archive_history_limit",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 8,
+            "min": 1,
+            "max": "",
+            "step": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_camp_archive_tab_gallery",
+            "label": "Галерея",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_camp_archive_gallery_title",
+            "label": "Заголовок галереї",
+            "name": "camp_archive_gallery_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заповніть поле «Заголовок галереї».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_camp_archive_gallery",
+            "label": "Галерея",
+            "name": "camp_archive_gallery",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "Заповніть поле «Галерея».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": 0,
+            "max": 0,
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_camp_archive_tab_reviews",
+            "label": "Відгуки",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_camp_archive_reviews_section",
+            "label": "Налаштування секції",
+            "name": "",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "Задайте заголовок і ілюстрації саме для цієї сторінки. Порожні поля використовують загальні налаштування сайту.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_logika_testimonials_images"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_camp_archive_reviews",
+            "label": "Власна добірка відгуків",
+            "name": "camp_archive_reviews",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Оберіть відгуки лише для цієї сторінки. Залиште порожнім, щоб показати глобальну добірку.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "review"
+            ],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "return_format": "id",
+            "taxonomy": [],
+            "min": 0,
+            "max": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_camp_archive_tab_faq",
+            "label": "FAQ",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_camp_archive_faq_title",
+            "label": "Заголовок FAQ",
+            "name": "camp_archive_faq_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заповніть поле «Заголовок FAQ».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_camp_archive_faq",
+            "label": "FAQ",
+            "name": "camp_archive_faq",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Заповніть поле «FAQ».",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "faq_item"
+            ],
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "return_format": "id",
+            "taxonomy": [],
+            "min": 0,
+            "max": 0,
+            "bidirectional_target": []
         }
-      ]
-    },
-    {
-      "key": "field_camp_archive_tab_formats",
-      "label": "Формати",
-      "name": "",
-      "type": "tab",
-      "instructions": ""
-    },
-    {
-      "key": "field_camp_archive_formats_title",
-      "label": "Заголовок форматів",
-      "name": "camp_archive_formats_title",
-      "type": "text",
-      "instructions": "Заповніть поле «Заголовок форматів»."
-    },
-    {
-      "key": "field_camp_archive_formats",
-      "label": "Формати таборів",
-      "name": "camp_archive_formats",
-      "type": "relationship",
-      "instructions": "Оберіть табори у порядку показу карток на сторінці.",
-      "post_type": [
-        "camp"
-      ],
-      "return_format": "id",
-      "filters": [
-        "search"
-      ]
-    },
-    {
-      "key": "field_camp_archive_tab_booking",
-      "label": "Бронювання",
-      "name": "",
-      "type": "tab",
-      "instructions": ""
-    },
-    {
-      "key": "field_camp_archive_booking_title",
-      "label": "Заголовок бронювання",
-      "name": "camp_archive_booking_title",
-      "type": "text",
-      "instructions": "Заповніть поле «Заголовок бронювання»."
-    },
-    {
-      "key": "field_camp_archive_booking_text",
-      "label": "Текст бронювання",
-      "name": "camp_archive_booking_text",
-      "type": "textarea",
-      "instructions": "Заповніть поле «Текст бронювання»."
-    },
-    {
-      "key": "field_camp_archive_booking_image",
-      "label": "Зображення бронювання",
-      "name": "camp_archive_booking_image",
-      "type": "image",
-      "instructions": "Заповніть поле «Зображення бронювання».",
-      "return_format": "id",
-      "preview_size": "medium"
-    },
-    {
-      "key": "field_camp_archive_tab_history",
-      "label": "Історія",
-      "name": "",
-      "type": "tab",
-      "instructions": ""
-    },
-    {
-      "key": "field_camp_archive_history_title",
-      "label": "Заголовок історії",
-      "name": "camp_archive_history_title",
-      "type": "text",
-      "instructions": "Заповніть поле «Заголовок історії»."
-    },
-    {
-      "key": "field_camp_archive_history_text",
-      "label": "Текст історії",
-      "name": "camp_archive_history_text",
-      "type": "wysiwyg",
-      "instructions": "Заповніть поле «Текст історії»."
-    },
-    {
-      "key": "field_camp_archive_history_image",
-      "label": "Зображення історії",
-      "name": "camp_archive_history_image",
-      "type": "image",
-      "instructions": "Заповніть поле «Зображення історії».",
-      "return_format": "id",
-      "preview_size": "medium"
-    },
-    {
-      "key": "field_camp_archive_history_reviews",
-      "label": "Відео-відгуки міст",
-      "name": "camp_archive_history_reviews",
-      "type": "relationship",
-      "instructions": "Відгуки із заповненим посиланням на відеовідгук. Якщо нічого не обрано — беруться схвалені відгуки з відео автоматично.",
-      "post_type": [
-        "review"
-      ],
-      "return_format": "id",
-      "filters": [
-        "search"
-      ]
-    },
-    {
-      "key": "field_camp_archive_history_caption_prefix",
-      "label": "Префікс підпису слайда",
-      "name": "camp_archive_history_caption_prefix",
-      "type": "text",
-      "instructions": "До префікса додається назва міста: «Школа програмування для дітей у місті Київ».",
-      "default_value": "Школа програмування для дітей у місті"
-    },
-    {
-      "key": "field_camp_archive_history_limit",
-      "label": "Максимум слайдів",
-      "name": "camp_archive_history_limit",
-      "type": "number",
-      "default_value": 8,
-      "min": 1
-    },
-    {
-      "key": "field_camp_archive_tab_gallery",
-      "label": "Галерея",
-      "name": "",
-      "type": "tab",
-      "instructions": ""
-    },
-    {
-      "key": "field_camp_archive_gallery_title",
-      "label": "Заголовок галереї",
-      "name": "camp_archive_gallery_title",
-      "type": "text",
-      "instructions": "Заповніть поле «Заголовок галереї»."
-    },
-    {
-      "key": "field_camp_archive_gallery",
-      "label": "Галерея",
-      "name": "camp_archive_gallery",
-      "type": "gallery",
-      "instructions": "Заповніть поле «Галерея».",
-      "return_format": "id",
-      "preview_size": "medium"
-    },
-    {
-      "key": "field_camp_archive_tab_reviews",
-      "label": "Відгуки",
-      "name": "",
-      "type": "tab",
-      "instructions": "",
-      "placement": "top",
-      "endpoint": 0
-    },
-    {
-      "key": "field_camp_archive_reviews_section",
-      "label": "Налаштування секції",
-      "name": "",
-      "type": "clone",
-      "instructions": "Задайте заголовок і ілюстрації саме для цієї сторінки. Порожні поля використовують загальні налаштування сайту.",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "clone": [
-        "group_logika_testimonials_images"
-      ],
-      "display": "seamless",
-      "layout": "block",
-      "prefix_label": 0,
-      "prefix_name": 0
-    },
-    {
-      "key": "field_camp_archive_reviews",
-      "label": "Власна добірка відгуків",
-      "name": "camp_archive_reviews",
-      "type": "relationship",
-      "instructions": "Оберіть відгуки лише для цієї сторінки. Залиште порожнім, щоб показати глобальну добірку.",
-      "post_type": [
-        "review"
-      ],
-      "filters": [
-        "search",
-        "post_type"
-      ],
-      "elements": [
-        "featured_image"
-      ],
-      "return_format": "id"
-    },
-    {
-      "key": "field_camp_archive_tab_faq",
-      "label": "FAQ",
-      "name": "",
-      "type": "tab",
-      "instructions": ""
-    },
-    {
-      "key": "field_camp_archive_faq_title",
-      "label": "Заголовок FAQ",
-      "name": "camp_archive_faq_title",
-      "type": "text",
-      "instructions": "Заповніть поле «Заголовок FAQ»."
-    },
-    {
-      "key": "field_camp_archive_faq",
-      "label": "FAQ",
-      "name": "camp_archive_faq",
-      "type": "relationship",
-      "instructions": "Заповніть поле «FAQ».",
-      "post_type": [
-        "faq_item"
-      ],
-      "filters": [
-        "search",
-        "post_type"
-      ],
-      "elements": [
-        "featured_image"
-      ],
-      "return_format": "id"
-    }
-  ],
-  "location": [
-    [
-      {
-        "param": "page_template",
-        "operator": "==",
-        "value": "templates/page-camps.php"
-      }
-    ]
-  ],
-  "menu_order": 0,
-  "position": "normal",
-  "style": "default",
-  "label_placement": "top",
-  "instruction_placement": "label",
-  "hide_on_screen": [],
-  "active": true,
-  "description": "Секції публічної сторінки таборів.",
-  "show_in_rest": true,
-  "allow_ai_access": true,
-  "ai_description": "Налаштування сторінки таборів Logika.",
-  "modified": 1784542912
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-camps.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "Секції публічної сторінки таборів.",
+    "show_in_rest": true,
+    "display_title": "",
+    "allow_ai_access": true,
+    "ai_description": "Налаштування сторінки таборів Logika.",
+    "modified": 1784724260
 }

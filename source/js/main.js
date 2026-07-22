@@ -766,3 +766,61 @@ if (select.length) {
   });
 }
 
+//----scroll-top---------------------------------
+const scrollTopBtn = document.querySelector('[data-scroll-top]');
+
+if (scrollTopBtn) {
+  // The theme keeps `overflow-x: hidden` on <body> without setting
+  // overflow-y, which makes the browser compute overflow-y as `auto`
+  // (CSS overflow coupling rule) — body scrolls internally instead of
+  // the window, so window.scrollY/scroll events never fire here.
+  const firstSection = document.querySelector('main section');
+  const footerEl = document.querySelector('.footer');
+
+  const toggleScrollTopBtn = () => {
+    const pastFirstSection = firstSection
+      ? firstSection.getBoundingClientRect().bottom <= 0
+      : bodyEl.scrollTop > window.innerHeight;
+
+    if (pastFirstSection) {
+      addCustomClass(scrollTopBtn);
+    } else {
+      removeCustomClass(scrollTopBtn);
+    }
+
+    if (footerEl) {
+      const onFooter = footerEl.getBoundingClientRect().top <= scrollTopBtn.getBoundingClientRect().bottom;
+      scrollTopBtn.classList.toggle('scroll-top--on-footer', onFooter);
+    }
+  };
+
+  toggleScrollTopBtn();
+  bodyEl.addEventListener('scroll', toggleScrollTopBtn, { passive: true });
+  window.addEventListener('scroll', toggleScrollTopBtn, { passive: true });
+  window.addEventListener('resize', toggleScrollTopBtn);
+
+  const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+
+  const smoothScrollToTop = (duration = 600) => {
+    const scrollRoot = bodyEl.scrollTop > 0 ? bodyEl : htmlEl;
+    const startPos = scrollRoot.scrollTop;
+
+    if (startPos <= 0) return;
+
+    const startTime = performance.now();
+
+    const step = (now) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      scrollRoot.scrollTop = startPos * (1 - easeInOutQuad(progress));
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  scrollTopBtn.addEventListener('click', () => smoothScrollToTop());
+}
+

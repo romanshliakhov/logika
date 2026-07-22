@@ -49,9 +49,11 @@ final class Logika_Theme_City_Page {
 			$ids = Logika_Theme_Entities::faqs( (array) get_field( 'city_related_faq', self::$active_city_id ) );
 			if ( $ids ) {
 				return array_map(
+					// `home_faq_items` is a plain-text repeater, while `faq_answer` is stored
+					// as editor HTML, so the answer has to be flattened before it lands there.
 					static fn( int $id ): array => array(
 						'question' => get_field( 'faq_question', $id ) ?: get_the_title( $id ),
-						'answer'   => get_field( 'faq_answer', $id ),
+						'answer'   => trim( wp_strip_all_tags( (string) get_field( 'faq_answer', $id ) ) ),
 					),
 					$ids
 				);

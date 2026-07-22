@@ -1,0 +1,53 @@
+.scroll-top {
+  position: fixed;
+  right: clamp(16px, 2.083vw, 32px);
+  bottom: clamp(16px, 2.083vw, 32px);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--violet-100);
+  color: var(--white);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.2s ease, color 0.2s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    transform: scale(1.08);
+  }
+
+  // over the footer, invert the colors so the button stays visible
+  // against the footer's own violet-100 background.
+  &--on-footer {
+    background-color: var(--white);
+    color: var(--violet-100);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  @include mobile {
+    width: 44px;
+    height: 44px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

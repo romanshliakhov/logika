@@ -20,6 +20,8 @@
             gap: 47.5px;
 
             @include small-tablet {
+                flex-wrap: wrap;
+                gap: 4px 12px;
                 justify-content: space-between;
             }
         }
@@ -40,6 +42,10 @@
         align-items: center;
         gap: 12px;
 
+        @include small-tablet {
+            gap: 6px;
+        }
+
         &-heading {
             display: flex;
             align-items: center;
@@ -51,7 +57,7 @@
             color: var(--white);
 
             @include small-tablet {
-                display: none;
+                span { display: none; }
             }
         }
 
@@ -71,7 +77,10 @@
 
         &--email {
             @include small-tablet {
-                display: none;
+                display: flex;
+                order: -1;
+                flex: 1;
+                justify-content: flex-start;
             }
         }
     }
@@ -80,6 +89,12 @@
         display: flex;
         align-items: center;
         gap: 12px;
+
+        @include small-tablet {
+            order: -1;
+            flex-shrink: 0;
+            justify-content: flex-end;
+        }
 
         &-heading {
             font-size: 14px;
@@ -111,9 +126,34 @@
         }
     }
 
+    @media (min-width: 768px) and (max-width: 1024px) {
+        &__top-box {
+            gap: 10px;
+            flex-wrap: nowrap;
+        }
+
+        &__contact {
+            gap: 6px;
+        }
+
+        &__contact-heading span,
+        &__socials-heading {
+            display: none;
+        }
+
+        &__contact-link { white-space: nowrap; }
+    }
+
+    @media (max-width: 359px) {
+        &__top-box { gap: 4px 8px; }
+        &__top-city,
+        &__contact-link { font-size: 13px; }
+    }
+
     &__left {
         display: flex;
         align-items: center;
+        flex-shrink: 0;
         gap: clamp(10px, 1.042vw, 20px);
     }
 
@@ -152,6 +192,7 @@
         @include desktop {
             @include for-tablet {
                 max-width: clamp(190px, 10.938vw, 210px);
+                flex: 0 0 190px;
             }
         }
 
@@ -196,10 +237,11 @@
         @include for-tablet {
             .menu {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 justify-content: space-between;
-                gap: 20px;
-    
+                gap: 10px 20px;
+
                 .menu-item {
                     position: relative;
                     flex-grow: 1;

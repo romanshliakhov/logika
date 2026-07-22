@@ -942,7 +942,12 @@ final class Logika_Theme_Source_Markup {
 				}
 
 				if ( '' !== $answer ) {
-					$item = (string) preg_replace( '#(<div class="editor">\s*<p>).*?(</p>\s*</div>)#s', '$1' . esc_html( $answer ) . '$2', $item, 1 );
+					// Answers may arrive as editor HTML (shared `faq_item` posts) or as plain
+					// text (homepage repeater); HTML must not be escaped into the markup slot.
+					$replacement = $answer === wp_strip_all_tags( $answer )
+						? '<div class="editor"><p>' . esc_html( $answer ) . '</p></div>'
+						: '<div class="editor">' . wp_kses_post( $answer ) . '</div>';
+					$item = (string) preg_replace_callback( '#<div class="editor">\s*<p>.*?</p>\s*</div>#s', static fn(): string => $replacement, $item, 1 );
 				}
 
 				return $item;

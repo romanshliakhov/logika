@@ -11,7 +11,7 @@ final class Logika_Theme_Routing {
 		// Static-build filenames kept for defensive compatibility; none of these paths ever existed on Tilda.
 		'about.html' => '/about/', 'faq.html' => '/faq/', 'it-courses.html' => '/it-courses/', 'en-courses.html' => '/english-courses/', 'camps.html' => '/camps/', 'media-center.html' => '/media-center/', 'article.html' => '/media-center/', 'it-course.html' => '/courses/', 'camp.html' => '/camps/', 'city.html' => '/', 'litsenziia.html' => '/litsenziia/',
 		// Real Tilda slugs (verified against the live sitemap).
-		'litsenziia' => '/litsenziia/', 'privacy_policy' => '/privacy-policy/', 'contractoffer' => '/contractoffer/', 'contract_offer' => '/contractoffer/',
+		'privacy_policy' => '/privacy-policy/', 'contractoffer' => '/contractoffer/', 'contract_offer' => '/contractoffer/',
 		'eng-courses' => '/english-courses/', 'english_courses' => '/english-courses/',
 	);
 

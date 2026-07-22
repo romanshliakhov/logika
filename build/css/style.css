@@ -2602,6 +2602,9 @@ a .offer-card__info {
 }
 @media (max-width: 767px) {
   .header__top-box {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4px 12px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -2631,6 +2634,11 @@ a .offer-card__info {
   align-items: center;
   gap: 12px;
 }
+@media (max-width: 767px) {
+  .header__contact {
+    gap: 6px;
+  }
+}
 .header__contact-heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2646,7 +2654,7 @@ a .offer-card__info {
   color: var(--white);
 }
 @media (max-width: 767px) {
-  .header__contact-heading {
+  .header__contact-heading span {
     display: none;
   }
 }
@@ -2668,7 +2676,18 @@ a .offer-card__info {
 }
 @media (max-width: 767px) {
   .header__contact--email {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 .header__socials {
@@ -2679,6 +2698,18 @@ a .offer-card__info {
   -ms-flex-align: center;
   align-items: center;
   gap: 12px;
+}
+@media (max-width: 767px) {
+  .header__socials {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
 }
 .header__socials-heading {
   font-size: 14px;
@@ -2706,6 +2737,32 @@ a .offer-card__info {
   display: -ms-flexbox;
   display: flex;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header__top-box {
+    gap: 10px;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .header__contact {
+    gap: 6px;
+  }
+  .header__contact-heading span,
+  .header__socials-heading {
+    display: none;
+  }
+  .header__contact-link {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 359px) {
+  .header__top-box {
+    gap: 4px 8px;
+  }
+  .header__top-city,
+  .header__contact-link {
+    font-size: 13px;
+  }
+}
 @media (max-width: 767px) {
   .header__socials-links a svg {
     width: 30px;
@@ -2719,6 +2776,8 @@ a .offer-card__info {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   gap: clamp(10px, 1.042vw, 20px);
 }
 .header__accreditation {
@@ -2764,6 +2823,9 @@ a .offer-card__info {
 @media (max-width: 1440px) and (min-width: 1025px) {
   .header__location {
     max-width: clamp(190px, 10.938vw, 210px);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 190px;
+    flex: 0 0 190px;
   }
 }
 .header__location-trigger {
@@ -2823,13 +2885,15 @@ a .offer-card__info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px 20px;
   }
   .header__nav .menu .menu-item {
     position: relative;
@@ -11175,4 +11239,52 @@ a .offer-card__info {
 .process-section__item-lesson {
   max-width: 365px;
   width: 100%;
+}
+
+.scroll-top {
+  position: fixed;
+  right: clamp(16px, 2.083vw, 32px);
+  bottom: clamp(16px, 2.083vw, 32px);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--violet-100);
+  color: var(--white);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.scroll-top.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top:hover {
+  transform: scale(1.08);
+}
+.scroll-top--on-footer {
+  background-color: var(--white);
+  color: var(--violet-100);
+}
+.scroll-top svg {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+@media (max-width: 576px) {
+  .scroll-top {
+    width: 44px;
+    height: 44px;
+  }
+  .scroll-top svg {
+    width: 16px;
+    height: 16px;
+  }
 }

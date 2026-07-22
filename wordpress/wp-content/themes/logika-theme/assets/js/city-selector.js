@@ -46,6 +46,9 @@ if (cityRoot && cityTrigger && window.logikaCityContext) {
     button.setAttribute('aria-expanded', String(isOpen));
   };
   const regionLabel = (label) => String(label || 'Інші міста').replace(' область', ' обл.');
+  const byLabel = (a, b) => String(a || '').localeCompare(String(b || ''), 'uk', { sensitivity: 'base' });
+  const regionRank = (label) => label === 'Онлайн' ? 2 : Number(label === 'Інші міста');
+  const cityRank = (label) => Number(label === 'Онлайн');
   const cityOptionLabel = (label) => label === 'Онлайн' || /^м\.\s/.test(label) ? label : `м. ${label}`;
   const renderCities = (current) => {
     list.replaceChildren();
@@ -57,7 +60,7 @@ if (cityRoot && cityTrigger && window.logikaCityContext) {
       return regions;
     }, {});
 
-    Object.values(groups).sort((a, b) => (a.region.label === 'Онлайн' ? 2 : Number(a.region.label === 'Інші міста')) - (b.region.label === 'Онлайн' ? 2 : Number(b.region.label === 'Інші міста'))).forEach((group) => {
+    Object.values(groups).sort((a, b) => regionRank(a.region.label) - regionRank(b.region.label) || byLabel(regionLabel(a.region.label), regionLabel(b.region.label))).forEach((group) => {
       const item = document.createElement('li');
       const button = document.createElement('button');
       const citiesList = document.createElement('ul');
@@ -78,7 +81,7 @@ if (cityRoot && cityTrigger && window.logikaCityContext) {
         citiesList.hidden = !nextState;
       });
 
-      group.cities.sort((a, b) => Number(a.label === 'Онлайн') - Number(b.label === 'Онлайн')).forEach((city) => {
+      group.cities.slice().sort((a, b) => cityRank(a.label) - cityRank(b.label) || byLabel(a.label, b.label)).forEach((city) => {
         const cityItem = document.createElement('li');
         const option = document.createElement('button');
         option.className = 'header__city-option';

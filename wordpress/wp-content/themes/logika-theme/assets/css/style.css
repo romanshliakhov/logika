@@ -10066,3 +10066,6 @@ html{overflow-x:hidden}.main-form__honeypot{position:absolute;width:1px!importan
 .header__top-city{display:flex;align-items:center;gap:6px;margin-right:auto;color:var(--white)}.header__top-city svg{filter:brightness(0) invert(1)}
 
 @media (hover:hover){.btn:not(.header__login):hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(41,35,92,.18)}.btn:not(.header__login):hover svg{transform:translateX(4px)}}
+
+.scroll-top{position:fixed;right:clamp(16px,2.083vw,32px);bottom:clamp(16px,2.083vw,32px);z-index:30;display:flex;align-items:center;justify-content:center;width:52px;height:52px;border:none;border-radius:50%;background-color:var(--violet-100);color:var(--white);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s ease,visibility .3s ease,transform .3s ease,background-color .2s ease,color .2s ease}.scroll-top.active{opacity:1;visibility:visible;transform:translateY(0)}.scroll-top:hover{transform:scale(1.08)}.scroll-top--on-footer{background-color:var(--white);color:var(--violet-100)}.scroll-top svg{width:20px;height:20px;pointer-events:none}
+@media (max-width:576px){.scroll-top{width:44px;height:44px}.scroll-top svg{width:16px;height:16px}}

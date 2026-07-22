@@ -18,6 +18,12 @@ Rules for agents and developers:
 - use the repo-local `.agents/skills/acf-pro` skill for future ACF Pro field model, Local JSON, options page, and template output work;
 - update this plan when scope changes.
 
+### 2026-07-22: Мобільний верхній бар
+
+- [x] На екранах до 767 px вирівняти email над містом, показати іконки email і телефону та розмістити місто з телефоном нижче.
+- [x] На планшетах 768–1024 px прибрати повторювані підписи контактів і запобігти переносу телефону та email.
+- [x] На екранах 1025–1440 px зафіксувати бренд-блок і селектор міста, щоб селектор не накладався на логотип.
+
 ### 2026-07-18: Захист WordPress worktree від push у main
 
 - [x] Дозволити з `.worktrees/wordpress` push лише гілки `wordpress` до `origin/wordpress`.
