@@ -2716,6 +2716,11 @@ a .offer-card__info {
     opacity: 1;
     visibility: visible;
     max-height: initial !important;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+    -webkit-transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
   }
   .header__nav .menu .menu-item:first-child .menu-link:hover, .header__nav .menu .menu-item:first-child .menu-link:active {
     color: var(--violet-100);
@@ -2746,9 +2751,11 @@ a .offer-card__info {
     background-color: #fff;
     top: 100%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) translateY(8px);
+    -ms-transform: translateX(-50%) translateY(8px);
+    transform: translateX(-50%) translateY(8px);
+    -webkit-transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     overflow: hidden;
     padding: 10px 20px;
     border-radius: 6px;

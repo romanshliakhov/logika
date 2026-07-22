@@ -89,12 +89,17 @@
 .media-section__feature, .media-section__contest, .media-section__promo, .media-section__race {
   position: relative;
   overflow: hidden;
-  border-radius: 22px;
+  border-radius: 32px;
+}
+/* The three panel cards sit on a hairline in the design. */
+.media-section__contest, .media-section__promo, .media-section__race {
+  border: 1px solid #d0d0d0;
 }
 .media-section__feature {
   height: 460px;
-  padding: 30px;
-  background: #9edb10 radial-gradient(circle at 16% 25%, rgba(255, 255, 255, 0.14) 0 2px, transparent 3px) 0 0/35px 35px;
+  padding: 40px;
+  border-radius: 30px;
+  background: var(--green);
 }
 .media-section__figma-art {
   position: absolute;
@@ -230,7 +235,20 @@
 .media-section__feature-copy {
   display: -ms-grid;
   display: grid;
-  gap: 14px;
+  gap: 15px;
+}
+.media-section__feature-copy h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 118%;
+  letter-spacing: -0.05em;
+  color: var(--violet-300);
+}
+.media-section__feature-copy p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.05em;
 }
 .media-section__feature-copy p, .media-section__contest p, .media-section__promo p, .media-section__race p, .media-section__post p {
   margin: 0;
@@ -248,8 +266,8 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 37px;
-  background: #ddf0fb;
+  padding: 40px;
+  background: var(--white);
 }
 .media-section__contest .media-section__figma-art {
   inset: -15px 0 auto auto;
@@ -264,15 +282,20 @@
   z-index: 2;
 }
 .media-section__contest h3 {
-  font-size: 36px;
-  line-height: 1.05;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 118%;
+  letter-spacing: -0.05em;
 }
 .media-section__contest p {
-  max-width: 390px;
-  font-size: 14px;
+  max-width: 420px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.05em;
 }
 .media-section__promo, .media-section__race {
-  padding: 26px;
+  padding: 40px;
   color: var(--white);
   background: var(--violet-500);
 }
@@ -316,13 +339,17 @@
   color: var(--white);
 }
 .media-section__promo h3 {
-  font-size: 42px;
-  line-height: 0.9;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 118%;
+  letter-spacing: -0.05em;
 }
 .media-section__promo h4 {
   margin: 0;
-  font-size: 24px;
-  line-height: 1;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 128%;
+  letter-spacing: -0.05em;
 }
 .media-section__promo p, .media-section__race p {
   font-family: "Montserrat", sans-serif;
@@ -334,6 +361,7 @@
 }
 .media-section__promo p {
   margin-top: 10px;
+  font-size: 14px;
 }
 .media-section__promo .btn, .media-section__race .btn, .media-section__contest .btn, .media-section__feature-copy .btn {
   width: 100%;
@@ -344,14 +372,42 @@
 .media-section__promo .btn, .media-section__race .btn {
   border-radius: 44px;
 }
+/* The promo cards use the compact button; the taller panels keep the 63px one. */
+.media-section__promo .btn {
+  height: 46px;
+  padding: 12px 25px;
+  gap: 6px;
+  font-size: 14px;
+}
+.media-section__contest .btn, .media-section__feature-copy .btn {
+  height: 63px;
+  padding: 15px 25px;
+  gap: 6px;
+  font-size: 16px;
+}
 .media-section__news .btn, .media-section__contest .btn {
   border-radius: 44px;
 }
-.media-section__promo .media-section__label, .media-section__race .media-section__label, .media-section__contest .media-section__label {
+.media-section__promo .media-section__label, .media-section__race .media-section__label, .media-section__contest .media-section__label, .media-section__post .media-section__label {
   background: #efddfa;
   border: 1px solid #d6c1e3;
   border-radius: 46px;
   color: #602b7a;
+}
+/* Small chip variant used on the promo and blog cards. */
+.media-section__promo .media-section__label, .media-section__post .media-section__label {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 36px;
+  padding: 8px 15px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.05em;
 }
 .media-section__feature .media-section__label {
   -webkit-box-sizing: border-box;
@@ -448,14 +504,16 @@
   letter-spacing: -0.05em;
 }
 .media-section__race h3 {
-  font-size: 42px;
-  line-height: 0.95;
-  margin-top: 22px;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 118%;
+  letter-spacing: -0.05em;
+  margin-top: 0;
 }
 .media-section__race p {
   position: absolute !important;
-  top: 200px !important;
-  left: 26px;
+  top: 213px !important;
+  left: 40px;
   width: 236px;
   height: 110px;
   margin: 0;
@@ -480,7 +538,7 @@
   box-shadow: 0 0 15px rgba(236, 186, 22, 0.35);
 }
 .media-section__blog-list {
-  gap: 18px;
+  gap: 20px;
 }
 .media-section__post {
   display: -webkit-box;
@@ -502,7 +560,7 @@
 }
 .media-section__post > img {
   width: 225px;
-  height: 143px;
+  height: 110px;
   border-radius: 18px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -525,10 +583,12 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   margin: 0;
   font-size: 16px;
-  color: #8c8c8c;
+  font-weight: 500;
+  line-height: 140%;
+  color: var(--grey-500);
 }
 .media-section__post p span {
   display: -webkit-inline-box;
@@ -537,35 +597,35 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   white-space: nowrap;
 }
 .media-section__post p img {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   border-radius: 0;
   -o-object-fit: contain;
   object-fit: contain;
 }
-.media-section__post .media-section__label {
-  padding: 10px 20px;
-  font-size: 16px;
-}
 .media-section__cards {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1236px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[3];
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 80px 50px;
+  /* Figma spaces the rows 103px apart; the exported PNGs carry a taller
+     drawing than the Figma vectors, so the rows need a little extra clearance
+     for the illustration that overhangs each card's top edge. */
+  gap: 115px 100px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 .media-section__card {
   position: relative;
-  height: 340px;
+  aspect-ratio: 345/307;
+  height: auto;
   min-height: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -579,9 +639,9 @@
   color: var(--white);
 }
 .media-section__card:nth-child(1) {
-  -webkit-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  transform: rotate(3deg);
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 .media-section__card:nth-child(2) {
   -webkit-transform: rotate(-4deg);
@@ -589,9 +649,9 @@
   transform: rotate(-4deg);
 }
 .media-section__card:nth-child(3) {
-  -webkit-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  transform: rotate(3deg);
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 .media-section__card:nth-child(4) {
   -webkit-transform: rotate(-4deg);
@@ -599,9 +659,9 @@
   transform: rotate(-4deg);
 }
 .media-section__card:nth-child(5) {
-  -webkit-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  transform: rotate(3deg);
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 .media-section__card:nth-child(6) {
   -webkit-transform: rotate(-4deg);
@@ -610,23 +670,23 @@
 }
 .media-section__card h3 {
   margin: 0;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 110%;
-  letter-spacing: -0.96px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 128%;
+  letter-spacing: -0.05em;
   color: inherit;
 }
 .media-section__card p {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 125%;
-  letter-spacing: -0.52px;
+  line-height: 140%;
+  letter-spacing: -0.05em;
   color: inherit;
 }
 .media-section__card--yellow {
   background-color: var(--yellow);
-  color: var(--violet-500);
+  color: var(--violet-300);
 }
 .media-section__card--violet {
   background-color: var(--violet-100);
@@ -645,108 +705,68 @@
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 6px;
+  /* Percentages of the 345x307 design card, anchored to the bottom edge so
+     the copy sits on its Figma baseline and can never spill past the card. */
+  left: 8.551%;
+  width: 82.899%;
+  bottom: 13.029%;
 }
 .media-section__card--platform .media-section__card-content {
-  top: 127px;
-  left: 24px;
-  width: 303px;
-  height: 144px;
-}
-.media-section__card--projects .media-section__card-content {
-  top: 144px;
-  left: 45px;
-  width: 278px;
-  height: 144px;
-}
-.media-section__card--open-lessons .media-section__card-content {
-  top: 125px;
-  left: 44px;
-  width: 278px;
-  height: 144px;
-}
-.media-section__card--online-city .media-section__card-content {
-  top: 166px;
-  left: 45px;
-  width: 277px;
-  height: 122px;
-}
-.media-section__card--teachers .media-section__card-content {
-  top: 126px;
-  left: 39px;
-  width: 278px;
-  height: 144px;
-}
-.media-section__card--game-method .media-section__card-content {
-  top: 146px;
-  left: 40px;
-  width: 278px;
-  height: 144px;
+  left: 6.087%;
+  width: 87.826%;
 }
 .media-section__card-img {
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: 50%;
-  width: auto;
   height: auto;
   pointer-events: none;
-  -webkit-transform: translate(-50%, -34%);
-  -ms-transform: translate(-50%, -34%);
-  transform: translate(-50%, -34%);
+  /* style.css still carries the older centred placement; the per-card rules
+     below position each illustration outright, so drop the inherited nudge. */
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
+/* Same reason: the old stagger in style.css would knock the rows out of line. */
+.media-section__card--platform,
+.media-section__card--projects,
+.media-section__card--open-lessons,
+.media-section__card--online-city,
+.media-section__card--teachers,
+.media-section__card--game-method {
+  margin-top: 0;
+}
+/* Placement is expressed as a share of the 345x307 design card and accounts
+   for the transparent margin baked into each PNG, so the drawing itself lands
+   on the rect Figma gives it. */
 .media-section__card--platform .media-section__card-img {
-  width: 253px;
-  -webkit-transform: translate(-50%, -49%);
-  -ms-transform: translate(-50%, -49%);
-  transform: translate(-50%, -49%);
+  left: 11.445%;
+  top: -43.721%;
+  width: 78.893%;
 }
 .media-section__card--projects .media-section__card-img {
-  width: 259px;
-  -webkit-transform: translate(-50%, -38%);
-  -ms-transform: translate(-50%, -38%);
-  transform: translate(-50%, -38%);
+  left: 10.757%;
+  top: -43.902%;
+  width: 75.091%;
 }
 .media-section__card--open-lessons .media-section__card-img {
-  width: 239px;
-  -webkit-transform: translate(-50%, -46%);
-  -ms-transform: translate(-50%, -46%);
-  transform: translate(-50%, -46%);
+  left: 18.111%;
+  top: -36.497%;
+  width: 73.266%;
 }
 .media-section__card--online-city .media-section__card-img {
-  width: 276px;
-  -webkit-transform: translate(-50%, -28%);
-  -ms-transform: translate(-50%, -28%);
-  transform: translate(-50%, -28%);
+  left: 7.234%;
+  top: -29.414%;
+  width: 86.526%;
 }
 .media-section__card--teachers .media-section__card-img {
-  width: 276px;
-  -webkit-transform: translate(-50%, -45%);
-  -ms-transform: translate(-50%, -45%);
-  transform: translate(-50%, -45%);
+  left: 11.204%;
+  top: -40.44%;
+  width: 87.193%;
 }
 .media-section__card--game-method .media-section__card-img {
-  width: 289px;
-  -webkit-transform: translate(-50%, -33%);
-  -ms-transform: translate(-50%, -33%);
-  transform: translate(-50%, -33%);
-}
-.media-section__card--platform {
-  margin-top: 18px;
-}
-.media-section__card--projects {
-  margin-top: 24px;
-}
-.media-section__card--open-lessons {
-  margin-top: 18px;
-}
-.media-section__card--online-city {
-  margin-top: 18px;
-}
-.media-section__card--teachers {
-  margin-top: 28px;
-}
-.media-section__card--game-method {
-  margin-top: 18px;
+  left: 7.357%;
+  top: -32.354%;
+  width: 89.327%;
 }
 .why-logika-section {
   padding-top: clamp(16px, 1.563vw, 24px);
@@ -754,7 +774,7 @@
 .why-logika-section .media-section__wrapp {
   position: relative;
   isolation: isolate;
-  gap: clamp(96px, 8.333vw, 120px);
+  gap: clamp(110px, 9.375vw, 135px);
 }
 .why-logika-section .media-section__title,
 .why-logika-section .media-section__cards {
@@ -788,7 +808,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
   .media-section__cards {
-    max-width: 680px;
+    max-width: 790px;
     -ms-grid-columns: (minmax(0, 1fr))[2];
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -837,22 +857,45 @@
   .media-section__post img {
     height: 160px;
   }
+  /* Mobile design: the card keeps its 345px width but is shorter (345x285),
+     with a 20px radius and a 23px title. The illustrations sit at the same
+     offsets as on desktop, so their percentages are restated against the
+     shorter card. The gap is set so the tallest illustration still clears the
+     copy of the card above it. */
   .media-section__cards {
-    max-width: 366px;
+    max-width: 345px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 62px;
+    gap: 112px;
   }
   .media-section__card {
-    height: 340px;
-    min-height: 0;
-    padding: 128px 30px 30px;
+    aspect-ratio: 345/285;
+    border-radius: 20px;
+    padding-bottom: 8.696%;
   }
   .media-section__card h3 {
-    font-size: 24px;
+    font-size: 23px;
   }
   .media-section__card p {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .media-section__card--platform .media-section__card-img {
+    top: -47.096%;
+  }
+  .media-section__card--projects .media-section__card-img {
+    top: -47.291%;
+  }
+  .media-section__card--open-lessons .media-section__card-img {
+    top: -39.314%;
+  }
+  .media-section__card--online-city .media-section__card-img {
+    top: -31.685%;
+  }
+  .media-section__card--teachers .media-section__card-img {
+    top: -43.562%;
+  }
+  .media-section__card--game-method .media-section__card-img {
+    top: -34.852%;
   }
   .why-logika-section .media-section__wrapp {
     gap: 128px;
@@ -867,4 +910,18 @@
 /*# sourceMappingURL=media-section.css.map */
 
 /* WordPress-only selectors. */
-.media-section__news,.media-section__promos,.media-section__blog-list{display:flex;flex-direction:column;gap:20px}.media-section__feature,.media-section__contest,.media-section__promo,.media-section__race{position:relative;overflow:hidden;border-radius:22px}.media-section__feature-tags span,.media-section__label{position:relative;z-index:1;display:flex;width:fit-content;padding:9px 16px;border-radius:24px;background:#eee4ff;color:var(--violet-500);font-size:13px;font-weight:700}.media-section__feature-copy h3,.media-section__contest h3,.media-section__promo h3,.media-section__race h3,.media-section__post h3{margin:0;color:var(--violet-500)}.media-section__feature-copy p,.media-section__contest p,.media-section__promo p,.media-section__race p,.media-section__post p{margin:0;color:var(--grey-500)}.media-section__contest>:not(.media-section__figma-art):not(.media-section__background),.media-section__promo>:not(.media-section__figma-art),.media-section__race>:not(.media-section__figma-art){position:relative;z-index:2}.media-section__promo,.media-section__race{padding:26px;color:var(--white);background:#602b7a}.media-section__promo h3,.media-section__promo h4,.media-section__race h3{color:var(--white)}.media-section__promo p,.media-section__race p{font-family:Montserrat,sans-serif;font-size:16px;font-weight:600;line-height:140%;letter-spacing:-.05em;color:#d0d0d0}.media-section__promo .btn,.media-section__race .btn,.media-section__contest .btn,.media-section__feature-copy .btn{width:100%;justify-content:center;border-radius:44px}.media-section__promo .media-section__label,.media-section__race .media-section__label,.media-section__contest .media-section__label{box-sizing:border-box;align-items:center;justify-content:center;height:45px;padding:10px 20px;background:#efddfa;border:1px solid #d6c1e3;border-radius:46px;white-space:nowrap;font-family:Montserrat,sans-serif;font-size:18px;font-weight:600;line-height:140%;letter-spacing:-.05em;color:#602b7a}.media-section__post>img{width:225px;height:143px;border-radius:18px;object-fit:cover}@media(max-width:1024px){.media-section__cards-layout{grid-template-columns:minmax(0,1fr) minmax(320px,467px)}.media-section__blog-list{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr)}}@media(max-width:576px){.media-section__top{gap:20px}.media-section__btns,.media-section__cards-layout,.media-section__blog-list{grid-template-columns:1fr;flex-direction:column}.media-section__btns{align-items:stretch}.media-section__btn-about{width:100%;justify-content:center}.media-section__feature{height:330px;padding:20px}.media-section__contest,.media-section__promo,.media-section__race{padding:22px}.media-section__post>img{height:160px}}
+.media-section__news,.media-section__promos,.media-section__blog-list{display:flex;flex-direction:column;gap:20px}.media-section__feature,.media-section__contest,.media-section__promo,.media-section__race{position:relative;overflow:hidden;border-radius:32px}.media-section__feature-tags span,.media-section__label{position:relative;z-index:1;display:flex;width:fit-content;padding:9px 16px;border-radius:24px;background:#eee4ff;color:var(--violet-500);font-size:13px;font-weight:700}.media-section__feature-copy h3,.media-section__contest h3,.media-section__promo h3,.media-section__race h3,.media-section__post h3{margin:0;color:var(--violet-500)}.media-section__feature-copy p,.media-section__contest p,.media-section__promo p,.media-section__race p,.media-section__post p{margin:0;color:var(--grey-500)}.media-section__contest>:not(.media-section__figma-art):not(.media-section__background),.media-section__promo>:not(.media-section__figma-art),.media-section__race>:not(.media-section__figma-art){position:relative;z-index:2}.media-section__promo,.media-section__race{padding:40px;color:var(--white);background:#602b7a}.media-section__promo h3,.media-section__promo h4,.media-section__race h3{color:var(--white)}.media-section__promo p,.media-section__race p{font-family:Montserrat,sans-serif;font-size:16px;font-weight:600;line-height:140%;letter-spacing:-.05em;color:#d0d0d0}.media-section__promo .btn,.media-section__race .btn,.media-section__contest .btn,.media-section__feature-copy .btn{width:100%;justify-content:center;border-radius:44px}.media-section__promo .media-section__label,.media-section__race .media-section__label,.media-section__contest .media-section__label{box-sizing:border-box;align-items:center;justify-content:center;height:45px;padding:10px 20px;background:#efddfa;border:1px solid #d6c1e3;border-radius:46px;white-space:nowrap;font-family:Montserrat,sans-serif;font-size:18px;font-weight:600;line-height:140%;letter-spacing:-.05em;color:#602b7a}.media-section__post>img{width:225px;height:110px;border-radius:18px;object-fit:cover}@media(max-width:1024px){.media-section__cards-layout{grid-template-columns:minmax(0,1fr) minmax(320px,467px)}.media-section__blog-list{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr)}}@media(max-width:576px){.media-section__top{gap:20px}.media-section__btns,.media-section__cards-layout,.media-section__blog-list{grid-template-columns:1fr;flex-direction:column}.media-section__btns{align-items:stretch}.media-section__btn-about{width:100%;justify-content:center}.media-section__feature{height:330px;padding:20px}.media-section__contest,.media-section__promo,.media-section__race{padding:22px}.media-section__post>img{height:160px}}
+
+/* Figma media-center card corrections (must follow the block above). */
+.media-section__feature{border-radius:30px}
+.media-section__feature-copy h3{color:var(--violet-300)}
+.media-section__post h3{color:var(--violet-300)}
+.media-section__promo p{font-size:14px}
+.media-section__promo .media-section__label,.media-section__post .media-section__label{box-sizing:border-box;align-items:center;height:36px;padding:8px 15px;white-space:nowrap;font-family:Montserrat,sans-serif;font-size:14px;font-weight:600;line-height:140%;letter-spacing:-.05em}
+/* The rule above sets position:relative on every race child at equal specificity,
+   which turned the button's top:358px into a 358px downward nudge and pushed it
+   out of the clipped card. Restate the absolute placement so it lands on its
+   Figma coordinates; the explicit width is needed because a percentage would
+   resolve against the padding box once the button is out of flow. */
+.media-section__race .btn{position:absolute;top:358px;left:40px;width:387px;height:63px;padding:15px 25px;gap:6px}
+@media(max-width:1024px){.media-section__contest h3{font-size:36px}}

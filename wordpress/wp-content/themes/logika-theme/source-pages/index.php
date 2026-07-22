@@ -1183,7 +1183,7 @@
                 <img class="media-section__figma-art" src="img/media-center/figma/race.svg" alt="">
                 <h3>LogiRace<br>2026</h3>
                 <p>Уявіть майбутнє і створіть свій світ на Червоній планеті: ландшафт, технології, роботів, транспорт, ресурси та екосистему.</p>
-                <a href="#" class="btn btn--yellow">Дізнатись більше <svg width='20' height='20'><use href='img/sprite/sprite.svg#arrow-right'></use></svg></a>
+                <a href="/media-center/articles/logirace-2026/" class="btn btn--yellow">Дізнатись більше <svg width='20' height='20'><use href='img/sprite/sprite.svg#arrow-right'></use></svg></a>
               </article>
             </div>
 

@@ -19,7 +19,7 @@ foreach ( array( 'why-logika-section', 'Єдина платформа – єди
 	}
 }
 
-foreach ( array( 'height: 340px', 'border-radius: 30px', '.why-logika-section {', 'padding-top: clamp(16px, 1.563vw, 24px)', '.why-logika-section .media-section__wrapp {', 'gap: clamp(96px, 8.333vw, 120px)', '.media-section__card--platform .media-section__card-img', 'width: 253px', 'translate(-50%, -49%)', '@media (max-width: 576px)', 'gap: 128px' ) as $marker ) {
+foreach ( array( 'aspect-ratio: 345/307', 'border-radius: 30px', '.why-logika-section {', 'padding-top: clamp(16px, 1.563vw, 24px)', '.why-logika-section .media-section__wrapp {', 'gap: clamp(110px, 9.375vw, 135px)', '.media-section__card--platform .media-section__card-img', 'width: 78.893%', 'top: -43.721%', '@media (max-width: 576px)', 'gap: 128px' ) as $marker ) {
 	if ( ! str_contains( $styles, $marker ) ) {
 		$errors[] = "Why Logika styles are missing {$marker}.";
 	}

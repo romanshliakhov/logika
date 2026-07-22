@@ -349,10 +349,10 @@
 
     &__cards {
         width: 100%;
-        max-width: 980px;
+        max-width: 1236px;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: clamp(22px, 3.125vw, 40px) clamp(24px, 3.906vw, 50px);
+        gap: clamp(34px, 7.153vw, 103px) clamp(24px, 6.986vw, 100px);
         padding: 0;
         margin: 0;
         list-style: none;
@@ -360,60 +360,45 @@
 
     &__card {
         position: relative;
-        min-height: clamp(190px, 20.833vw, 240px);
+        aspect-ratio: 345 / 307;
         display: flex;
         align-items: flex-end;
-        padding: clamp(92px, 11.719vw, 150px) 20px 26px;
-        border-radius: 22px;
+        // Percentages of the card width, so insets track the 345x307 design box.
+        padding: 0 8.551% 11.594%;
+        border-radius: clamp(20px, 2.083vw, 30px);
         overflow: visible;
         color: var(--white);
 
-        &:nth-child(1) {
-            transform: rotate(3deg);
+        &:nth-child(odd) {
+            transform: rotate(4deg);
         }
 
-        &:nth-child(2) {
-            transform: rotate(-4deg);
-        }
-
-        &:nth-child(3) {
-            transform: rotate(3deg);
-        }
-
-        &:nth-child(4) {
-            transform: rotate(-4deg);
-        }
-
-        &:nth-child(5) {
-            transform: rotate(3deg);
-        }
-
-        &:nth-child(6) {
+        &:nth-child(even) {
             transform: rotate(-4deg);
         }
 
         h3 {
             margin: 0;
-            font-size: clamp(18px, 1.667vw, 24px);
-            font-weight: 700;
-            line-height: 110%;
-            letter-spacing: -0.96px;
+            font-size: clamp(20px, 1.944vw, 28px);
+            font-weight: 600;
+            line-height: 128%;
+            letter-spacing: -0.05em;
             color: inherit;
         }
 
         p {
             margin: 0;
-            font-size: clamp(11px, 0.903vw, 13px);
+            font-size: clamp(13px, 1.111vw, 16px);
             font-weight: 600;
-            line-height: 125%;
-            letter-spacing: -0.52px;
+            line-height: 140%;
+            letter-spacing: -0.05em;
             color: inherit;
         }
     }
 
     &__card--yellow {
         background-color: var(--yellow);
-        color: var(--violet-500);
+        color: var(--violet-300);
     }
 
     &__card--violet {
@@ -429,49 +414,65 @@
         z-index: 2;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 6px;
     }
 
     &__card-img {
         position: absolute;
         z-index: 1;
-        top: 0;
-        left: 50%;
-        width: min(85%, 290px);
         height: auto;
         pointer-events: none;
-        transform: translate(-50%, -34%);
     }
 
+    // This card carries a wider text box in the design, so its copy wraps the same way.
     &__card--platform {
-        margin-top: 18px;
+        padding-inline: 6.087%;
     }
 
-    &__card--projects {
-        margin-top: 24px;
+    // Illustration placement per card, as a share of the 345x307 design card.
+    // Values account for the transparent margin baked into each PNG, so the
+    // artwork itself lands on its design rect.
+    &__card--platform &__card-img {
+        left: 11.445%;
+        top: -43.721%;
+        width: 78.893%;
     }
 
-    &__card--open-lessons {
-        margin-top: 18px;
+    &__card--projects &__card-img {
+        left: 10.757%;
+        top: -43.902%;
+        width: 75.091%;
     }
 
-    &__card--online-city {
-        margin-top: 18px;
+    &__card--open-lessons &__card-img {
+        left: 18.111%;
+        top: -36.497%;
+        width: 73.266%;
     }
 
-    &__card--teachers {
-        margin-top: 28px;
+    &__card--online-city &__card-img {
+        left: 7.234%;
+        top: -29.414%;
+        width: 86.526%;
     }
 
-    &__card--game-method {
-        margin-top: 18px;
+    &__card--teachers &__card-img {
+        left: 11.204%;
+        top: -40.44%;
+        width: 87.193%;
+    }
+
+    &__card--game-method &__card-img {
+        left: 7.357%;
+        top: -32.354%;
+        width: 89.327%;
     }
 
     @include tablet {
         &__cards-layout { grid-template-columns: minmax(0, 1fr) minmax(320px, 467px); }
         &__blog-list { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); }
         &__cards {
-            max-width: 680px;
+            max-width: 790px;
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
     }
@@ -489,12 +490,7 @@
         &__cards {
             max-width: 340px;
             grid-template-columns: 1fr;
-            gap: 34px;
-        }
-
-        &__card {
-            min-height: 210px;
-            padding-top: 120px;
+            gap: 90px;
         }
     }
 }
