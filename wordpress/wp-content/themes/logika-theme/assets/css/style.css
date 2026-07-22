@@ -2488,6 +2488,9 @@ a .offer-card__info {
 }
 @media (max-width: 767px) {
   .header__top-box {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4px 12px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -2501,6 +2504,11 @@ a .offer-card__info {
   -ms-flex-align: center;
   align-items: center;
   gap: 12px;
+}
+@media (max-width: 767px) {
+  .header__contact {
+    gap: 6px;
+  }
 }
 .header__contact-heading {
   display: -webkit-box;
@@ -2517,7 +2525,7 @@ a .offer-card__info {
   color: var(--white);
 }
 @media (max-width: 767px) {
-  .header__contact-heading {
+  .header__contact-heading span {
     display: none;
   }
 }
@@ -2539,7 +2547,18 @@ a .offer-card__info {
 }
 @media (max-width: 767px) {
   .header__contact--email {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 .header__socials {
@@ -2550,6 +2569,18 @@ a .offer-card__info {
   -ms-flex-align: center;
   align-items: center;
   gap: 12px;
+}
+@media (max-width: 767px) {
+  .header__socials {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
 }
 .header__socials-heading {
   font-size: 14px;
@@ -2581,6 +2612,31 @@ a .offer-card__info {
   .header__socials-links a svg {
     width: 30px;
     height: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header__top-box {
+    gap: 10px;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+  .header__contact {
+    gap: 6px;
+  }
+  .header__contact-heading span,
+  .header__socials-heading {
+    display: none;
+  }
+  .header__contact-link {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 359px) {
+  .header__top-box {
+    gap: 4px 8px;
+  }
+  .header__contact-link {
+    font-size: 13px;
   }
 }
 .header__left {
